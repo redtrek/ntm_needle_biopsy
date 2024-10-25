@@ -19,6 +19,11 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Work has begun on a custom library with necessary footprints (NEEDED FOR DECODER) and symbols (DONE).
 - Most of the most important signals have been connected.
 
+**Bugs/Challenges:**
+- Broken ASM: safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
+- Difficulties with potentiometer circuit: the voltage oscillates a lot causing the read values to change to quickly to be viable for normal inputs. I have added a capacitor to act as a low pass filter in order to mitigate this. Additionally, I have implemented an averaging function in order to smoothen out the values. Currently, values can be read in 5% increments.
+- Unmarked code: unlabeled code has been documented in the main code file and functions that were not operating correctly have been removed. One example is the velocity calculation function which was incomplete, unlabeled, and did not use a time dependent quantity.
+
 # Background
 _Introduction_
 
