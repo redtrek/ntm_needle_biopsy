@@ -1,6 +1,8 @@
 // Aspiration-Assisted Biopsy Needle Device - Motor Code
 // Desc: This code handles the operation of a 12 V 10 A motor as well as a current reading device. It features and LCD interface and potentiometer inputs.
 // Author(s): Thomas Chang, Dane
+
+// TODO: 1mm increment for distance. RPM function. Merge states. See about keeping track of position as the device is powered off.
 #include <Wire.h> // For I2C Communication Protocl
 #include <stdio.h>
 #include <Adafruit_INA219.h>
@@ -119,7 +121,7 @@ void loop() {
   Serial.print(current); 
   Serial.println(" mA");
 */
-
+  // merge input and standby states.
   switch(deviceState)
   {
     case STANDBY:
