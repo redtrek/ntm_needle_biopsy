@@ -13,7 +13,7 @@ int input_pin = 14;
 
 // ==== GLOBALS AND OBJECTS ==== //
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
-long iterations = 2000;
+long iterations = 1;
 // ==== GLOBALS AND OBJECTS ==== //
 
 void setup() {
@@ -28,7 +28,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   long input = 0;
   for (int i = 0; i < iterations; i++) {
-    input += analogRead(input);
+    input += analogRead(input_pin);
   }
 
   input /= iterations;

@@ -1,5 +1,5 @@
 // Aspiration-Assisted Biopsy Needle Device - Motor Code
-// Desc: This code handles the operation of a 12 V 10 A motor as well as a current reading device.
+// Desc: This code handles the operation of a 12 V 10 A motor as well as a current reading device. It features and LCD interface and potentiometer inputs.
 // Author(s): Thomas Chang, Dane
 #include <Wire.h> // For I2C Communication Protocl
 #include <stdio.h>
@@ -11,8 +11,10 @@ Adafruit_INA219 ina219;
 // ==== Handling Motor Operation ==== //
 enum states {
   STANDBY,
+  SPEED_INPUT,
   CUTTING,
   REMOVAL,
+  SPEED_INPUT_REVERSE,
   EXITING
 };
 enum states deviceState;
@@ -21,8 +23,8 @@ enum states deviceState;
 
 // ==== Function Prototypes ==== //
 float numRevolutions(float numCounts);
-void flash();
-void CountA();
+void countA();
+long inputSpeed();
 // ==== Function Prototypes ==== //
 
 
@@ -32,6 +34,7 @@ const int DIR = 7; // Direction control of motor? analog
 const int PWM = 6; // Controls PWM i.e. speed control of motor - digital 8-bit value relationship: 0 (min speed) to 255 (max speed)
 const int encoder_outputA = 2; // must be 2 or 3 for arduino uno
 const int encoder_outputB = 3; // must be 2 or 3 for arduino uno
+const int speed_pin = 14; // Attached to potentiometer to adjust speed.
 // ==== Pin Assignments ==== //
 
 
@@ -45,6 +48,11 @@ int outputB = 0;
 
 float velocity = 0;
 float revolution = 0;
+
+int speed_cutting = 0;
+int speed_exiting = 0;
+const long inputScale = 5.0;
+const potIterations = 1000;
 // ==== Constants and Global Values ==== //
 
 
@@ -58,18 +66,19 @@ void setup() {
     while (1) { delay(10); }
   }
   
-  attachInterrupt(0, CountA, FALLING); // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
+  attachInterrupt(0, countA, FALLING); // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
 
-  // Set pin modes
+  // - Pin Modes - //
   pinMode(button, INPUT);
   pinMode(DIR, OUTPUT);
   pinMode(PWM, OUTPUT);
   pinMode(encoder_outputA, INPUT);
   pinMode(encoder_outputB, INPUT);
+  // - Pin Modes - //
   
   // Handle motor state. Begin in standby mode i.e. MOTOR OFF
   deviceState = STANDBY;
-  digitalWrite(DIR, LOW); // this will brake, regardless of what ph is <== What???h
+  digitalWrite(DIR, LOW);
   digitalWrite(PWM, LOW); 
 }
 
@@ -77,23 +86,11 @@ void loop() {
   float current = 0;
   float current_mA = 0;
   
-/*
-  int volt = analogRead(A2);
-  // 10 for no syringe, 11 for syringe on, 12 for needle on
-  int stall = 10;
-  float current= (volt+0.5) * (5.0 / 1023.0)*1000/40;
-*/
-  
   buttonVal = digitalRead(button);
   float revolution = numRevolutions(count);
   Serial.print(revolution);
   Serial.print(","); 
-/*
-  Serial.println(" rounds"); 
-  Serial.print(" ");
-  Serial.print(volt);
-  Serial.println(" ");
-*/
+
   current = ina219.getCurrent_mA();
   Serial.print(current);
   Serial.println();
@@ -103,73 +100,77 @@ void loop() {
   Serial.println(" mA");
 */
 
-/*
-  // Conditionally handles motor stop functionality. When cutting, turn off the motor once reaching a specified distance. When removing, turn off once back in the original position.
-  if (revolution > 0 || revolution < -60)
+  // Conditionally read analog potentiometer value.
+
+  switch(deviceState)
   {
-    digitalWrite(DIR, LOW);
-    analogWrite(PWM, LOW);
-  }
-*/
-
-
-
-
-
-
-
-  
-  if (deviceState == STANDBY){
-    digitalWrite(DIR, HIGH); // Set motor direction forwards.
-    digitalWrite(PWM, LOW); // Set motor off.
-       
-    if (buttonVal == HIGH){
-      deviceState = CUTTING;
-      delay(100);
-    }
-  }
-  else if (deviceState == CUTTING){
-    // Safety Check: If the motor has moved too far forward while cutting, place it in the removal state.
-    if (revolution < -20)
-    {
-      digitalWrite(DIR, LOW); // Redundancy: Set motor direction backwards.
-      digitalWrite(PWM, LOW); // Redundancy: Set motor off.
-      deviceState = REMOVAL;
-    } else {
-      digitalWrite(DIR, HIGH); // Set motor forwards.
-      analogWrite(PWM, 255);   // Set full power.
-      
+    case STANDBY:
+      digitalWrite(DIR, HIGH); // Set motor direction forwards.
+      digitalWrite(PWM, LOW); // Set motor off.
       if (buttonVal == HIGH){
-        deviceState = REMOVAL;
+        deviceState = SPEED_INPUT;
         delay(100);
       }
-    }
-  }
-  else if (deviceState == REMOVAL){
-    digitalWrite(DIR, LOW); // Set motor direction backward.
-    digitalWrite(PWM, LOW); // Set motor off.
+      break;
     
-    if (buttonVal == HIGH){
-      deviceState = EXITING;
-      delay(100);
-    }
-  }
-  else if (deviceState == EXITING){
-    // Safety Check: If the motor has moved to far backward while exiting, place it in the standby state.
-    if (revolution > 0)
-    {
-      digitalWrite(DIR, LOW); // Redundancy: Set motor direction forward.
-      digitalWrite(PWM, LOW); // Redundancy: Set motor off.
-      deviceState = STANDBY;
-    } else {
-      digitalWrite(DIR, LOW); // Set motor direction backward.
-      analogWrite(PWM, 255);  // Set full power.
-      
+    case SPEED_INPUT:
+      speed_cutting = inputSpeed(potIterations) * 255;
       if (buttonVal == HIGH){
-        deviceState = STANDBY;
+        deviceState = CUTTING;
         delay(100);
       }
-    }
+      break;
+    
+    case CUTTING:
+      // Safety Check: If the motor has moved too far forward while cutting, place it in the removal state.
+      if (revolution < -20)
+      {
+        digitalWrite(DIR, LOW); // Redundancy: Set motor direction backwards.
+        digitalWrite(PWM, LOW); // Redundancy: Set motor off.
+        deviceState = REMOVAL;
+      } else {
+        digitalWrite(DIR, HIGH); // Set motor forwards.
+        analogWrite(PWM, speed_cutting);   // Set full power.
+        if (buttonVal == HIGH){
+          deviceState = REMOVAL;
+          delay(100);
+        }
+      }
+      break;
+      
+    case REMOVAL:
+      digitalWrite(DIR, LOW); // Set motor direction backward.
+      digitalWrite(PWM, LOW); // Set motor off.
+      if (buttonVal == HIGH){
+        deviceState = SPEED_INPUT_REVERSE;
+        delay(100);
+      }
+      break;
+
+    case SPEED_INPUT_REVERSE:
+      speed_exiting = inputSpeed(potIterations) * 255;
+      if (buttonVal == HIGH){
+        deviceState = CUTTING;
+        delay(100);
+      }
+      break;
+    
+    case EXITING:
+      // Safety Check: If the motor has moved to far backward while exiting, place it in the standby state.
+      if (revolution > 0)
+      {
+        digitalWrite(DIR, LOW); // Redundancy: Set motor direction forward.
+        digitalWrite(PWM, LOW); // Redundancy: Set motor off.
+        deviceState = STANDBY;
+      } else {
+        digitalWrite(DIR, LOW); // Set motor direction backward.
+        analogWrite(PWM, speed_exiting);  // Set to user defined speed.
+        if (buttonVal == HIGH){
+          deviceState = STANDBY;
+          delay(100);
+        }
+      }
+      break;
   }
 
   // Debug device state
@@ -189,7 +190,7 @@ float numRevolutions(float numCounts)
 }
 
 // Interrupt Service Routine: Jumps here every time encoder_outputA falls.
-void CountA() 
+void countA() 
 {
   if(digitalRead(encoder_outputB) == HIGH) // If outputA falls and outputB is high, then output A is leading.
   {
@@ -202,4 +203,23 @@ void CountA()
     // Changes position by 1 count on the +axis.
     count++;
   }
+}
+
+// Reads analog pin attached to 5V supplied 10k potentiometer. Users input a percentage of the full speed of the motor here.
+long inputSpeed(int iterations)
+{
+  long pot_read = 0;
+  
+  // Here we accumulate several readings of the potentiometer and average them for a consistent value.
+  for (int i = 0; i < iterations; i++) {
+    pot_read += analogRead(speed_pin);
+  }
+  pot_read /= iterations;
+
+  // Next we map the potential potentiometer values to a scale of (0 to 100) from the Arduino's built in ADC scale (0 to 1024).
+  pot_read = map(pot_read, 0, 1024, 0, 100);
+
+  // Return the value as a decimal. This was experimentally determined with inputScale = 5. What this does is make the input change by quantities of 5%. The ADC isn't too stable so any more precise and there could be issues.
+  pot_read = round((pot_read + inputScale) / inputScale) * inputScale / 100; // This will be some value 0.05-1.05 (5% speed to 105%)
+  return min(pot_read, 1.0); // EDGE CASE: Previous calculation shouldn't practically ever reach 105% but just in case, limit the speed to 100%
 }
