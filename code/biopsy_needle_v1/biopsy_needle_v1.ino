@@ -25,6 +25,8 @@ enum states deviceState;
 float numRevolutions(float numCounts);
 void countA();
 long inputSpeed();
+void writeCurrentEEPROM(float detectedCurrent, bool isMax); // Writes if there was excess current to the EEPROM. This will be read at the start of operation to indicate irregularities.
+void readCurrentEEPROM(bool isMax);
 // ==== Function Prototypes ==== //
 
 
@@ -34,12 +36,11 @@ const int DIR = 7; // Direction control of motor? analog
 const int PWM = 6; // Controls PWM i.e. speed control of motor - digital 8-bit value relationship: 0 (min speed) to 255 (max speed)
 const int encoder_outputA = 2; // must be 2 or 3 for arduino uno
 const int encoder_outputB = 3; // must be 2 or 3 for arduino uno
-const int speed_pin = 14; // Attached to potentiometer to adjust speed.
+const int speed_pin = 14; // (Pin A0) Attached to potentiometer to adjust speed.
 // ==== Pin Assignments ==== //
 
 
 // ==== Constants and Global Values ==== //
-const int high = 255;
 volatile long count = 0;
 int m = 0;
 int buttonVal = 0;
@@ -48,6 +49,9 @@ int outputB = 0;
 
 float velocity = 0;
 float revolution = 0;
+
+const float excessCurrent = 1000; // Anything over 1A is considered an excess current.
+float maxCurrent = 1000; // 1A is the defaulted value. This will be replaced on startup by whatever is written in EEPROM.
 
 int speed_cutting = 0;
 int speed_exiting = 0;
@@ -59,7 +63,14 @@ const potIterations = 1000;
 // ==== ACTUAL CODE ==== //
 void setup() {
   Serial.begin(115200);
-
+  
+  // -- Startup: Reading current data i.e. last excess and max current --//
+  maxCurrent = readCurrentEEPROM(true);
+  Serial.println("The maximum current recorded on this device was: " + String(maxCurrent));
+  float lastExcess = readCurrentEEPROM(false);
+  Serial.println("The last recorded excess current recorded on this device was: " + String(lastExcess));
+  // -- Startup: Reading current data i.e. last excess and max current --//
+  
   // Check if current sensing chip is functioning correctly. Output message and infinitely loop in case of error.
   if (!ina219.begin()) {
     Serial.println("Could not INA219 chip.");
@@ -94,13 +105,18 @@ void loop() {
   current = ina219.getCurrent_mA();
   Serial.print(current);
   Serial.println();
+  
+  if (current > excessCurrent) {
+    if (current > maxCurrent) {
+      writeCurrentEEPROM(current, true); // Save new max current
+    }
+    writeCurrentEEPROM(current, false); // Save the excess current
+  }
 /*
   Serial.print("Current: "); 
   Serial.print(current); 
   Serial.println(" mA");
 */
-
-  // Conditionally read analog potentiometer value.
 
   switch(deviceState)
   {
@@ -115,6 +131,7 @@ void loop() {
     
     case SPEED_INPUT:
       speed_cutting = inputSpeed(potIterations) * 255;
+      Serial.print("Cutting speed: " + String(speed_cutting));
       if (buttonVal == HIGH){
         deviceState = CUTTING;
         delay(100);
@@ -149,6 +166,7 @@ void loop() {
 
     case SPEED_INPUT_REVERSE:
       speed_exiting = inputSpeed(potIterations) * 255;
+      Serial.print("Exiting speed: " + String(speed_exiting));
       if (buttonVal == HIGH){
         deviceState = CUTTING;
         delay(100);
@@ -219,7 +237,34 @@ long inputSpeed(int iterations)
   // Next we map the potential potentiometer values to a scale of (0 to 100) from the Arduino's built in ADC scale (0 to 1024).
   pot_read = map(pot_read, 0, 1024, 0, 100);
 
-  // Return the value as a decimal. This was experimentally determined with inputScale = 5. What this does is make the input change by quantities of 5%. The ADC isn't too stable so any more precise and there could be issues.
-  pot_read = round((pot_read + inputScale) / inputScale) * inputScale / 100; // This will be some value 0.05-1.05 (5% speed to 105%)
+  // Return the value as a decimal. Experimentally determined with inputScale = 5. What this does is make the input change by quantities of 5%. The ADC isn't too stable so any more precise and there could be issues.
+  pot_read = round((pot_read + inputScale) / inputScale) * inputScale / 100; // = 0.05-1.05 (5% speed to 105%)
   return min(pot_read, 1.0); // EDGE CASE: Previous calculation shouldn't practically ever reach 105% but just in case, limit the speed to 100%
+}
+
+// This function writes any detected excess max currets
+void writeCurrentEEPROM(float detectedCurrent, bool isMax)
+{
+  int address = 0;
+  if (isMax) {address = 8;}
+  
+  byte* pointer = (byte*)(void*)&detectedCurrent; // This code is a pointer conversion technique. We cast &detectedCurrent from float* to generic void*. Then we cast this to a byte*.
+  for (int i = 0; i < sizeof(detectedCurrent); i++) {
+    EEPROM.write(address + i, *(pointer + i));
+  }
+}
+
+// This function reads any saved max currents.
+void readCurrentEEPROM(bool isMax)
+{
+  // Excess stored at byte 0. Max stored at byte 8.
+  int address = 0;
+  if (isMax) {address = 8;}
+  
+  float currentEEPROM;
+  byte* pointer = (byte*)(void*)&currentEEPROM;
+  for (int i = 0; i < sizeof(currentEEPROM); i++) {
+    *(pointer + i) = EEPROM.read(address + i);
+  }
+  return currentEEPROM;
 }

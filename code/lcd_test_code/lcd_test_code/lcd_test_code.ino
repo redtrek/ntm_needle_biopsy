@@ -1,3 +1,4 @@
+#include <EEPROM.h>
 #include <LiquidCrystal.h>
 
 // ==== PIN ASSIGNMENTS ==== //
@@ -22,6 +23,9 @@ void setup() {
   Serial.begin(9600);
   lcd.begin(16, 2);
   lcd.print("Powering On...");
+  lcd.clear();
+  lcd.print("Testing...");
+  delay(2000);
 }
 
 void loop() {
@@ -34,7 +38,7 @@ void loop() {
   input /= iterations;
   input = map(input, 0, 1024, 0, 100);
   lcd.clear();
-  lcd.print("Input: " + String(round((input + 5) / 5.0) * 5) + "%");
+  lcd.print("Input: " + String( min( round((input+5)/5.0)*5, 100)) + "%");
   Serial.println(input);
   delay(100);
 }
