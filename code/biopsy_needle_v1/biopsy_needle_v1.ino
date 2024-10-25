@@ -4,6 +4,8 @@
 #include <Wire.h> // For I2C Communication Protocl
 #include <stdio.h>
 #include <Adafruit_INA219.h>
+#include <EEPROM.h>
+#include <LiquidCrystal.h>
 
 Adafruit_INA219 ina219;
 
