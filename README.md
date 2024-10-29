@@ -6,7 +6,7 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - This has been cleaned with legacy code removed, a rewritten state machine, and added documentation for all functions.
 - Completely reorganized and formatted for new components.
 - Saving current information to EEPROM has been integrated (PERSISTENT DATA NEEDS TOTAL REWORK / NEW DEV BOARD).
-- Adjustable inputs have been added allowing for variable speeds.
+- Adjustable inputs have been added allowing for variable speeds. Now fully implemented.
 
 **LCD Input Display:**
 - Test code for this proof of concept is complete and functional.
@@ -20,9 +20,9 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Most of the most important signals have been connected.
 
 **Bugs/Challenges:**
-- Broken ASM: safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
-- Difficulties with potentiometer circuit: the voltage oscillates a lot causing the read values to change to quickly to be viable for normal inputs. I have added a capacitor to act as a low pass filter in order to mitigate this. Additionally, I have implemented an averaging function in order to smoothen out the values. Currently, values can be read in 5% increments.
-- Unmarked code: unlabeled code has been documented in the main code file and functions that were not operating correctly have been removed. One example is the velocity calculation function which was incomplete, unlabeled, and did not use a time dependent quantity.
+- Broken ASM (FIXED): safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
+- Difficulties with potentiometer circuit (FIXED): the voltage oscillates a lot causing the read values to change to quickly to be viable for normal inputs. I have added a capacitor to act as a low pass filter in order to mitigate this. Additionally, I have implemented an averaging function in order to smoothen out the values. Currently, values can be read in 5% increments. (Fixed 10/28/24: Hardware bug with the circuit. Wire underneath the potentiometer prevented contacts from having a stable position)
+- Unmarked code (FIXED): unlabeled code has been documented in the main code file and functions that were not operating correctly have been removed. One example is the velocity calculation function which was incomplete, unlabeled, and did not use a time dependent quantity.
 
 # Background
 _Introduction_

@@ -15,10 +15,8 @@ Adafruit_INA219 ina219;
 // ==== Handling Motor Operation ==== //
 enum states {
   STANDBY,
-  SPEED_INPUT,
   CUTTING,
   REMOVAL,
-  SPEED_INPUT_REVERSE,
   EXITING
 };
 enum states deviceState;
@@ -28,7 +26,7 @@ enum states deviceState;
 // ==== Function Prototypes ==== //
 float numRevolutions(float numCounts);
 void countA();
-long inputSpeed();
+long inputSpeed(long iterations);
 void writeCurrentEEPROM(float detectedCurrent, bool isMax); // Writes if there was excess current to the EEPROM. This will be read at the start of operation to indicate irregularities.
 void readCurrentEEPROM(bool isMax);
 // ==== Function Prototypes ==== //
@@ -57,10 +55,10 @@ float revolution = 0;
 const float excessCurrent = 1000; // Anything over 1A is considered an excess current.
 float maxCurrent = 1000; // 1A is the defaulted value. This will be replaced on startup by whatever is written in EEPROM.
 
-int speed_cutting = 0;
-int speed_exiting = 0;
+long speed_cutting = 0;
+long speed_exiting = 0;
 const long inputScale = 5.0;
-const potIterations = 1000;
+const long potIterations = 1000;
 // ==== Constants and Global Values ==== //
 
 
@@ -69,10 +67,12 @@ void setup() {
   Serial.begin(115200);
   
   // -- Startup: Reading current data i.e. last excess and max current --//
+  /*
   maxCurrent = readCurrentEEPROM(true);
   Serial.println("The maximum current recorded on this device was: " + String(maxCurrent));
   float lastExcess = readCurrentEEPROM(false);
   Serial.println("The last recorded excess current recorded on this device was: " + String(lastExcess));
+  */
   // -- Startup: Reading current data i.e. last excess and max current --//
   
   // Check if current sensing chip is functioning correctly. Output message and infinitely loop in case of error.
@@ -102,40 +102,41 @@ void loop() {
   float current_mA = 0;
   
   buttonVal = digitalRead(button);
+  
   float revolution = numRevolutions(count);
-  Serial.print(revolution);
-  Serial.print(","); 
+  //Serial.print(revolution);
+  //Serial.print(","); 
 
   current = ina219.getCurrent_mA();
-  Serial.print(current);
-  Serial.println();
-  
+  //Serial.print(current);
+  //Serial.println();
+ /*
+  Serial.print("Current: "); 
+  Serial.print(current); 
+  Serial.println(" mA");
+*/
+ 
+  // EEPROM CODE: EXPERIMENTAL
+  /*
   if (current > excessCurrent) {
     if (current > maxCurrent) {
       writeCurrentEEPROM(current, true); // Save new max current
     }
     writeCurrentEEPROM(current, false); // Save the excess current
   }
-/*
-  Serial.print("Current: "); 
-  Serial.print(current); 
-  Serial.println(" mA");
-*/
-  // merge input and standby states.
+  */
+
+  // State Machine
   switch(deviceState)
   {
     case STANDBY:
-      digitalWrite(DIR, HIGH); // Set motor direction forwards.
-      digitalWrite(PWM, LOW); // Set motor off.
-      if (buttonVal == HIGH){
-        deviceState = SPEED_INPUT;
-        delay(100);
-      }
-      break;
-    
-    case SPEED_INPUT:
-      speed_cutting = inputSpeed(potIterations) * 255;
-      Serial.print("Cutting speed: " + String(speed_cutting));
+      // Set motor off: direction = forwards, speed = 0
+      digitalWrite(DIR, HIGH);
+      digitalWrite(PWM, LOW);
+
+      // Handle speed input information
+      speed_cutting = inputSpeed(potIterations) / 100.0 * 255;
+      Serial.println("Cutting speed: " + String(speed_cutting));
       if (buttonVal == HIGH){
         deviceState = CUTTING;
         delay(100);
@@ -160,21 +161,17 @@ void loop() {
       break;
       
     case REMOVAL:
-      digitalWrite(DIR, LOW); // Set motor direction backward.
-      digitalWrite(PWM, LOW); // Set motor off.
-      if (buttonVal == HIGH){
-        deviceState = SPEED_INPUT_REVERSE;
-        delay(100);
-      }
-      break;
+      // Set motor off: direction = backwards, speed = 0
+      digitalWrite(DIR, LOW);
+      digitalWrite(PWM, LOW);
 
-    case SPEED_INPUT_REVERSE:
-      speed_exiting = inputSpeed(potIterations) * 255;
-      Serial.print("Exiting speed: " + String(speed_exiting));
+      speed_exiting = inputSpeed(potIterations) / 100.0 * 255;
+      Serial.println("Exiting speed: " + String(speed_exiting));
       if (buttonVal == HIGH){
-        deviceState = CUTTING;
+        deviceState = EXITING;
         delay(100);
       }
+      
       break;
     
     case EXITING:
@@ -228,7 +225,7 @@ void countA()
 }
 
 // Reads analog pin attached to 5V supplied 10k potentiometer. Users input a percentage of the full speed of the motor here.
-long inputSpeed(int iterations)
+long inputSpeed(long iterations)
 {
   long pot_read = 0;
   
@@ -241,11 +238,17 @@ long inputSpeed(int iterations)
   // Next we map the potential potentiometer values to a scale of (0 to 100) from the Arduino's built in ADC scale (0 to 1024).
   pot_read = map(pot_read, 0, 1024, 0, 100);
 
-  // Return the value as a decimal. Experimentally determined with inputScale = 5. What this does is make the input change by quantities of 5%. The ADC isn't too stable so any more precise and there could be issues.
-  pot_read = round((pot_read + inputScale) / inputScale) * inputScale / 100; // = 0.05-1.05 (5% speed to 105%)
-  return min(pot_read, 1.0); // EDGE CASE: Previous calculation shouldn't practically ever reach 105% but just in case, limit the speed to 100%
+  // Return the value as a decimal. Experimentally determined with inputScale = 5. This makes pot_read change by quantities of 5. The ADC isn't too stable so any more precise and there could be issues.
+  //pot_read = round((pot_read + 5.0) / 5.0) * 5.0 / 100.0; // = 0.05-1.05 (5% speed to 105%)
+  
+  return pot_read;//min(pot_read, 1.0); // EDGE CASE: Previous calculation shouldn't practically ever reach 105% but just in case, limit the speed to 100%
 }
 
+
+
+
+
+/*
 // This function writes any detected excess max currets
 void writeCurrentEEPROM(float detectedCurrent, bool isMax)
 {
@@ -272,3 +275,4 @@ void readCurrentEEPROM(bool isMax)
   }
   return currentEEPROM;
 }
+*/
