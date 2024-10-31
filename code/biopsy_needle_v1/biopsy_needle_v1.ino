@@ -11,6 +11,9 @@
 
 Adafruit_INA219 ina219;
 
+// ==== EXPERIMENTAL VARIABLES ====//
+const int fwRev = -60;
+const int bwRev = 0;
 
 // ==== Handling Motor Operation ==== //
 enum states {
@@ -33,16 +36,25 @@ void readCurrentEEPROM(bool isMax);
 
 
 // ==== Pin Assignments ==== //
-const int button = 13;
-const int DIR = 7; // Direction control of motor? analog
-const int PWM = 6; // Controls PWM i.e. speed control of motor - digital 8-bit value relationship: 0 (min speed) to 255 (max speed)
 const int encoder_outputA = 2; // must be 2 or 3 for arduino uno
 const int encoder_outputB = 3; // must be 2 or 3 for arduino uno
+const int PWM = 6; // Controls PWM i.e. speed control of motor (analogWrite 0 to 255)
+const int DIR = 7; // Direction control of motor? analog
+const int button = 13;
+
+const int rs = 4; // LCD reset
+const int en = 5; // LCD enable
+int d4 = 8; // LCD data
+int d5 = 9; // LCD data
+int d6 = 10; // LCD data
+int d7 = 11; // LCD data
+
 const int speed_pin = 14; // (Pin A0) Attached to potentiometer to adjust speed.
 // ==== Pin Assignments ==== //
 
 
 // ==== Constants and Global Values ==== //
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 volatile long count = 0;
 int m = 0;
 int buttonVal = 0;
@@ -54,6 +66,7 @@ float revolution = 0;
 
 const float excessCurrent = 1000; // Anything over 1A is considered an excess current.
 float maxCurrent = 1000; // 1A is the defaulted value. This will be replaced on startup by whatever is written in EEPROM.
+float maxOpCurrent = 0;
 
 long speed_cutting = 0;
 long speed_exiting = 0;
@@ -65,6 +78,11 @@ const long potIterations = 1000;
 // ==== ACTUAL CODE ==== //
 void setup() {
   Serial.begin(115200);
+
+  lcd.begin(16, 2);
+  lcd.print("Powering On...");
+  lcd.clear();
+  lcd.print("Testing...");
   
   // -- Startup: Reading current data i.e. last excess and max current --//
   /*
@@ -104,13 +122,13 @@ void loop() {
   buttonVal = digitalRead(button);
   
   float revolution = numRevolutions(count);
-  //Serial.print(revolution);
-  //Serial.print(","); 
+  Serial.print(revolution);
+  Serial.print(","); 
 
   current = ina219.getCurrent_mA();
-  //Serial.print(current);
-  //Serial.println();
- /*
+  Serial.print(current);
+  Serial.println();
+/*
   Serial.print("Current: "); 
   Serial.print(current); 
   Serial.println(" mA");
@@ -136,23 +154,39 @@ void loop() {
 
       // Handle speed input information
       speed_cutting = inputSpeed(potIterations) / 100.0 * 255;
-      Serial.println("Cutting speed: " + String(speed_cutting));
+      lcd.clear();
+      lcd.print("Cut Speed: " + String(speed_cutting));
+      
       if (buttonVal == HIGH){
         deviceState = CUTTING;
         delay(100);
       }
+
+      // Reset maximum current reading for this run;
+      maxOpCurrent = 0;
+      
       break;
     
     case CUTTING:
+      lcd.clear();
+      lcd.setCursor(0,0);
+      lcd.print("CUTTING...");
+      lcd.setCursor(0,1);
+      lcd.print("Max(mA): " + String(maxOpCurrent));
+
+      if (abs(current) > abs(maxOpCurrent)) {
+        maxOpCurrent = current;
+      }
+      
       // Safety Check: If the motor has moved too far forward while cutting, place it in the removal state.
-      if (revolution < -20)
+      if (revolution < fwRev)
       {
         digitalWrite(DIR, LOW); // Redundancy: Set motor direction backwards.
         digitalWrite(PWM, LOW); // Redundancy: Set motor off.
         deviceState = REMOVAL;
       } else {
         digitalWrite(DIR, HIGH); // Set motor forwards.
-        analogWrite(PWM, speed_cutting);   // Set full power.
+        analogWrite(PWM, speed_cutting); // Set full power.
         if (buttonVal == HIGH){
           deviceState = REMOVAL;
           delay(100);
@@ -165,18 +199,34 @@ void loop() {
       digitalWrite(DIR, LOW);
       digitalWrite(PWM, LOW);
 
+      // Speed input information
       speed_exiting = inputSpeed(potIterations) / 100.0 * 255;
-      Serial.println("Exiting speed: " + String(speed_exiting));
+      lcd.clear();
+      lcd.print("Exit Speed: " + String(speed_exiting));
+      
       if (buttonVal == HIGH){
         deviceState = EXITING;
         delay(100);
       }
+
+      // Reset maximum current for future operation.
+      maxCurrent = 0;
       
       break;
     
     case EXITING:
+      lcd.clear();
+      lcd.setCursor(0,0);
+      lcd.print("EXITING...");  
+      lcd.setCursor(0,1);
+      lcd.print("Max(mA): " + String(maxOpCurrent));
+
+      if (abs(current) > abs(maxOpCurrent)) {
+        maxOpCurrent = current;
+      }
+      
       // Safety Check: If the motor has moved to far backward while exiting, place it in the standby state.
-      if (revolution > 0)
+      if (revolution > bwRev)
       {
         digitalWrite(DIR, LOW); // Redundancy: Set motor direction forward.
         digitalWrite(PWM, LOW); // Redundancy: Set motor off.
