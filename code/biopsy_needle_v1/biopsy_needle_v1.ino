@@ -11,9 +11,10 @@
 
 Adafruit_INA219 ina219;
 
-// ==== EXPERIMENTAL VARIABLES ====//
+// ==== Experimental Variables ====//
 const int fwRev = -60;
 const int bwRev = 0;
+
 
 // ==== Handling Motor Operation ==== //
 enum states {
@@ -23,23 +24,25 @@ enum states {
   EXITING
 };
 enum states deviceState;
-// ==== Handling Motor Operation ==== //
 
 
 // ==== Function Prototypes ==== //
 float numRevolutions(float numCounts);
 void countA();
 long inputSpeed(long iterations);
-void writeCurrentEEPROM(float detectedCurrent, bool isMax); // Writes if there was excess current to the EEPROM. This will be read at the start of operation to indicate irregularities.
-void readCurrentEEPROM(bool isMax);
-// ==== Function Prototypes ==== //
+float getRPM();
+void buttonHandler();
+
+
+// ==== Flags ==== //
+bool countA_flag = false;
 
 
 // ==== Pin Assignments ==== //
-const int encoder_outputA = 2; // must be 2 or 3 for arduino uno
-const int encoder_outputB = 3; // must be 2 or 3 for arduino uno
+const int encoder_outputA = 2;
+const int encoder_outputB = 3;
 const int PWM = 6; // Controls PWM i.e. speed control of motor (analogWrite 0 to 255)
-const int DIR = 7; // Direction control of motor? analog
+const int DIR = 7; // Direction control for motor
 const int button = 13;
 
 const int rs = 4; // LCD reset
@@ -50,32 +53,27 @@ int d6 = 10; // LCD data
 int d7 = 11; // LCD data
 
 const int speed_pin = 14; // (Pin A0) Attached to potentiometer to adjust speed.
-// ==== Pin Assignments ==== //
 
 
 // ==== Constants and Global Values ==== //
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 volatile long count = 0;
 int m = 0;
-int buttonVal = 0;
 int outputA = 0;
 int outputB = 0;
 
 float velocity = 0;
 float revolution = 0;
-
-const float excessCurrent = 1000; // Anything over 1A is considered an excess current.
-float maxCurrent = 1000; // 1A is the defaulted value. This will be replaced on startup by whatever is written in EEPROM.
 float maxOpCurrent = 0;
 
 long speed_cutting = 0;
 long speed_exiting = 0;
 const long inputScale = 5.0;
 const long potIterations = 1000;
-// ==== Constants and Global Values ==== //
 
+float prevTime = 0;
+int numPulses;
 
-// ==== ACTUAL CODE ==== //
 void setup() {
   Serial.begin(115200);
 
@@ -84,30 +82,21 @@ void setup() {
   lcd.clear();
   lcd.print("Testing...");
   
-  // -- Startup: Reading current data i.e. last excess and max current --//
-  /*
-  maxCurrent = readCurrentEEPROM(true);
-  Serial.println("The maximum current recorded on this device was: " + String(maxCurrent));
-  float lastExcess = readCurrentEEPROM(false);
-  Serial.println("The last recorded excess current recorded on this device was: " + String(lastExcess));
-  */
-  // -- Startup: Reading current data i.e. last excess and max current --//
-  
-  // Check if current sensing chip is functioning correctly. Output message and infinitely loop in case of error.
+  // Check if current sensing chip is functioning correctly.
   if (!ina219.begin()) {
-    Serial.println("Could not INA219 chip.");
+    Serial.println("ERROR: Could not find the INA219 chip.");
     while (1) { delay(10); }
   }
-  
-  attachInterrupt(0, countA, FALLING); // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
 
+  // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
+  attachInterrupt(0, countA, FALLING); 
+  
   // - Pin Modes - //
   pinMode(button, INPUT);
   pinMode(DIR, OUTPUT);
   pinMode(PWM, OUTPUT);
   pinMode(encoder_outputA, INPUT);
   pinMode(encoder_outputB, INPUT);
-  // - Pin Modes - //
   
   // Handle motor state. Begin in standby mode i.e. MOTOR OFF
   deviceState = STANDBY;
@@ -116,34 +105,42 @@ void setup() {
 }
 
 void loop() {
+  // ==== CHECK FOR INTERRUPTS AND TIMERS ====//
+  
+  // ---- countA signal ISR ---- //
+  if (countA_flag == true) {
+    noInterrupts();
+    
+    // outputB is high/low : output A is leading/following
+    if(digitalRead(encoder_outputB) == HIGH) {
+      count--;
+    } else if(digitalRead(encoder_outputB) == LOW) {
+      count++;
+    }
+     
+    countA_flag = false;
+    interrupts();
+  }
+  // ---- countA signal ISR ---- //
+  
+  // ==== CHECK FOR INTERRUPTS AND TIMERS ====//
+  
   float current = 0;
   float current_mA = 0;
   
-  buttonVal = digitalRead(button);
-  
   float revolution = numRevolutions(count);
-  Serial.print(revolution);
-  Serial.print(","); 
+  //Serial.print(revolution);
+  //Serial.print(","); 
 
   current = ina219.getCurrent_mA();
-  Serial.print(current);
-  Serial.println();
-/*
-  Serial.print("Current: "); 
-  Serial.print(current); 
-  Serial.println(" mA");
-*/
+  //Serial.print(current);
+  //Serial.println();
  
-  // EEPROM CODE: EXPERIMENTAL
-  /*
-  if (current > excessCurrent) {
-    if (current > maxCurrent) {
-      writeCurrentEEPROM(current, true); // Save new max current
-    }
-    writeCurrentEEPROM(current, false); // Save the excess current
-  }
-  */
+  Serial.println(String(getRPM()) + "rpm");
 
+  // Read button inputs to change states
+  buttonHandler();
+  
   // State Machine
   switch(deviceState)
   {
@@ -156,11 +153,6 @@ void loop() {
       speed_cutting = inputSpeed(potIterations) / 100.0 * 255;
       lcd.clear();
       lcd.print("Cut Speed: " + String(speed_cutting));
-      
-      if (buttonVal == HIGH){
-        deviceState = CUTTING;
-        delay(100);
-      }
 
       // Reset maximum current reading for this run;
       maxOpCurrent = 0;
@@ -186,11 +178,7 @@ void loop() {
         deviceState = REMOVAL;
       } else {
         digitalWrite(DIR, HIGH); // Set motor forwards.
-        analogWrite(PWM, speed_cutting); // Set full power.
-        if (buttonVal == HIGH){
-          deviceState = REMOVAL;
-          delay(100);
-        }
+        analogWrite(PWM, speed_cutting);
       }
       break;
       
@@ -204,13 +192,8 @@ void loop() {
       lcd.clear();
       lcd.print("Exit Speed: " + String(speed_exiting));
       
-      if (buttonVal == HIGH){
-        deviceState = EXITING;
-        delay(100);
-      }
-
       // Reset maximum current for future operation.
-      maxCurrent = 0;
+      maxOpCurrent = 0;
       
       break;
     
@@ -234,10 +217,6 @@ void loop() {
       } else {
         digitalWrite(DIR, LOW); // Set motor direction backward.
         analogWrite(PWM, speed_exiting);  // Set to user defined speed.
-        if (buttonVal == HIGH){
-          deviceState = STANDBY;
-          delay(100);
-        }
       }
       break;
   }
@@ -261,17 +240,8 @@ float numRevolutions(float numCounts)
 // Interrupt Service Routine: Jumps here every time encoder_outputA falls.
 void countA() 
 {
-  if(digitalRead(encoder_outputB) == HIGH) // If outputA falls and outputB is high, then output A is leading.
-  {
-    // Changes position by 1 count on the -axis.
-    count--;
-  }
-  
-  if(digitalRead(encoder_outputB) == LOW) // If outputA falls and outputB is low, then output B is leading.
-  {
-    // Changes position by 1 count on the +axis.
-    count++;
-  }
+  countA_flag = true;
+  numPulses++;
 }
 
 // Reads analog pin attached to 5V supplied 10k potentiometer. Users input a percentage of the full speed of the motor here.
@@ -288,41 +258,33 @@ long inputSpeed(long iterations)
   // Next we map the potential potentiometer values to a scale of (0 to 100) from the Arduino's built in ADC scale (0 to 1024).
   pot_read = map(pot_read, 0, 1024, 0, 100);
 
-  // Return the value as a decimal. Experimentally determined with inputScale = 5. This makes pot_read change by quantities of 5. The ADC isn't too stable so any more precise and there could be issues.
-  //pot_read = round((pot_read + 5.0) / 5.0) * 5.0 / 100.0; // = 0.05-1.05 (5% speed to 105%)
-  
-  return pot_read;//min(pot_read, 1.0); // EDGE CASE: Previous calculation shouldn't practically ever reach 105% but just in case, limit the speed to 100%
+  return pot_read;
 }
 
+// Returns RPM using global values gathered from the interrupt. Uses number of pulses divided against a 1 second time frmae.
+float getRPM() {
+  unsigned long currTime = micros();
+  if (currTime - prevTime >= 1000000) {
+    float rpm = (numPulses / 12.0 / 34.014) * 60;
+    numPulses = 0;
+    prevTime = currTime;
+    return rpm;
+  }
+  return 0;
+}
 
-
-
-
-/*
-// This function writes any detected excess max currets
-void writeCurrentEEPROM(float detectedCurrent, bool isMax)
-{
-  int address = 0;
-  if (isMax) {address = 8;}
-  
-  byte* pointer = (byte*)(void*)&detectedCurrent; // This code is a pointer conversion technique. We cast &detectedCurrent from float* to generic void*. Then we cast this to a byte*.
-  for (int i = 0; i < sizeof(detectedCurrent); i++) {
-    EEPROM.write(address + i, *(pointer + i));
+void buttonHandler() {
+  int buttonVal = digitalRead(button);
+  if (buttonVal == HIGH) {
+    delay(100);
+    if (deviceState == STANDBY) {
+      deviceState = CUTTING;
+    } else if (deviceState == CUTTING) {
+      deviceState = REMOVAL;
+    } else if (deviceState == REMOVAL) {
+      deviceState = EXITING;
+    } else {
+      deviceState = STANDBY;
+    }
   }
 }
-
-// This function reads any saved max currents.
-void readCurrentEEPROM(bool isMax)
-{
-  // Excess stored at byte 0. Max stored at byte 8.
-  int address = 0;
-  if (isMax) {address = 8;}
-  
-  float currentEEPROM;
-  byte* pointer = (byte*)(void*)&currentEEPROM;
-  for (int i = 0; i < sizeof(currentEEPROM); i++) {
-    *(pointer + i) = EEPROM.read(address + i);
-  }
-  return currentEEPROM;
-}
-*/
