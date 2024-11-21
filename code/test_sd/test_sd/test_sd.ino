@@ -18,6 +18,7 @@ Adafruit_USBD_MSC msc;
 long msc_read_req(long unsigned address, unsigned char* buffer, long unsigned length);
 long msc_write_req(long unsigned address, unsigned char* buffer, long unsigned length);
 void msc_flush();
+void msc_enable();
 
 void setup() {
   
@@ -37,7 +38,7 @@ void setup() {
   testFile = SD.open("test.txt", FILE_WRITE);
 
   if (testFile) {
-    testFile.println("First SD card test");
+    testFile.println("First SD card test. Hi Darren!");
     testFile.close();
   } else {
     Serial.println("Could not open test.txt");
@@ -53,22 +54,7 @@ void setup() {
     Serial.println("Could not read from test.txt");
   }
 
-  //msc.setID();
-  msc.setReadWriteCallback(msc_read_req, msc_write_req, msc_flush);
-
-  msc.setUnitReady(false);
-  msc.begin();
-
-  
-  if (TinyUSBDevice.mounted()) {
-    TinyUSBDevice.detach();
-    delay(10);
-    TinyUSBDevice.attach();
-  }
-  
-  uint32_t block_count = SD.card()->sectorCount();
-  msc.setCapacity(block_count, 512);
-  msc.setUnitReady(true);
+  msc_enable();
 }
 
 void loop() {
@@ -95,4 +81,24 @@ long msc_write_req(long unsigned address, unsigned char* buffer, long unsigned l
 void msc_flush() {
   SD.card()->syncDevice();
   //SD.cacheClear();
+}
+
+// Enables MSC capability of RP2040 and SD card.
+void msc_enable() {
+   //msc.setID();
+  msc.setReadWriteCallback(msc_read_req, msc_write_req, msc_flush);
+
+  msc.setUnitReady(false); // Unit ready is just a boolean that says whether reading and writing is possible at the moment. msc.UnitReady() will return this boolean but it has no bearing on the actual code.
+  msc.begin(); // Initialize the MSC - Allows host PC to recognize RP2040 device as storage.
+
+  // Re-enumeration: Essentially taking the USB out and putting it in again. Ensures the PC recognizes as storage rather than just an interface to flash programs and act as serial port.
+  if (TinyUSBDevice.mounted()) {
+    TinyUSBDevice.detach();
+    delay(10);
+    TinyUSBDevice.attach();
+  }
+  
+  uint32_t block_count = SD.card()->sectorCount();
+  msc.setCapacity(block_count, 512);
+  msc.setUnitReady(true);
 }
