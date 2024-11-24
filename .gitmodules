@@ -1,0 +1,6 @@
+[submodule "code/biopsy_needle/build/_deps/picotool-src"]
+	path = code/biopsy_needle/build/_deps/picotool-src
+	url = https://github.com/raspberrypi/picotool.git
+[submodule "code/biopsy_needle/libs/pico-sdk"]
+	path = code/biopsy_needle/libs/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
