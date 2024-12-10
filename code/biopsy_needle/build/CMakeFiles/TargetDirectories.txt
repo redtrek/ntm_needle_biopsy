@@ -1,4 +1,6 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/biopsy_needle.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/picotoolForceReconfigure.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/picotoolBuild.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/CMakeFiles/edit_cache.dir
@@ -41,7 +43,7 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_base/CMakeFiles/edit_cache.dir
@@ -94,10 +96,12 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_vreg/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_watchdog/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_watchdog/CMakeFiles/rebuild_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_xip_cache/CMakeFiles/edit_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_xip_cache/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_xosc/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/hardware_xosc/CMakeFiles/rebuild_cache.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootrom/CMakeFiles/edit_cache.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootrom/CMakeFiles/rebuild_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/boot_bootrom_headers/CMakeFiles/edit_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/boot_bootrom_headers/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_platform_compiler/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_platform_compiler/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_platform_sections/CMakeFiles/edit_cache.dir
@@ -106,6 +110,8 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_platform_panic/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_aon_timer/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_aon_timer/CMakeFiles/rebuild_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootrom/CMakeFiles/edit_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootrom/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_multicore/CMakeFiles/edit_cache.dir
@@ -152,7 +158,6 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_async_context/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_btstack/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_btstack/CMakeFiles/rebuild_cache.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/rebuild_cache.dir
@@ -192,3 +197,9 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/build/CMakeFiles/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/build/CMakeFiles/edit_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/build/CMakeFiles/rebuild_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219_driver/CMakeFiles/ina219.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219_driver/CMakeFiles/edit_cache.dir
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219_driver/CMakeFiles/rebuild_cache.dir

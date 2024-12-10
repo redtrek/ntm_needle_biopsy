@@ -27,9 +27,6 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -72,11 +69,11 @@ include CMakeFiles/biopsy_needle.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/biopsy_needle.dir/flags.make
 
-CMakeFiles/biopsy_needle.dir/src/main.cpp.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/src/main.cpp.obj: ../src/main.cpp
-CMakeFiles/biopsy_needle.dir/src/main.cpp.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/biopsy_needle.dir/src/main.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/src/main.cpp.obj -MF CMakeFiles/biopsy_needle.dir/src/main.cpp.obj.d -o CMakeFiles/biopsy_needle.dir/src/main.cpp.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/main.cpp
+CMakeFiles/biopsy_needle.dir/src/main.cpp.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/biopsy_needle.dir/src/main.cpp.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/biopsy_needle.dir/src/main.cpp.o"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/src/main.cpp.o -MF CMakeFiles/biopsy_needle.dir/src/main.cpp.o.d -o CMakeFiles/biopsy_needle.dir/src/main.cpp.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/main.cpp
 
 CMakeFiles/biopsy_needle.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/biopsy_needle.dir/src/main.cpp.i"
@@ -86,11 +83,39 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/biopsy_needle.dir/src/main.cpp.s"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/main.cpp -o CMakeFiles/biopsy_needle.dir/src/main.cpp.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+CMakeFiles/biopsy_needle.dir/src/hw_config.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/src/hw_config.c.o: ../src/hw_config.c
+CMakeFiles/biopsy_needle.dir/src/hw_config.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/biopsy_needle.dir/src/hw_config.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/src/hw_config.c.o -MF CMakeFiles/biopsy_needle.dir/src/hw_config.c.o.d -o CMakeFiles/biopsy_needle.dir/src/hw_config.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/hw_config.c
+
+CMakeFiles/biopsy_needle.dir/src/hw_config.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/src/hw_config.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/hw_config.c > CMakeFiles/biopsy_needle.dir/src/hw_config.c.i
+
+CMakeFiles/biopsy_needle.dir/src/hw_config.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/src/hw_config.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/hw_config.c -o CMakeFiles/biopsy_needle.dir/src/hw_config.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o: ../libs/SSD1306/ssd1306.c
+CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o -MF CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/SSD1306/ssd1306.c
+
+CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/SSD1306/ssd1306.c > CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/SSD1306/ssd1306.c -o CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
@@ -100,11 +125,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: ../libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i"
@@ -114,11 +139,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj: ../libs/pico-sdk/src/rp2040/pico_platform/platform.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform/platform.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o: ../libs/pico-sdk/src/rp2040/pico_platform/platform.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform/platform.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.i"
@@ -128,11 +153,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform/platform.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: ../libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: ../libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i"
@@ -142,11 +167,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/pa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj: ../libs/pico-sdk/src/common/hardware_claim/claim.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/hardware_claim/claim.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o: ../libs/pico-sdk/src/common/hardware_claim/claim.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/hardware_claim/claim.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.i"
@@ -156,11 +181,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/hardware_claim/claim.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_sync/sync.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: ../libs/pico-sdk/src/rp2_common/hardware_sync/sync.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.i"
@@ -170,11 +195,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i"
@@ -184,11 +209,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_loc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_irq/irq.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: ../libs/pico-sdk/src/rp2_common/hardware_irq/irq.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.i"
@@ -198,10 +223,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: ../libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: ../libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i"
@@ -211,11 +236,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj: ../libs/pico-sdk/src/common/pico_sync/sem.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/sem.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o: ../libs/pico-sdk/src/common/pico_sync/sem.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.i"
@@ -225,11 +250,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/sem.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj: ../libs/pico-sdk/src/common/pico_sync/lock_core.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/lock_core.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o: ../libs/pico-sdk/src/common/pico_sync/lock_core.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.i"
@@ -239,11 +264,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/lock_core.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj: ../libs/pico-sdk/src/common/pico_sync/mutex.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/mutex.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o: ../libs/pico-sdk/src/common/pico_sync/mutex.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.i"
@@ -253,11 +278,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/mutex.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj: ../libs/pico-sdk/src/common/pico_sync/critical_section.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/critical_section.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o: ../libs/pico-sdk/src/common/pico_sync/critical_section.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.i"
@@ -267,11 +292,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/critical_section.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj: ../libs/pico-sdk/src/common/pico_time/time.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/time.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o: ../libs/pico-sdk/src/common/pico_time/time.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.i"
@@ -281,11 +306,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/time.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj: ../libs/pico-sdk/src/common/pico_time/timeout_helper.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/timeout_helper.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o: ../libs/pico-sdk/src/common/pico_time/timeout_helper.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.i"
@@ -295,11 +320,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/timeout_helper.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: ../libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.i"
@@ -309,11 +334,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj: ../libs/pico-sdk/src/common/pico_util/datetime.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/datetime.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o: ../libs/pico-sdk/src/common/pico_util/datetime.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.i"
@@ -323,11 +348,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/datetime.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj: ../libs/pico-sdk/src/common/pico_util/pheap.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/pheap.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o: ../libs/pico-sdk/src/common/pico_util/pheap.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.i"
@@ -337,11 +362,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/pheap.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj: ../libs/pico-sdk/src/common/pico_util/queue.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/queue.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o: ../libs/pico-sdk/src/common/pico_util/queue.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.i"
@@ -351,11 +376,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_util/queue.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_uart/uart.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: ../libs/pico-sdk/src/rp2_common/hardware_uart/uart.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.i"
@@ -365,11 +390,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: ../libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i"
@@ -379,11 +404,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_pll/pll.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: ../libs/pico-sdk/src/rp2_common/hardware_pll/pll.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.i"
@@ -393,11 +418,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: ../libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i"
@@ -407,11 +432,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: ../libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i"
@@ -421,11 +446,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: ../libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i"
@@ -435,107 +460,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: ../libs/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: ../libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: ../libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: ../libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: ../libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i"
@@ -545,11 +474,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: ../libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: ../libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i"
@@ -559,11 +488,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_l
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: ../libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i"
@@ -573,10 +502,120 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj: ../libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o: ../libs/pico-sdk/src/rp2_common/pico_flash/flash.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_flash/flash.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_flash/flash.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_flash/flash.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: ../libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: ../libs/pico-sdk/src/rp2_common/hardware_divider/divider.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: ../libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: ../libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: ../libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i"
@@ -586,10 +625,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj: ../libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: ../libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i"
@@ -599,11 +638,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aea
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: ../libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: ../libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i"
@@ -613,11 +652,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_ini
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: ../libs/pico-sdk/src/rp2_common/pico_double/double_math.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_math.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o: ../libs/pico-sdk/src/rp2_common/pico_double/double_math.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.i"
@@ -627,10 +666,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_mat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj: ../libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: ../libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i"
@@ -640,10 +679,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: ../libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: ../libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i"
@@ -653,10 +692,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_in
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj: ../libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: ../libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i"
@@ -666,11 +705,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: ../libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: ../libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i"
@@ -680,11 +719,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: ../libs/pico-sdk/src/rp2_common/pico_float/float_math.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_math.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o: ../libs/pico-sdk/src/rp2_common/pico_float/float_math.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.i"
@@ -694,10 +733,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj: ../libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: ../libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i"
@@ -707,11 +746,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_ro
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: ../libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: ../libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i"
@@ -721,10 +760,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: ../libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: ../libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i"
@@ -734,11 +773,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_a
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: ../libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: ../libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i"
@@ -748,11 +787,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: ../libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj"
-	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: ../libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i"
@@ -762,11 +801,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: ../libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: ../libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i"
@@ -776,11 +815,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: ../libs/pico-sdk/src/rp2_common/pico_printf/printf.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_printf/printf.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o: ../libs/pico-sdk/src/rp2_common/pico_printf/printf.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.i"
@@ -790,10 +829,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_printf/printf.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj: ../libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: ../libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building ASM object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing ASM source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i"
@@ -803,11 +842,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling ASM source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: ../libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: ../libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i"
@@ -817,11 +856,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/ne
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i"
@@ -831,11 +870,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i"
@@ -845,11 +884,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i"
@@ -859,11 +898,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i"
@@ -873,11 +912,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i"
@@ -887,11 +926,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: ../libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: ../libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i"
@@ -901,11 +940,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: ../libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: ../libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.i"
@@ -915,11 +954,25 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: ../libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i"
@@ -929,11 +982,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i"
@@ -943,11 +996,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: ../libs/pico-sdk/lib/tinyusb/src/device/usbd.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../libs/pico-sdk/lib/tinyusb/src/device/usbd.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.i"
@@ -957,11 +1010,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: ../libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: ../libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i"
@@ -971,11 +1024,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i"
@@ -985,11 +1038,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i"
@@ -999,11 +1052,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i"
@@ -1013,11 +1066,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i"
@@ -1027,11 +1080,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_devi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i"
@@ -1041,11 +1094,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i"
@@ -1055,11 +1108,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_devic
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i"
@@ -1069,11 +1122,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i"
@@ -1083,11 +1136,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i"
@@ -1097,11 +1150,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i"
@@ -1111,11 +1164,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i"
@@ -1125,11 +1178,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: ../libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i"
@@ -1139,11 +1192,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj: ../libs/pico-sdk/lib/tinyusb/src/tusb.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: ../libs/pico-sdk/lib/tinyusb/src/tusb.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.i"
@@ -1153,11 +1206,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i"
@@ -1167,11 +1220,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/biopsy_needle.dir/flags.make
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: ../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: ../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i"
@@ -1181,183 +1234,656 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: ../libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: ../libs/pico-sdk/src/rp2_common/hardware_adc/adc.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: ../libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o -MF CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c > CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c -o CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: ../libs/pico-sdk/src/rp2_common/hardware_dma/dma.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: ../libs/pico-sdk/src/rp2_common/hardware_pio/pio.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: ../libs/pico-sdk/src/rp2_common/hardware_spi/spi.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: ../libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: ../libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o: CMakeFiles/biopsy_needle.dir/flags.make
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o: ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o: CMakeFiles/biopsy_needle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o -MF CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o.d -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o -c /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c > CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c -o CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s
+
 # Object files for target biopsy_needle
 biopsy_needle_OBJECTS = \
-"CMakeFiles/biopsy_needle.dir/src/main.cpp.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj" \
-"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
+"CMakeFiles/biopsy_needle.dir/src/main.cpp.o" \
+"CMakeFiles/biopsy_needle.dir/src/hw_config.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o" \
+"CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o"
 
 # External object files for target biopsy_needle
 biopsy_needle_EXTERNAL_OBJECTS =
 
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/src/main.cpp.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/src/main.cpp.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/src/hw_config.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o
 biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/build.make
-biopsy_needle.elf: pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
+biopsy_needle.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
+biopsy_needle.elf: libs/INA219_driver/libina219.a
 biopsy_needle.elf: ../libs/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Linking CXX executable biopsy_needle.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Linking CXX executable biopsy_needle.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/biopsy_needle.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf > biopsy_needle.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf >> biopsy_needle.dis
-	/usr/local/bin/picotool coprodis --quiet biopsy_needle.dis biopsy_needle.dis || /usr/bin/cmake -E echo "WARNING: Disassembly is not correct"
+	/usr/bin/arm-none-eabi-objcopy -Oihex /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf biopsy_needle.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf biopsy_needle.bin
-	/usr/local/bin/picotool uf2 convert --quiet /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf biopsy_needle.uf2 --family rp2040 --abs-block
+	_deps/picotool/picotool uf2 convert --quiet /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/biopsy_needle.elf biopsy_needle.uf2 --family rp2040
 
 # Rule to build all files generated by this target.
 CMakeFiles/biopsy_needle.dir/build: biopsy_needle.elf

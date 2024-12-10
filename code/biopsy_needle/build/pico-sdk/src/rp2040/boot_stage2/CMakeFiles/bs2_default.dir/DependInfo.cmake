@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S" "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S" "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
+  "LIB_BOOT_STAGE2_HEADERS=1"
   "PICO_32BIT=1"
   "PICO_BOARD=\"adafruit_feather_rp2040\""
   "PICO_BUILD=1"

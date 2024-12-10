@@ -1,0 +1,5 @@
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm-install/pioasm/pioasm
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm-install/pioasm/pioasmTargets.cmake
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm-install/pioasm/pioasmTargets-release.cmake
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm-install/pioasm/pioasmConfig.cmake
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm-install/pioasm/pioasmConfigVersion.cmake

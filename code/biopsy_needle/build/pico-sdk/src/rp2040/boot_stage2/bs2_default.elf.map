@@ -10,12 +10,13 @@ Linker script and memory map
                 0x0000000020041f00                . = ORIGIN (SRAM)
 
 .text           0x0000000020041f00       0x4c
+                0x0000000020041f00                _start = .
  *(.entry)
  *(.text)
- .text          0x0000000020041f00       0x4c CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .text          0x0000000020041f00       0x4c CMakeFiles/bs2_default.dir/compile_time_choice.S.o
                 0x0000000020041f00                _stage2_boot
                 0x0000000020041f34                literals
-LOAD CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+LOAD CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 START GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a
@@ -30,7 +31,7 @@ OUTPUT(bs2_default.elf elf32-littlearm)
 LOAD linker stubs
 
 .data           0x0000000020041f4c        0x0
- .data          0x0000000020041f4c        0x0 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .data          0x0000000020041f4c        0x0 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .glue_7         0x0000000020041f4c        0x0
  .glue_7        0x0000000020041f4c        0x0 linker stubs
@@ -45,25 +46,25 @@ LOAD linker stubs
  .v4_bx         0x0000000020041f4c        0x0 linker stubs
 
 .bss            0x0000000020041f4c        0x0
- .bss           0x0000000020041f4c        0x0 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .bss           0x0000000020041f4c        0x0 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .ARM.attributes
                 0x0000000000000000       0x22
  .ARM.attributes
-                0x0000000000000000       0x22 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+                0x0000000000000000       0x22 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_line     0x0000000000000000      0x14f
- .debug_line    0x0000000000000000      0x14f CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .debug_line    0x0000000000000000      0x14f CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_info     0x0000000000000000       0x26
- .debug_info    0x0000000000000000       0x26 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .debug_info    0x0000000000000000       0x26 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_abbrev   0x0000000000000000       0x14
- .debug_abbrev  0x0000000000000000       0x14 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .debug_abbrev  0x0000000000000000       0x14 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_aranges  0x0000000000000000       0x20
  .debug_aranges
-                0x0000000000000000       0x20 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+                0x0000000000000000       0x20 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_str      0x0000000000000000       0xd1
- .debug_str     0x0000000000000000       0xd1 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+ .debug_str     0x0000000000000000       0xd1 CMakeFiles/bs2_default.dir/compile_time_choice.S.o

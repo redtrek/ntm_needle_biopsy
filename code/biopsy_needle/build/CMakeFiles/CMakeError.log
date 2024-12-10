@@ -1,5 +1,5 @@
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /usr/bin/arm-none-eabi-g++ 
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-none-eabi-gcc 
 Build flags: ;-mcpu=cortex-m0plus;-mthumb
 Id flags:  
 
@@ -10,8 +10,8 @@ The output was:
 collect2: error: ld returned 1 exit status
 
 
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /usr/bin/arm-none-eabi-gcc 
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-none-eabi-g++ 
 Build flags: ;-mcpu=cortex-m0plus;-mthumb
 Id flags:  
 

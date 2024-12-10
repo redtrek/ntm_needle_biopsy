@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "my_debug.h": "c",
+        "tusb.h": "c",
+        "tusb_config.h": "c",
+        "usbd.h": "c",
+        "msc.h": "c",
+        "cdc.h": "c"
+    }
+}

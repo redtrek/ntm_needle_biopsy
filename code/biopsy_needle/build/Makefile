@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -133,6 +130,32 @@ biopsy_needle/fast:
 .PHONY : biopsy_needle/fast
 
 #=============================================================================
+# Target rules for targets named picotoolForceReconfigure
+
+# Build rule for target.
+picotoolForceReconfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
+.PHONY : picotoolForceReconfigure
+
+# fast build rule for target.
+picotoolForceReconfigure/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolForceReconfigure.dir/build.make CMakeFiles/picotoolForceReconfigure.dir/build
+.PHONY : picotoolForceReconfigure/fast
+
+#=============================================================================
+# Target rules for targets named picotoolBuild
+
+# Build rule for target.
+picotoolBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
+.PHONY : picotoolBuild
+
+# fast build rule for target.
+picotoolBuild/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolBuild.dir/build.make CMakeFiles/picotoolBuild.dir/build
+.PHONY : picotoolBuild/fast
+
+#=============================================================================
 # Target rules for targets named bs2_default
 
 # Build rule for target.
@@ -159,30 +182,17 @@ bs2_default_bin/fast:
 .PHONY : bs2_default_bin/fast
 
 #=============================================================================
-# Target rules for targets named bs2_default_padded_checksummed_asm
+# Target rules for targets named bs2_default_library
 
 # Build rule for target.
-bs2_default_padded_checksummed_asm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_padded_checksummed_asm
-.PHONY : bs2_default_padded_checksummed_asm
+bs2_default_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_library
+.PHONY : bs2_default_library
 
 # fast build rule for target.
-bs2_default_padded_checksummed_asm/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
-.PHONY : bs2_default_padded_checksummed_asm/fast
-
-#=============================================================================
-# Target rules for targets named pioasmBuild
-
-# Build rule for target.
-pioasmBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pioasmBuild
-.PHONY : pioasmBuild
-
-# fast build rule for target.
-pioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build
-.PHONY : pioasmBuild/fast
+bs2_default_library/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
+.PHONY : bs2_default_library/fast
 
 #=============================================================================
 # Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
@@ -197,13 +207,543 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
-libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
+#=============================================================================
+# Target rules for targets named no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h
+
+# Build rule for target.
+no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h
+.PHONY : no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h
+
+# fast build rule for target.
+no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f build/CMakeFiles/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h.dir/build.make build/CMakeFiles/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h.dir/build
+.PHONY : no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h/fast
+
+#=============================================================================
+# Target rules for targets named ina219
+
+# Build rule for target.
+ina219: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ina219
+.PHONY : ina219
+
+# fast build rule for target.
+ina219/fast:
+	$(MAKE) $(MAKESILENT) -f libs/INA219_driver/CMakeFiles/ina219.dir/build.make libs/INA219_driver/CMakeFiles/ina219.dir/build
+.PHONY : ina219/fast
+
+libs/SSD1306/ssd1306.o: libs/SSD1306/ssd1306.c.o
+.PHONY : libs/SSD1306/ssd1306.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+libs/SSD1306/ssd1306.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o
+.PHONY : libs/SSD1306/ssd1306.c.o
+
+libs/SSD1306/ssd1306.i: libs/SSD1306/ssd1306.c.i
+.PHONY : libs/SSD1306/ssd1306.i
+
+# target to preprocess a source file
+libs/SSD1306/ssd1306.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.i
+.PHONY : libs/SSD1306/ssd1306.c.i
+
+libs/SSD1306/ssd1306.s: libs/SSD1306/ssd1306.c.s
+.PHONY : libs/SSD1306/ssd1306.s
+
+# target to generate assembly for a file
+libs/SSD1306/ssd1306.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.s
+.PHONY : libs/SSD1306/ssd1306.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.s
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.o: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.o
+
+# target to build an object file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.i: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.i
+
+# target to preprocess a source file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i
+
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.s: libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.s
+
+# target to generate assembly for a file
+libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
+.PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
+
+libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
+
+# target to build an object file
+libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
@@ -221,13 +761,13 @@ libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
@@ -245,13 +785,13 @@ libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
@@ -269,13 +809,13 @@ libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
@@ -293,13 +833,13 @@ libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
@@ -317,13 +857,13 @@ libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
@@ -341,13 +881,13 @@ libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
@@ -365,13 +905,13 @@ libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
@@ -389,13 +929,13 @@ libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
@@ -413,13 +953,13 @@ libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
@@ -437,13 +977,13 @@ libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
@@ -461,13 +1001,13 @@ libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.obj
+libs/pico-sdk/lib/tinyusb/src/class/video/video_device.o: libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 
 libs/pico-sdk/lib/tinyusb/src/class/video/video_device.i: libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.i
@@ -485,13 +1025,13 @@ libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
-libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj
+libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
@@ -509,13 +1049,13 @@ libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
-libs/pico-sdk/lib/tinyusb/src/device/usbd.obj: libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.obj
+libs/pico-sdk/lib/tinyusb/src/device/usbd.o: libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 
 libs/pico-sdk/lib/tinyusb/src/device/usbd.i: libs/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.i
@@ -533,13 +1073,13 @@ libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
-libs/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.obj
+libs/pico-sdk/lib/tinyusb/src/device/usbd_control.o: libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 
 libs/pico-sdk/lib/tinyusb/src/device/usbd_control.i: libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.i
@@ -557,13 +1097,13 @@ libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
-libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj
+libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 
 libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
@@ -581,13 +1121,13 @@ libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
-libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
+libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 
 libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
@@ -605,13 +1145,13 @@ libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
-libs/pico-sdk/lib/tinyusb/src/tusb.obj: libs/pico-sdk/lib/tinyusb/src/tusb.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.obj
+libs/pico-sdk/lib/tinyusb/src/tusb.o: libs/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.o
 
 # target to build an object file
-libs/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.obj
-.PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.c.obj
+libs/pico-sdk/lib/tinyusb/src/tusb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.c.o
 
 libs/pico-sdk/lib/tinyusb/src/tusb.i: libs/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.i
@@ -629,13 +1169,13 @@ libs/pico-sdk/lib/tinyusb/src/tusb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : libs/pico-sdk/lib/tinyusb/src/tusb.c.s
 
-libs/pico-sdk/src/common/hardware_claim/claim.obj: libs/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : libs/pico-sdk/src/common/hardware_claim/claim.obj
+libs/pico-sdk/src/common/hardware_claim/claim.o: libs/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : libs/pico-sdk/src/common/hardware_claim/claim.o
 
 # target to build an object file
-libs/pico-sdk/src/common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.obj
-.PHONY : libs/pico-sdk/src/common/hardware_claim/claim.c.obj
+libs/pico-sdk/src/common/hardware_claim/claim.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o
+.PHONY : libs/pico-sdk/src/common/hardware_claim/claim.c.o
 
 libs/pico-sdk/src/common/hardware_claim/claim.i: libs/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : libs/pico-sdk/src/common/hardware_claim/claim.i
@@ -653,13 +1193,13 @@ libs/pico-sdk/src/common/hardware_claim/claim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : libs/pico-sdk/src/common/hardware_claim/claim.c.s
 
-libs/pico-sdk/src/common/pico_sync/critical_section.obj: libs/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.obj
+libs/pico-sdk/src/common/pico_sync/critical_section.o: libs/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.c.obj
+libs/pico-sdk/src/common/pico_sync/critical_section.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.c.o
 
 libs/pico-sdk/src/common/pico_sync/critical_section.i: libs/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.i
@@ -677,13 +1217,13 @@ libs/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : libs/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-libs/pico-sdk/src/common/pico_sync/lock_core.obj: libs/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.obj
+libs/pico-sdk/src/common/pico_sync/lock_core.o: libs/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.c.obj
+libs/pico-sdk/src/common/pico_sync/lock_core.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.c.o
 
 libs/pico-sdk/src/common/pico_sync/lock_core.i: libs/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.i
@@ -701,13 +1241,13 @@ libs/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : libs/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-libs/pico-sdk/src/common/pico_sync/mutex.obj: libs/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/mutex.obj
+libs/pico-sdk/src/common/pico_sync/mutex.o: libs/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/mutex.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/mutex.c.obj
+libs/pico-sdk/src/common/pico_sync/mutex.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/mutex.c.o
 
 libs/pico-sdk/src/common/pico_sync/mutex.i: libs/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : libs/pico-sdk/src/common/pico_sync/mutex.i
@@ -725,13 +1265,13 @@ libs/pico-sdk/src/common/pico_sync/mutex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : libs/pico-sdk/src/common/pico_sync/mutex.c.s
 
-libs/pico-sdk/src/common/pico_sync/sem.obj: libs/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/sem.obj
+libs/pico-sdk/src/common/pico_sync/sem.o: libs/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/sem.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_sync/sem.c.obj
+libs/pico-sdk/src/common/pico_sync/sem.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o
+.PHONY : libs/pico-sdk/src/common/pico_sync/sem.c.o
 
 libs/pico-sdk/src/common/pico_sync/sem.i: libs/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : libs/pico-sdk/src/common/pico_sync/sem.i
@@ -749,13 +1289,13 @@ libs/pico-sdk/src/common/pico_sync/sem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : libs/pico-sdk/src/common/pico_sync/sem.c.s
 
-libs/pico-sdk/src/common/pico_time/time.obj: libs/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_time/time.obj
+libs/pico-sdk/src/common/pico_time/time.o: libs/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : libs/pico-sdk/src/common/pico_time/time.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_time/time.c.obj
+libs/pico-sdk/src/common/pico_time/time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o
+.PHONY : libs/pico-sdk/src/common/pico_time/time.c.o
 
 libs/pico-sdk/src/common/pico_time/time.i: libs/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : libs/pico-sdk/src/common/pico_time/time.i
@@ -773,13 +1313,13 @@ libs/pico-sdk/src/common/pico_time/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : libs/pico-sdk/src/common/pico_time/time.c.s
 
-libs/pico-sdk/src/common/pico_time/timeout_helper.obj: libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.obj
+libs/pico-sdk/src/common/pico_time/timeout_helper.o: libs/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+libs/pico-sdk/src/common/pico_time/timeout_helper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.o
+.PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
 libs/pico-sdk/src/common/pico_time/timeout_helper.i: libs/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.i
@@ -797,13 +1337,13 @@ libs/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : libs/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-libs/pico-sdk/src/common/pico_util/datetime.obj: libs/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/datetime.obj
+libs/pico-sdk/src/common/pico_util/datetime.o: libs/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/datetime.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/datetime.c.obj
+libs/pico-sdk/src/common/pico_util/datetime.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/datetime.c.o
 
 libs/pico-sdk/src/common/pico_util/datetime.i: libs/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : libs/pico-sdk/src/common/pico_util/datetime.i
@@ -821,13 +1361,13 @@ libs/pico-sdk/src/common/pico_util/datetime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : libs/pico-sdk/src/common/pico_util/datetime.c.s
 
-libs/pico-sdk/src/common/pico_util/pheap.obj: libs/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/pheap.obj
+libs/pico-sdk/src/common/pico_util/pheap.o: libs/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/pheap.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/pheap.c.obj
+libs/pico-sdk/src/common/pico_util/pheap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/pheap.c.o
 
 libs/pico-sdk/src/common/pico_util/pheap.i: libs/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : libs/pico-sdk/src/common/pico_util/pheap.i
@@ -845,13 +1385,13 @@ libs/pico-sdk/src/common/pico_util/pheap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : libs/pico-sdk/src/common/pico_util/pheap.c.s
 
-libs/pico-sdk/src/common/pico_util/queue.obj: libs/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/queue.obj
+libs/pico-sdk/src/common/pico_util/queue.o: libs/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/queue.o
 
 # target to build an object file
-libs/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.obj
-.PHONY : libs/pico-sdk/src/common/pico_util/queue.c.obj
+libs/pico-sdk/src/common/pico_util/queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o
+.PHONY : libs/pico-sdk/src/common/pico_util/queue.c.o
 
 libs/pico-sdk/src/common/pico_util/queue.i: libs/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : libs/pico-sdk/src/common/pico_util/queue.i
@@ -869,13 +1409,13 @@ libs/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : libs/pico-sdk/src/common/pico_util/queue.c.s
 
-libs/pico-sdk/src/rp2040/pico_platform/platform.obj: libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.obj
+libs/pico-sdk/src/rp2040/pico_platform/platform.o: libs/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj
-.PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+libs/pico-sdk/src/rp2040/pico_platform/platform.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o
+.PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.c.o
 
 libs/pico-sdk/src/rp2040/pico_platform/platform.i: libs/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.i
@@ -893,13 +1433,61 @@ libs/pico-sdk/src/rp2040/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : libs/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.o: libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.o
+
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.i: libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.i
+
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.s: libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.o: libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.i: libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.s: libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i
@@ -917,13 +1505,13 @@ libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj
+libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
@@ -941,21 +1529,45 @@ libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_divider/divider.obj: libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+libs/pico-sdk/src/rp2_common/hardware_divider/divider.o: libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_divider/divider.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
-libs/pico-sdk/src/rp2_common/hardware_flash/flash.obj: libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.o: libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.i: libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.s: libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_flash/flash.o: libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_flash/flash.i: libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.i
@@ -973,13 +1585,13 @@ libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
+libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
@@ -997,13 +1609,37 @@ libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_irq/irq.obj: libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.obj
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.o: libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_irq/irq.o: libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_irq/irq.i: libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.i
@@ -1021,21 +1657,45 @@ libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
+libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
-libs/pico-sdk/src/rp2_common/hardware_pll/pll.obj: libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.obj
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.o: libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.i: libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.s: libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_pll/pll.o: libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_pll/pll.i: libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.i
@@ -1053,13 +1713,61 @@ libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_sync/sync.obj: libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.obj
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.o: libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.o: libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.i: libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.s: libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_sync/sync.o: libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_sync/sync.i: libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.i
@@ -1077,13 +1785,13 @@ libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj
+libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i
@@ -1101,13 +1809,13 @@ libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj
+libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.i
@@ -1125,13 +1833,13 @@ libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_timer/timer.obj: libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.obj
+libs/pico-sdk/src/rp2_common/hardware_timer/timer.o: libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_timer/timer.i: libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.i
@@ -1149,13 +1857,13 @@ libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_uart/uart.obj: libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.obj
+libs/pico-sdk/src/rp2_common/hardware_uart/uart.o: libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_uart/uart.i: libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.i
@@ -1173,13 +1881,13 @@ libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj
+libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
@@ -1197,13 +1905,13 @@ libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj
+libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
@@ -1221,13 +1929,37 @@ libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+
+libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
 libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
@@ -1245,13 +1977,37 @@ libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-libs/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.obj
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.o: libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o
+
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.i: libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i
+
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.s: libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.s
+
+libs/pico-sdk/src/rp2_common/pico_atomic/atomic.o: libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
 libs/pico-sdk/src/rp2_common/pico_atomic/atomic.i: libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.i
@@ -1269,21 +2025,21 @@ libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
+libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
-libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
+libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
 libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
@@ -1301,13 +2057,13 @@ libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj
+libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
 libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i
@@ -1325,13 +2081,13 @@ libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj
+libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
 libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
@@ -1349,21 +2105,21 @@ libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-libs/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_crt0/crt0.obj
+libs/pico-sdk/src/rp2_common/pico_crt0/crt0.o: libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_crt0/crt0.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
-libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj
+libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
 libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i
@@ -1381,29 +2137,29 @@ libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj
+libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 
-libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj
-
-# target to build an object file
-libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
-
-libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+
+libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 
 libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i
@@ -1421,13 +2177,13 @@ libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-libs/pico-sdk/src/rp2_common/pico_double/double_math.obj: libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_math.o: libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
 libs/pico-sdk/src/rp2_common/pico_double/double_math.i: libs/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.i
@@ -1445,21 +2201,21 @@ libs/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 
-libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj
+libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 
 libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
@@ -1477,21 +2233,45 @@ libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_d
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
-libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj
+libs/pico-sdk/src/rp2_common/pico_flash/flash.o: libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 
-libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj
+libs/pico-sdk/src/rp2_common/pico_flash/flash.i: libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+
+libs/pico-sdk/src/rp2_common/pico_flash/flash.s: libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+
+libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+
+libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 
 libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
@@ -1509,13 +2289,13 @@ libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-libs/pico-sdk/src/rp2_common/pico_float/float_math.obj: libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.obj
+libs/pico-sdk/src/rp2_common/pico_float/float_math.o: libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
 libs/pico-sdk/src/rp2_common/pico_float/float_math.i: libs/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.i
@@ -1533,29 +2313,29 @@ libs/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj
+libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 
-libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
-
-# target to build an object file
-libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-
-libs/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.obj
+libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+
+libs/pico-sdk/src/rp2_common/pico_malloc/malloc.o: libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
 libs/pico-sdk/src/rp2_common/pico_malloc/malloc.i: libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.i
@@ -1573,21 +2353,45 @@ libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
+libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 
-libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.o: libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.i: libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.i
+
+# target to preprocess a source file
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.s: libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.s
+
+# target to generate assembly for a file
+libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : libs/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+
+libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.o
+
+# target to build an object file
+libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
 libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.i
@@ -1605,13 +2409,13 @@ libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-libs/pico-sdk/src/rp2_common/pico_printf/printf.obj: libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.obj
+libs/pico-sdk/src/rp2_common/pico_printf/printf.o: libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
 libs/pico-sdk/src/rp2_common/pico_printf/printf.i: libs/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.i
@@ -1629,13 +2433,13 @@ libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-libs/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
+libs/pico-sdk/src/rp2_common/pico_runtime/runtime.o: libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
 libs/pico-sdk/src/rp2_common/pico_runtime/runtime.i: libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.i
@@ -1653,13 +2457,13 @@ libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
 libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i
@@ -1677,13 +2481,13 @@ libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
 libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i
@@ -1701,13 +2505,13 @@ libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
 libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i
@@ -1725,13 +2529,13 @@ libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
-libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj
+libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
 libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i
@@ -1749,13 +2553,13 @@ libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.obj
+libs/pico-sdk/src/rp2_common/pico_stdio/stdio.o: libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdio/stdio.i: libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.i
@@ -1773,13 +2577,13 @@ libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
@@ -1797,13 +2601,13 @@ libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
@@ -1821,13 +2625,13 @@ libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
@@ -1845,13 +2649,13 @@ libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
@@ -1869,13 +2673,13 @@ libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
+libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
 libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
@@ -1893,13 +2697,13 @@ libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
+libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o
 
 # target to build an object file
-libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-.PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 
 libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
@@ -1917,13 +2721,37 @@ libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+src/hw_config.o: src/hw_config.c.o
+.PHONY : src/hw_config.o
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/hw_config.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/hw_config.c.o
+.PHONY : src/hw_config.c.o
+
+src/hw_config.i: src/hw_config.c.i
+.PHONY : src/hw_config.i
+
+# target to preprocess a source file
+src/hw_config.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/hw_config.c.i
+.PHONY : src/hw_config.c.i
+
+src/hw_config.s: src/hw_config.c.s
+.PHONY : src/hw_config.s
+
+# target to generate assembly for a file
+src/hw_config.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/hw_config.c.s
+.PHONY : src/hw_config.c.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
 .PHONY : src/main.i
@@ -1950,227 +2778,329 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
-	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
-	@echo "... pioasmBuild"
+	@echo "... no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h"
+	@echo "... picotoolBuild"
+	@echo "... picotoolForceReconfigure"
 	@echo "... biopsy_needle"
 	@echo "... bs2_default"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
+	@echo "... bs2_default_library"
+	@echo "... ina219"
+	@echo "... libs/SSD1306/ssd1306.o"
+	@echo "... libs/SSD1306/ssd1306.i"
+	@echo "... libs/SSD1306/ssd1306.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.s"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.o"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.i"
+	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.s"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/class/video/video_device.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/class/video/video_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd_control.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd_control.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
-	@echo "... libs/pico-sdk/lib/tinyusb/src/tusb.obj"
+	@echo "... libs/pico-sdk/lib/tinyusb/src/tusb.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/tusb.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/tusb.s"
-	@echo "... libs/pico-sdk/src/common/hardware_claim/claim.obj"
+	@echo "... libs/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... libs/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... libs/pico-sdk/src/common/hardware_claim/claim.s"
-	@echo "... libs/pico-sdk/src/common/pico_sync/critical_section.obj"
+	@echo "... libs/pico-sdk/src/common/pico_sync/critical_section.o"
 	@echo "... libs/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... libs/pico-sdk/src/common/pico_sync/critical_section.s"
-	@echo "... libs/pico-sdk/src/common/pico_sync/lock_core.obj"
+	@echo "... libs/pico-sdk/src/common/pico_sync/lock_core.o"
 	@echo "... libs/pico-sdk/src/common/pico_sync/lock_core.i"
 	@echo "... libs/pico-sdk/src/common/pico_sync/lock_core.s"
-	@echo "... libs/pico-sdk/src/common/pico_sync/mutex.obj"
+	@echo "... libs/pico-sdk/src/common/pico_sync/mutex.o"
 	@echo "... libs/pico-sdk/src/common/pico_sync/mutex.i"
 	@echo "... libs/pico-sdk/src/common/pico_sync/mutex.s"
-	@echo "... libs/pico-sdk/src/common/pico_sync/sem.obj"
+	@echo "... libs/pico-sdk/src/common/pico_sync/sem.o"
 	@echo "... libs/pico-sdk/src/common/pico_sync/sem.i"
 	@echo "... libs/pico-sdk/src/common/pico_sync/sem.s"
-	@echo "... libs/pico-sdk/src/common/pico_time/time.obj"
+	@echo "... libs/pico-sdk/src/common/pico_time/time.o"
 	@echo "... libs/pico-sdk/src/common/pico_time/time.i"
 	@echo "... libs/pico-sdk/src/common/pico_time/time.s"
-	@echo "... libs/pico-sdk/src/common/pico_time/timeout_helper.obj"
+	@echo "... libs/pico-sdk/src/common/pico_time/timeout_helper.o"
 	@echo "... libs/pico-sdk/src/common/pico_time/timeout_helper.i"
 	@echo "... libs/pico-sdk/src/common/pico_time/timeout_helper.s"
-	@echo "... libs/pico-sdk/src/common/pico_util/datetime.obj"
+	@echo "... libs/pico-sdk/src/common/pico_util/datetime.o"
 	@echo "... libs/pico-sdk/src/common/pico_util/datetime.i"
 	@echo "... libs/pico-sdk/src/common/pico_util/datetime.s"
-	@echo "... libs/pico-sdk/src/common/pico_util/pheap.obj"
+	@echo "... libs/pico-sdk/src/common/pico_util/pheap.o"
 	@echo "... libs/pico-sdk/src/common/pico_util/pheap.i"
 	@echo "... libs/pico-sdk/src/common/pico_util/pheap.s"
-	@echo "... libs/pico-sdk/src/common/pico_util/queue.obj"
+	@echo "... libs/pico-sdk/src/common/pico_util/queue.o"
 	@echo "... libs/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... libs/pico-sdk/src/common/pico_util/queue.s"
-	@echo "... libs/pico-sdk/src/rp2040/pico_platform/platform.obj"
+	@echo "... libs/pico-sdk/src/rp2040/pico_platform/platform.o"
 	@echo "... libs/pico-sdk/src/rp2040/pico_platform/platform.i"
 	@echo "... libs/pico-sdk/src/rp2040/pico_platform/platform.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.o"
+	@echo "... libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.i"
+	@echo "... libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_adc/adc.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_adc/adc.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_divider/divider.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_dma/dma.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_dma/dma.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_flash/flash.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_flash/flash.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_flash/flash.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_pio/pio.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_pio/pio.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_pll/pll.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_spi/spi.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_spi/spi.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_spi/spi.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync/sync.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync/sync.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_timer/timer.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_timer/timer.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_timer/timer.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_timer/timer.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_uart/uart.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_uart/uart.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_uart/uart.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_uart/uart.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
-	@echo "... libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s"
+	@echo "... libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.o"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
 	@echo "... libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_atomic/atomic.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.i"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.s"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_atomic/atomic.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_atomic/atomic.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_atomic/atomic.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_crt0/crt0.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_crt0/crt0.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_math.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_math.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_math.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_flash/flash.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_flash/flash.i"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_flash/flash.s"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_math.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_math.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_math.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_math.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_malloc/malloc.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_malloc/malloc.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_multicore/multicore.o"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_multicore/multicore.i"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_multicore/multicore.s"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_printf/printf.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_printf/printf.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_printf/printf.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_printf/printf.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime/runtime.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
+	@echo "... libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... src/main.obj"
+	@echo "... src/hw_config.o"
+	@echo "... src/hw_config.i"
+	@echo "... src/hw_config.s"
+	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 .PHONY : help

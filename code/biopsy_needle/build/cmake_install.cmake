@@ -40,6 +40,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/cmake_install.cmake")
+  include("/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/build/cmake_install.cmake")
+  include("/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219_driver/cmake_install.cmake")
 
 endif()
 

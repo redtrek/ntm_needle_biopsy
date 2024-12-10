@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
+
