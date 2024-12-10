@@ -3,15 +3,14 @@
 // Author(s): Thomas Chang, Dane Ungurait
 // Desc: This code handles the operation of the motor, sensors, inputs, and USB capabilities of the UF device.
 
-
-#include <Wire.h>
+#include <Arduino.h>
 #include <stdio.h>
-#include <Adafruit_INA219>
-#include <LiquidCrystal.h>
+#include <Wire.h>
 #include <SPI.h>
+#include <Adafruit_INA219.h>
+#include <Adafruit_SSD1306.h>
 #include <SdFat.h>
 #include <Adafruit_TinyUSB.h>
-
 
 // ==== Experimental Variables ====//
 const int fwRev = -60;
@@ -45,7 +44,7 @@ void msc_enable();
 bool countA_flag = false;
 
 
-// ==== Pin Assignments ==== //
+// ==== Pin Assignments and Addressing ==== //
 #define SPI0_SCK 18         // SCK
 #define SPI0_MOSI 19        // MOSI
 #define SPI0_MISO 20        // MISO
@@ -64,14 +63,16 @@ bool countA_flag = false;
 //#define lcd_6
 //#define lcd_7
 
-#define I2C_SDA 12          // 12
-#define I2C_SCL 13          // 13
+#define I2C0_SDA 12          // 12
+#define I2C0_SCL 13          // 13
+#define OLED_ADDR   0x3C
+#define INA219_ADDR 0x40
 
 #define speed_pin 26        // A0
 
 // ==== Constants and Global Values ==== //
 Adafruit_INA219 ina219;
-//LiquidCrystal lcd(lcd_rs, lcd_en, lcd_4, lcd_5, lcd_6, lcd_7);
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
 SdFat SD;
 FsFile testFile;
 Adafruit_USBD_MSC msc;
@@ -95,24 +96,29 @@ int numPulses;
 
 
 void setup() {
-  
   Serial.begin(115200);
 
-  // LCD Initialization
-  lcd.begin(16, 2);
-  lcd.print("Powering On...");
-  lcd.clear();
-  lcd.print("Testing...");
-  
-  // Current Sensor Initialization
-  Wire.setSDA(I2C_SDA);
-  Wire.setSCL(I2C_SCL);
+  // I2C Initialization
   Wire.begin();
-  
+  Wire.setSDA(I2C0_SDA);
+  Wire.setSCL(I2C0_SCL);
+
+  // OLED Initialization
+  display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR);
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(2);
+  display.setCursor(20, 20);
+  display.println("Hello!");
+  display.display();
+
+  /*
+  // Current Sensor Initialization
   if (!ina219.begin()) {
     Serial.println("ERROR: Could not find the INA219 chip.");
     while (1) { delay(10); }
   }
+  */
   
   // SD Card Initialization
   SPI.setTX(SPI0_MOSI);
@@ -125,6 +131,7 @@ void setup() {
   }
   Serial.println("SD card recognized");
 
+  /*
   // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
   attachInterrupt(encoderA_pin, countA, FALLING); 
   
@@ -139,7 +146,7 @@ void setup() {
   deviceState = STANDBY;
   digitalWrite(DIR, LOW);
   digitalWrite(PWM, LOW); 
-
+  */
 
   // Test file demonstrating memory.
   testFile = SD.open("test.txt", FILE_WRITE);
@@ -161,10 +168,11 @@ void setup() {
     Serial.println("Could not read from test.txt");
   }
 
-  msc_enable();
+  //msc_enable();
 }
 
 void loop() {
+/*
   // ==== CHECK FOR INTERRUPTS AND TIMERS ====//
   
   // ---- countA signal ISR ---- //
@@ -284,7 +292,7 @@ void loop() {
   // Debug device state
   // Serial.print(deviceState);
   // Serial.print(" ");
-
+*/
   delay(100);
 }
 
@@ -336,6 +344,20 @@ float getRPM() {
 }
 
 void buttonHandler() {
+  int buttonVal = digitalRead(button);
+  if (buttonVal == HIGH) {
+    delay(100);
+    if (deviceState == STANDBY) {
+      deviceState = CUTTING;
+    } else if (deviceState == CUTTING) {
+      deviceState = REMOVAL;
+    } else if (deviceState == REMOVAL) {
+      deviceState = EXITING;
+    } else {
+      deviceState = STANDBY;
+    }
+  }
+}
 
 long msc_read_req(long unsigned address, void* buffer, long unsigned length) {
   if(SD.card()->readSectors(address, (unsigned char*)buffer, length/512)) {

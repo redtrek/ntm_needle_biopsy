@@ -1,19 +1,22 @@
-// Aspiration-Assisted Biopsy Needle Device - Motor Code
-// Desc: This code handles the operation of a 12 V 10 A motor as well as a current reading device. It features and LCD interface and potentiometer inputs.
-// Author(s): Thomas Chang, Dane
+// Non-traditional Manufacturing Laboratory (CEN3907C)
+// Aspiration-Assisted Biopsy Needle Device
+// Author(s): Thomas Chang, Dane Ungurait
+// Desc: This code handles the operation of the motor, sensors, inputs, and USB capabilities of the UF device.
 
-// TODO: 1mm increment for distance. RPM function. Merge states. See about keeping track of position as the device is powered off.
-#include <Wire.h> // For I2C Communication Protocl
+
+#include <Wire.h>
 #include <stdio.h>
 #include <Adafruit_INA219.h>
-#include <EEPROM.h>
+#include <Adafruit_SSD1306.h>
 #include <LiquidCrystal.h>
+#include <SPI.h>
+#include <SdFat.h>
+#include <Adafruit_TinyUSB.h>
 
-Adafruit_INA219 ina219;
 
 // ==== Experimental Variables ====//
-const int fwRev = -1000;
-const int bwRev = 1000;
+const int fwRev = -60;
+const int bwRev = 0;
 
 
 // ==== Handling Motor Operation ==== //
@@ -33,30 +36,49 @@ long inputSpeed(long iterations);
 float getRPM();
 void buttonHandler();
 
+long msc_read_req(long unsigned address, unsigned char* buffer, long unsigned length);
+long msc_write_req(long unsigned address, unsigned char* buffer, long unsigned length);
+void msc_flush();
+void msc_enable();
+
 
 // ==== Flags ==== //
 bool countA_flag = false;
 
 
-// ==== Pin Assignments ==== //
-const int encoder_outputA = 2;
-const int encoder_outputB = 3;
-const int PWM = 6; // Controls PWM i.e. speed control of motor (analogWrite 0 to 255)
-const int DIR = 7; // Direction control for motor
-const int button = 13;
+// ==== Pin Assignments and Addressing ==== //
+#define SPI0_SCK 18         // SCK
+#define SPI0_MOSI 19        // MOSI
+#define SPI0_MISO 20        // MISO
+#define SPI0_CS 1           // RX
 
-const int rs = 4; // LCD reset
-const int en = 5; // LCD enable
-int d4 = 8; // LCD data
-int d5 = 9; // LCD data
-int d6 = 10; // LCD data
-int d7 = 11; // LCD data
+#define encoder_outputA 24  // 24
+#define encoder_outputB 25  // 25
+#define PWM 0               // TX
+#define DIR 6               // D4
 
-const int speed_pin = 14; // (Pin A0) Attached to potentiometer to adjust speed.
+#define button 11           // 11
+//#define lcd_rst
+//#define lcd_en
+//#define lcd_4
+//#define lcd_5
+//#define lcd_6
+//#define lcd_7
 
+#define I2C0_SDA 12          // 12
+#define I2C0_SCL 13          // 13
+#define OLED_ADDR   0x3C
+#define INA219_ADDR 0x40
+
+#define speed_pin 26        // A0
 
 // ==== Constants and Global Values ==== //
-LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+Adafruit_INA219 ina219;
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
+SdFat SD;
+FsFile testFile;
+Adafruit_USBD_MSC msc;
+
 volatile long count = 0;
 int m = 0;
 int outputA = 0;
@@ -74,24 +96,47 @@ const long potIterations = 1000;
 float prevTime = 0;
 int numPulses;
 
+
 void setup() {
   Serial.begin(115200);
 
-  lcd.begin(16, 2);
-  lcd.print("Powering On...");
-  lcd.clear();
-  lcd.print("Testing...");
-  
-  // Check if current sensing chip is functioning correctly.
+  // I2C Initialization
+  Wire.begin();
+  Wire.setSDA(I2C0_SDA);
+  Wire.setSCL(I2C0_SCL);
+  // OLED Initialization
+  display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR);
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(2);
+  display.setCursor(20, 20);
+  display.println("Hello!");
+  display.display();
+
+  /*
+  // Current Sensor Initialization
   if (!ina219.begin()) {
     Serial.println("ERROR: Could not find the INA219 chip.");
     while (1) { delay(10); }
   }
-
-  // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
-  attachInterrupt(0, countA, FALLING); 
+  */
   
-  // - Pin Modes - //
+  // SD Card Initialization
+  SPI.setTX(SPI0_MOSI);
+  SPI.setRX(SPI0_MISO);
+  SPI.setSCK(SPI0_SCK);
+
+  if (!SD.begin(SPI0_CS)) {
+    Serial.println("SD card could not be properly initialized.");
+    while(1) {delay(10);}
+  }
+  Serial.println("SD card recognized");
+
+  /*
+  // Interrupt for encoder_outputA: attachInterrupt(pin, ISR, trigger mode). Counts whenever encoder_outputA is falling.
+  attachInterrupt(encoderA_pin, countA, FALLING); 
+  
+  // Pin Modes //
   pinMode(button, INPUT);
   pinMode(DIR, OUTPUT);
   pinMode(PWM, OUTPUT);
@@ -102,9 +147,33 @@ void setup() {
   deviceState = STANDBY;
   digitalWrite(DIR, LOW);
   digitalWrite(PWM, LOW); 
+  */
+
+  // Test file demonstrating memory.
+  testFile = SD.open("test.txt", FILE_WRITE);
+
+  if (testFile) {
+    testFile.println("First SD card test. Hi Darren!");
+    testFile.close();
+  } else {
+    Serial.println("Could not open test.txt");
+  }
+
+  testFile = SD.open("test.txt");
+  if (testFile) {
+    while (testFile.available()) {
+      Serial.write(testFile.read());
+    }
+    testFile.close();
+  } else {
+    Serial.println("Could not read from test.txt");
+  }
+
+  //msc_enable();
 }
 
 void loop() {
+/*
   // ==== CHECK FOR INTERRUPTS AND TIMERS ====//
   
   // ---- countA signal ISR ---- //
@@ -224,9 +293,11 @@ void loop() {
   // Debug device state
   // Serial.print(deviceState);
   // Serial.print(" ");
-
+*/
   delay(100);
 }
+
+// ==== Function Definitions ==== //
 
 // Converts encoder counts to revolutions
 float numRevolutions(float numCounts)
@@ -287,4 +358,45 @@ void buttonHandler() {
       deviceState = STANDBY;
     }
   }
+}
+
+long msc_read_req(long unsigned address, void* buffer, long unsigned length) {
+  if(SD.card()->readSectors(address, (unsigned char*)buffer, length/512)) {
+    return length;
+  } else {
+    return -1;
+  }
+}
+
+long msc_write_req(long unsigned address, unsigned char* buffer, long unsigned length) {
+  if(SD.card()->writeSectors(address, buffer, length/512)) {
+    return length;
+  } else {
+    return -1;
+  }
+}
+
+void msc_flush() {
+  SD.card()->syncDevice();
+  //SD.cacheClear();
+}
+
+// Enables MSC capability of RP2040 and SD card.
+void msc_enable() {
+   //msc.setID();
+  msc.setReadWriteCallback(msc_read_req, msc_write_req, msc_flush);
+
+  msc.setUnitReady(false); // Unit ready is just a boolean that says whether reading and writing is possible at the moment. msc.UnitReady() will return this boolean but it has no bearing on the actual code.
+  msc.begin(); // Initialize the MSC - Allows host PC to recognize RP2040 device as storage.
+
+  // Re-enumeration: Essentially taking the USB out and putting it in again. Ensures the PC recognizes as storage rather than just an interface to flash programs and act as serial port.
+  if (TinyUSBDevice.mounted()) {
+    TinyUSBDevice.detach();
+    delay(10);
+    TinyUSBDevice.attach();
+  }
+  
+  uint32_t block_count = SD.card()->sectorCount();
+  msc.setCapacity(block_count, 512);
+  msc.setUnitReady(true);
 }

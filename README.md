@@ -8,11 +8,20 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Saving current information to EEPROM has been integrated (PERSISTENT DATA NEEDS TOTAL REWORK / NEW DEV BOARD).
 - Adjustable inputs have been added allowing for variable speeds. Now fully implemented.
 
-**LCD Input Display:**
-- Test code for this proof of concept is complete and functional.
-- Supports input via a potentiometer and accurately displays in real time to the LCD.
+**OLED Input Display:**
+- Test code for this proof of concept (LCD) is complete and functional.
+- Supports input via a potentiometer and accurately displays in real time.
+- Shows maximum current during operation and rpm in real time.
 - Adjustable backlight.
-- Value calculations are the same that would be used on the Biopsy Needle Code.
+- Custom function implemented to add new features such as battery messages and general status information.
+
+**Real-time Data Collection**
+- Prototype can read current in mA and RPM of the motor in real time.
+
+**MSC Capabilities**
+- Prototype for MSC complete: Can view created files on a Windows machine through the native filesystem.
+- Can write files to the SD card from Windows machine.
+- Automatically opens after USB connection.
 
 **PCB Design:**
 - Design Files have been collected.
@@ -23,6 +32,15 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Broken ASM (FIXED): safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
 - Difficulties with potentiometer circuit (FIXED): the voltage oscillates a lot causing the read values to change to quickly to be viable for normal inputs. I have added a capacitor to act as a low pass filter in order to mitigate this. Additionally, I have implemented an averaging function in order to smoothen out the values. Currently, values can be read in 5% increments. (Fixed 10/28/24: Hardware bug with the circuit. Wire underneath the potentiometer prevented contacts from having a stable position)
 - Unmarked code (FIXED): unlabeled code has been documented in the main code file and functions that were not operating correctly have been removed. One example is the velocity calculation function which was incomplete, unlabeled, and did not use a time dependent quantity.
+- INA219 not functioning properly. Returning extremely high values for calculated voltages and currents.
+
+# Quick-Start
+** In your WSL2 environment ***
+- Clone this repository and navigate to the build folder of code/biopsy_needle
+- Build the code using the command "cmake -DPICO_BOARD=adafruit_feather_rp2040 .."
+- Run the command "make".
+- Put the RP2040 device into bootloader mode by holding down BOOTSEL and pressing RESET.
+- Drag the .uf2 file inside of the build folder into the flash file explorer.
 
 # Background
 _Introduction_
