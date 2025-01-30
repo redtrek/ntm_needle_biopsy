@@ -18,7 +18,7 @@ This repository contains the all the relevant code, documentation, and PCB desig
 **Real-time Data Collection**
 - Prototype can read current in mA and RPM of the motor in real time.
 
-**MSC Capabilities**
+**MSC Capabilities (WIP)**
 - Prototype for MSC complete: Can view created files on a Windows machine through the native filesystem.
 - Can write files to the SD card from Windows machine.
 - Automatically opens after USB connection.
@@ -32,7 +32,12 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Broken ASM (FIXED): safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
 - Difficulties with potentiometer circuit (FIXED): the voltage oscillates a lot causing the read values to change to quickly to be viable for normal inputs. I have added a capacitor to act as a low pass filter in order to mitigate this. Additionally, I have implemented an averaging function in order to smoothen out the values. Currently, values can be read in 5% increments. (Fixed 10/28/24: Hardware bug with the circuit. Wire underneath the potentiometer prevented contacts from having a stable position)
 - Unmarked code (FIXED): unlabeled code has been documented in the main code file and functions that were not operating correctly have been removed. One example is the velocity calculation function which was incomplete, unlabeled, and did not use a time dependent quantity.
-- INA219 not functioning properly. Returning extremely high values for calculated voltages and currents.
+- INA219 (FIXED): not functioning properly. Returning extremely high values for calculated voltages and currents.
+- RPM and Positional Data Incorrect (FIXED): interrupt not catching every falling edge of the motor_outputA signal.
+- Motor activation on startup (FIXED): PWM pin receiving 3.3 Volts from the feather board on startup activating the motor.
+- Variable speed (FIXED): inputs crash the system. Likely due to timing issues with state transitions that need to be resolved.
+- MSC not working: library needs to be configured and various changes to the source code necessary.
+
 
 # Quick-Start
 ** In your WSL2 environment ***

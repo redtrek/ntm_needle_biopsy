@@ -398,15 +398,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/delays.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_gcc.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/arm_acle.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/armv7m_mpu.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/system_RP2040.h \
   build/rp2040_sdio.pio.h
 
 CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c \
@@ -500,15 +491,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/delays.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_gcc.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/arm_acle.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/armv7m_mpu.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/system_RP2040.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
   ../libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
@@ -653,15 +635,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_regs.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/delays.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_gcc.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/arm_acle.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/armv7m_mpu.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/system_RP2040.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.h
 
 CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c \
@@ -752,15 +725,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_gcc.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/arm_acle.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/armv7m_mpu.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/system_RP2040.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
@@ -1114,6 +1078,8 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
@@ -1462,15 +1428,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_de
   /usr/include/newlib/sys/_pthreadtypes.h \
   /usr/include/newlib/sys/sched.h \
   /usr/include/newlib/machine/types.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/RP2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/core_cm0plus.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_gcc.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/arm_acle.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/armv7m_mpu.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Include/system_RP2040.h \
   ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
@@ -1519,6 +1476,8 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_de
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/crash.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h \
   /usr/include/newlib/stdio.h \
@@ -6075,7 +6034,7 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/newlib/c++/10.3.1/bits/ostream.tcc \
   /usr/include/newlib/c++/10.3.1/istream \
   /usr/include/newlib/c++/10.3.1/bits/istream.tcc \
-  ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -6096,13 +6055,9 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h \
   ../libs/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
@@ -6111,26 +6066,30 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
   ../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
   ../libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \

@@ -12,7 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
-  "picotool/tmp/picotoolBuild-cfgcmd.txt.in"
   "pioasm-install/pioasm/pioasmConfig.cmake"
   "pioasm-install/pioasm/pioasmConfigVersion.cmake"
   "pioasm-install/pioasm/pioasmTargets-release.cmake"
@@ -139,7 +138,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/pico-sdk/src/rp2_common/pico_unique_id/CMakeLists.txt"
   "../libs/pico-sdk/src/rp2_common/tinyusb/CMakeLists.txt"
   "../libs/pico-sdk/tools/CMakeLists.txt"
-  "../libs/pico-sdk/tools/Findpicotool.cmake"
+  "/usr/local/lib/cmake/picotool/picotoolConfig.cmake"
+  "/usr/local/lib/cmake/picotool/picotoolConfigVersion.cmake"
+  "/usr/local/lib/cmake/picotool/picotoolTargets-release.cmake"
+  "/usr/local/lib/cmake/picotool/picotoolTargets.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
@@ -155,11 +157,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-3.22/Modules/ExternalProject.cmake"
   "/usr/share/cmake-3.22/Modules/FetchContent.cmake"
-  "/usr/share/cmake-3.22/Modules/FetchContent/CMakeLists.cmake.in"
   "/usr/share/cmake-3.22/Modules/FindDoxygen.cmake"
-  "/usr/share/cmake-3.22/Modules/FindGit.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindPython/Support.cmake"
@@ -175,8 +174,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "_deps/picotool-subbuild/CMakeLists.txt"
-  "picotool/tmp/picotoolBuild-cfgcmd.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "generated/pico_base/pico/version.h"
   "generated/pico_base/pico/config_autogen.h"
@@ -285,8 +282,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/biopsy_needle.dir/DependInfo.cmake"
-  "CMakeFiles/picotoolForceReconfigure.dir/DependInfo.cmake"
-  "CMakeFiles/picotoolBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/DependInfo.cmake"
   "pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake"
   "pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/DependInfo.cmake"

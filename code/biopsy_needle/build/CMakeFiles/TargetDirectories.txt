@@ -1,6 +1,4 @@
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/biopsy_needle.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/picotoolForceReconfigure.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/picotoolBuild.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/edit_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles/rebuild_cache.dir
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/CMakeFiles/edit_cache.dir

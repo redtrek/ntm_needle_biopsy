@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "board.h": "c",
+        "hw_config.h": "c"
+    }
+}

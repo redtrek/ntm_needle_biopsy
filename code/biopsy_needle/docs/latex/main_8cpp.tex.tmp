@@ -1,0 +1,199 @@
+\hypertarget{main_8cpp}{}\doxysection{/home/redtrek/ntm\+\_\+needle\+\_\+biopsy/code/biopsy\+\_\+needle/src/main.cpp File Reference}
+\label{main_8cpp}\index{/home/redtrek/ntm\_needle\_biopsy/code/biopsy\_needle/src/main.cpp@{/home/redtrek/ntm\_needle\_biopsy/code/biopsy\_needle/src/main.cpp}}
+
+
+This is the main file for the electronic biopsy needle. It handles the operation of the state machine, sensors, motors, and display.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/pwm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/irq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hw\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}f\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ff.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../libs/\+INA219\+\_\+driver/\+INA219.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../libs/\+SSD1306/ssd1306.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_af530325ce28cf25ce89308fbd9ac8c16}\label{main_8cpp_af530325ce28cf25ce89308fbd9ac8c16}} 
+\#define {\bfseries I2\+C0\+\_\+\+SDA}~12
+\item 
+\mbox{\Hypertarget{main_8cpp_a69f255245dd74fb6785ca39656cf9983}\label{main_8cpp_a69f255245dd74fb6785ca39656cf9983}} 
+\#define {\bfseries I2\+C0\+\_\+\+SCL}~13
+\item 
+\mbox{\Hypertarget{main_8cpp_a85a885041758879c90a08fed7a75d2e2}\label{main_8cpp_a85a885041758879c90a08fed7a75d2e2}} 
+\#define {\bfseries SPI0\+\_\+\+SCK}~18
+\item 
+\mbox{\Hypertarget{main_8cpp_a16ce69be83444ff939653090fb7fa151}\label{main_8cpp_a16ce69be83444ff939653090fb7fa151}} 
+\#define {\bfseries SPI0\+\_\+\+MOSI}~19
+\item 
+\mbox{\Hypertarget{main_8cpp_aabba8137ea69a9180bedb49e83873988}\label{main_8cpp_aabba8137ea69a9180bedb49e83873988}} 
+\#define {\bfseries SPI0\+\_\+\+MISO}~20
+\item 
+\mbox{\Hypertarget{main_8cpp_a5764b944b7809f264ff68d12652a7be0}\label{main_8cpp_a5764b944b7809f264ff68d12652a7be0}} 
+\#define {\bfseries SPI0\+\_\+\+CS}~1
+\item 
+\mbox{\Hypertarget{main_8cpp_a7dfa2c4cfbfcba36416046052e7943e8}\label{main_8cpp_a7dfa2c4cfbfcba36416046052e7943e8}} 
+\#define {\bfseries OLED\+\_\+\+ADDR}~0x3C
+\item 
+\mbox{\Hypertarget{main_8cpp_ac1339fa84c70a1e0606d8d3362c993ee}\label{main_8cpp_ac1339fa84c70a1e0606d8d3362c993ee}} 
+\#define {\bfseries INA219\+\_\+\+ADDR}~0x40
+\item 
+\mbox{\Hypertarget{main_8cpp_a44b13121b2822ff13beab2c7307c645e}\label{main_8cpp_a44b13121b2822ff13beab2c7307c645e}} 
+\#define {\bfseries state\+\_\+input}~11
+\item 
+\mbox{\Hypertarget{main_8cpp_a03dec72577301b6b7f3d6f308ea3533e}\label{main_8cpp_a03dec72577301b6b7f3d6f308ea3533e}} 
+\#define {\bfseries speed\+\_\+input}~26
+\item 
+\mbox{\Hypertarget{main_8cpp_a0427c5ee0151d36a621ea2bbbcc33b80}\label{main_8cpp_a0427c5ee0151d36a621ea2bbbcc33b80}} 
+\#define {\bfseries debounce\+\_\+us}~50000
+\item 
+\mbox{\Hypertarget{main_8cpp_ac10c5e664055ed80b487406ea89b6e72}\label{main_8cpp_ac10c5e664055ed80b487406ea89b6e72}} 
+\#define {\bfseries pot\+Iterations}~1000
+\item 
+\mbox{\Hypertarget{main_8cpp_a538e3ec60828cfabae7e3011d73d2093}\label{main_8cpp_a538e3ec60828cfabae7e3011d73d2093}} 
+\#define {\bfseries PWM}~0
+\item 
+\mbox{\Hypertarget{main_8cpp_a6c8de73bb604d91743c7f6f356eb171e}\label{main_8cpp_a6c8de73bb604d91743c7f6f356eb171e}} 
+\#define {\bfseries DIR}~6
+\item 
+\mbox{\Hypertarget{main_8cpp_ae6407e0d3287ac088c981352ba3cdbb9}\label{main_8cpp_ae6407e0d3287ac088c981352ba3cdbb9}} 
+\#define {\bfseries motor\+A\+\_\+out}~25
+\item 
+\mbox{\Hypertarget{main_8cpp_a79b9b9bbda44153dafd9397f417fc885}\label{main_8cpp_a79b9b9bbda44153dafd9397f417fc885}} 
+\#define {\bfseries motor\+B\+\_\+out}~24
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677}\label{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677}} 
+enum {\bfseries states} \{ \newline
+{\bfseries WAIT}
+, {\bfseries STANDBY}
+, {\bfseries CUTTING}
+, {\bfseries REMOVAL}
+, \newline
+{\bfseries EXITING}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a7e911cbf6e905da5cb9e26293bb62474}\label{main_8cpp_a7e911cbf6e905da5cb9e26293bb62474}} 
+void {\bfseries init\+\_\+i2c0} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a8c50659733df2acac1580d209db8e97f}\label{main_8cpp_a8c50659733df2acac1580d209db8e97f}} 
+void {\bfseries oled\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_acbe50e907061b4e6af54ba2ac30b0c1f}\label{main_8cpp_acbe50e907061b4e6af54ba2ac30b0c1f}} 
+void {\bfseries sd\+\_\+test} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}\label{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}} 
+void {\bfseries display\+State} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_af67e7019df41d6d3ed4323004f7b653b}\label{main_8cpp_af67e7019df41d6d3ed4323004f7b653b}} 
+void {\bfseries display\+Input\+Speed} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_ac7a582c55ab5c7860fa88f499e065059}\label{main_8cpp_ac7a582c55ab5c7860fa88f499e065059}} 
+void {\bfseries button\+Handler} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}\label{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}} 
+long {\bfseries get\+Input\+Speed} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a8ed58896238a2ab9bfdbcc5d8950077d}\label{main_8cpp_a8ed58896238a2ab9bfdbcc5d8950077d}} 
+float {\bfseries get\+Revolutions} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_ace35c4a8ec724c9ee5256a0061372e28}\label{main_8cpp_ace35c4a8ec724c9ee5256a0061372e28}} 
+float {\bfseries get\+RPM} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a519229de3e7224e504d43cdce4b699b5}\label{main_8cpp_a519229de3e7224e504d43cdce4b699b5}} 
+void {\bfseries display\+RPM} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_af55d867a0c9be79f5fd5905a6ecfab67}\label{main_8cpp_af55d867a0c9be79f5fd5905a6ecfab67}} 
+void {\bfseries display\+Current} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a404d7c0149efcb3f95cb5d8d08af9f85}\label{main_8cpp_a404d7c0149efcb3f95cb5d8d08af9f85}} 
+const char $\ast$ {\bfseries string} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a77067d683e743ab4b231c03622c9c6e7}\label{main_8cpp_a77067d683e743ab4b231c03622c9c6e7}} 
+void {\bfseries motor\+\_\+\+ISR} (uint gpio, uint32\+\_\+t events)
+\item 
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a3f3d08e54c32dbb17ea4cc61e4442106}\label{main_8cpp_a3f3d08e54c32dbb17ea4cc61e4442106}} 
+std\+::string {\bfseries state\+To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}\label{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}} 
+int {\bfseries fw\+Rev} = 60
+\item 
+\mbox{\Hypertarget{main_8cpp_a5988591b58aabf7567019b975da7e7aa}\label{main_8cpp_a5988591b58aabf7567019b975da7e7aa}} 
+int {\bfseries bw\+Rev} = -\/60
+\item 
+\mbox{\Hypertarget{main_8cpp_a03de839a9debec4f2265023b765444ad}\label{main_8cpp_a03de839a9debec4f2265023b765444ad}} 
+ssd1306\+\_\+t {\bfseries oled}
+\item 
+\mbox{\Hypertarget{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}\label{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}} 
+uint16\+\_\+t {\bfseries speed\+\_\+lvl} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}\label{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}} 
+long {\bfseries temp\+\_\+speed} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_a45c1ebffa998de7f47a9259870ec6c56}\label{main_8cpp_a45c1ebffa998de7f47a9259870ec6c56}} 
+bool {\bfseries count\+A\+\_\+flag} = false
+\item 
+\mbox{\Hypertarget{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
+int {\bfseries count} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_ac6f130727d2275823bd3040581e801a5}\label{main_8cpp_ac6f130727d2275823bd3040581e801a5}} 
+int {\bfseries num\+Pulses} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}\label{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}} 
+absolute\+\_\+time\+\_\+t {\bfseries prev\+Time} = get\+\_\+absolute\+\_\+time()
+\item 
+\mbox{\Hypertarget{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}\label{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}} 
+float {\bfseries rpm} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_af9653d31acfffa5a40aa709b2065e00b}\label{main_8cpp_af9653d31acfffa5a40aa709b2065e00b}} 
+float {\bfseries current} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}\label{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}} 
+enum states state {\bfseries next\+State}
+\item 
+\mbox{\Hypertarget{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}\label{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}} 
+FATFS {\bfseries filesys}
+\item 
+\mbox{\Hypertarget{main_8cpp_a0b58cc3ec33a653b182fc55c93418a87}\label{main_8cpp_a0b58cc3ec33a653b182fc55c93418a87}} 
+FRESULT {\bfseries fr} = f\+\_\+mount(\&filesys, \char`\"{}\char`\"{}, 1)
+\item 
+\mbox{\Hypertarget{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}\label{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}} 
+FIL {\bfseries fil}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file for the electronic biopsy needle. It handles the operation of the state machine, sensors, motors, and display. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Chang 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/12-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

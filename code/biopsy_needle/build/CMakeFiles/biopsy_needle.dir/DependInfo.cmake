@@ -91,7 +91,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/include"
+  "../include"
   "../libs/pico-sdk/src/rp2_common/pico_atomic/include"
   "../libs/pico-sdk/lib/tinyusb/src"
   "../libs/INA219_driver"

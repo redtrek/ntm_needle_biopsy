@@ -3,11 +3,13 @@
 
 cmake_minimum_required(VERSION 3.13)
 
+set(PICO_SDK_PATH ${CMAKE_CURRENT_LIST_DIR}/libs/pico-sdk)
+
 # initialize pico-sdk directly
-include(./libs/pico-sdk/pico_sdk_init.cmake)
+include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # include build functions from Pico-SDK
-include(./libs/pico-sdk/external/pico_sdk_import.cmake)
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 set(NAME biopsy_needle)
 
@@ -18,7 +20,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # building for feather rp2040
 set(PICO_BOARD adafruit_feather_rp2040)
-#set(PICO_SDK_PATH libs/pico-sdk)
+
 
 # intialize pico SDK
 pico_sdk_init()
@@ -48,7 +50,7 @@ target_link_libraries(${NAME} PRIVATE
 )
 
 target_include_directories(${NAME} PRIVATE
-    libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/include
+    ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 # generate uf2 output files for flash
