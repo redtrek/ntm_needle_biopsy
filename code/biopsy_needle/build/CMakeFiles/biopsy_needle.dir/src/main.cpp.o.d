@@ -201,6 +201,33 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: \
  /usr/include/newlib/string.h /usr/include/newlib/strings.h \
  /usr/include/newlib/sys/string.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/tinyusb/include/bsp/board.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/include/tusb_config.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/INA219_driver/INA219.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
@@ -221,4 +248,5 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: \
  /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/poly_laguerre.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/SSD1306/ssd1306.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/SSD1306/ssd1306.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/FX29/fx29.h

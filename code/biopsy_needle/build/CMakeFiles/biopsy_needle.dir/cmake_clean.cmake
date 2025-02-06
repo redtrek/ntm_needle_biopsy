@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o"
+  "CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o.d"
   "CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o"
   "CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o.d"
   "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o"
@@ -41,6 +43,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o.d"
   "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o"
   "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o.d"
+  "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o"
+  "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o.d"
   "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
   "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d"
   "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
@@ -214,6 +218,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/biopsy_needle.dir/src/hw_config.c.o.d"
   "CMakeFiles/biopsy_needle.dir/src/main.cpp.o"
   "CMakeFiles/biopsy_needle.dir/src/main.cpp.o.d"
+  "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o"
+  "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o.d"
+  "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o"
+  "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o.d"
   "biopsy_needle.elf"
   "biopsy_needle.pdb"
 )

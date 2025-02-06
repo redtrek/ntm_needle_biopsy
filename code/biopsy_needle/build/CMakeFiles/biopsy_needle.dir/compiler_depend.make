@@ -1615,12 +1615,8 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: ../libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c \
+  ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -1650,48 +1646,50 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_dev
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h \
+  ../libs/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/ioqspi.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_qspi.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h \
+  ../libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
   /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
   /usr/include/newlib/sys/_locale.h \
@@ -1703,7 +1701,85 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
   /usr/include/newlib/sys/lock.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   /usr/include/newlib/stdio.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/board.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -1725,6 +1801,24 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -1744,358 +1838,58 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
   /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/include/newlib/sys/_locale.h \
   /usr/include/newlib/string.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2113,10 +1907,27 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_d
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -2129,45 +1940,40 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_d
   ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
+
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: ../libs/pico-sdk/lib/tinyusb/src/class/video/video_device.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../src/include/tusb_config.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c \
@@ -2212,9 +2018,14 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
   /usr/include/newlib/sys/stdio.h \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -2233,13 +2044,6 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -2257,54 +2061,34 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../libs/pico-sdk/lib/tinyusb/src/device/usbd.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/newlib.h \
   /usr/include/newlib/_newlib_version.h \
   /usr/include/newlib/sys/config.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/include/newlib/sys/_locale.h \
   /usr/include/newlib/string.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2325,6 +2109,24 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../l
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -2344,7 +2146,8 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../l
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
@@ -2352,54 +2155,34 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../l
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: ../libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/newlib.h \
   /usr/include/newlib/_newlib_version.h \
   /usr/include/newlib/sys/config.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/include/newlib/sys/_locale.h \
   /usr/include/newlib/string.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2420,6 +2203,24 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -2439,16 +2240,16 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -2478,8 +2279,6 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
@@ -2497,6 +2296,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2530,6 +2330,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  ../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include/pico/fix/rp2040_usb_device_enumeration.h \
   ../libs/pico-sdk/lib/tinyusb/src/device/dcd.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
@@ -2543,50 +2344,29 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  /usr/include/newlib/stdlib.h \
+  /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
   /usr/include/newlib/_newlib_version.h \
   /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  /usr/include/newlib/stdlib.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/machine/stdlib.h \
   /usr/include/newlib/alloca.h \
   ../libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
   /usr/include/newlib/sys/_locale.h \
@@ -2594,6 +2374,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2611,6 +2392,24 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h \
@@ -2632,54 +2431,34 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: ../libs/pico-sdk/lib/tinyusb/src/tusb.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/newlib.h \
   /usr/include/newlib/_newlib_version.h \
   /usr/include/newlib/sys/config.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/include/newlib/sys/_locale.h \
   /usr/include/newlib/string.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/sys/_types.h \
   /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
   /usr/include/newlib/sys/_stdint.h \
   /usr/include/newlib/machine/endian.h \
@@ -2702,6 +2481,24 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: ../libs/pic
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -2719,7 +2516,8 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: ../libs/pic
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h
@@ -5414,9 +5212,16 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_i
   /usr/include/newlib/sys/stdio.h \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -5435,15 +5240,6 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_i
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -5461,20 +5257,14 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_i
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../libs/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h \
   ../libs/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
   ../libs/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h \
   ../libs/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h \
   ../libs/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h \
-  ../libs/pico-sdk/src/rp2_common/pico_flash/include/pico/flash.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb/reset_interface.h \
-  ../libs/pico-sdk/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h
+  ../libs/pico-sdk/src/rp2_common/pico_flash/include/pico/flash.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
@@ -5518,9 +5308,16 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
   /usr/include/newlib/sys/stdio.h \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -5539,15 +5336,6 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
@@ -5565,8 +5353,10 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
   ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
   ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
   ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
@@ -5581,99 +5371,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
   ../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h
 
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/include/newlib/inttypes.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/include/newlib/sys/_intsup.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  /usr/include/newlib/sys/_locale.h \
-  /usr/include/newlib/string.h \
-  /usr/include/newlib/sys/reent.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/sys/_types.h \
-  /usr/include/newlib/machine/_types.h \
-  /usr/include/newlib/machine/_default_types.h \
-  /usr/include/newlib/sys/lock.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/strings.h \
-  /usr/include/newlib/sys/string.h \
-  /usr/include/newlib/stdio.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  /usr/include/newlib/sys/types.h \
-  /usr/include/newlib/sys/_stdint.h \
-  /usr/include/newlib/machine/endian.h \
-  /usr/include/newlib/machine/_endian.h \
-  /usr/include/newlib/sys/select.h \
-  /usr/include/newlib/sys/_sigset.h \
-  /usr/include/newlib/sys/_timeval.h \
-  /usr/include/newlib/sys/timespec.h \
-  /usr/include/newlib/sys/_timespec.h \
-  /usr/include/newlib/sys/_pthreadtypes.h \
-  /usr/include/newlib/sys/sched.h \
-  /usr/include/newlib/machine/types.h \
-  /usr/include/newlib/sys/stdio.h \
-  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/include/newlib/assert.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
-  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
-  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb/reset_interface.h \
-  ../libs/pico-sdk/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h \
-  ../libs/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h
+CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c \
   ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
@@ -6123,6 +5821,34 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
+  ../libs/pico-sdk/src/rp2_common/tinyusb/include/bsp/board.h \
+  ../libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/sys/_intsup.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
   ../libs/INA219_driver/INA219.h \
   ../libs/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
@@ -6146,6 +5872,221 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
   ../libs/SSD1306/ssd1306.h
 
+CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o: ../src/msc_disk.c \
+  /usr/include/newlib/assert.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  /usr/include/newlib/stdio.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ffconf.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h
+
+CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../src/include/tusb_config.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/include/newlib/assert.h \
+  generated/pico_base/pico/version.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  ../libs/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h
+
+
+../src/usb_descriptors.c:
+
+../src/msc_disk.c:
 
 /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc:
 
@@ -6160,6 +6101,8 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/newlib/c++/10.3.1/tr1/gamma.tcc:
 
 /usr/include/newlib/c++/10.3.1/math.h:
+
+../libs/pico-sdk/src/rp2_common/tinyusb/include/bsp/board.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h:
 
@@ -6229,8 +6172,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/newlib/c++/10.3.1/cstdint:
 
-/usr/include/newlib/c++/10.3.1/bits/predefined_ops.h:
-
 /usr/include/newlib/c++/10.3.1/bits/ptr_traits.h:
 
 /usr/include/newlib/c++/10.3.1/debug/assertions.h:
@@ -6285,13 +6226,9 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c:
 
-../libs/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h:
-
 /usr/include/newlib/c++/10.3.1/ext/atomicity.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c:
-
-../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb/reset_interface.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
@@ -6310,8 +6247,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_flash/flash.c:
-
-../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include/pico/fix/rp2040_usb_device_enumeration.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c:
 
@@ -6356,8 +6291,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xosc.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
 
@@ -6405,6 +6338,24 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../libs/pico-sdk/src/rp2_common/hardware_dma/dma.c:
 
+/usr/include/newlib/c++/10.3.1/bits/nested_exception.h:
+
+../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pll.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_pll/include/hardware/pll.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
+
+../libs/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c:
+
+/usr/include/newlib/c++/10.3.1/bits/string_view.tcc:
+
+../libs/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_adc/adc.c:
+
 /usr/include/newlib/c++/10.3.1/bits/exception.h:
 
 ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
@@ -6414,8 +6365,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
-
-../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h:
 
 /usr/include/newlib/c++/10.3.1/new:
 
@@ -6463,10 +6412,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/newlib/machine/types.h:
 
-../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_qspi.h:
-
-../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h:
-
 /usr/include/newlib/sys/_timespec.h:
 
 /usr/include/newlib/locale.h:
@@ -6478,6 +6423,10 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h:
 
 ../libs/pico-sdk/src/common/pico_time/timeout_helper.c:
+
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h:
+
+../libs/SSD1306/ssd1306.h:
 
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h:
 
@@ -6517,9 +6466,19 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/newlib/stdio.h:
 
+../libs/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
+
+../libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c:
+
 /usr/include/newlib/sys/string.h:
 
+../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/m-profile/cmsis_gcc_m.h:
+
+../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_qspi.h:
+
 ../libs/SSD1306/font.h:
+
+../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/ioqspi.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_atomic/include/stdatomic.h:
 
@@ -6540,6 +6499,8 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/pico-sdk/src/common/hardware_claim/include/hardware/claim.h:
 
 ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h:
+
+../libs/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h:
 
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.h:
 
@@ -6613,7 +6574,9 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h:
 
-../libs/pico-sdk/src/rp2_common/hardware_adc/adc.c:
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pll.h:
+
+../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
 
@@ -6689,8 +6652,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/newlib/sys/features.h:
 
-../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h:
-
 /usr/include/newlib/string.h:
 
 ../libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h:
@@ -6700,10 +6661,6 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
 ../libs/pico-sdk/src/rp2_common/hardware_ticks/include/hardware/ticks.h:
 
 /usr/include/newlib/_ansi.h:
-
-../libs/SSD1306/ssd1306.h:
-
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h:
 
 /usr/include/newlib/sys/config.h:
 
@@ -6737,10 +6694,6 @@ generated/pico_base/pico/version.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h:
 
-../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
-
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pll.h:
-
 /usr/include/newlib/sys/stdio.h:
 
 ../libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c:
@@ -6756,6 +6709,10 @@ generated/pico_base/pico/version.h:
 ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
+
+../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Core/Include/cmsis_version.h:
+
+../libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/board.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h:
 
@@ -6825,10 +6782,6 @@ generated/pico_base/pico/config_autogen.h:
 
 /usr/include/newlib/sys/time.h:
 
-/usr/include/newlib/c++/10.3.1/bits/nested_exception.h:
-
-../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pll.h:
-
 build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h:
@@ -6840,6 +6793,8 @@ build/rp2040_sdio.pio.h:
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/ctype_base.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h:
+
+../libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include/pico/fix/rp2040_usb_device_enumeration.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h:
 
@@ -6856,18 +6811,6 @@ build/rp2040_sdio.pio.h:
 ../libs/pico-sdk/src/common/pico_util/queue.c:
 
 /usr/include/newlib/machine/time.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c:
-
-../libs/pico-sdk/src/common/pico_time/include/pico/time.h:
-
-../libs/pico-sdk/src/common/pico_sync/include/pico/sync.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
-
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h:
-
-../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_rtc.h:
 
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c:
 
@@ -6897,17 +6840,23 @@ build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h:
 
-../libs/pico-sdk/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h:
-
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h:
 
-/usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/error_constants.h:
+../libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
 
-../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c:
+../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_rtc.h:
+
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h:
+
+../libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h:
+
+../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xip.h:
+
+../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h:
 
@@ -6919,15 +6868,13 @@ build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h:
 
-../libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c:
+../libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c:
 
-../libs/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
+../libs/pico-sdk/src/common/pico_time/include/pico/time.h:
 
-../libs/pico-sdk/lib/tinyusb/src/device/usbd.h:
+../libs/pico-sdk/src/common/pico_sync/include/pico/sync.h:
 
-../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xip.h:
-
-../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
+../src/include/tusb_config.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h:
 
@@ -6944,14 +6891,6 @@ build/rp2040_sdio.pio.h:
 ../libs/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/common/tusb_types.h:
-
-/usr/include/newlib/sys/timespec.h:
-
-../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h:
-
-../libs/pico-sdk/src/common/pico_util/pheap.c:
-
-../libs/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h:
 
@@ -6981,6 +6920,28 @@ build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h:
 
+../libs/pico-sdk/src/rp2_common/pico_platform_panic/panic.c:
+
+../libs/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
+
+../libs/pico-sdk/lib/tinyusb/src/device/usbd.h:
+
+/usr/include/newlib/c++/10.3.1/bits/predefined_ops.h:
+
+../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h:
+
+../libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h:
+
+/usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/error_constants.h:
+
+../libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c:
+
+/usr/include/newlib/sys/timespec.h:
+
+../libs/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h:
+
+../libs/pico-sdk/src/common/pico_util/pheap.c:
+
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c:
 
 ../libs/pico-sdk/lib/tinyusb/src/common/tusb_private.h:
@@ -6994,6 +6955,8 @@ build/rp2040_sdio.pio.h:
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
+
+../libs/pico-sdk/lib/tinyusb/src/device/dcd.h:
 
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.h:
 
@@ -7013,10 +6976,6 @@ build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/src/common/pico_sync/sem.c:
 
-/usr/include/newlib/c++/10.3.1/bits/string_view.tcc:
-
-../libs/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h:
-
 ../libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c:
 
 ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h:
@@ -7029,13 +6988,9 @@ build/rp2040_sdio.pio.h:
 
 ../libs/pico-sdk/lib/tinyusb/src/device/usbd.c:
 
-../libs/pico-sdk/lib/tinyusb/src/device/dcd.h:
-
 ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c:
 
 ../libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c:
-
-../libs/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
 
 /usr/include/newlib/c++/10.3.1/limits:
 
@@ -7084,7 +7039,3 @@ build/rp2040_sdio.pio.h:
 ../libs/pico-sdk/src/common/pico_util/include/pico/util/pheap.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sysinfo.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c:
-
-../libs/pico-sdk/src/rp2_common/hardware_pll/include/hardware/pll.h:

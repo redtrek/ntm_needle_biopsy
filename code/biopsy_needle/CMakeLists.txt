@@ -29,9 +29,13 @@ pico_sdk_init()
 add_executable(${NAME}
     src/main.cpp
     src/hw_config.c
+    src/msc_disk.c
+    src/usb_descriptors.c
     libs/SSD1306/ssd1306.c
     libs/SSD1306/ssd1306.h
     libs/SSD1306/font.h
+    libs/FX29/fx29.h
+    libs/FX29/fx29.c
 )
 
 add_subdirectory(libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
@@ -47,10 +51,13 @@ target_link_libraries(${NAME} PRIVATE
     pico_multicore
     ina219
     no-OS-FatFS-SD-SDIO-SPI-RPi-Pico
+    tinyusb_additions
+    tinyusb_board
+    tinyusb_device
 )
 
 target_include_directories(${NAME} PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/include
+    ${CMAKE_CURRENT_LIST_DIR}/src/include
 )
 
 # generate uf2 output files for flash

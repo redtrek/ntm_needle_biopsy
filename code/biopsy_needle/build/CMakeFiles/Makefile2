@@ -1817,12 +1817,12 @@ CMakeFiles/biopsy_needle.dir/all: build/CMakeFiles/no-OS-FatFS-SD-SDIO-SPI-RPi-P
 CMakeFiles/biopsy_needle.dir/all: libs/INA219_driver/CMakeFiles/ina219.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62 "Built target biopsy_needle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63 "Built target biopsy_needle"
 .PHONY : CMakeFiles/biopsy_needle.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/biopsy_needle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 100
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 99
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/biopsy_needle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 0
 .PHONY : CMakeFiles/biopsy_needle.dir/rule
@@ -1843,12 +1843,12 @@ CMakeFiles/biopsy_needle.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=63,64 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=64 "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -1869,7 +1869,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num= "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=65 "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1895,12 +1895,12 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=65,66 "Built target bs2_default_library"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=66,67 "Built target bs2_default_library"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
@@ -1973,12 +1973,12 @@ build/CMakeFiles/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h.dir/clean:
 libs/INA219_driver/CMakeFiles/ina219.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f libs/INA219_driver/CMakeFiles/ina219.dir/build.make libs/INA219_driver/CMakeFiles/ina219.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/INA219_driver/CMakeFiles/ina219.dir/build.make libs/INA219_driver/CMakeFiles/ina219.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target ina219"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target ina219"
 .PHONY : libs/INA219_driver/CMakeFiles/ina219.dir/all
 
 # Build rule for subdir invocation for target.
 libs/INA219_driver/CMakeFiles/ina219.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/INA219_driver/CMakeFiles/ina219.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles 0
 .PHONY : libs/INA219_driver/CMakeFiles/ina219.dir/rule

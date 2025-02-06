@@ -73,6 +73,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_TIME_ADAPTER=1"
   "LIB_PICO_UNIQUE_ID=1"
   "LIB_PICO_UTIL=1"
+  "LIB_TINYUSB_BOARD=1"
+  "LIB_TINYUSB_DEVICE=1"
   "PICO_32BIT=1"
   "PICO_BOARD=\"adafruit_feather_rp2040\""
   "PICO_BUILD=1"
@@ -84,6 +86,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "PICO_NO_HARDWARE=0"
   "PICO_ON_DEVICE=1"
   "PICO_RP2040=1"
+  "PICO_RP2040_USB_DEVICE_ENUMERATION_FIX=1"
   "PICO_RP2040_USB_DEVICE_UFRAME_FIX=1"
   "PICO_TARGET_NAME=\"biopsy_needle\""
   "PICO_USE_BLOCKED_RAM=0"
@@ -91,7 +94,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "../include"
+  "../src/include"
   "../libs/pico-sdk/src/rp2_common/pico_atomic/include"
   "../libs/pico-sdk/lib/tinyusb/src"
   "../libs/INA219_driver"
@@ -99,6 +102,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source"
   "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver"
   "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include"
+  "../libs/pico-sdk/src/rp2_common/tinyusb/include"
+  "../libs/pico-sdk/lib/tinyusb/hw"
   "../libs/pico-sdk/src/common/pico_stdlib_headers/include"
   "../libs/pico-sdk/src/rp2_common/hardware_gpio/include"
   "../libs/pico-sdk/src/common/pico_base_headers/include"
@@ -170,6 +175,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/FX29/fx29.c" "CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/SSD1306/ssd1306.c" "CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o.d"
@@ -191,6 +197,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o.d"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d"
@@ -270,6 +277,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/hw_config.c" "CMakeFiles/biopsy_needle.dir/src/hw_config.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/hw_config.c.o.d"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/msc_disk.c" "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o.d"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/usb_descriptors.c" "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/main.cpp" "CMakeFiles/biopsy_needle.dir/src/main.cpp.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/main.cpp.o.d"
   )

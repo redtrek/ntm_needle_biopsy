@@ -2,10 +2,10 @@
  * @file main.cpp
  * @author Thomas Chang
  * @brief This is the main file for the electronic biopsy needle. It handles the operation of the state machine, sensors, motors, and display.
- * @version 0.1
- * @date 2024-12-11
+ * @version 1.0
+ * @date 2025-02-06
  * 
- * @copyright Copyright (c) 2024
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -22,8 +22,16 @@
 #include "f_util.h"
 #include "ff.h"
 
+// - MSC-specific
+#include <bsp/board.h>
+#include <stdlib.h>
+#include <tusb.h>
+#include "include/tusb_config.h"
+
+// Peripheral Devices
 #include "../libs/INA219_driver/INA219.h"
 #include "../libs/SSD1306/ssd1306.h"
+#include "../libs/FX29/fx29.h"
 
 
 #define I2C0_SDA    12  // 12
@@ -36,6 +44,7 @@
 
 #define OLED_ADDR   0x3C
 #define INA219_ADDR 0x40
+#define FX29_ADDR   0x28
 
 #define state_input 11   // 11
 #define speed_input 29   // A3
@@ -67,6 +76,7 @@ float getRevolutions();
 void getRPM();
 void displayRPM();
 void displayCurrent();
+string stateToString();
 
 
 // ==== Globals ==== //
@@ -91,13 +101,20 @@ absolute_time_t currBug = get_absolute_time();
 volatile bool motor_flag = false;
 volatile bool button_flag = false;
 
+// ==== Data Logging ==== //
+FATFS filesys;
+FRESULT fr = f_mount(&filesys, "", 1);
+FIL fil;
+const char* const filename = "24_circuit.txt";
+
 // ==== Motor Operation State Machine ==== //
 enum states {
     WAIT,
     STANDBY,
     CUTTING,
     REMOVAL,
-    EXITING
+    EXITING,
+    PROCESSING
 };
 enum states state, nextState;
 
@@ -115,30 +132,31 @@ void gpio_ISR(uint gpio, uint32_t events) {
     }
 }
 
-//FATFS filesys;
-//FRESULT fr = f_mount(&filesys, "", 1);
-//FIL fil;
-
 int main() {
+    // MSC: Initialize board
+    board_init();
+    printf("\033[2J\033[H");
+    tud_init(BOARD_TUD_RHPORT);
+
     // Initialize serial port and wait for serial monitor
     stdio_init_all();
     gpio_init(PWM);
     gpio_put(PWM, 0);
     sleep_ms(3000);
 
-    // FatFS
-
     // ==== Pin Initialization ==== //
     {
+        // Potentiometer Input
         adc_init();
         adc_gpio_init(speed_input);
         adc_select_input(3);
 
+        // Pushbutton State Input
         gpio_init(state_input);
         gpio_set_dir(state_input, GPIO_IN);
         gpio_pull_down(state_input);
         
-        
+        // Motor Control
         gpio_set_function(PWM, GPIO_FUNC_PWM);
         pwm_set_clkdiv(slice, 48.83f);
         pwm_set_wrap(slice, 255);
@@ -147,10 +165,10 @@ int main() {
         gpio_init(DIR);
         gpio_set_dir(DIR, GPIO_OUT);
 
+        // Motor Feedback
         gpio_init(motorA_out);
         gpio_set_dir(motorA_out, GPIO_IN);
         gpio_pull_up(motorA_out);
-        
         gpio_init(motorB_out);
         gpio_set_dir(motorB_out, GPIO_IN);
         gpio_pull_up(motorB_out);
@@ -159,7 +177,7 @@ int main() {
     // ==== General Initialization ==== //
     init_i2c0();
     oled_init();
-    //sd_test();
+    sd_test();
     
     state = WAIT;
     nextState = STANDBY;
@@ -171,39 +189,45 @@ int main() {
     gpio_set_irq_enabled_with_callback(motorA_out, GPIO_IRQ_EDGE_FALL, true, &gpio_ISR);
     gpio_set_irq_enabled(state_input, GPIO_IRQ_EDGE_FALL, true);
 
-    const char* const filename = "demo.txt";
+    // Unmount drive
+    //f_unmount("");
+
 
     while(1) {
+        // TinyUSB handling MSC capabilities
+        tud_task();
+
         handleButton();
         getRPM();
         
         current = ina219.read_current();
-        float voltage = ina219.read_voltage();
         
         switch(state) {
-            case WAIT:
-                
+            case WAIT: {
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
                 nextState = STANDBY;
                 break;
-
-            case STANDBY:
+            }
+            case STANDBY: {
+                f_printf(&fil, "STANDBY\n");
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                
+                
 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f);         
-
                 displayState();
+
                 nextState = CUTTING;
                 break;
-            
-            case CUTTING:
-                displayState();
-                nextState = REMOVAL;
+            }
+            case CUTTING: {
                 speed_lvl = speed_lvl;
+                
+                f_printf(&fil, "CUTTING\n");
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() > fwRev) {
@@ -214,22 +238,28 @@ int main() {
                     gpio_put(DIR, 1);
                     pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
-
+                displayState();
+                
+                nextState = REMOVAL;
                 break;
-            
-            case REMOVAL:
+            }
+            case REMOVAL: {
                 gpio_put(DIR, 0);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                
+                f_printf(&fil, "REMOVAL\n");
+
                 temp_speed = getInputSpeed();
                 speed_lvl = int(temp_speed / 100.0f * 255.0f);
-                
-
                 displayState();
+
                 nextState = EXITING;
                 break;
-            
-            case EXITING:
+            }
+            case EXITING: {
                 speed_lvl = speed_lvl;
+
+                f_printf(&fil, "EXITING\n");
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() < bwRev) {
@@ -240,11 +270,21 @@ int main() {
                     gpio_put(DIR, 0);
                     pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
+                displayState();
+
+                nextState = PROCESSING;
+                break;
+            }
+            case PROCESSING: {
+                gpio_put(DIR, 1);
+                pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+
+                fr = f_close(&fil);
 
                 displayState();
                 nextState = STANDBY;
                 break;
-            
+            }
         }
 
     }
@@ -285,41 +325,66 @@ void oled_init() {
         printf("OLED initialization failed.\n");
     }
 }
-/*
+
 void sd_test() {
-    FATFS filesys;
-    FRESULT fr = f_mount(&filesys, "", 1);
-    
+    //FATFS filesys;
+    //FRESULT fr = f_mount(&filesys, "", 1);
     if (fr != FR_OK) {
         while(true) {
-            printf("ERROR: could not mount filesystem \n", fr);
+            printf("ERROR: could not mount filesystem (%d)\r\n", fr);
+            sleep_ms(1000);
         }
     }
-    FIL fil;
-    const char* const filename = "testing03.txt";
+
+    //FIL fil;
+    //const char* const filename = "new_circuit.txt";
+
+    // TXT file test
+    {
+        fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
+        if (fr != FR_OK && FR_EXIST != fr) {
+            while(true) {
+                printf("ERROR: Could not open file (%d)\r\n", fr);
+                sleep_ms(1000);
+            }
+        }
+
+        if (f_printf(&fil, "Testing for MSC \n") < 0) {
+            while(true) {
+                printf("ERROR: Could not write to file (%d)\r\n", fr);
+                sleep_ms(1000);
+            }
+        }
+        /*
+        fr = f_close(&fil);
+        if (fr != FR_OK) {
+            while (true) {
+                printf("ERROR: Could not close file (%d)\r\n", fr);
+                sleep_ms(1000);
+            }
+        }
+        */
+    }
     
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    if (fr != FR_OK) {
-        
-        while (true) {
-            printf("ERROR: Could not open file (%d)\r\n", fr);
-        }
+
+    // CSV file test
+    /*
+    {
+        const char* const filename2 = "csvtest2.csv";
+        fr = f_open(&fil, filename2, FA_OPEN_APPEND | FA_WRITE);
+        string pstate = "CUTTING";
+        string ptime = "21:25:06";
+        float pcurrent = 0.500;
+        float prpm = 256.8;
+        f_printf(&fil, "State, Time, Current, RPM\n");
+        f_printf(&fil, "%s,%s,%f,%f\n", pstate.c_str(), ptime.c_str(), pcurrent, prpm);
+        fr = f_close(&fil);
+        // Unmount drive
+        f_unmount("");
     }
-    f_printf(&fil, "Testing new library again \n");
-    
-    fr = f_close(&fil);
-    if (fr != FR_OK) {
-        while (true) {
-            printf("ERROR: Could not close file (%d)\r\n", fr);
-        }
-    }
-
-
-    // Unmount drive
-    f_unmount("");
-
+    */
 }
-*/
+
 void displayInputSpeed() {
     std::string temp = "Input Speed: " + to_string(temp_speed) + "%";
     const char* in_speed = temp.c_str();
@@ -351,6 +416,9 @@ void displayState() {
                 displayCurrent();
                 break;
             
+            case PROCESSING:
+                ssd1306_draw_string(&oled, 0, 2, 2, "PROCESSING");
+                break;
         }
     ssd1306_show(&oled);
 }
@@ -367,7 +435,7 @@ void displayCurrent() {
     ssd1306_draw_string(&oled, 0, 40, 1 , curr);
 }
 
-std::string stateToString() {
+string stateToString() {
     switch(state) {
         case WAIT:    return "WAIT";
         case STANDBY: return "STANDBY";
@@ -415,6 +483,7 @@ void handleButton() {
                 //std::string temp = "State: " + stateToString() + ":\n";
                 //const TCHAR* name = temp.c_str();
                 //f_printf(&fil, name);
+
             }
             button_flag = false; 
         }

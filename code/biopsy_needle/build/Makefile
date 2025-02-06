@@ -207,6 +207,30 @@ ina219/fast:
 	$(MAKE) $(MAKESILENT) -f libs/INA219_driver/CMakeFiles/ina219.dir/build.make libs/INA219_driver/CMakeFiles/ina219.dir/build
 .PHONY : ina219/fast
 
+libs/FX29/fx29.o: libs/FX29/fx29.c.o
+.PHONY : libs/FX29/fx29.o
+
+# target to build an object file
+libs/FX29/fx29.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o
+.PHONY : libs/FX29/fx29.c.o
+
+libs/FX29/fx29.i: libs/FX29/fx29.c.i
+.PHONY : libs/FX29/fx29.i
+
+# target to preprocess a source file
+libs/FX29/fx29.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.i
+.PHONY : libs/FX29/fx29.c.i
+
+libs/FX29/fx29.s: libs/FX29/fx29.c.s
+.PHONY : libs/FX29/fx29.s
+
+# target to generate assembly for a file
+libs/FX29/fx29.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.s
+.PHONY : libs/FX29/fx29.c.s
+
 libs/SSD1306/ssd1306.o: libs/SSD1306/ssd1306.c.o
 .PHONY : libs/SSD1306/ssd1306.o
 
@@ -710,6 +734,30 @@ libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.s: libs/no-OS-FatFS-SD-SDIO-S
 libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
 .PHONY : libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.s
+
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o: libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o
+
+# target to build an object file
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
+
+# target to preprocess a source file
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
+
+# target to generate assembly for a file
+libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
 
 libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
@@ -2743,6 +2791,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/msc_disk.o: src/msc_disk.c.o
+.PHONY : src/msc_disk.o
+
+# target to build an object file
+src/msc_disk.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o
+.PHONY : src/msc_disk.c.o
+
+src/msc_disk.i: src/msc_disk.c.i
+.PHONY : src/msc_disk.i
+
+# target to preprocess a source file
+src/msc_disk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/msc_disk.c.i
+.PHONY : src/msc_disk.c.i
+
+src/msc_disk.s: src/msc_disk.c.s
+.PHONY : src/msc_disk.s
+
+# target to generate assembly for a file
+src/msc_disk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/msc_disk.c.s
+.PHONY : src/msc_disk.c.s
+
+src/usb_descriptors.o: src/usb_descriptors.c.o
+.PHONY : src/usb_descriptors.o
+
+# target to build an object file
+src/usb_descriptors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o
+.PHONY : src/usb_descriptors.c.o
+
+src/usb_descriptors.i: src/usb_descriptors.c.i
+.PHONY : src/usb_descriptors.i
+
+# target to preprocess a source file
+src/usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.i
+.PHONY : src/usb_descriptors.c.i
+
+src/usb_descriptors.s: src/usb_descriptors.c.s
+.PHONY : src/usb_descriptors.s
+
+# target to generate assembly for a file
+src/usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.s
+.PHONY : src/usb_descriptors.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2758,6 +2854,9 @@ help:
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
 	@echo "... ina219"
+	@echo "... libs/FX29/fx29.o"
+	@echo "... libs/FX29/fx29.i"
+	@echo "... libs/FX29/fx29.s"
 	@echo "... libs/SSD1306/ssd1306.o"
 	@echo "... libs/SSD1306/ssd1306.i"
 	@echo "... libs/SSD1306/ssd1306.s"
@@ -2821,6 +2920,9 @@ help:
 	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.o"
 	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.i"
 	@echo "... libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.s"
+	@echo "... libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o"
+	@echo "... libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
+	@echo "... libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... libs/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -3075,6 +3177,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/msc_disk.o"
+	@echo "... src/msc_disk.i"
+	@echo "... src/msc_disk.s"
+	@echo "... src/usb_descriptors.o"
+	@echo "... src/usb_descriptors.i"
+	@echo "... src/usb_descriptors.s"
 .PHONY : help
 
 
