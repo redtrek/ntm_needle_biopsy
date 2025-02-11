@@ -3,6 +3,7 @@
         "board.h": "c",
         "hw_config.h": "c",
         "tusb.h": "c",
-        "msc.h": "c"
+        "msc.h": "c",
+        "usbd.h": "c"
     }
 }

@@ -15,6 +15,7 @@
 #include "hardware/adc.h"
 #include "hardware/pwm.h"
 #include "hardware/irq.h"
+#include "hardware/uart.h"
 
 // Includes for the FatFS Library
 #include "pico/stdlib.h"
@@ -22,7 +23,7 @@
 #include "f_util.h"
 #include "ff.h"
 
-// - MSC-specific
+// MSC-specific
 #include <bsp/board.h>
 #include <stdlib.h>
 #include <tusb.h>
@@ -42,6 +43,11 @@
 #define SPI0_MISO   20  // MISO
 #define SPI0_CS     1   // RX
 
+#define UART_TX     24  // 24
+#define UART_RX     25  // 25
+#define UART_ID     uart1
+#define BAUD_RATE   115200
+
 #define OLED_ADDR   0x3C
 #define INA219_ADDR 0x40
 #define FX29_ADDR   0x28
@@ -58,6 +64,8 @@
 #define motorA_out  9    // 9
 #define motorB_out  8    // SCL
 
+#define MAF_sz      5    // Window size for Moving Average Filter.
+
 using namespace std;
 
 // ==== Experimental Values ==== //
@@ -65,19 +73,19 @@ int fwRev = 50;
 int bwRev = 0;
 
 // ==== Function Prototypes ==== //
-void init_i2c0();
+void gpio_init();
 void oled_init();
 void sd_test();
+string stateToString();
 void displayState();
 void displayInputSpeed();
+void displayRPM();
+void displayCurrent();
 void handleButton();
 long getInputSpeed();
 float getRevolutions();
 void getRPM();
-void displayRPM();
-void displayCurrent();
-string stateToString();
-
+void createDataFile();
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -89,6 +97,11 @@ absolute_time_t prevTime = get_absolute_time();
 absolute_time_t currTime = get_absolute_time();
 float rpm = 0;
 float current = 0;
+float lp_current = 0;
+float lp_alpha = 0.1; // Smoothing factor for LP Filter
+float MAF[MAF_sz] = {0};
+int MAF_counter = 0;
+float MAF_sum = 0;
 uint slice = pwm_gpio_to_slice_num(PWM);
 uint channel = pwm_gpio_to_channel(PWM);
 
@@ -97,15 +110,15 @@ uint channel = pwm_gpio_to_channel(PWM);
 absolute_time_t prevBug = get_absolute_time();
 absolute_time_t currBug = get_absolute_time();
 
-// ==== Interrupt Flags ==== //
+// ==== Flags ==== //
 volatile bool motor_flag = false;
 volatile bool button_flag = false;
+volatile bool msc_flag = true;
 
 // ==== Data Logging ==== //
 FATFS filesys;
-FRESULT fr = f_mount(&filesys, "", 1);
 FIL fil;
-const char* const filename = "24_circuit.txt";
+TCHAR filename[20] = "data0.csv\0";
 
 // ==== Motor Operation State Machine ==== //
 enum states {
@@ -143,41 +156,10 @@ int main() {
     gpio_init(PWM);
     gpio_put(PWM, 0);
     sleep_ms(3000);
-
-    // ==== Pin Initialization ==== //
-    {
-        // Potentiometer Input
-        adc_init();
-        adc_gpio_init(speed_input);
-        adc_select_input(3);
-
-        // Pushbutton State Input
-        gpio_init(state_input);
-        gpio_set_dir(state_input, GPIO_IN);
-        gpio_pull_down(state_input);
-        
-        // Motor Control
-        gpio_set_function(PWM, GPIO_FUNC_PWM);
-        pwm_set_clkdiv(slice, 48.83f);
-        pwm_set_wrap(slice, 255);
-        pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-        pwm_set_enabled(slice, true);
-        gpio_init(DIR);
-        gpio_set_dir(DIR, GPIO_OUT);
-
-        // Motor Feedback
-        gpio_init(motorA_out);
-        gpio_set_dir(motorA_out, GPIO_IN);
-        gpio_pull_up(motorA_out);
-        gpio_init(motorB_out);
-        gpio_set_dir(motorB_out, GPIO_IN);
-        gpio_pull_up(motorB_out);
-    }
-
+    
     // ==== General Initialization ==== //
-    init_i2c0();
+    gpio_init();
     oled_init();
-    sd_test();
     
     state = WAIT;
     nextState = STANDBY;
@@ -188,22 +170,37 @@ int main() {
     // ==== Interrupts ==== //
     gpio_set_irq_enabled_with_callback(motorA_out, GPIO_IRQ_EDGE_FALL, true, &gpio_ISR);
     gpio_set_irq_enabled(state_input, GPIO_IRQ_EDGE_FALL, true);
-
-    // Unmount drive
-    //f_unmount("");
-
+    
 
     while(1) {
-        // TinyUSB handling MSC capabilities
-        tud_task();
+        //uart_putc(UART_ID, 'A');
+        //uart_puts(uart1, "Bruh\n");
+        //printf("Bruh\n");
+        absolute_time_t now = get_absolute_time();
+        int64_t time_ms = to_ms_since_boot(now);
 
         handleButton();
         getRPM();
         
-        current = ina219.read_current();
+        current = ina219.read_current() * 1000;
         
+        if (MAF_counter == MAF_sz) {
+            MAF_counter = 0;
+        }
+        // Remove oldest value and add newest value to sum
+        MAF_sum -= MAF[MAF_counter];
+        MAF_sum += current;
+        MAF[MAF_counter] = current;
+
+        MAF_counter++;
+        float MAF_current = MAF_sum * 1.0f/MAF_sz;
+
         switch(state) {
             case WAIT: {
+                // Enable MSC
+                f_unmount("");
+                tud_task();
+
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
@@ -211,12 +208,14 @@ int main() {
                 break;
             }
             case STANDBY: {
-                f_printf(&fil, "STANDBY\n");
+                // Disable MSC
+                tud_disconnect();
+                f_mount(&filesys, "", 1);
+                tud_deinit(BOARD_TUD_RHPORT);
+
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
-                
-
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f);         
                 displayState();
@@ -227,7 +226,9 @@ int main() {
             case CUTTING: {
                 speed_lvl = speed_lvl;
                 
-                f_printf(&fil, "CUTTING\n");
+                float displacement = getRevolutions() * 0.5f;
+                lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() > fwRev) {
@@ -259,13 +260,15 @@ int main() {
             case EXITING: {
                 speed_lvl = speed_lvl;
 
-                f_printf(&fil, "EXITING\n");
+                float displacement = getRevolutions() * 0.5f;
+                lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() < bwRev) {
                     gpio_put(DIR, 1);
                     pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-                    state = STANDBY;
+                    state = PROCESSING;
                 } else {
                     gpio_put(DIR, 0);
                     pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
@@ -276,13 +279,23 @@ int main() {
                 break;
             }
             case PROCESSING: {
+
+                f_close(&fil);
+                f_unmount("");
+
+                /*
+                tud_init(BOARD_TUD_RHPORT);
+                tud_connect();
+                tud_task();
+                */
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
 
-                fr = f_close(&fil);
+                
 
                 displayState();
                 nextState = STANDBY;
+
                 break;
             }
         }
@@ -291,12 +304,45 @@ int main() {
     return 0;
 }
 
-void init_i2c0() {
+void gpio_init() {
+    // Potentiometer Input
+    adc_init();
+    adc_gpio_init(speed_input);
+    adc_select_input(3);
+
+    // Pushbutton State Input
+    gpio_init(state_input);
+    gpio_set_dir(state_input, GPIO_IN);
+    gpio_pull_down(state_input);
+    
+    // Motor Control
+    gpio_set_function(PWM, GPIO_FUNC_PWM);
+    pwm_set_clkdiv(slice, 48.83f);
+    pwm_set_wrap(slice, 255);
+    pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+    pwm_set_enabled(slice, true);
+    gpio_init(DIR);
+    gpio_set_dir(DIR, GPIO_OUT);
+
+    // Motor Feedback - Output Signals
+    gpio_init(motorA_out);
+    gpio_set_dir(motorA_out, GPIO_IN);
+    gpio_pull_up(motorA_out);
+    gpio_init(motorB_out);
+    gpio_set_dir(motorB_out, GPIO_IN);
+    gpio_pull_up(motorB_out);
+    
+    // I2C Initialization
     i2c_init(i2c0, 400000);
     gpio_set_function(I2C0_SDA, GPIO_FUNC_I2C);
     gpio_set_function(I2C0_SCL, GPIO_FUNC_I2C);
     gpio_pull_up(I2C0_SDA);
     gpio_pull_up(I2C0_SCL);
+
+    // UART Initialization - Second Serial Monitor
+    uart_init(uart1, BAUD_RATE);
+    gpio_set_function(UART_TX, UART_FUNCSEL_NUM(UART_ID, UART_TX));
+    gpio_set_function(UART_RX, UART_FUNCSEL_NUM(UART_ID, UART_RX));
 }
 
 void oled_init() {
@@ -326,9 +372,23 @@ void oled_init() {
     }
 }
 
+void createDataFile() {
+    
+    int fileNum = 0;
+    FRESULT file_created = f_open(&fil, filename, FA_CREATE_NEW | FA_WRITE);
+    while (file_created == FR_EXIST) {
+        fileNum++;
+        sprintf(filename, "data%d.csv", fileNum);
+        file_created = f_open(&fil, filename, FA_CREATE_NEW | FA_WRITE);
+    }
+
+    // Print header of file
+    f_printf(&fil, "State, Time(ms), Current(mA), CurrentLP(mA), CurrentMAF(mA), RPM, Displacement(mm)\n");
+}
+
 void sd_test() {
     //FATFS filesys;
-    //FRESULT fr = f_mount(&filesys, "", 1);
+    FRESULT fr = f_mount(&filesys, "", 1);
     if (fr != FR_OK) {
         while(true) {
             printf("ERROR: could not mount filesystem (%d)\r\n", fr);
@@ -479,11 +539,11 @@ void handleButton() {
         currTime = get_absolute_time();
         if (absolute_time_diff_us(prevTime, currTime) >= debounce_us) {
             if (gpio_get(state_input) == 0) {
+                
                 state = nextState;
-                //std::string temp = "State: " + stateToString() + ":\n";
-                //const TCHAR* name = temp.c_str();
-                //f_printf(&fil, name);
-
+                if (state == CUTTING) {
+                    createDataFile();
+                }
             }
             button_flag = false; 
         }
