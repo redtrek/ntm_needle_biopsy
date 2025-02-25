@@ -5865,6 +5865,9 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h \
   ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \

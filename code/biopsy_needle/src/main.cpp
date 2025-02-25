@@ -16,6 +16,7 @@
 #include "hardware/pwm.h"
 #include "hardware/irq.h"
 #include "hardware/uart.h"
+#include "hardware/watchdog.h"
 
 // Includes for the FatFS Library
 #include "pico/stdlib.h"
@@ -54,8 +55,11 @@
 
 #define state_input 11   // 11
 #define speed_input 29   // A3
+#define msc_input   10   // 10
+//#define msc_signal  10   // 10
 
-#define debounce_us   10000
+#define debounce_us   100000
+#define hold_us       3000000 // 3 second hold for zeroing functionality
 #define potIterations 1000
 
 #define PWM         0    // TX
@@ -75,17 +79,20 @@ int bwRev = 0;
 // ==== Function Prototypes ==== //
 void gpio_init();
 void oled_init();
-void sd_test();
 string stateToString();
 void displayState();
 void displayInputSpeed();
 void displayRPM();
 void displayCurrent();
+void displayPos();
 void handleButton();
+void handleRelease();
+void handleMSCButton();
 long getInputSpeed();
 float getRevolutions();
 void getRPM();
 void createDataFile();
+void resetFiltering();
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -93,10 +100,14 @@ uint16_t speed_lvl = 0;
 long temp_speed = 0;
 int count = 0;
 int numPulses = 0;
+absolute_time_t now = get_absolute_time();
 absolute_time_t prevTime = get_absolute_time();
-absolute_time_t currTime = get_absolute_time();
+absolute_time_t pressTime = get_absolute_time();
+absolute_time_t pressedTime = get_absolute_time();
+absolute_time_t mscPressTime = get_absolute_time();
 float rpm = 0;
 float current = 0;
+float displacement = 0;
 float lp_current = 0;
 float lp_alpha = 0.1; // Smoothing factor for LP Filter
 float MAF[MAF_sz] = {0};
@@ -112,8 +123,9 @@ absolute_time_t currBug = get_absolute_time();
 
 // ==== Flags ==== //
 volatile bool motor_flag = false;
-volatile bool button_flag = false;
-volatile bool msc_flag = true;
+volatile bool button_press_flag = false;
+volatile bool button_release_flag = false;
+volatile bool button_msc_flag = false;
 
 // ==== Data Logging ==== //
 FATFS filesys;
@@ -127,7 +139,8 @@ enum states {
     CUTTING,
     REMOVAL,
     EXITING,
-    PROCESSING
+    FINISH,
+    ZERO
 };
 enum states state, nextState;
 
@@ -141,7 +154,16 @@ void gpio_ISR(uint gpio, uint32_t events) {
                 count++;
             }
     } else if (gpio == state_input) {
-        button_flag = true;
+        if (gpio_get(state_input) == 1) {
+            pressTime = get_absolute_time();
+            button_press_flag = true;
+        } else if (gpio_get(state_input) == 0) {
+            button_release_flag = true;
+        }
+        
+    } else if (gpio == msc_input) {
+        mscPressTime = get_absolute_time();
+        button_msc_flag = true;
     }
 }
 
@@ -169,21 +191,24 @@ int main() {
 
     // ==== Interrupts ==== //
     gpio_set_irq_enabled_with_callback(motorA_out, GPIO_IRQ_EDGE_FALL, true, &gpio_ISR);
-    gpio_set_irq_enabled(state_input, GPIO_IRQ_EDGE_FALL, true);
-    
+    gpio_set_irq_enabled(state_input, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true);
+    gpio_set_irq_enabled(msc_input, GPIO_IRQ_EDGE_FALL, true);
 
     while(1) {
         //uart_putc(UART_ID, 'A');
         //uart_puts(uart1, "Bruh\n");
         //printf("Bruh\n");
-        absolute_time_t now = get_absolute_time();
+        now = get_absolute_time();
         int64_t time_ms = to_ms_since_boot(now);
 
+        handleRelease();
         handleButton();
+        handleMSCButton();
         getRPM();
         
         current = ina219.read_current() * 1000;
-        
+        displacement = getRevolutions() * 0.5f;
+
         if (MAF_counter == MAF_sz) {
             MAF_counter = 0;
         }
@@ -208,16 +233,21 @@ int main() {
                 break;
             }
             case STANDBY: {
+
+
                 // Disable MSC
                 tud_disconnect();
                 f_mount(&filesys, "", 1);
                 tud_deinit(BOARD_TUD_RHPORT);
+
+                //gpio_put(msc_signal, 0);
 
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f);         
+                resetFiltering();
                 displayState();
 
                 nextState = CUTTING;
@@ -226,7 +256,6 @@ int main() {
             case CUTTING: {
                 speed_lvl = speed_lvl;
                 
-                float displacement = getRevolutions() * 0.5f;
                 lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
                 f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement);
 
@@ -245,13 +274,13 @@ int main() {
                 break;
             }
             case REMOVAL: {
+
                 gpio_put(DIR, 0);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-                
-                f_printf(&fil, "REMOVAL\n");
 
                 temp_speed = getInputSpeed();
                 speed_lvl = int(temp_speed / 100.0f * 255.0f);
+                resetFiltering();
                 displayState();
 
                 nextState = EXITING;
@@ -260,7 +289,6 @@ int main() {
             case EXITING: {
                 speed_lvl = speed_lvl;
 
-                float displacement = getRevolutions() * 0.5f;
                 lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
                 f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement);
 
@@ -268,34 +296,40 @@ int main() {
                 if (getRevolutions() < bwRev) {
                     gpio_put(DIR, 1);
                     pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-                    state = PROCESSING;
+                    state = FINISH;
                 } else {
                     gpio_put(DIR, 0);
                     pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
                 displayState();
 
-                nextState = PROCESSING;
+                nextState = FINISH;
                 break;
             }
-            case PROCESSING: {
-
+            case FINISH: {
                 f_close(&fil);
                 f_unmount("");
 
-                /*
-                tud_init(BOARD_TUD_RHPORT);
-                tud_connect();
-                tud_task();
-                */
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-
                 
-
                 displayState();
-                nextState = STANDBY;
 
+                nextState = STANDBY;
+                break;
+            }
+            case ZERO: {
+                gpio_put(DIR, 1);
+                pwm_set_chan_level(slice, PWM_CHAN_A, 255);
+
+                if (current > 1.5f) {
+                    count = 0;
+                    state = FINISH;
+                }
+                
+                displayState();
+
+                nextState = FINISH;
                 break;
             }
         }
@@ -314,6 +348,11 @@ void gpio_init() {
     gpio_init(state_input);
     gpio_set_dir(state_input, GPIO_IN);
     gpio_pull_down(state_input);
+
+    // Pushbutton MSC Input
+    gpio_init(msc_input);
+    gpio_set_dir(msc_input, GPIO_IN);
+    gpio_pull_down(msc_input);
     
     // Motor Control
     gpio_set_function(PWM, GPIO_FUNC_PWM);
@@ -343,6 +382,13 @@ void gpio_init() {
     uart_init(uart1, BAUD_RATE);
     gpio_set_function(UART_TX, UART_FUNCSEL_NUM(UART_ID, UART_TX));
     gpio_set_function(UART_RX, UART_FUNCSEL_NUM(UART_ID, UART_RX));
+
+    // MSC Reset Pin Control
+    /*
+    gpio_init(msc_signal);
+    gpio_put(msc_signal, 1);
+    gpio_set_dir(msc_signal, GPIO_OUT);
+    */
 }
 
 void oled_init() {
@@ -359,13 +405,11 @@ void oled_init() {
 
     if (oled_status) {
         ssd1306_clear(&oled);
-        ssd1306_draw_string(
-            &oled,
-            0,
-            2,
-            1,
-            "Starting... :)"
-        );
+        ssd1306_draw_string(&oled, 0, 2, 2, "RECORDS");
+        ssd1306_draw_string(&oled, 0, 20, 1, "PRESS state button to");
+        ssd1306_draw_string(&oled, 0, 30, 1, "begin operation.");
+        ssd1306_draw_string(&oled, 0, 44, 1, "HOLD state button to");
+        ssd1306_draw_string(&oled, 0, 55, 1, "zero device.");
         ssd1306_show(&oled);
     } else {
         printf("OLED initialization failed.\n");
@@ -386,69 +430,10 @@ void createDataFile() {
     f_printf(&fil, "State, Time(ms), Current(mA), CurrentLP(mA), CurrentMAF(mA), RPM, Displacement(mm)\n");
 }
 
-void sd_test() {
-    //FATFS filesys;
-    FRESULT fr = f_mount(&filesys, "", 1);
-    if (fr != FR_OK) {
-        while(true) {
-            printf("ERROR: could not mount filesystem (%d)\r\n", fr);
-            sleep_ms(1000);
-        }
-    }
-
-    //FIL fil;
-    //const char* const filename = "new_circuit.txt";
-
-    // TXT file test
-    {
-        fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-        if (fr != FR_OK && FR_EXIST != fr) {
-            while(true) {
-                printf("ERROR: Could not open file (%d)\r\n", fr);
-                sleep_ms(1000);
-            }
-        }
-
-        if (f_printf(&fil, "Testing for MSC \n") < 0) {
-            while(true) {
-                printf("ERROR: Could not write to file (%d)\r\n", fr);
-                sleep_ms(1000);
-            }
-        }
-        /*
-        fr = f_close(&fil);
-        if (fr != FR_OK) {
-            while (true) {
-                printf("ERROR: Could not close file (%d)\r\n", fr);
-                sleep_ms(1000);
-            }
-        }
-        */
-    }
-    
-
-    // CSV file test
-    /*
-    {
-        const char* const filename2 = "csvtest2.csv";
-        fr = f_open(&fil, filename2, FA_OPEN_APPEND | FA_WRITE);
-        string pstate = "CUTTING";
-        string ptime = "21:25:06";
-        float pcurrent = 0.500;
-        float prpm = 256.8;
-        f_printf(&fil, "State, Time, Current, RPM\n");
-        f_printf(&fil, "%s,%s,%f,%f\n", pstate.c_str(), ptime.c_str(), pcurrent, prpm);
-        fr = f_close(&fil);
-        // Unmount drive
-        f_unmount("");
-    }
-    */
-}
-
 void displayInputSpeed() {
-    std::string temp = "Input Speed: " + to_string(temp_speed) + "%";
+    std::string temp = "INPUT SPEED: " + to_string(temp_speed) + "%";
     const char* in_speed = temp.c_str();
-    ssd1306_draw_string(&oled, 0, 20, 1, in_speed);
+    ssd1306_draw_string(&oled, 0, 50, 1, in_speed);
 }
 
 void displayState() {
@@ -456,6 +441,8 @@ void displayState() {
     switch(state) {
             case STANDBY:
                 ssd1306_draw_string(&oled, 0, 2, 2, "STANDBY");
+                ssd1306_draw_string(&oled, 0, 20, 1, "PRESS MSC button to");
+                ssd1306_draw_string(&oled, 0, 30, 1, "access past logs.");
                 displayInputSpeed();
                 break;
             
@@ -463,10 +450,12 @@ void displayState() {
                 ssd1306_draw_string(&oled, 0, 2, 2, "CUTTING");
                 displayRPM();
                 displayCurrent();
+                displayPos();
                 break;
             
             case REMOVAL:
                 ssd1306_draw_string(&oled, 0, 2, 2, "REMOVAL");
+                displayPos();
                 displayInputSpeed();
                 break;
             
@@ -474,10 +463,20 @@ void displayState() {
                 ssd1306_draw_string(&oled, 0, 2, 2, "EXITING");
                 displayRPM();
                 displayCurrent();
+                displayPos();
                 break;
             
-            case PROCESSING:
-                ssd1306_draw_string(&oled, 0, 2, 2, "PROCESSING");
+            case FINISH: // For debugging purposes.
+                ssd1306_draw_string(&oled, 0, 2, 2, "TASK DONE");
+                ssd1306_draw_string(&oled, 0, 20, 1, "PRESS state button");
+                ssd1306_draw_string(&oled, 0, 30, 1, "for new operation.");
+                ssd1306_draw_string(&oled, 0, 44, 1, "PRESS MSC button to");
+                ssd1306_draw_string(&oled, 0, 54, 1, "access log.");
+                break;
+            case ZERO:
+                ssd1306_draw_string(&oled, 0, 2, 2, "ZERO");
+                ssd1306_draw_string(&oled, 0, 20, 1, "Resetting to origin");
+                displayCurrent();
                 break;
         }
     ssd1306_show(&oled);
@@ -492,7 +491,13 @@ void displayRPM() {
 void displayCurrent() {
     std::string temp = "Current: " + to_string(current);
     const char* curr = temp.c_str();
-    ssd1306_draw_string(&oled, 0, 40, 1 , curr);
+    ssd1306_draw_string(&oled, 0, 30, 1 , curr);
+}
+
+void displayPos() {
+    std::string temp = "Position: " + to_string(displacement);
+    const char* pos = temp.c_str();
+    ssd1306_draw_string(&oled, 0, 40, 1 , pos);
 }
 
 string stateToString() {
@@ -534,18 +539,62 @@ void getRPM() {
     }
 }
 
+bool validPress = false;
+
 void handleButton() {
-    if (button_flag) {
-        currTime = get_absolute_time();
-        if (absolute_time_diff_us(prevTime, currTime) >= debounce_us) {
-            if (gpio_get(state_input) == 0) {
-                
-                state = nextState;
-                if (state == CUTTING) {
-                    createDataFile();
-                }
+    if (button_press_flag) {
+        if (absolute_time_diff_us(pressTime, now) >= debounce_us) {
+            if (gpio_get(state_input) == 1) {
+                validPress = true;
+            } else {
+                button_press_flag = false;
             }
-            button_flag = false; 
+        }
+
+        if (validPress) {
+            if (absolute_time_diff_us(pressTime, now) >= hold_us) {
+                state = ZERO;
+                nextState = FINISH;
+                button_press_flag = false;
+                validPress = false;
+            } 
         }
     }
+}
+
+void handleRelease() {
+    if (button_release_flag) {
+        if (validPress) {
+            state = nextState;
+            //gpio_put(msc_signal, 1);
+            if (state == CUTTING) {
+                createDataFile();
+            }
+            validPress = false;
+        }
+        button_release_flag = false;
+    }
+}
+
+void handleMSCButton() {
+    if (button_msc_flag) {
+        if (absolute_time_diff_us(mscPressTime, now) >= debounce_us) {
+            if (state == STANDBY || state == FINISH) {
+                if (gpio_get(state_input) == 0) {
+                    watchdog_enable(1, 1);
+                }
+            }
+            button_msc_flag = false;
+        }
+    }
+}
+
+void resetFiltering() {
+    // Initialize all moving average filter values to zero.
+    MAF_counter = 0;
+    MAF_sum = 0;
+    memset(MAF, 0, sizeof(MAF));
+
+    // Reset previous low pass output.
+    lp_current = 0;
 }

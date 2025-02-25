@@ -161,6 +161,9 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/include/pico/time.h \
