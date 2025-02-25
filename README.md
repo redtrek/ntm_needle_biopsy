@@ -5,28 +5,32 @@ This repository contains the all the relevant code, documentation, and PCB desig
 **Biopsy Needle Code:**
 - This has been cleaned with legacy code removed, a rewritten state machine, and added documentation for all functions.
 - Completely reorganized and formatted for new components.
-- Saving current information to EEPROM has been integrated (PERSISTENT DATA NEEDS TOTAL REWORK / NEW DEV BOARD).
+- Saving current, position, RPM, and force data to MicroSD card.
 - Adjustable inputs have been added allowing for variable speeds. Now fully implemented.
+- Button holding supported as a form of input to zero and return the device to origin.
 
 **OLED Input Display:**
-- Test code for this proof of concept (LCD) is complete and functional.
 - Supports input via a potentiometer and accurately displays in real time.
 - Shows maximum current during operation and rpm in real time.
-- Adjustable backlight.
 - Custom function implemented to add new features such as battery messages and general status information.
 
 **Real-time Data Collection**
-- Prototype can read current in mA and RPM of the motor in real time.
+- Device can track position, current, RPM, and force information in real time.
+- Navigation of state machine through calculated sensor values.
+- Automated safety limits based on distance traveled by device.
+- Real-time low pass and moving average filter calculations and logging.
 
-**MSC Capabilities (WIP)**
-- Prototype for MSC complete: Can view created files on a Windows machine through the native filesystem.
-- Can write files to the SD card from Windows machine.
+**MSC Capabilities**
+- MSC complete: Can view created files on a Windows machine through the native filesystem.
+- Can read/write logs to the SD card from Windows machine and RP2040 device.
 - Automatically opens after USB connection.
+- Separate toggle to enter filesystem mode.
 
 **PCB Design:**
 - Design Files have been collected.
-- Work has begun on a custom library with necessary footprints (NEEDED FOR DECODER) and symbols (DONE).
-- Most of the most important signals have been connected.
+- All components represented and connected in schematic files.
+- Necessary devices configured for RP2040's operation.
+- INA219 breakout board recreated.
 
 **Bugs/Challenges:**
 - Broken ASM (FIXED): safety condition meant that users had to press the button twice to exit states at times. It was a mix of a timing issue and trying to have the safety features independent from the states themselves. I moved the conditions inside the states as well as shifting all the operations into the correct positions.
@@ -36,7 +40,7 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - RPM and Positional Data Incorrect (FIXED): interrupt not catching every falling edge of the motor_outputA signal.
 - Motor activation on startup (FIXED): PWM pin receiving 3.3 Volts from the feather board on startup activating the motor.
 - Variable speed (FIXED): inputs crash the system. Likely due to timing issues with state transitions that need to be resolved.
-- MSC not working: library needs to be configured and various changes to the source code necessary.
+- MSC not working (FIXED): library needs to be configured and various changes to the source code necessary.
 
 
 # Quick-Start
