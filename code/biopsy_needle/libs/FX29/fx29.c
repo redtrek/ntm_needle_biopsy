@@ -28,18 +28,10 @@ uint16_t FX29_read(i2c_inst_t *i2c, uint8_t sladdr){
     return data; 
 }
 
-uint16_t compute_force(uint16_t force_data) {
-    uint32_t temp_force;
-    uint16_t force;
-    const uint16_t scale = 100;
-    const uint16_t divisor = 125.893;
+float compute_force(uint16_t force_data) {
+    float force;
+    float N_perbit = 0.00794f;
 
-    if (force_data < 1000) {
-        force = 0;
-    } else {
-        temp_force = ((force_data - 1000) * scale) / divisor;
-        force = (uint16_t) temp_force;
-    }
-
+    force = ((force_data - 1000.0f) * N_perbit);
     return force;
 }
