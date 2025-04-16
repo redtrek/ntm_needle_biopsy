@@ -35,43 +35,43 @@
 #include "../libs/SSD1306/ssd1306.h"
 #include "../libs/FX29/fx29.h"
 
-#define ABS(A)      (A) > 0 ? (A) : -1 * (A)
-
-#define I2C0_SDA    12  // 12
-#define I2C0_SCL    13  // 13
-
-#define SPI0_SCK    18  // SCK
-#define SPI0_MOSI   19  // MOSI
-#define SPI0_MISO   20  // MISO
-#define SPI0_CS     1   // RX
-
-#define UART_TX     24  // 24
-#define UART_RX     25  // 25
-#define UART_ID     uart1
-#define BAUD_RATE   115200
-
+#define MY_I2C     i2c0
+#define I2C_SDA    12  // 12
+#define I2C_SCL    13  // 13
 #define OLED_ADDR   0x3C
 #define INA219_ADDR 0x40
 #define FX29_ADDR   0x28
 
-#define state_input 11   // 11
-#define speed_input 29   // A3
-#define msc_input   10   // 10
-#define bat_lvl     26   // A0
+// Please see hw_config.c to change SPI configuration.
+
+#define MY_UART     uart1
+#define UART_TX     24  // 24 (pin)
+#define UART_RX     25  // 25 (pin)
+#define BAUD_RATE   115200
+
+#define state_input 11   // 11 (pin)
+#define speed_input 29   // A3 (pin)
+#define msc_input   10   // 10 (pin)
+#define bat_lvl     26   // A0 (pin)
 
 #define debounce_us   100000
 #define hold_us       3000000 // 3 second hold for zeroing functionality
 #define potIterations 1000
 
-#define PWM         0    // TX
-#define DIR         6    // D4
+#define PWM         0    // TX (pin)
+#define DIR         6    // D4 (pin)
+#define FW          1    
+#define BW          0    
+#define ON          255  
+#define OFF         0    
 
-#define motorA_out  9    // 9
-#define motorB_out  8    // SCL
+#define motorA_out  9    // 9 (pin)
+#define motorB_out  8    // SCL (pin)
 
-#define MAF_sz      5    // Window size for Moving Average Filter.
+#define MAF_SZ      5    // Window size for Moving Average Filter.
 
-#define SPIKE_TIME  500
+#define SPIKE_TIME  500 // Time in ms used to avoid spikes during ZERO state.
+#define CUTOFF_STALL 800.0f // Stall current in mA used to ZERO the device
 
 #define max(A, B) ((A) >= (B) ? (A) : (B))
 #define min(A, B) ((A) <= (B) ? (A) : (B))
@@ -79,7 +79,7 @@
 #define BAT_MIN_ADC ((int)(0.5 + (4095/3.3) * (3.2/2)))
 #define BAT_ADC_PER (100.0 / (BAT_MAX_ADC - BAT_MIN_ADC))
 #define BAT_ADC_OS  -320
-
+#define SEC_US      1000000
 
 using namespace std;
 
@@ -107,6 +107,7 @@ float getRevolutions();
 void getRPM();
 void createDataFile();
 void resetFiltering();
+void activateMotor(bool direction, uint16_t power);
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -122,12 +123,12 @@ absolute_time_t pressTime = get_absolute_time();
 absolute_time_t pressedTime = get_absolute_time();
 absolute_time_t mscPressTime = get_absolute_time();
 float rpm = 0;
-float current = 0;
+float current_mA = 0;
 float force = 0;
 float displacement = 0;
 float lp_current = 0;
 float lp_alpha = 0.1; // Smoothing factor for LP Filter
-float MAF[MAF_sz] = {0};
+float MAF[MAF_SZ] = {0};
 int MAF_counter = 0;
 float MAF_sum = 0;
 uint slice = pwm_gpio_to_slice_num(PWM);
@@ -187,7 +188,6 @@ void gpio_ISR(uint gpio, uint32_t events) {
 int main() {
     // MSC: Initialize board
     board_init();
-    //printf("\033[2J\033[H");
     tud_init(BOARD_TUD_RHPORT);
 
     // Initialize serial port and wait for serial monitor
@@ -199,10 +199,10 @@ int main() {
     // ==== General Initialization ==== //
     gpio_init();
     bat_per = getBatLevel();
-    oled_init();
     state = WAIT;
     nextState = STANDBY;
-    INA219 ina219(i2c0, INA219_ADDR);
+    oled_init();
+    INA219 ina219(MY_I2C, INA219_ADDR);
     ina219.calibrate(0.1, 3.2);
 
     // ==== Interrupts ==== //
@@ -211,8 +211,6 @@ int main() {
     gpio_set_irq_enabled(msc_input, GPIO_IRQ_EDGE_FALL, true);
 
     while(1) {
-        printf("Testing\n");
-
         now = get_absolute_time();
         int64_t time_ms = to_ms_since_boot(now);
 
@@ -222,44 +220,42 @@ int main() {
         getRPM();
         
         bat_per = getBatLevel();
-        current = ina219.read_current() * 1000;
+        current_mA = ina219.read_current() * 1000;
         displacement = getRevolutions() * 0.5f;
-        force = compute_force(FX29_read(i2c0, FX29_ADDR));
+        force = compute_force(FX29_read(MY_I2C, FX29_ADDR));
 
-        if (MAF_counter == MAF_sz) {
+        if (MAF_counter == MAF_SZ) {
             MAF_counter = 0;
         }
         // Remove oldest value and add newest value to sum
         MAF_sum -= MAF[MAF_counter];
-        MAF_sum += current;
-        MAF[MAF_counter] = current;
+        MAF_sum += current_mA;
+        MAF[MAF_counter] = current_mA;
 
         MAF_counter++;
-        float MAF_current = MAF_sum * 1.0f/MAF_sz;
+        float MAF_current = MAF_sum * 1.0f/MAF_SZ;
 
         switch(state) {
             case WAIT: {
                 // Enable MSC
                 f_unmount("");
                 tud_task();
-
-                gpio_put(DIR, 1);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
+                activateMotor(FW, OFF);
+                displayState();
+
                 nextState = STANDBY;
                 break;
             }
             case STANDBY: {
-
                 // Disable MSC
                 tud_disconnect();
                 f_mount(&filesys, "", 1);
                 tud_deinit(BOARD_TUD_RHPORT);
 
-                //gpio_put(msc_signal, 0);
-
-                gpio_put(DIR, 1);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                activateMotor(FW, OFF);
+                //gpio_put(DIR, 1);
+                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f); 
@@ -274,17 +270,19 @@ int main() {
             case CUTTING: {
                 speed_lvl = speed_lvl;
 
-                lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
-                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement, force);
+                lp_current = lp_alpha * current_mA + (1 - lp_alpha) * lp_current;
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() > fwRev) {
-                    gpio_put(DIR, 0);
-                    pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                    activateMotor(BW, OFF);
+                    //gpio_put(DIR, 0);
+                    //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                     state = REMOVAL;
                 } else {
-                    gpio_put(DIR, 1);
-                    pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
+                    activateMotor(FW, speed_lvl);
+                    //gpio_put(DIR, 1);
+                    //pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
                 displayState();
                 
@@ -292,9 +290,9 @@ int main() {
                 break;
             }
             case REMOVAL: {
-
-                gpio_put(DIR, 0);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                activateMotor(BW, 0);
+                //gpio_put(DIR, 0);
+                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
 
                 temp_speed = getInputSpeed();
                 speed_lvl = int(temp_speed / 100.0f * 255.0f);
@@ -307,17 +305,19 @@ int main() {
             case EXITING: {
                 speed_lvl = speed_lvl;
 
-                lp_current = lp_alpha * current + (1 - lp_alpha) * lp_current;
-                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current, lp_current, MAF_current, rpm, displacement, force);
+                lp_current = lp_alpha * current_mA + (1 - lp_alpha) * lp_current;
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() < bwRev) {
-                    gpio_put(DIR, 1);
-                    pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                    activateMotor(FW, OFF);
+                    //gpio_put(DIR, 1);
+                    //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                     state = FINISH;
                 } else {
-                    gpio_put(DIR, 0);
-                    pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
+                    activateMotor(BW, speed_lvl);
+                    //gpio_put(DIR, 0);
+                    //pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
                 displayState();
 
@@ -330,7 +330,8 @@ int main() {
 
                 gpio_put(DIR, 1);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-                
+                activateMotor(FW, OFF);
+
                 displayState();
 
                 nextState = STANDBY;
@@ -342,7 +343,7 @@ int main() {
                 pwm_set_chan_level(slice, PWM_CHAN_A, 255);
 
                 
-                if (current > 800.0f) {
+                if (current_mA > CUTOFF_STALL) {
                     count = 0;
                     state = FINISH;
                 }
@@ -393,20 +394,19 @@ void gpio_init() {
     
     // I2C Initialization
     i2c_init(i2c0, 400000);
-    gpio_set_function(I2C0_SDA, GPIO_FUNC_I2C);
-    gpio_set_function(I2C0_SCL, GPIO_FUNC_I2C);
-    gpio_pull_up(I2C0_SDA);
-    gpio_pull_up(I2C0_SCL);
+    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
+    gpio_pull_up(I2C_SDA);
+    gpio_pull_up(I2C_SCL);
 
     // UART Initialization - Second Serial Monitor
     //uart_init(uart1, BAUD_RATE);
-    //gpio_set_function(UART_TX, UART_FUNCSEL_NUM(UART_ID, UART_TX));
-    //gpio_set_function(UART_RX, UART_FUNCSEL_NUM(UART_ID, UART_RX));
+    //gpio_set_function(UART_TX, UART_FUNCSEL_NUM(MY_UART, UART_TX));
+    //gpio_set_function(UART_RX, UART_FUNCSEL_NUM(MY_UART, UART_RX));
 }
 
 void oled_init() {
-
-    // external_vcc must be false for this to work
+    // External_vcc must be false for this to work
     oled.external_vcc = false;
     bool oled_status = ssd1306_init(
         &oled,
@@ -417,14 +417,7 @@ void oled_init() {
     );
 
     if (oled_status) {
-        ssd1306_clear(&oled);
-        ssd1306_draw_string(&oled, 0, 2, 2, "RECORDS");
-        ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");
-        ssd1306_draw_string(&oled, 0, 30, 1, "[ HOLD  STA  : ZERO ]");
-        ssd1306_draw_string(&oled, 0, 45, 1, "V2.0 - 4/10/25");
-        ssd1306_draw_string(&oled, 0, 55, 1, "Author: Thomas Chang");
-        displayBat(0);
-        ssd1306_show(&oled);
+        displayState();
     } else {
         printf("OLED initialization failed.\n");
     }
@@ -450,11 +443,18 @@ void displayInputSpeed(int y_pos) {
     ssd1306_draw_string(&oled, 0, y_pos, 1, in_speed);
 }
 
-
-
 void displayState() {
     ssd1306_clear(&oled);
     switch(state) {
+            case WAIT:
+                ssd1306_draw_string(&oled, 0, 2, 2, "RECORDS");
+                ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");
+                ssd1306_draw_string(&oled, 0, 30, 1, "[ HOLD  STA  : ZERO ]");
+                ssd1306_draw_string(&oled, 0, 45, 1, "V2.0 - 4/10/25");
+                ssd1306_draw_string(&oled, 0, 55, 1, "Author: Thomas Chang");
+                displayBat(0);
+                ssd1306_show(&oled);
+                break;
             case STANDBY:
                 ssd1306_draw_string(&oled, 0, 2, 2, "STANDBY");
                 ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");
@@ -517,7 +517,7 @@ void displayRPM(int y_pos) {
 }
 
 void displayCurrent(int y_pos) {
-    std::string temp = "CUR (mA)  : " + to_string(current);
+    std::string temp = "CUR (mA)  : " + to_string(current_mA);
     const char* curr = temp.c_str();
     ssd1306_draw_string(&oled, 0, y_pos, 1 , curr);
 }
@@ -586,12 +586,8 @@ float getRevolutions() {
 void getRPM() {
     static absolute_time_t prevRPMTime = get_absolute_time();
     absolute_time_t currRPMTime = get_absolute_time();
-    //printf("Current time: %lld us\n", currTime);
-    //printf("Prev time: %lld us\n", prevTime);
 
-    if (absolute_time_diff_us(prevRPMTime, currRPMTime) >= 1000000) {
-        //printf("this point has been reached! %d", currTime);
-        
+    if (absolute_time_diff_us(prevRPMTime, currRPMTime) >= SEC_US) {
         rpm = (numPulses/12.0f/34.014f) * 60.0f;
         numPulses = 0;
         prevRPMTime = currRPMTime;
@@ -661,4 +657,9 @@ void resetFiltering() {
 
     // Reset previous low pass output.
     lp_current = 0;
+}
+
+void activateMotor(bool direction, uint16_t power) {
+    gpio_put(DIR, direction);
+    pwm_set_chan_level(slice, PWM_CHAN_A, power);
 }
