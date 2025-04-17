@@ -42,24 +42,24 @@
 #define INA219_ADDR 0x40
 #define FX29_ADDR   0x28
 
+#define MY_SPI      spi0
+#define SPI0_SCK    18  // SCK
+#define SPI0_MOSI   19  // MOSI
+#define SPI0_MISO   20  // MISO
+#define SPI0_CS     21  // RX (BB Pin)
+
 // Please see hw_config.c to change SPI configuration.
-
-#define MY_UART     uart1
-#define UART_TX     24  // 24 (pin)
-#define UART_RX     25  // 25 (pin)
-#define BAUD_RATE   115200
-
-#define state_input 11   // 11 (pin)
-#define speed_input 29   // A3 (pin)
-#define msc_input   10   // 10 (pin)
+#define state_input 23   // 11 (BB pin)
+#define msc_input   24   // 10 (BB pin)
+#define speed_input 29   // A3 (BB pin)
 #define bat_lvl     26   // A0 (pin)
 
 #define debounce_us   100000
 #define hold_us       3000000 // 3 second hold for zeroing functionality
 #define potIterations 1000
 
-#define PWM         0    // TX (pin)
-#define DIR         6    // D4 (pin)
+#define PWM         0    // TX (BB pin)
+#define DIR         4    // D4 (BB pin)
 #define FW          1    
 #define BW          0    
 #define ON          255  
@@ -108,13 +108,14 @@ void getRPM();
 void createDataFile();
 void resetFiltering();
 void activateMotor(bool direction, uint16_t power);
+void testingSuite();
+
 
 // ==== Globals ==== //
 ssd1306_t oled;
 uint16_t speed_lvl = 0;
 long temp_speed = 0;
 long bat_per = 0;
-
 int count = 0;
 int numPulses = 0;
 absolute_time_t now = get_absolute_time();
@@ -185,7 +186,73 @@ void gpio_ISR(uint gpio, uint32_t events) {
     }
 }
 
+
+void testingSuite() {
+    stdio_init_all();
+    sleep_ms(1000);
+
+    gpio_init(26);
+    gpio_set_dir(26, GPIO_OUT);
+
+    // I2C
+    i2c_init(i2c0, 400000);
+    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
+    gpio_pull_up(I2C_SDA);
+    gpio_pull_up(I2C_SCL);
+
+    // OLED
+    oled_init();
+
+    // BUTTONS
+    gpio_init(state_input);
+    gpio_set_dir(state_input, GPIO_IN);
+    gpio_pull_down(state_input);
+    gpio_init(msc_input);
+    gpio_set_dir(msc_input, GPIO_IN);
+    gpio_pull_down(msc_input);
+
+    // POTENTIOMETER
+    adc_init();
+    adc_gpio_init(speed_input);
+
+    // Motor Control
+    gpio_set_function(PWM, GPIO_FUNC_PWM);
+    pwm_set_clkdiv(slice, 48.83f);
+    pwm_set_wrap(slice, 255);
+    pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+    pwm_set_enabled(slice, true);
+    gpio_init(DIR);
+    gpio_set_dir(DIR, GPIO_OUT);
+
+    while(1) {
+        // Testing functionality of pushbuttons.
+        while (gpio_get(msc_input) == 1 || gpio_get(state_input) == 1) {
+            gpio_put(26, 1);
+        }
+        
+        // Testing potentiometer.
+        long test_pot = getInputSpeed() * 10;
+        gpio_put(26, 1);
+        sleep_ms(test_pot);
+        gpio_put(26, 0);
+        sleep_ms(test_pot);
+
+        // Testing functionality of motor.
+        if (gpio_get(state_input) == 1) {
+            activateMotor(FW, 255);
+            sleep_ms(3000);
+            activateMotor(BW, OFF);
+        }
+        
+    }
+}
+
+
 int main() {
+    // Uncomment to enter testing mode.
+    //testingSuite();
+    
     // MSC: Initialize board
     board_init();
     tud_init(BOARD_TUD_RHPORT);
@@ -199,9 +266,9 @@ int main() {
     // ==== General Initialization ==== //
     gpio_init();
     bat_per = getBatLevel();
+    oled_init();
     state = WAIT;
     nextState = STANDBY;
-    oled_init();
     INA219 ina219(MY_I2C, INA219_ADDR);
     ina219.calibrate(0.1, 3.2);
 
@@ -211,6 +278,7 @@ int main() {
     gpio_set_irq_enabled(msc_input, GPIO_IRQ_EDGE_FALL, true);
 
     while(1) {
+        printf("Testing!\n");
         now = get_absolute_time();
         int64_t time_ms = to_ms_since_boot(now);
 
@@ -236,13 +304,14 @@ int main() {
         float MAF_current = MAF_sum * 1.0f/MAF_SZ;
 
         switch(state) {
+            
             case WAIT: {
                 // Enable MSC
                 f_unmount("");
                 tud_task();
                 
                 activateMotor(FW, OFF);
-                displayState();
+                //displayState();
 
                 nextState = STANDBY;
                 break;
@@ -259,7 +328,6 @@ int main() {
                 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f); 
-                
                 
                 resetFiltering();
                 displayState();
@@ -328,8 +396,8 @@ int main() {
                 f_close(&fil);
                 f_unmount("");
 
-                gpio_put(DIR, 1);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 0);
+                //gpio_put(DIR, 1);
+                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 activateMotor(FW, OFF);
 
                 displayState();
@@ -399,10 +467,8 @@ void gpio_init() {
     gpio_pull_up(I2C_SDA);
     gpio_pull_up(I2C_SCL);
 
-    // UART Initialization - Second Serial Monitor
-    //uart_init(uart1, BAUD_RATE);
-    //gpio_set_function(UART_TX, UART_FUNCSEL_NUM(MY_UART, UART_TX));
-    //gpio_set_function(UART_RX, UART_FUNCSEL_NUM(MY_UART, UART_RX));
+    // SPI Initialization
+    gpio_set_function(SPI0_CS, GPIO_FUNC_SPI);
 }
 
 void oled_init() {
@@ -417,7 +483,14 @@ void oled_init() {
     );
 
     if (oled_status) {
-        displayState();
+        ssd1306_clear(&oled);
+        ssd1306_draw_string(&oled, 0, 2, 2, "RECORDS");
+        ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");
+        ssd1306_draw_string(&oled, 0, 30, 1, "[ HOLD  STA  : ZERO ]");
+        ssd1306_draw_string(&oled, 0, 45, 1, "V2.0 - 4/10/25");
+        ssd1306_draw_string(&oled, 0, 55, 1, "Author: Thomas Chang");
+        displayBat(0);
+        ssd1306_show(&oled);
     } else {
         printf("OLED initialization failed.\n");
     }
@@ -446,15 +519,6 @@ void displayInputSpeed(int y_pos) {
 void displayState() {
     ssd1306_clear(&oled);
     switch(state) {
-            case WAIT:
-                ssd1306_draw_string(&oled, 0, 2, 2, "RECORDS");
-                ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");
-                ssd1306_draw_string(&oled, 0, 30, 1, "[ HOLD  STA  : ZERO ]");
-                ssd1306_draw_string(&oled, 0, 45, 1, "V2.0 - 4/10/25");
-                ssd1306_draw_string(&oled, 0, 55, 1, "Author: Thomas Chang");
-                displayBat(0);
-                ssd1306_show(&oled);
-                break;
             case STANDBY:
                 ssd1306_draw_string(&oled, 0, 2, 2, "STANDBY");
                 ssd1306_draw_string(&oled, 0, 20, 1, "[ PRESS STA  :  NEW ]");

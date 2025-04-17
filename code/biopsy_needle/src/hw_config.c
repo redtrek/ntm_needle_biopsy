@@ -25,7 +25,7 @@ https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/tree/main#customizing
 #define SPI0_SCK    18  // SCK
 #define SPI0_MOSI   19  // MOSI
 #define SPI0_MISO   20  // MISO
-#define SPI0_CS     1   // RX
+#define SPI0_CS     21  // RX (BB Pin)
 
 /* Configuration of hardware SPI object */
 static spi_t spi = {
