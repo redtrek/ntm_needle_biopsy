@@ -51,6 +51,30 @@ This repository contains the all the relevant code, documentation, and PCB desig
 - Put the RP2040 device into bootloader mode by holding down BOOTSEL and pressing RESET.
 - Drag the .uf2 file inside of the build folder into the flash file explorer.
 
+# PCB Ordering
+- To order a new PCB upload biopsy_needle.zip to OSHPark.
+- To order a new stencil, zip the F_Paste.gbr and B_Paste.gbr and submit to OSHStencils.
+- The PCB has been designed around OSHPark constraints so be cautious if ordering from other vendors.
+
+
+# PCB Modification
+- If modifying the PCB, extract biopsy_needle_src.zip and open the project file using KiCAD 8.0 or above. Be careful to adjust design rules to PCB vendor. All information can be found on the website of said vendors.
+- Make sure to run the DRC and ERC before continuing with PCB order.
+- To replace parts you can manually do so by heating up a soldering iron to 700-800 degrees farenheit, applying flux to the pads, and using tweezers to remove components. Flux solder wick can be used to clean the area and Isopropyl alcohol can be applied to remove any access flux.
+
+# PCB Assembly
+- Refer to Bill of Materials, typically labeled biopsy_needle.xlsx for parts ordering. Typical UF supported vendors are Digikey, Pololu, and Mouser Electronics.
+- 1. Attach PCB to appropriate jig and place stencil on top such that all copper regions of the PCB are visible through stencil holes.
+- 2. While holding the stencil steady, firmly wipe solder paste across entire stencil.
+- 3. Slowly lift stencil up from the PCB.
+- 4. Place SMT components in pads utilizing PCB board design files as reference. One order that could be used is: capacitors/resistors, ICs. You may need a magnifying glass, microscope, and tweezers for smaller components (e.g. 0402)
+- 5. Bake in a reflow oven (typically 7 minute process) and when ready wait 10 minutes to cool.
+- 6. Repeat for back side if necessary.
+- 7. Hand solder headers and other through hole components if necessary.
+
+# PCB Firmware
+- To test PCB functionality of pilot devices and interfacing with the motor, uncomment the testingSuite() function in main. This will prevent the rest of the code from running and essentially send the device into a state were the operation of the buttons, potentiometer, and other modules can be observed without involving the other power components.
+
 # Background
 _Introduction_
 
