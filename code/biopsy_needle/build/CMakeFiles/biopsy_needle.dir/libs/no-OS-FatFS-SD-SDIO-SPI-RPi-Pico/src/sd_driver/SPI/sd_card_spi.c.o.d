@@ -36,7 +36,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/generated/pico_base/pico/version.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/generated/pico_base/pico/config_autogen.h \
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -85,7 +85,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \

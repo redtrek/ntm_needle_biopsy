@@ -47,7 +47,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/INA219.cpp.o: ../libs/INA219_driver/INA
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -147,7 +147,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/hardware_claim/c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -183,7 +183,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_sync/critic
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -223,7 +223,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_sync/lock_c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -264,7 +264,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_sync/mutex.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -307,7 +307,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_sync/sem.c.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -356,7 +356,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_time/time.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -416,7 +416,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_time/timeou
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -453,7 +453,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_util/dateti
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -535,7 +535,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_util/pheap.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -579,7 +579,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/common/pico_util/queue.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -617,7 +617,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2040/pico_platform/pl
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -652,7 +652,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_boo
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -685,7 +685,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_clo
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -738,7 +738,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_gpi
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -786,7 +786,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_i2c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -834,7 +834,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_irq
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -884,7 +884,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_pll
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -925,7 +925,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_syn
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -960,7 +960,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_syn
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -994,7 +994,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_tic
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1030,7 +1030,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_tim
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1075,7 +1075,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_uar
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1120,7 +1120,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_vre
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1178,7 +1178,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_wat
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1223,7 +1223,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_xos
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1263,7 +1263,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_atomic/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1308,7 +1308,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_bootrom
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1358,7 +1358,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_bootrom
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1425,7 +1425,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_clib_in
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1481,7 +1481,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_cxx_opt
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1522,7 +1522,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_double/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1566,7 +1566,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_double/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1597,7 +1597,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_flash/f
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1648,7 +1648,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_float/f
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1693,7 +1693,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_float/f
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1733,7 +1733,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_malloc/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1787,7 +1787,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_platfor
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1839,7 +1839,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_printf/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1871,7 +1871,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_runtime
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1904,7 +1904,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_runtime
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1950,7 +1950,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_runtime
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1998,7 +1998,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_runtime
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2036,7 +2036,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_standar
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2094,7 +2094,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_stdio/s
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2146,7 +2146,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_stdio_u
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2206,7 +2206,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_stdlib/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2428,13 +2428,17 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_stdlib/
 
 ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
 
+../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h:
+
+/usr/include/newlib/c++/10.3.1/tr1/legendre_function.tcc:
+
 ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
 
-../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h:
+../libs/pico-sdk/src/boards/include/boards/pico.h:
 
-/usr/include/newlib/c++/10.3.1/tr1/legendre_function.tcc:
+/usr/include/newlib/sys/cdefs.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
 
@@ -2467,10 +2471,6 @@ generated/pico_base/pico/version.h:
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h:
 
 /usr/include/newlib/c++/10.3.1/tr1/beta_function.tcc:
-
-/usr/include/newlib/sys/cdefs.h:
-
-../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h:
 
 /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h:
 

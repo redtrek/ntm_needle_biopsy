@@ -15,7 +15,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
- ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+ ../libs/pico-sdk/src/boards/include/boards/pico.h \
  ../libs/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S \
  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  generated/pico_base/pico/config_autogen.h \

@@ -15,7 +15,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_div
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_divider/divider.S
  generated/pico_base/pico/config_autogen.h
@@ -42,7 +42,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_irq
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
  generated/pico_base/pico/config_autogen.h
@@ -72,7 +72,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_bit_ops
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime/include/pico/runtime.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/runtime_init.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
  generated/pico_base/pico/config_autogen.h
@@ -107,7 +107,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_crt0/cr
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_crt0/crt0.S
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_crt0/embedded_end_block.inc.S
@@ -129,7 +129,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_divider
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
  generated/pico_base/pico/config_autogen.h
@@ -152,7 +152,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_double/
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime/include/pico/runtime.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/runtime_init.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
  generated/pico_base/pico/config_autogen.h
@@ -171,7 +171,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_double/
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
  generated/pico_base/pico/config_autogen.h
@@ -194,7 +194,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_float/f
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime/include/pico/runtime.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/runtime_init.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
  generated/pico_base/pico/config_autogen.h
@@ -213,7 +213,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_float/f
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
  generated/pico_base/pico/config_autogen.h
@@ -232,7 +232,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_int64_o
  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
  generated/pico_base/pico/config_autogen.h
@@ -262,7 +262,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/pico_mem_ops
  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime/include/pico/runtime.h
  ../libs/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/runtime_init.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
  generated/pico_base/pico/config_autogen.h

@@ -208,7 +208,7 @@ pico.h
 pico/runtime.h
 ../libs/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/pico/runtime.h
 
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
 
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
 
@@ -311,7 +311,7 @@ pico/runtime_init.h
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_mem_ops/pico/runtime_init.h
 
 generated/pico_base/pico/config_autogen.h
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h
+/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h
 -
 /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
 -

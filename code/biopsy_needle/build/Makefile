@@ -169,19 +169,6 @@ bs2_default_library/fast:
 .PHONY : bs2_default_library/fast
 
 #=============================================================================
-# Target rules for targets named pioasmBuild
-
-# Build rule for target.
-pioasmBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pioasmBuild
-.PHONY : pioasmBuild
-
-# fast build rule for target.
-pioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build
-.PHONY : pioasmBuild/fast
-
-#=============================================================================
 # Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 
 # Build rule for target.
@@ -2612,30 +2599,6 @@ libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
-
-# target to build an object file
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
-
-# target to preprocess a source file
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
-
-# target to generate assembly for a file
-libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-
 libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 .PHONY : libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
@@ -2863,7 +2826,6 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... no-OS-FatFS-SD-SDIO-SPI-RPi-Pico_rp2040_sdio_pio_h"
-	@echo "... pioasmBuild"
 	@echo "... biopsy_needle"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
@@ -3167,9 +3129,6 @@ help:
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"

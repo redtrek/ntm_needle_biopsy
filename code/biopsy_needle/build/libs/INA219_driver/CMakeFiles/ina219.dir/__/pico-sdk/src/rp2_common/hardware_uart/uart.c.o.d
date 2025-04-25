@@ -14,7 +14,7 @@ libs/INA219_driver/CMakeFiles/ina219.dir/__/pico-sdk/src/rp2_common/hardware_uar
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/generated/pico_base/pico/version.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/generated/pico_base/pico/config_autogen.h \
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/boards/include/boards/pico.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \

@@ -17,6 +17,7 @@
 #include "hardware/irq.h"
 #include "hardware/uart.h"
 #include "hardware/watchdog.h"
+#include "hardware/clocks.h"
 
 // Includes for the FatFS Library
 #include "pico/stdlib.h"
@@ -35,38 +36,54 @@
 #include "../libs/SSD1306/ssd1306.h"
 #include "../libs/FX29/fx29.h"
 
-#define MY_I2C     i2c0
-#define I2C_SDA    12  // 12
-#define I2C_SCL    13  // 13
+// Pin Defintions (see hw_config.c for SPI)
+#ifndef PCB
+#define PCB 0
+#endif
+
+#if PCB == 0
+    #define MY_I2C      i2c0
+    #define I2C_SDA     12
+    #define I2C_SCL     13
+    #define state_input 11
+    #define msc_input   10
+    #define speed_input 29 // A3 on Feather
+    #define bat_lvl     26 // A0 on Feather
+    #define PWM         0  // TX on Feather
+    #define DIR         6  // D4 on Feather
+    #define motorA_out  9
+    #define motorB_out  8  // SCL on Feather
+#elif PCB == 1
+    #define MY_I2C      i2c0
+    #define I2C_SDA     12
+    #define I2C_SCL     13
+    #define state_input 23
+    #define msc_input   24
+    #define speed_input 29
+    #define bat_lvl     26
+    #define PWM         0
+    #define DIR         4
+    #define motorA_out  9
+    #define motorB_out  8  
+#else
+    #error "Unsupported PLATFORM value"
+#endif
+
 #define OLED_ADDR   0x3C
 #define INA219_ADDR 0x40
 #define FX29_ADDR   0x28
 
-#define MY_SPI      spi0
-#define SPI0_SCK    18  // SCK
-#define SPI0_MOSI   19  // MOSI
-#define SPI0_MISO   20  // MISO
-#define SPI0_CS     21  // RX (BB Pin)
-
 // Please see hw_config.c to change SPI configuration.
-#define state_input 23   // 11 (BB pin)
-#define msc_input   24   // 10 (BB pin)
-#define speed_input 29   // A3 (BB pin)
-#define bat_lvl     26   // A0 (pin)
 
 #define debounce_us   100000
 #define hold_us       3000000 // 3 second hold for zeroing functionality
 #define potIterations 1000
 
-#define PWM         0    // TX (BB pin)
-#define DIR         4    // D4 (BB pin)
+// Motor commands
 #define FW          1    
 #define BW          0    
 #define ON          255  
 #define OFF         0    
-
-#define motorA_out  9    // 9 (pin)
-#define motorB_out  8    // SCL (pin)
 
 #define MAF_SZ      5    // Window size for Moving Average Filter.
 
@@ -109,7 +126,8 @@ void createDataFile();
 void resetFiltering();
 void activateMotor(bool direction, uint16_t power);
 void testingSuite();
-
+void testMSC();
+void testSD();
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -247,12 +265,82 @@ void testingSuite() {
         
     }
 }
+void testMSC() {
+    board_init();
+    printf("\033[2J\033[H");
+    tud_init(BOARD_TUD_RHPORT);
+    stdio_init_all();
 
+    // I2C
+    i2c_init(i2c0, 400000);
+    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
+    gpio_pull_up(I2C_SDA);
+    gpio_pull_up(I2C_SCL);
 
+    uint32_t sys_freq = clock_get_hz(clk_sys);
+    std::string temp = to_string(sys_freq);
+    const char* sys_freq_str = temp.c_str();
+    oled.external_vcc = false;
+    bool oled_status = ssd1306_init(&oled, 128, 64, OLED_ADDR, MY_I2C);
+    
+    if (oled_status) {
+        ssd1306_clear(&oled);
+        ssd1306_draw_string(&oled, 0, 2, 2, "Sys Clock:");
+        ssd1306_draw_string(&oled, 0, 20, 1 , sys_freq_str);
+        ssd1306_show(&oled);
+    } else {
+        printf("OLED initialization failed.\n");
+    }
+    
+
+    while(1) {
+        tud_task();
+    }
+}
+void testSD() {
+    stdio_init_all();
+    tusb_init();
+    sleep_ms(5000);
+    printf("Testing if seral works.\n");
+
+    FATFS fs;
+    FRESULT fr = f_mount(&fs, "", 1);
+    if (FR_OK != fr) {
+        panic("f_mount error: %s (%d)\n", FRESULT_str(fr), fr);
+    }
+
+    // Open a file and write to it
+    FIL fil;
+    const char* const filename = "filename.txt";
+    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
+    if (FR_OK != fr && FR_EXIST != fr) {
+        panic("f_open(%s) error: %s (%d)\n", filename, FRESULT_str(fr), fr);
+    }
+    if (f_printf(&fil, "Hello, world!\n") < 0) {
+        printf("f_printf failed\n");
+    }
+
+    // Close the file
+    fr = f_close(&fil);
+    if (FR_OK != fr) {
+        printf("f_close error: %s (%d)\n", FRESULT_str(fr), fr);
+    }
+
+    // Unmount the SD card
+    f_unmount("");
+
+    while(1) {
+        printf("Testing serial.\n");
+        sleep_ms(1000);
+    }
+}
 int main() {
     // Uncomment to enter testing mode.
-    //testingSuite();
-    
+    testingSuite();
+    //testMSC();
+    //testSD();
+
     // MSC: Initialize board
     board_init();
     tud_init(BOARD_TUD_RHPORT);
@@ -323,8 +411,6 @@ int main() {
                 tud_deinit(BOARD_TUD_RHPORT);
 
                 activateMotor(FW, OFF);
-                //gpio_put(DIR, 1);
-                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f); 
@@ -344,13 +430,9 @@ int main() {
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() > fwRev) {
                     activateMotor(BW, OFF);
-                    //gpio_put(DIR, 0);
-                    //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                     state = REMOVAL;
                 } else {
                     activateMotor(FW, speed_lvl);
-                    //gpio_put(DIR, 1);
-                    //pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
                 displayState();
                 
@@ -359,8 +441,6 @@ int main() {
             }
             case REMOVAL: {
                 activateMotor(BW, 0);
-                //gpio_put(DIR, 0);
-                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
 
                 temp_speed = getInputSpeed();
                 speed_lvl = int(temp_speed / 100.0f * 255.0f);
@@ -379,13 +459,9 @@ int main() {
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() < bwRev) {
                     activateMotor(FW, OFF);
-                    //gpio_put(DIR, 1);
-                    //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                     state = FINISH;
                 } else {
                     activateMotor(BW, speed_lvl);
-                    //gpio_put(DIR, 0);
-                    //pwm_set_chan_level(slice, PWM_CHAN_A, speed_lvl);
                 }
                 displayState();
 
@@ -396,8 +472,6 @@ int main() {
                 f_close(&fil);
                 f_unmount("");
 
-                //gpio_put(DIR, 1);
-                //pwm_set_chan_level(slice, PWM_CHAN_A, 0);
                 activateMotor(FW, OFF);
 
                 displayState();
@@ -406,10 +480,7 @@ int main() {
                 break;
             }
             case ZERO: {
-                
-                gpio_put(DIR, 0);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 255);
-
+                activateMotor(BW, ON);
                 
                 if (current_mA > CUTOFF_STALL) {
                     count = 0;
@@ -466,9 +537,6 @@ void gpio_init() {
     gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
     gpio_pull_up(I2C_SDA);
     gpio_pull_up(I2C_SCL);
-
-    // SPI Initialization
-    gpio_set_function(SPI0_CS, GPIO_FUNC_SPI);
 }
 
 void oled_init() {
@@ -479,7 +547,7 @@ void oled_init() {
         128,
         64,
         OLED_ADDR,
-        i2c0
+        MY_I2C
     );
 
     if (oled_status) {
@@ -690,7 +758,6 @@ void handleRelease() {
     if (button_release_flag) {
         if (validPress) {
             state = nextState;
-            //gpio_put(msc_signal, 1);
             if (state == CUTTING) {
                 createDataFile();
             }

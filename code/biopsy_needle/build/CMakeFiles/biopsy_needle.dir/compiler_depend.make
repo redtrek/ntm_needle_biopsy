@@ -42,7 +42,7 @@ CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o: ../libs/FX29/fx29.c \
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -80,7 +80,6 @@ CMakeFiles/biopsy_needle.dir/libs/FX29/fx29.c.o: ../libs/FX29/fx29.c \
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
@@ -104,7 +103,7 @@ CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o: ../libs/SSD1306/ssd1306.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -145,7 +144,6 @@ CMakeFiles/biopsy_needle.dir/libs/SSD1306/ssd1306.c.o: ../libs/SSD1306/ssd1306.c
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
@@ -268,7 +266,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -347,7 +345,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
@@ -403,7 +400,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -454,7 +451,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -525,7 +521,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -573,7 +569,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/delays.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
@@ -655,7 +650,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -704,7 +699,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -753,7 +747,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -808,7 +802,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
@@ -876,7 +869,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -927,7 +920,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -1005,7 +997,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1056,7 +1048,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -1122,7 +1113,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1161,7 +1152,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
@@ -1317,7 +1307,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1355,7 +1345,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ffconf.h \
@@ -1400,7 +1389,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1451,7 +1440,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -1521,7 +1509,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_de
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1559,7 +1547,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_de
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
@@ -1608,7 +1595,7 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rt
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1651,7 +1638,6 @@ CMakeFiles/biopsy_needle.dir/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rt
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h \
@@ -1718,7 +1704,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -1759,7 +1745,6 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
   ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
@@ -1893,7 +1878,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2002,7 +1987,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2118,7 +2103,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2201,7 +2186,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd.c.o: ../l
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2295,7 +2280,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/device/usbd_control.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2351,7 +2336,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2484,7 +2469,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2573,7 +2558,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/src/tusb.c.o: ../libs/pic
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2625,7 +2610,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/hardware_claim/claim.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2661,7 +2646,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/critical_section
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2701,7 +2686,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/lock_core.c.o: .
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2742,7 +2727,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/mutex.c.o: ../li
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2785,7 +2770,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_sync/sem.c.o: ../libs
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2834,7 +2819,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/time.c.o: ../lib
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2894,7 +2879,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_time/timeout_helper.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -2931,7 +2916,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/datetime.c.o: ..
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3013,7 +2998,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/pheap.c.o: ../li
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3057,7 +3042,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/common/pico_util/queue.c.o: ../li
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3095,7 +3080,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2040/pico_platform/platform.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3139,7 +3124,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Devic
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3173,7 +3158,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3226,7 +3211,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_boot_lock/boo
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3259,7 +3244,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_clocks/clocks
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3334,7 +3319,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3373,7 +3358,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_flash/flash.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3426,7 +3411,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3474,7 +3459,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3522,7 +3507,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3572,7 +3557,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3626,7 +3611,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3666,7 +3651,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3715,7 +3700,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3757,7 +3742,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3792,7 +3777,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_sync_spin_loc
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3826,7 +3811,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3862,7 +3847,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_timer/timer.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3907,7 +3892,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -3952,7 +3937,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4010,7 +3995,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_watchdog/watc
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4056,7 +4041,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xip_cache/xip
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4092,7 +4077,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4131,7 +4116,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_aon_timer/aon_tim
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4200,7 +4185,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4245,7 +4230,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4295,7 +4280,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_bootrom/bootrom_l
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4362,7 +4347,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_clib_interface/ne
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4418,7 +4403,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_d
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4459,7 +4444,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_ini
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4503,7 +4488,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_double/double_mat
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4533,7 +4518,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_de
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4588,7 +4573,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_flash/flash.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4647,7 +4632,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_init_
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4692,7 +4677,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_float/float_math.
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4732,7 +4717,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4777,7 +4762,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_multicore/multico
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4853,7 +4838,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_platform_panic/pa
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4905,7 +4890,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_printf/printf.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4937,7 +4922,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime/runtime.c
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -4970,7 +4955,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runt
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5016,7 +5001,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runt
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5064,7 +5049,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_runtime_init/runt
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5102,7 +5087,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_standard_binary_i
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5160,7 +5145,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: 
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5184,76 +5169,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: 
   ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
-
-CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
-  ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  ../libs/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  ../libs/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
-  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
-  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
-  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
-  ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c \
   ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
@@ -5314,7 +5230,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/reset_i
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5410,7 +5326,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5476,7 +5392,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5517,8 +5433,11 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
+  ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
+  ../libs/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
 
 CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: ../libs/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c \
   ../libs/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
@@ -5538,7 +5457,7 @@ CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_unique_id/unique_
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5605,7 +5524,7 @@ CMakeFiles/biopsy_needle.dir/src/hw_config.c.o: ../src/hw_config.c \
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5656,7 +5575,6 @@ CMakeFiles/biopsy_needle.dir/src/hw_config.c.o: ../src/hw_config.c \
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
@@ -5827,7 +5745,7 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -5868,13 +5786,15 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
   ../libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
   ../libs/pico-sdk/src/common/pico_time/include/pico/time.h \
   ../libs/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
@@ -6020,7 +5940,7 @@ CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o: ../src/msc_disk.c \
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -6072,7 +5992,6 @@ CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o: ../src/msc_disk.c \
   ../libs/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  ../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
@@ -6140,7 +6059,7 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
   generated/pico_base/pico/version.h \
   ../libs/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  ../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h \
+  ../libs/pico-sdk/src/boards/include/boards/pico.h \
   ../libs/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   ../libs/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
   ../libs/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
@@ -6319,8 +6238,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 
 ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c:
 
-../libs/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
-
 ../libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
 
 ../libs/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c:
@@ -6447,8 +6364,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 
 ../libs/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2040/Source/system_RP2040.c:
 
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sysinfo.h:
-
 /usr/include/newlib/c++/10.3.1/bits/exception.h:
 
 ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
@@ -6519,8 +6434,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 
 /usr/include/newlib/sys/_stdint.h:
 
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
-
 ../libs/FX29/fx29.h:
 
 /usr/include/newlib/c++/10.3.1/bits/stl_iterator.h:
@@ -6532,6 +6445,10 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/rtc.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h:
+
+../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h:
 
 /usr/include/newlib/c++/10.3.1/tr1/special_function_util.h:
 
@@ -6701,8 +6618,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 
 ../libs/pico-sdk/src/rp2_common/pico_malloc/include/pico/malloc.h:
 
-../libs/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h:
-
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h:
 
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.h:
@@ -6716,10 +6631,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 ../libs/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h:
 
 ../libs/pico-sdk/src/common/pico_time/timeout_helper.c:
-
-../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h:
-
-../libs/SSD1306/ssd1306.h:
 
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h:
 
@@ -6745,18 +6656,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 
 /usr/include/newlib/sys/_sigset.h:
 
-../libs/pico-sdk/src/boards/include/boards/adafruit_feather_rp2040.h:
-
-/usr/include/newlib/c++/10.3.1/bits/locale_facets.h:
-
-/usr/include/newlib/ctype.h:
-
-/usr/include/newlib/sys/cdefs.h:
-
-/usr/include/newlib/c++/10.3.1/bits/memoryfwd.h:
-
-../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.h:
-
 ../libs/pico-sdk/src/rp2_common/hardware_ticks/ticks.c:
 
 ../libs/pico-sdk/lib/tinyusb/src/common/tusb_debug.h:
@@ -6774,10 +6673,6 @@ CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o: ../src/usb_descriptors.c \
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c:
 
 ../libs/pico-sdk/src/common/pico_base_headers/include/pico/types.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h:
-
-../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h:
 
 /usr/include/newlib/c++/10.3.1/stdlib.h:
 
@@ -6817,9 +6712,23 @@ generated/pico_base/pico/config_autogen.h:
 
 ../libs/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h:
 
+/usr/include/newlib/sys/cdefs.h:
+
+/usr/include/newlib/c++/10.3.1/bits/memoryfwd.h:
+
+../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.h:
+
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h:
+
+../libs/SSD1306/ssd1306.h:
+
+../libs/pico-sdk/src/boards/include/boards/pico.h:
+
 ../libs/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h:
 
 /usr/include/newlib/sys/_locale.h:
+
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
 
 /usr/include/newlib/c++/10.3.1/tr1/beta_function.tcc:
 
@@ -6894,6 +6803,10 @@ build/rp2040_sdio.pio.h:
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c:
 
 ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c:
+
+/usr/include/newlib/c++/10.3.1/bits/locale_facets.h:
+
+/usr/include/newlib/ctype.h:
 
 ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h:
 
@@ -7132,3 +7045,5 @@ build/rp2040_sdio.pio.h:
 /usr/include/newlib/inttypes.h:
 
 ../libs/pico-sdk/src/common/pico_util/include/pico/util/pheap.h:
+
+../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sysinfo.h:

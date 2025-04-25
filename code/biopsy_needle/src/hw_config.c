@@ -21,18 +21,34 @@ https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/tree/main#customizing
 */
 
 #include "hw_config.h"
-#define MY_SPI      spi0
-#define SPI0_SCK    18  // SCK
-#define SPI0_MOSI   19  // MOSI
-#define SPI0_MISO   20  // MISO
-#define SPI0_CS     21  // RX (BB Pin)
+
+#ifndef PCB
+#define PCB 0
+#endif
+
+// Pin Defintions (see hw_config.c for SPI)
+#if PCB == 0
+    #define MY_SPI      spi0
+    #define SPI_SCK    18  // SCK
+    #define SPI_MOSI   19  // MOSI
+    #define SPI_MISO   20  // MISO
+    #define SPI_CS     1   // RX (BB Pin)
+#elif PCB == 1
+    #define MY_SPI      spi0
+    #define SPI_SCK    18
+    #define SPI_MOSI   19
+    #define SPI_MISO   20
+    #define SPI_CS     21
+#else
+    #error "Unsupported PLATFORM value"
+#endif
 
 /* Configuration of hardware SPI object */
 static spi_t spi = {
     .hw_inst     = MY_SPI,  // SPI component
-    .sck_gpio    = SPI0_SCK,    // GPIO number (not Pico pin number)
-    .mosi_gpio   = SPI0_MOSI,
-    .miso_gpio   = SPI0_MISO,
+    .sck_gpio    = SPI_SCK,    // GPIO number (not Pico pin number)
+    .mosi_gpio   = SPI_MOSI,
+    .miso_gpio   = SPI_MISO,
     // THOMAS CHANG: We've kept this baud rate to match that of the 2040
     .baud_rate = 125 * 1000 * 1000 / 4  // 31250000 Hz
 
@@ -41,7 +57,7 @@ static spi_t spi = {
 /* SPI Interface */
 static sd_spi_if_t spi_if = {
     .spi = &spi,  // Pointer to the SPI driving this card
-    .ss_gpio     = SPI0_CS  // The SPI slave select GPIO for this SD card
+    .ss_gpio     = SPI_CS  // The SPI slave select GPIO for this SD card
 };
 
 /* Configuration of the SD Card socket object */

@@ -255,8 +255,11 @@ FETCHCONTENT_QUIET:BOOL=ON
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
+//build for pcb or breadboard
+PCB:BOOL=1
+
 //PICO target board (e.g. pico, pico2)
-PICO_BOARD:STRING=adafruit_feather_rp2040
+PICO_BOARD:STRING=pico
 
 //PICO board header directories
 PICO_BOARD_HEADER_DIRS:STRING=
