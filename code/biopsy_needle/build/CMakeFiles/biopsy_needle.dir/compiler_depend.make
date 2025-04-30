@@ -5796,43 +5796,16 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
   ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
   ../libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
-  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
   ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ffconf.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h \
-  ../libs/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
-  ../libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
-  ../libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/sd_timeouts.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card_constants.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_regs.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h \
-  /usr/include/newlib/string.h \
-  /usr/include/newlib/strings.h \
-  /usr/include/newlib/sys/string.h \
-  ../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
   ../libs/pico-sdk/src/rp2_common/tinyusb/include/bsp/board.h \
   ../libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
   /usr/include/newlib/inttypes.h \
   /usr/include/newlib/sys/_intsup.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
   ../libs/pico-sdk/lib/tinyusb/src/tusb.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   ../libs/pico-sdk/lib/tinyusb/src/tusb_option.h \
@@ -5847,6 +5820,10 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: ../src/main.cpp \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  ../libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
   ../libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
   ../libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   ../libs/pico-sdk/lib/tinyusb/src/osal/osal.h \

@@ -5899,43 +5899,16 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ffconf.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/sd_timeouts.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card_constants.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_regs.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h
- /usr/include/newlib/string.h
- /usr/include/newlib/strings.h
- /usr/include/newlib/sys/string.h
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/tinyusb/include/bsp/board.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/hw/bsp/board_api.h
  /usr/include/newlib/inttypes.h
  /usr/include/newlib/sys/_intsup.h
+ /usr/include/newlib/string.h
+ /usr/include/newlib/strings.h
+ /usr/include/newlib/sys/string.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/tusb_option.h
@@ -5950,6 +5923,10 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_common.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/osal/osal_pico.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/sem.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/lock_core.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/mutex.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_sync/include/pico/critical_section.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/osal/osal.h

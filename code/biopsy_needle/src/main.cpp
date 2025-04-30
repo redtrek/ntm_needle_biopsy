@@ -18,6 +18,7 @@
 #include "hardware/uart.h"
 #include "hardware/watchdog.h"
 #include "hardware/clocks.h"
+//#include "include/ntm_needle_helpers.h"
 
 // Includes for the FatFS Library
 #include "pico/stdlib.h"
@@ -128,6 +129,7 @@ void activateMotor(bool direction, uint16_t power);
 void testingSuite();
 void testMSC();
 void testSD();
+void testSPI();
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -335,11 +337,40 @@ void testSD() {
         sleep_ms(1000);
     }
 }
+void testSPI() {
+    #define SPI_SCK    18
+    #define SPI_MOSI   19
+    #define SPI_MISO   20
+    #define SPI_CS     21
+    gpio_init(SPI_SCK);
+    gpio_init(SPI_MOSI);
+    gpio_init(SPI_MISO);
+    gpio_init(SPI_CS);
+    gpio_set_dir(SPI_SCK, 1);
+    gpio_set_dir(SPI_MOSI, 1);
+    gpio_set_dir(SPI_CS, 1);
+    gpio_set_dir(SPI_MISO, 1);
+
+    while(1) {
+        gpio_put(SPI_SCK, 1);
+        gpio_put(SPI_MOSI, 1);
+        gpio_put(SPI_CS, 1);
+        gpio_put(SPI_MISO, 1);
+        sleep_ms(500);
+        gpio_put(SPI_SCK, 0);
+        gpio_put(SPI_MOSI, 0);
+        gpio_put(SPI_CS, 0);
+        gpio_put(SPI_MISO, 0);
+        sleep_ms(500);
+    }
+}
+
 int main() {
     // Uncomment to enter testing mode.
-    testingSuite();
+    //testingSuite();
     //testMSC();
     //testSD();
+    //testSPI();
 
     // MSC: Initialize board
     board_init();
