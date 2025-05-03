@@ -21,8 +21,8 @@
 #define MOTOR_OFF         0    
 
 // Battery Monitoring and ADC
-#define max(A, B) ((A) >= (B) ? (A) : (B))
-#define min(A, B) ((A) <= (B) ? (A) : (B))
+#define NTM_MAX(A, B) ((A) >= (B) ? (A) : (B))
+#define NTM_MIN(A, B) ((A) <= (B) ? (A) : (B))
 #define BAT_MAX_ADC ((int)(0.5 + (4095/3.3) * (4.2/2)))
 #define BAT_MIN_ADC ((int)(0.5 + (4095/3.3) * (3.2/2)))
 #define BAT_ADC_PER (100.0 / (BAT_MAX_ADC - BAT_MIN_ADC))

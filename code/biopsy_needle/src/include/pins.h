@@ -14,8 +14,8 @@
     #define msc_input   10
     #define speed_input 29 // A3 on Feather
     #define bat_lvl     26 // A0 on Feather
-    #define PWM         0  // TX on Feather
-    #define DIR         6  // D4 on Feather
+    #define MOTOR_PWM         0  // TX on Feather
+    #define MOTOR_DIR         6  // D4 on Feather
     #define motorA_out  9
     #define motorB_out  8  // SCL on Feather
 #elif PCB == 1
@@ -26,8 +26,8 @@
     #define msc_input   24
     #define speed_input 29
     #define bat_lvl     26
-    #define PWM         0
-    #define DIR         4
+    #define MOTOR_PWM         0
+    #define MOTOR_DIR         4
     #define motorA_out  9
     #define motorB_out  8  
 #else

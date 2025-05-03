@@ -1922,7 +1922,7 @@ biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/cms
 biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/libs/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
 biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/build.make
 biopsy_needle.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-biopsy_needle.elf: libs/INA219_driver/libina219.a
+biopsy_needle.elf: libs/INA219/libina219.a
 biopsy_needle.elf: ../libs/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 biopsy_needle.elf: CMakeFiles/biopsy_needle.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Linking CXX executable biopsy_needle.elf"

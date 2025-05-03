@@ -97,7 +97,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../src/include"
   "../libs/pico-sdk/src/rp2_common/pico_atomic/include"
   "../libs/pico-sdk/lib/tinyusb/src"
-  "../libs/INA219_driver"
+  "../libs/INA219"
   "build"
   "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source"
   "../libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver"
@@ -283,7 +283,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219_driver/CMakeFiles/ina219.dir/DependInfo.cmake"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/libs/INA219/CMakeFiles/ina219.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

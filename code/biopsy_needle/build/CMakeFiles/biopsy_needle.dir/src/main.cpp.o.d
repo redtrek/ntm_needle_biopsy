@@ -167,6 +167,8 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/include/pins.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/include/config.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/pico_time/include/pico/time.h \
@@ -233,7 +235,7 @@ CMakeFiles/biopsy_needle.dir/src/main.cpp.o: \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
- /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/INA219_driver/INA219.h \
+ /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/../libs/INA219/INA219.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \

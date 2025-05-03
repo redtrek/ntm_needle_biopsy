@@ -35,7 +35,7 @@
 #include "include/tusb_config.h"
 
 // Peripheral Devices
-#include "../libs/INA219_driver/INA219.h"
+#include "../libs/INA219/INA219.h"
 #include "../libs/SSD1306/ssd1306.h"
 #include "../libs/FX29/fx29.h"
 
@@ -95,8 +95,8 @@ float lp_current = 0;
 float MAF[MAF_SZ] = {0};
 int MAF_counter = 0;
 float MAF_sum = 0;
-uint slice = pwm_gpio_to_slice_num(PWM);
-uint channel = pwm_gpio_to_channel(PWM);
+uint slice = pwm_gpio_to_slice_num(MOTOR_PWM);
+uint channel = pwm_gpio_to_channel(MOTOR_PWM);
 
 // ==== Debugging ==== //
 #define debug_us   5000000
@@ -130,7 +130,7 @@ enum states state, nextState;
 void gpio_ISR(uint gpio, uint32_t events) {
     if (gpio == motorA_out) {
         numPulses++;
-        if (gpio_get(DIR) == 0) {
+        if (gpio_get(MOTOR_DIR) == 0) {
                 count--;
             } else {
                 count++;
@@ -180,13 +180,13 @@ void testingSuite() {
     adc_gpio_init(speed_input);
 
     // Motor Control
-    gpio_set_function(PWM, GPIO_FUNC_PWM);
+    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);
     pwm_set_clkdiv(slice, 48.83f);
     pwm_set_wrap(slice, 255);
     pwm_set_chan_level(slice, PWM_CHAN_A, 0);
     pwm_set_enabled(slice, true);
-    gpio_init(DIR);
-    gpio_set_dir(DIR, GPIO_OUT);
+    gpio_init(MOTOR_DIR);
+    gpio_set_dir(MOTOR_DIR, GPIO_OUT);
 
     while(1) {
         // Testing functionality of pushbuttons.
@@ -321,8 +321,8 @@ int main() {
 
     // Initialize serial port and wait for serial monitor
     stdio_init_all();
-    gpio_init(PWM);
-    gpio_put(PWM, 0);
+    gpio_init(MOTOR_PWM);
+    gpio_put(MOTOR_PWM, 0);
     sleep_ms(1000);
     
     // ==== General Initialization ==== //
@@ -476,13 +476,13 @@ void gpio_init() {
     gpio_pull_down(msc_input);
     
     // Motor Control
-    gpio_set_function(PWM, GPIO_FUNC_PWM);
+    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);
     pwm_set_clkdiv(slice, 48.83f);
     pwm_set_wrap(slice, 255);
     pwm_set_chan_level(slice, PWM_CHAN_A, 0);
     pwm_set_enabled(slice, true);
-    gpio_init(DIR);
-    gpio_set_dir(DIR, GPIO_OUT);
+    gpio_init(MOTOR_DIR);
+    gpio_set_dir(MOTOR_DIR, GPIO_OUT);
 
     // Motor Feedback - Output Signals
     gpio_init(motorA_out);
@@ -655,8 +655,8 @@ float getBatLevel() {
         bat += adc_read();
     }
     bat /= 1.0 * potIterations;
-    bat = max(bat, BAT_MIN_ADC);
-    bat = min(bat, BAT_MAX_ADC);
+    bat = NTM_MAX(bat, BAT_MIN_ADC);
+    bat = NTM_MIN(bat, BAT_MAX_ADC);
     bat = BAT_ADC_PER * bat + BAT_ADC_OFFSET;
     return bat;
 }
@@ -703,7 +703,7 @@ void handleButton() {
             if (absolute_time_diff_us(pressTime, now) >= hold_us) {
                 state = ZERO;
                 nextState = FINISH;
-                gpio_put(DIR, 0);
+                gpio_put(MOTOR_DIR, 0);
                 pwm_set_chan_level(slice, PWM_CHAN_A, 255);
                 displayState();
                 sleep_ms(SPIKE_TIME);
@@ -752,7 +752,7 @@ void resetFiltering() {
 }
 
 void setMotor(bool direction, uint16_t power) {
-    gpio_put(DIR, direction);
+    gpio_put(MOTOR_DIR, direction);
     pwm_set_chan_level(slice, PWM_CHAN_A, power);
 }
 

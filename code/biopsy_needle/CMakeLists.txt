@@ -45,7 +45,7 @@ add_executable(${NAME}
 )
 
 add_subdirectory(libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
-add_subdirectory(libs/INA219_driver)
+add_subdirectory(libs/INA219)
 
 # link libraries
 target_link_libraries(${NAME} PRIVATE
