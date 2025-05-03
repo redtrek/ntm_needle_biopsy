@@ -1,9 +1,9 @@
 /**
  * @file main.cpp
  * @author Thomas Chang
- * @brief This is the main file for the electronic biopsy needle. It handles the operation of the state machine, sensors, motors, and display.
+ * @brief This is the main file for the smart biopsy needle. It handles the high level operation of the state machine, sensors, motors, and display.
  * @version 1.0
- * @date 2025-02-06
+ * @date 2025-04-30
  * 
  * @copyright Copyright (c) 2025
  * 
@@ -18,7 +18,9 @@
 #include "hardware/uart.h"
 #include "hardware/watchdog.h"
 #include "hardware/clocks.h"
-//#include "include/ntm_needle_helpers.h"
+#include "include/pins.h"
+#include "include/config.h"
+//#include "include/ntm_helpers.h"
 
 // Includes for the FatFS Library
 #include "pico/stdlib.h"
@@ -37,73 +39,13 @@
 #include "../libs/SSD1306/ssd1306.h"
 #include "../libs/FX29/fx29.h"
 
-// Pin Defintions (see hw_config.c for SPI)
-#ifndef PCB
-#define PCB 0
-#endif
-
-#if PCB == 0
-    #define MY_I2C      i2c0
-    #define I2C_SDA     12
-    #define I2C_SCL     13
-    #define state_input 11
-    #define msc_input   10
-    #define speed_input 29 // A3 on Feather
-    #define bat_lvl     26 // A0 on Feather
-    #define PWM         0  // TX on Feather
-    #define DIR         6  // D4 on Feather
-    #define motorA_out  9
-    #define motorB_out  8  // SCL on Feather
-#elif PCB == 1
-    #define MY_I2C      i2c0
-    #define I2C_SDA     12
-    #define I2C_SCL     13
-    #define state_input 23
-    #define msc_input   24
-    #define speed_input 29
-    #define bat_lvl     26
-    #define PWM         0
-    #define DIR         4
-    #define motorA_out  9
-    #define motorB_out  8  
-#else
-    #error "Unsupported PLATFORM value"
-#endif
-
-#define OLED_ADDR   0x3C
-#define INA219_ADDR 0x40
-#define FX29_ADDR   0x28
-
-// Please see hw_config.c to change SPI configuration.
-
-#define debounce_us   100000
-#define hold_us       3000000 // 3 second hold for zeroing functionality
-#define potIterations 1000
-
-// Motor commands
-#define FW          1    
-#define BW          0    
-#define ON          255  
-#define OFF         0    
-
-#define MAF_SZ      5    // Window size for Moving Average Filter.
-
-#define SPIKE_TIME  500 // Time in ms used to avoid spikes during ZERO state.
-#define CUTOFF_STALL 800.0f // Stall current in mA used to ZERO the device
-
-#define max(A, B) ((A) >= (B) ? (A) : (B))
-#define min(A, B) ((A) <= (B) ? (A) : (B))
-#define BAT_MAX_ADC ((int)(0.5 + (4095/3.3) * (4.2/2)))
-#define BAT_MIN_ADC ((int)(0.5 + (4095/3.3) * (3.2/2)))
-#define BAT_ADC_PER (100.0 / (BAT_MAX_ADC - BAT_MIN_ADC))
-#define BAT_ADC_OS  -320
-#define SEC_US      1000000
-
 using namespace std;
 
 // ==== Experimental Values ==== //
 int fwRev = 50;
 int bwRev = 0;
+#define MAF_SZ      5    // Window size for Moving Average Filter.
+#define LP_ALPHA    0.1f // Smoothing factor for LP Filter
 
 // ==== Function Prototypes ==== //
 void gpio_init();
@@ -125,11 +67,13 @@ float getRevolutions();
 void getRPM();
 void createDataFile();
 void resetFiltering();
-void activateMotor(bool direction, uint16_t power);
+void setMotor(bool direction, uint16_t power);
 void testingSuite();
 void testMSC();
 void testSD();
-void testSPI();
+void testPins();
+void enableMSC();
+void disableMSC();
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -148,7 +92,6 @@ float current_mA = 0;
 float force = 0;
 float displacement = 0;
 float lp_current = 0;
-float lp_alpha = 0.1; // Smoothing factor for LP Filter
 float MAF[MAF_SZ] = {0};
 int MAF_counter = 0;
 float MAF_sum = 0;
@@ -224,7 +167,7 @@ void testingSuite() {
     // OLED
     oled_init();
 
-    // BUTTONS
+    // BUTTMOTOR_ONS
     gpio_init(state_input);
     gpio_set_dir(state_input, GPIO_IN);
     gpio_pull_down(state_input);
@@ -260,9 +203,9 @@ void testingSuite() {
 
         // Testing functionality of motor.
         if (gpio_get(state_input) == 1) {
-            activateMotor(FW, 255);
+            setMotor(MOTOR_FW, 255);
             sleep_ms(3000);
-            activateMotor(BW, OFF);
+            setMotor(MOTOR_BW, MOTOR_OFF);
         }
         
     }
@@ -337,7 +280,7 @@ void testSD() {
         sleep_ms(1000);
     }
 }
-void testSPI() {
+void testPins() {
     #define SPI_SCK    18
     #define SPI_MOSI   19
     #define SPI_MISO   20
@@ -423,79 +366,67 @@ int main() {
         float MAF_current = MAF_sum * 1.0f/MAF_SZ;
 
         switch(state) {
-            
             case WAIT: {
-                // Enable MSC
-                f_unmount("");
-                tud_task();
-                
-                activateMotor(FW, OFF);
-                //displayState();
-
+                enableMSC();
+                setMotor(MOTOR_FW, MOTOR_OFF);
                 nextState = STANDBY;
                 break;
             }
             case STANDBY: {
-                // Disable MSC
-                tud_disconnect();
-                f_mount(&filesys, "", 1);
-                tud_deinit(BOARD_TUD_RHPORT);
-
-                activateMotor(FW, OFF);
+                disableMSC();
+                setMotor(MOTOR_FW, MOTOR_OFF);
                 
                 temp_speed = getInputSpeed();
                 speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f); 
                 
                 resetFiltering();
                 displayState();
-
                 nextState = CUTTING;
                 break;
             }
             case CUTTING: {
                 speed_lvl = speed_lvl;
-
-                lp_current = lp_alpha * current_mA + (1 - lp_alpha) * lp_current;
+                lp_current = LP_ALPHA * current_mA + (1 - LP_ALPHA) * lp_current;
                 f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() > fwRev) {
-                    activateMotor(BW, OFF);
+                    setMotor(MOTOR_BW, MOTOR_OFF);
                     state = REMOVAL;
                 } else {
-                    activateMotor(FW, speed_lvl);
+                    setMotor(MOTOR_FW, speed_lvl);
                 }
-                displayState();
                 
+                displayState();
                 nextState = REMOVAL;
                 break;
             }
             case REMOVAL: {
-                activateMotor(BW, 0);
+                setMotor(MOTOR_BW, 0);
 
                 temp_speed = getInputSpeed();
                 speed_lvl = int(temp_speed / 100.0f * 255.0f);
                 resetFiltering();
+                
                 displayState();
-
                 nextState = EXITING;
                 break;
             }
             case EXITING: {
                 speed_lvl = speed_lvl;
 
-                lp_current = lp_alpha * current_mA + (1 - lp_alpha) * lp_current;
+                lp_current = LP_ALPHA * current_mA + (1 - LP_ALPHA) * lp_current;
                 f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
                 if (getRevolutions() < bwRev) {
-                    activateMotor(FW, OFF);
+                    setMotor(MOTOR_FW, MOTOR_OFF);
                     state = FINISH;
                 } else {
-                    activateMotor(BW, speed_lvl);
+                    setMotor(MOTOR_BW, speed_lvl);
                 }
+                
                 displayState();
-
                 nextState = FINISH;
                 break;
             }
@@ -503,7 +434,7 @@ int main() {
                 f_close(&fil);
                 f_unmount("");
 
-                activateMotor(FW, OFF);
+                setMotor(MOTOR_FW, MOTOR_OFF);
 
                 displayState();
 
@@ -511,7 +442,7 @@ int main() {
                 break;
             }
             case ZERO: {
-                activateMotor(BW, ON);
+                setMotor(MOTOR_BW, MOTOR_ON);
                 
                 if (current_mA > CUTOFF_STALL) {
                     count = 0;
@@ -524,7 +455,6 @@ int main() {
                 break;
             }
         }
-
     }
     return 0;
 }
@@ -727,7 +657,7 @@ float getBatLevel() {
     bat /= 1.0 * potIterations;
     bat = max(bat, BAT_MIN_ADC);
     bat = min(bat, BAT_MAX_ADC);
-    bat = BAT_ADC_PER * bat + BAT_ADC_OS;
+    bat = BAT_ADC_PER * bat + BAT_ADC_OFFSET;
     return bat;
 }
 
@@ -821,7 +751,18 @@ void resetFiltering() {
     lp_current = 0;
 }
 
-void activateMotor(bool direction, uint16_t power) {
+void setMotor(bool direction, uint16_t power) {
     gpio_put(DIR, direction);
     pwm_set_chan_level(slice, PWM_CHAN_A, power);
+}
+
+void enableMSC() {
+    f_unmount("");
+    tud_task();
+}
+
+void disableMSC() {
+    tud_disconnect();
+    f_mount(&filesys, "", 1);
+    tud_deinit(BOARD_TUD_RHPORT);
 }
