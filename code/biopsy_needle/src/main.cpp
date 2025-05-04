@@ -8,31 +8,8 @@
  * @copyright Copyright (c) 2025
  * 
  */
+#include "include/ntm_helpers.h"
 
-#include <iostream>
-#include <stdio.h>
-#include <string>
-#include "hardware/adc.h"
-#include "hardware/pwm.h"
-#include "hardware/irq.h"
-#include "hardware/uart.h"
-#include "hardware/watchdog.h"
-#include "hardware/clocks.h"
-#include "include/pins.h"
-#include "include/config.h"
-//#include "include/ntm_helpers.h"
-
-// Includes for the FatFS Library
-#include "pico/stdlib.h"
-#include "hw_config.h"
-#include "f_util.h"
-#include "ff.h"
-
-// MSC-specific
-#include <bsp/board.h>
-#include <stdlib.h>
-#include <tusb.h>
-#include "include/tusb_config.h"
 
 // Peripheral Devices
 #include "../libs/INA219/INA219.h"
@@ -48,32 +25,31 @@ int bwRev = 0;
 #define LP_ALPHA    0.1f // Smoothing factor for LP Filter
 
 // ==== Function Prototypes ==== //
-void gpio_init();
 void oled_init();
-string stateToString();
-void displayState();
+
 void displayInputSpeed(int y_pos);
-void displayRPM(int y_pos);
-void displayCurrent(int y_pos);
-void displayPos(int y_pos);
 void displayBat(int y_pos);
-void displayForce(int y_pos);
+
+
+void displayState();
 void handleButton();
 void handleRelease();
 void handleMSCButton();
-float getBatLevel();
-long getInputSpeed();
-float getRevolutions();
-void getRPM();
 void createDataFile();
 void resetFiltering();
-void setMotor(bool direction, uint16_t power);
+
+float getBatLevel();
+long getInputSpeed();
+void getRPM();
+
+
+
+// Testing functions
 void testingSuite();
 void testMSC();
 void testSD();
 void testPins();
-void enableMSC();
-void disableMSC();
+
 
 // ==== Globals ==== //
 ssd1306_t oled;
@@ -91,15 +67,16 @@ float rpm = 0;
 float current_mA = 0;
 float force = 0;
 float displacement = 0;
+
 float lp_current = 0;
 float MAF[MAF_SZ] = {0};
 int MAF_counter = 0;
 float MAF_sum = 0;
-uint slice = pwm_gpio_to_slice_num(MOTOR_PWM);
-uint channel = pwm_gpio_to_channel(MOTOR_PWM);
+
+extern uint slice;
+extern uint channel;
 
 // ==== Debugging ==== //
-#define debug_us   5000000
 absolute_time_t prevBug = get_absolute_time();
 absolute_time_t currBug = get_absolute_time();
 
@@ -149,6 +126,8 @@ void gpio_ISR(uint gpio, uint32_t events) {
     }
 }
 
+void enableMSC();
+void disableMSC();
 
 void testingSuite() {
     stdio_init_all();
@@ -180,6 +159,8 @@ void testingSuite() {
     adc_gpio_init(speed_input);
 
     // Motor Control
+    uint slice = pwm_gpio_to_slice_num(MOTOR_PWM);
+    uint channel = pwm_gpio_to_channel(MOTOR_PWM);
     gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);
     pwm_set_clkdiv(slice, 48.83f);
     pwm_set_wrap(slice, 255);
@@ -326,7 +307,7 @@ int main() {
     sleep_ms(1000);
     
     // ==== General Initialization ==== //
-    gpio_init();
+    board_gpio_init();
     bat_per = getBatLevel();
     oled_init();
     state = WAIT;
@@ -340,7 +321,6 @@ int main() {
     gpio_set_irq_enabled(msc_input, GPIO_IRQ_EDGE_FALL, true);
 
     while(1) {
-        printf("Testing!\n");
         now = get_absolute_time();
         int64_t time_ms = to_ms_since_boot(now);
 
@@ -351,7 +331,7 @@ int main() {
         
         bat_per = getBatLevel();
         current_mA = ina219.read_current() * 1000;
-        displacement = getRevolutions() * 0.5f;
+        displacement = getRevolutions(count) * 0.5f;
         force = compute_force(FX29_read(MY_I2C, FX29_ADDR));
 
         if (MAF_counter == MAF_SZ) {
@@ -387,10 +367,10 @@ int main() {
             case CUTTING: {
                 speed_lvl = speed_lvl;
                 lp_current = LP_ALPHA * current_mA + (1 - LP_ALPHA) * lp_current;
-                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", "CUTTING", time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
-                if (getRevolutions() > fwRev) {
+                if (getRevolutions(count) > fwRev) {
                     setMotor(MOTOR_BW, MOTOR_OFF);
                     state = REMOVAL;
                 } else {
@@ -416,10 +396,10 @@ int main() {
                 speed_lvl = speed_lvl;
 
                 lp_current = LP_ALPHA * current_mA + (1 - LP_ALPHA) * lp_current;
-                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", stateToString().c_str(), time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
+                f_printf(&fil, "%s,%lld,%f,%f,%f,%f,%f,%f\n", "EXITING", time_ms, current_mA, lp_current, MAF_current, rpm, displacement, force);
 
                 // ==== SAFETY CHECK ==== //
-                if (getRevolutions() < bwRev) {
+                if (getRevolutions(count) < bwRev) {
                     setMotor(MOTOR_FW, MOTOR_OFF);
                     state = FINISH;
                 } else {
@@ -457,47 +437,6 @@ int main() {
         }
     }
     return 0;
-}
-
-void gpio_init() {
-    // Potentiometer Input
-    adc_init();
-    adc_gpio_init(speed_input);
-    adc_gpio_init(bat_lvl);
-
-    // Pushbutton State Input
-    gpio_init(state_input);
-    gpio_set_dir(state_input, GPIO_IN);
-    gpio_pull_down(state_input);
-
-    // Pushbutton MSC Input
-    gpio_init(msc_input);
-    gpio_set_dir(msc_input, GPIO_IN);
-    gpio_pull_down(msc_input);
-    
-    // Motor Control
-    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);
-    pwm_set_clkdiv(slice, 48.83f);
-    pwm_set_wrap(slice, 255);
-    pwm_set_chan_level(slice, PWM_CHAN_A, 0);
-    pwm_set_enabled(slice, true);
-    gpio_init(MOTOR_DIR);
-    gpio_set_dir(MOTOR_DIR, GPIO_OUT);
-
-    // Motor Feedback - Output Signals
-    gpio_init(motorA_out);
-    gpio_set_dir(motorA_out, GPIO_IN);
-    gpio_pull_up(motorA_out);
-    gpio_init(motorB_out);
-    gpio_set_dir(motorB_out, GPIO_IN);
-    gpio_pull_up(motorB_out);
-    
-    // I2C Initialization
-    i2c_init(i2c0, 400000);
-    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
-    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
-    gpio_pull_up(I2C_SDA);
-    gpio_pull_up(I2C_SCL);
 }
 
 void oled_init() {
@@ -559,26 +498,26 @@ void displayState() {
             case CUTTING:
                 ssd1306_draw_string(&oled, 0, 2, 2, "CUTTING");
                 displayBat(0);
-                displayCurrent(20);
-                displayRPM(30);
-                displayPos(40);
-                displayForce(50);
+                displayData(&oled, 20, current_mA, "CUR (mA)  : ");
+                displayData(&oled, 30, rpm, "SPD (RPM) : ");
+                displayData(&oled, 40, displacement, "POS (mm)  : ");
+                displayData(&oled, 50, force, "FRC (N)   : ");
                 break;
             
             case REMOVAL:
                 ssd1306_draw_string(&oled, 0, 2, 2, "REMOVAL");
                 displayBat(0);
-                displayPos(20);
+                displayData(&oled, 20, displacement, "POS (mm)  : ");
                 displayInputSpeed(50);
                 break;
             
             case EXITING:
                 ssd1306_draw_string(&oled, 0, 2, 2, "EXITING");
                 displayBat(0);
-                displayCurrent(20);
-                displayRPM(30);
-                displayPos(40);
-                displayForce(50);
+                displayData(&oled, 20, current_mA, "CUR (mA)  : ");
+                displayData(&oled, 30, rpm, "SPD (RPM) : ");
+                displayData(&oled, 40, displacement, "POS (mm)  : ");
+                displayData(&oled, 50, force, "FRC (N)   : ");
                 break;
             
             case FINISH: // For debugging purposes.
@@ -591,34 +530,10 @@ void displayState() {
                 ssd1306_draw_string(&oled, 0, 2, 2, "ZERO");
                 displayBat(0);
                 ssd1306_draw_string(&oled, 0, 20, 1, "Resetting to origin");
-                displayCurrent(30);
+                displayData(&oled, 30, current_mA, "CUR (mA)  : ");
                 break;
         }
     ssd1306_show(&oled);
-}
-
-void displayForce(int y_pos) {
-    std::string temp = "FRC (N)   : " + to_string(force);
-    const char* frc = temp.c_str();
-    ssd1306_draw_string(&oled, 0, y_pos, 1, frc);
-}
-
-void displayRPM(int y_pos) {
-    std::string temp = "SPD (RPM) : " + to_string(rpm);
-    const char* rpm = temp.c_str();
-    ssd1306_draw_string(&oled, 0, y_pos, 1, rpm);
-}
-
-void displayCurrent(int y_pos) {
-    std::string temp = "CUR (mA)  : " + to_string(current_mA);
-    const char* curr = temp.c_str();
-    ssd1306_draw_string(&oled, 0, y_pos, 1 , curr);
-}
-
-void displayPos(int y_pos) {
-    std::string temp = "POS (mm)  : " + to_string(displacement);
-    const char* pos = temp.c_str();
-    ssd1306_draw_string(&oled, 0, y_pos, 1 , pos);
 }
 
 void displayBat(int y_pos) {
@@ -634,17 +549,6 @@ void displayBat(int y_pos) {
     const char* bat = temp.c_str();
     ssd1306_draw_string(&oled, 110, y_pos, 1, "BAT");
     ssd1306_draw_string(&oled, x_pos, y_pos + 8, 1, bat);
-}
-
-string stateToString() {
-    switch(state) {
-        case WAIT:    return "WAIT";
-        case STANDBY: return "STANDBY";
-        case CUTTING: return "CUTTING";
-        case REMOVAL: return "REMOVAL";
-        case EXITING: return "EXITING";
-        default:      return "STATE ERROR"; 
-    }
 }
 
 float getBatLevel() {
@@ -669,11 +573,6 @@ long getInputSpeed() {
     }
     
     return long(0.0243 * (val * 1.0 / potIterations) + 1);
-}
-
-float getRevolutions() {
-    float re = count/12.0/34.014f;
-    return re;
 }
 
 void getRPM() {
@@ -704,7 +603,7 @@ void handleButton() {
                 state = ZERO;
                 nextState = FINISH;
                 gpio_put(MOTOR_DIR, 0);
-                pwm_set_chan_level(slice, PWM_CHAN_A, 255);
+                pwm_set_chan_level(slice, channel, 255);
                 displayState();
                 sleep_ms(SPIKE_TIME);
 
@@ -751,11 +650,6 @@ void resetFiltering() {
     lp_current = 0;
 }
 
-void setMotor(bool direction, uint16_t power) {
-    gpio_put(MOTOR_DIR, direction);
-    pwm_set_chan_level(slice, PWM_CHAN_A, power);
-}
-
 void enableMSC() {
     f_unmount("");
     tud_task();
@@ -766,3 +660,4 @@ void disableMSC() {
     f_mount(&filesys, "", 1);
     tud_deinit(BOARD_TUD_RHPORT);
 }
+

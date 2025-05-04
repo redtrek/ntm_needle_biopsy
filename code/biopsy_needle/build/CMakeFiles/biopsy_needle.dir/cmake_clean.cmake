@@ -218,6 +218,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/biopsy_needle.dir/src/main.cpp.o.d"
   "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o"
   "CMakeFiles/biopsy_needle.dir/src/msc_disk.c.o.d"
+  "CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.o"
+  "CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.o.d"
   "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o"
   "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o.d"
   "biopsy_needle.elf"

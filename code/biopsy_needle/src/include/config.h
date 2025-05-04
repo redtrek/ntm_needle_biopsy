@@ -9,6 +9,7 @@
 #define debounce_us   100000
 #define hold_us       3000000 // 3 second hold for zeroing functionality
 #define potIterations 1000
+#define debug_us   5000000
 
 // ZERO state timing
 #define SPIKE_TIME  500 // Time in ms used to avoid spikes during ZERO state.

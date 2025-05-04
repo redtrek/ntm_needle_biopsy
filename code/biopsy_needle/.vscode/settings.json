@@ -72,6 +72,9 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "cfenv": "cpp"
+        "cfenv": "cpp",
+        "ntm_helpers.h": "c",
+        "irq.h": "c",
+        "stdio.h": "c"
     }
 }

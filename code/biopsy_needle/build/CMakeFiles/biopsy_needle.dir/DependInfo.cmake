@@ -279,6 +279,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/usb_descriptors.c" "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/usb_descriptors.c.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/biopsy_needle.dir/libs/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/main.cpp" "CMakeFiles/biopsy_needle.dir/src/main.cpp.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/main.cpp.o.d"
+  "/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/src/ntm_helpers.cpp" "CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.o" "gcc" "CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.o.d"
   )
 
 # Targets to which this target links.

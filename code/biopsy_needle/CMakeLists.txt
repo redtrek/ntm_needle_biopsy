@@ -34,6 +34,7 @@ add_compile_definitions(PCB=${PCB})
 # src files .h and .cpp
 add_executable(${NAME}
     src/main.cpp
+    src/ntm_helpers.cpp
     src/hw_config.c
     src/msc_disk.c
     src/usb_descriptors.c

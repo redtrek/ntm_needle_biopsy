@@ -2804,6 +2804,30 @@ src/msc_disk.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/msc_disk.c.s
 .PHONY : src/msc_disk.c.s
 
+src/ntm_helpers.o: src/ntm_helpers.cpp.o
+.PHONY : src/ntm_helpers.o
+
+# target to build an object file
+src/ntm_helpers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.o
+.PHONY : src/ntm_helpers.cpp.o
+
+src/ntm_helpers.i: src/ntm_helpers.cpp.i
+.PHONY : src/ntm_helpers.i
+
+# target to preprocess a source file
+src/ntm_helpers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.i
+.PHONY : src/ntm_helpers.cpp.i
+
+src/ntm_helpers.s: src/ntm_helpers.cpp.s
+.PHONY : src/ntm_helpers.s
+
+# target to generate assembly for a file
+src/ntm_helpers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/biopsy_needle.dir/build.make CMakeFiles/biopsy_needle.dir/src/ntm_helpers.cpp.s
+.PHONY : src/ntm_helpers.cpp.s
+
 src/usb_descriptors.o: src/usb_descriptors.c.o
 .PHONY : src/usb_descriptors.o
 
@@ -3167,6 +3191,9 @@ help:
 	@echo "... src/msc_disk.o"
 	@echo "... src/msc_disk.i"
 	@echo "... src/msc_disk.s"
+	@echo "... src/ntm_helpers.o"
+	@echo "... src/ntm_helpers.i"
+	@echo "... src/ntm_helpers.s"
 	@echo "... src/usb_descriptors.o"
 	@echo "... src/usb_descriptors.i"
 	@echo "... src/usb_descriptors.s"
