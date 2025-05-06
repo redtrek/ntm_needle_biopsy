@@ -2,58 +2,58 @@
 \hypertarget{tusb__config_8h_source}{}\label{tusb__config_8h_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/tusb\_config.h@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/tusb\_config.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
-\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ The\ MIT\ License\ (MIT)}}
-\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2020\ Raspberry\ Pi\ (Trading)\ Ltd.}}
-\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2020\ Damien\ P.\ George}}
-\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a\ copy}}
-\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
-\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation\ the\ rights}}
-\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,\ and/or\ sell}}
-\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the\ Software\ is}}
-\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
-\DoxyCodeLine{00013\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
-\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
-\DoxyCodeLine{00016\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
-\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
-\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
-\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
-\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,}}
-\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN}}
-\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ THE\ SOFTWARE.}}
-\DoxyCodeLine{00024\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00025\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{comment}{//\#include\ "{}stdio\_usb.h"{}}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ CFG\_TUSB\_RHPORT0\_MODE\ \ \ (OPT\_MODE\_DEVICE)}}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\ \ \ \ \ \ \ \ \ \ \ \ \ (1)}}
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\_RX\_BUFSIZE\ \ (256)}}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\_TX\_BUFSIZE\ \ (256)}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_MSC\ \ \ \ \ \ \ \ \ \ \ \ \ (1)}}
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_MSC\_EP\_BUFSIZE\ \ (4096)}}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{comment}{//\ We\ use\ a\ vendor\ specific\ interface\ but\ with\ our\ own\ driver}}
-\DoxyCodeLine{00041\ \textcolor{comment}{//\ Vendor\ driver\ only\ used\ for\ Microsoft\ OS\ 2.0\ descriptor}}
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#if\ !PICO\_STDIO\_USB\_RESET\_INTERFACE\_SUPPORT\_MS\_OS\_20\_DESCRIPTOR}}
-\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\ \ \ \ \ \ \ \ \ \ \ \ (0)}}
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\ \ \ \ \ \ \ \ \ \ \ \ (1)}}
-\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\_RX\_BUFSIZE\ \ (256)}}
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\_TX\_BUFSIZE\ \ (256)}}
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \textcolor{comment}{//\ RHPort\ number\ used\ for\ device\ can\ be\ defined\ by\ board.mk,\ default\ to\ port\ 0}}
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifndef\ BOARD\_TUD\_RHPORT}}
-\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ BOARD\_TUD\_RHPORT\ \ \ \ \ \ 0}}
-\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00002}00002\ \textcolor{comment}{\ *\ The\ MIT\ License\ (MIT)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2020\ Raspberry\ Pi\ (Trading)\ Ltd.}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2020\ Damien\ P.\ George}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00006}00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00007}00007\ \textcolor{comment}{\ *\ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a\ copy}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00008}00008\ \textcolor{comment}{\ *\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00009}00009\ \textcolor{comment}{\ *\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation\ the\ rights}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00010}00010\ \textcolor{comment}{\ *\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,\ and/or\ sell}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00011}00011\ \textcolor{comment}{\ *\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the\ Software\ is}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00012}00012\ \textcolor{comment}{\ *\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00014}00014\ \textcolor{comment}{\ *\ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00015}00015\ \textcolor{comment}{\ *\ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00017}00017\ \textcolor{comment}{\ *\ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00018}00018\ \textcolor{comment}{\ *\ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00019}00019\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00020}00020\ \textcolor{comment}{\ *\ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00021}00021\ \textcolor{comment}{\ *\ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00022}00022\ \textcolor{comment}{\ *\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00023}00023\ \textcolor{comment}{\ *\ THE\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00024}00024\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00025}00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00027}00027\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00029}00029\ \textcolor{comment}{//\#include\ "{}stdio\_usb.h"{}}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ CFG\_TUSB\_RHPORT0\_MODE\ \ \ (OPT\_MODE\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00033}00033\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\ \ \ \ \ \ \ \ \ \ \ \ \ (1)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\_RX\_BUFSIZE\ \ (256)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_CDC\_TX\_BUFSIZE\ \ (256)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_MSC\ \ \ \ \ \ \ \ \ \ \ \ \ (1)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00038}00038\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_MSC\_EP\_BUFSIZE\ \ (4096)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00040}00040\ \textcolor{comment}{//\ We\ use\ a\ vendor\ specific\ interface\ but\ with\ our\ own\ driver}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00041}00041\ \textcolor{comment}{//\ Vendor\ driver\ only\ used\ for\ Microsoft\ OS\ 2.0\ descriptor}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00042}00042\ \textcolor{preprocessor}{\#if\ !PICO\_STDIO\_USB\_RESET\_INTERFACE\_SUPPORT\_MS\_OS\_20\_DESCRIPTOR}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00043}00043\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\ \ \ \ \ \ \ \ \ \ \ \ (0)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00044}00044\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\ \ \ \ \ \ \ \ \ \ \ \ (1)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00046}00046\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\_RX\_BUFSIZE\ \ (256)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00047}00047\ \textcolor{preprocessor}{\#define\ CFG\_TUD\_VENDOR\_TX\_BUFSIZE\ \ (256)}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00048}00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00050}00050\ \textcolor{comment}{//\ RHPort\ number\ used\ for\ device\ can\ be\ defined\ by\ board.mk,\ default\ to\ port\ 0}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00051}00051\ \textcolor{preprocessor}{\#ifndef\ BOARD\_TUD\_RHPORT}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00052}00052\ \textcolor{preprocessor}{\#define\ BOARD\_TUD\_RHPORT\ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{tusb__config_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,0 +1,184 @@
+\doxysection{msc\+\_\+disk.\+c}
+\hypertarget{msc__disk_8c_source}{}\label{msc__disk_8c_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/msc\_disk.c@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/msc\_disk.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00001}00001\ \textcolor{comment}{//\ lib/tinyusb/examples/device/cdc\_msc/src/msc\_disk.c}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00002}00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00003}00003\ \textcolor{comment}{\ *\ Modifications\ copyright\ 2024\ Carl\ John\ Kugler\ III}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00005}00005\ \textcolor{comment}{\ *\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ License);\ you\ may\ not\ use}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00006}00006\ \textcolor{comment}{\ *\ this\ file\ except\ in\ compliance\ with\ the\ License.\ You\ may\ obtain\ a\ copy\ of\ the}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00007}00007\ \textcolor{comment}{\ *\ License\ at}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00008}00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00009}00009\ \textcolor{comment}{\ *\ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00011}00011\ \textcolor{comment}{\ *\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software\ distributed}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00012}00012\ \textcolor{comment}{\ *\ under\ the\ License\ is\ distributed\ on\ an\ AS\ IS\ BASIS,\ WITHOUT\ WARRANTIES\ OR}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00013}00013\ \textcolor{comment}{\ *\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.\ See\ the\ License\ for\ the}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00014}00014\ \textcolor{comment}{\ *\ specific\ language\ governing\ permissions\ and\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00015}00015\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00016}00016\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00017}00017\ \textcolor{comment}{\ *\ The\ MIT\ License\ (MIT)}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00018}00018\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00019}00019\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2019\ Ha\ Thach\ (tinyusb.org)}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00020}00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00021}00021\ \textcolor{comment}{\ *\ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a\ copy}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00022}00022\ \textcolor{comment}{\ *\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00023}00023\ \textcolor{comment}{\ *\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation\ the\ rights}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00024}00024\ \textcolor{comment}{\ *\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,\ and/or\ sell}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00025}00025\ \textcolor{comment}{\ *\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the\ Software\ is}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00026}00026\ \textcolor{comment}{\ *\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00027}00027\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00028}00028\ \textcolor{comment}{\ *\ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00029}00029\ \textcolor{comment}{\ *\ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00030}00030\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00031}00031\ \textcolor{comment}{\ *\ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00032}00032\ \textcolor{comment}{\ *\ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00033}00033\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00034}00034\ \textcolor{comment}{\ *\ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00035}00035\ \textcolor{comment}{\ *\ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00036}00036\ \textcolor{comment}{\ *\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00037}00037\ \textcolor{comment}{\ *\ THE\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00038}00038\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00039}00039\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00041}00041\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00042}00042\ \textcolor{preprocessor}{\#include\ <stdarg.h>}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00043}00043\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00044}00044\ \textcolor{preprocessor}{\#include\ <tusb.h>}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00045}00045\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00046}00046\ \textcolor{preprocessor}{\#include\ <pico/stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00047}00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00048}00048\ \textcolor{preprocessor}{\#include\ "{}diskio.h"{}}\ \textcolor{comment}{/*\ Declarations\ of\ disk\ functions\ */}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00049}00049\ \textcolor{preprocessor}{\#include\ "{}my\_debug.h"{}}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ "{}class/msc/msc.h"{}}\ \textcolor{comment}{//\ THOMAS\ CHANG:\ Added\ this\ include\ to\ resolve\ errors\ with\ missing\ defines.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}ff.h"{}}\ \ \textcolor{comment}{//\ THOMAS\ CHANG:\ Added\ this\ include\ to\ resolve\ errors\ with\ missing\ defines.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00054}00054\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ ejected\ =\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ FIXME:\ should\ be\ LUN\ specific}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00056}00056\ \textcolor{comment}{//\ \#define\ TRACE\_PRINTF\ printf}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00057}00057\ \textcolor{preprocessor}{\#define\ TRACE\_PRINTF(fmt,\ args...)}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00067}00067\ \textcolor{keywordtype}{void}\ tud\_msc\_inquiry\_cb(uint8\_t\ lun,\ uint8\_t\ vendor\_id[8],\ uint8\_t\ product\_id[16],}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ product\_rev[4])\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00069}00069\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00070}00070\ \ \ \ \ (void)lun;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ FIXME:\ maybe\ this\ should\ come\ from\ the\ SD\ card's\ CSD?}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ vid[]\ =\ \textcolor{stringliteral}{"{}Pico\ SD"{}};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ pid[]\ =\ \textcolor{stringliteral}{"{}Mass\ Storage"{}};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ rev[]\ =\ \textcolor{stringliteral}{"{}1.0"{}};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Copy\ the\ vendor\ ID,\ product\ ID,\ and\ revision\ to\ the\ buffers.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00077}00077\ \ \ \ \ snprintf((\textcolor{keywordtype}{char}*)vendor\_id,\ 8,\ \textcolor{stringliteral}{"{}\%s"{}},\ vid);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00078}00078\ \ \ \ \ snprintf((\textcolor{keywordtype}{char}*)product\_id,\ 16,\ \textcolor{stringliteral}{"{}\%s"{}},\ pid);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00079}00079\ \ \ \ \ snprintf((\textcolor{keywordtype}{char}*)product\_rev,\ 4,\ \textcolor{stringliteral}{"{}\%s"{}},\ rev);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00090}00090\ \textcolor{keywordtype}{bool}\ tud\_msc\_test\_unit\_ready\_cb(uint8\_t\ lun)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00091}00091\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00092}00092\ \ \ \ \ DSTATUS\ ds\ =\ disk\_initialize(lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ (!(STA\_NOINIT\ \&\ ds)\ \&\&\ !(STA\_NODISK\ \&\ ds));}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00105}00105\ \textcolor{keywordtype}{void}\ tud\_msc\_capacity\_cb(uint8\_t\ lun,\ uint32\_t*\ block\_count\_p,\ uint16\_t*\ block\_size\_p)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00106}00106\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tud\_msc\_test\_unit\_ready\_cb(lun))\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ *block\_count\_p\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00109}00109\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ DRESULT\ dr\ =\ disk\_ioctl(lun,\ GET\_SECTOR\_COUNT,\ block\_count\_p);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (RES\_OK\ !=\ dr)\ *block\_count\_p\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00113}00113\ \ \ \ \ *block\_size\_p\ =\ 512;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00128}00128\ \textcolor{keywordtype}{bool}\ tud\_msc\_start\_stop\_cb(uint8\_t\ lun,\ uint8\_t\ power\_condition,\ \textcolor{keywordtype}{bool}\ start,\ \textcolor{keywordtype}{bool}\ load\_eject)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00129}00129\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00130}00130\ \ \ \ \ (void)power\_condition;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (load\_eject)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (start)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ load\ disk\ storage}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ ejected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ unload\ disk\ storage}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ DRESULT\ dr\ =\ disk\_ioctl(lun,\ CTRL\_SYNC,\ 0);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (RES\_OK\ !=\ dr)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ ejected\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00157}00157\ int32\_t\ tud\_msc\_read10\_cb(uint8\_t\ lun,\ uint32\_t\ lba,\ uint32\_t\ offset,\ \textcolor{keywordtype}{void}*\ buffer,}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ bufsize)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00159}00159\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00160}00160\ \ \ \ \ (void)offset;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00161}00161\ \ \ \ \ assert(!offset);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00162}00162\ \ \ \ \ assert(!(bufsize\ \%\ 512));}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{if}\ (ejected)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00165}00165\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tud\_msc\_test\_unit\_ready\_cb(lun))\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ Read\ data\ from\ the\ disk.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00168}00168\ \ \ \ \ DRESULT\ dr\ =\ disk\_read(lun,\ (BYTE*)buffer,\ lba,\ bufsize\ /\ 512);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00169}00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (RES\_OK\ !=\ dr)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00171}00171\ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)bufsize;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00181}00181\ \textcolor{keywordtype}{bool}\ tud\_msc\_is\_writable\_cb(uint8\_t\ lun)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00182}00182\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00183}00183\ \ \ \ \ \textcolor{keywordflow}{if}\ (ejected)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00185}00185\ \ \ \ \ DSTATUS\ ds\ =\ disk\_status(lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00186}00186\ \ \ \ \ \textcolor{keywordflow}{return}\ !(STA\_PROTECT\ \&\ ds);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00201}00201\ int32\_t\ tud\_msc\_write10\_cb(uint8\_t\ lun,\ uint32\_t\ lba,\ uint32\_t\ offset,\ uint8\_t*\ buffer,}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ bufsize)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00203}00203\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00204}00204\ \ \ \ \ (void)offset;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00205}00205\ \ \ \ \ assert(!offset);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00206}00206\ \ \ \ \ assert(!(bufsize\ \%\ 512));}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00208}00208\ \ \ \ \ \textcolor{keywordflow}{if}\ (ejected)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00209}00209\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tud\_msc\_test\_unit\_ready\_cb(lun))\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00211}00211\ \ \ \ \ \textcolor{comment}{//\ Write\ data\ to\ the\ disk.}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00212}00212\ \ \ \ \ DRESULT\ dr\ =\ disk\_write(lun,\ (BYTE*)buffer,\ lba,\ bufsize\ /\ 512);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{if}\ (RES\_OK\ !=\ dr)\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00215}00215\ \ \ \ \ \textcolor{keywordflow}{return}\ bufsize;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00216}00216\ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00228}00228\ int32\_t\ tud\_msc\_scsi\_cb(uint8\_t\ lun,\ uint8\_t\ \textcolor{keyword}{const}\ scsi\_cmd[16],\ \textcolor{keywordtype}{void}*\ buffer,}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ bufsize)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00230}00230\ \ \ \ \ TRACE\_PRINTF(\textcolor{stringliteral}{"{}\%s(lun=\%d)\(\backslash\)n"{}},\ \_\_func\_\_,\ lun);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00231}00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{const}*\ response\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00232}00232\ \ \ \ \ int32\_t\ resplen\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00234}00234\ \ \ \ \ \textcolor{comment}{//\ most\ scsi\ handled\ is\ input}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00235}00235\ \ \ \ \ \textcolor{keywordtype}{bool}\ in\_xfer\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00237}00237\ \ \ \ \ \textcolor{keywordflow}{switch}\ (scsi\_cmd[0])\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00238}00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Sense\ =\ Invalid\ Command\ Operation}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ tud\_msc\_set\_sense(lun,\ SCSI\_SENSE\_ILLEGAL\_REQUEST,\ 0x20,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ negative\ means\ error\ -\/>\ tinyusb\ could\ stall\ and/or\ response\ with\ failed\ status}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ resplen\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00244}00244\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00246}00246\ \ \ \ \ \textcolor{comment}{//\ return\ resplen\ must\ not\ larger\ than\ bufsize}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (resplen\ >\ bufsize)\ resplen\ =\ bufsize;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00249}00249\ \ \ \ \ \textcolor{keywordflow}{if}\ (response\ \&\&\ (resplen\ >\ 0))\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_xfer)\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(buffer,\ response,\ (\textcolor{keywordtype}{size\_t})resplen);}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ ;\ \ \textcolor{comment}{//\ SCSI\ output}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00254}00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00255}00255\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00256}00256\ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)resplen;}
+\DoxyCodeLine{\Hypertarget{msc__disk_8c_source_l00257}00257\ \}}
+
+\end{DoxyCode}

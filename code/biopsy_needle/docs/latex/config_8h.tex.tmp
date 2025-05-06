@@ -10,52 +10,43 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{config_8h_a7dfa2c4cfbfcba36416046052e7943e8}\label{config_8h_a7dfa2c4cfbfcba36416046052e7943e8} 
-\#define {\bfseries OLED\+\_\+\+ADDR}~0x3C
+\#define \mbox{\hyperlink{config_8h_a7dfa2c4cfbfcba36416046052e7943e8}{OLED\+\_\+\+ADDR}}~0x3C
 \item 
-\Hypertarget{config_8h_ac1339fa84c70a1e0606d8d3362c993ee}\label{config_8h_ac1339fa84c70a1e0606d8d3362c993ee} 
-\#define {\bfseries INA219\+\_\+\+ADDR}~0x40
+\#define \mbox{\hyperlink{config_8h_ac1339fa84c70a1e0606d8d3362c993ee}{INA219\+\_\+\+ADDR}}~0x40
 \item 
-\Hypertarget{config_8h_ab8af39ec9ea4179e1236663f82e6be92}\label{config_8h_ab8af39ec9ea4179e1236663f82e6be92} 
-\#define {\bfseries FX29\+\_\+\+ADDR}~0x28
+\#define \mbox{\hyperlink{config_8h_ab8af39ec9ea4179e1236663f82e6be92}{FX29\+\_\+\+ADDR}}~0x28
 \item 
-\Hypertarget{config_8h_a0427c5ee0151d36a621ea2bbbcc33b80}\label{config_8h_a0427c5ee0151d36a621ea2bbbcc33b80} 
-\#define {\bfseries debounce\+\_\+us}~100000
+\#define \mbox{\hyperlink{config_8h_a0427c5ee0151d36a621ea2bbbcc33b80}{debounce\+\_\+us}}~100000
 \item 
-\Hypertarget{config_8h_ac6f3299722b682ead61165a15c392922}\label{config_8h_ac6f3299722b682ead61165a15c392922} 
-\#define {\bfseries hold\+\_\+us}~3000000
+\#define \mbox{\hyperlink{config_8h_ac6f3299722b682ead61165a15c392922}{hold\+\_\+us}}~3000000
 \begin{DoxyCompactList}\small\item\em Hold \mbox{[}STATE\mbox{]} for 3 sec to enter ZERO state. \end{DoxyCompactList}\item 
-\Hypertarget{config_8h_ac10c5e664055ed80b487406ea89b6e72}\label{config_8h_ac10c5e664055ed80b487406ea89b6e72} 
-\#define {\bfseries pot\+Iterations}~1000
+\#define \mbox{\hyperlink{config_8h_ac10c5e664055ed80b487406ea89b6e72}{pot\+Iterations}}~1000
 \item 
-\Hypertarget{config_8h_a7e34bd94f3ba8465de287a9663c24b80}\label{config_8h_a7e34bd94f3ba8465de287a9663c24b80} 
-\#define {\bfseries debug\+\_\+us}~5000000
+\#define \mbox{\hyperlink{config_8h_a7e34bd94f3ba8465de287a9663c24b80}{debug\+\_\+us}}~5000000
 \item 
-\Hypertarget{config_8h_afce5aaf1a0caf368eaf0db8926a30960}\label{config_8h_afce5aaf1a0caf368eaf0db8926a30960} 
-\#define {\bfseries SPIKE\+\_\+\+TIME}~500
+\#define \mbox{\hyperlink{config_8h_afce5aaf1a0caf368eaf0db8926a30960}{SPIKE\+\_\+\+TIME}}~500
 \begin{DoxyCompactList}\small\item\em Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state will exit immediately as it will detect motor startup spikes as collision with the housing. \end{DoxyCompactList}\item 
-\Hypertarget{config_8h_a1923668201fdaeaced6d7935492b1a1f}\label{config_8h_a1923668201fdaeaced6d7935492b1a1f} 
-\#define {\bfseries CUTOFF\+\_\+\+STALL}~800.\+0f
+\#define \mbox{\hyperlink{config_8h_a1923668201fdaeaced6d7935492b1a1f}{CUTOFF\+\_\+\+STALL}}~800.\+0f
 \begin{DoxyCompactList}\small\item\em Stall current that determines when the ZERO state is complete. If the device detects this current, it will be because it has reached the housing. \end{DoxyCompactList}\item 
-\#define {\bfseries MOTOR\+\_\+\+FW}~1
+\#define \mbox{\hyperlink{group__MotorMacros_ga7217e715c077650b39f693d8fbfa57d0}{MOTOR\+\_\+\+FW}}~1
 \item 
-\#define {\bfseries MOTOR\+\_\+\+BW}~0
+\#define \mbox{\hyperlink{group__MotorMacros_gabd813818c5b56e7356a571c562b922fb}{MOTOR\+\_\+\+BW}}~0
 \item 
-\#define {\bfseries MOTOR\+\_\+\+ON}~255
+\#define \mbox{\hyperlink{group__MotorMacros_ga3249ae087e43a52e0182917edca0dc12}{MOTOR\+\_\+\+ON}}~255
 \begin{DoxyCompactList}\small\item\em Maximum PWM value for motor. \end{DoxyCompactList}\item 
-\#define {\bfseries MOTOR\+\_\+\+OFF}~0
+\#define \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\+\_\+\+OFF}}~0
 \begin{DoxyCompactList}\small\item\em Minimum PWM value for motor. \end{DoxyCompactList}\item 
-\#define {\bfseries NTM\+\_\+\+MAX}(A,  B)~((A) $>$= (B) ? (A) \+: (B))
+\#define \mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{NTM\+\_\+\+MAX}}(A,  B)~((A) $>$= (B) ? (A) \+: (B))
 \begin{DoxyCompactList}\small\item\em Calculates the bigger value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$>$}{>}= (B) return A. Else return B. \end{DoxyCompactList}\item 
-\#define {\bfseries NTM\+\_\+\+MIN}(A,  B)~((A) $<$= (B) ? (A) \+: (B))
+\#define \mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{NTM\+\_\+\+MIN}}(A,  B)~((A) $<$= (B) ? (A) \+: (B))
 \begin{DoxyCompactList}\small\item\em Calculates the smaller value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$<$}{<}= (B) return A. Else return B. \end{DoxyCompactList}\item 
-\#define {\bfseries BAT\+\_\+\+MAX\+\_\+\+ADC}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (4.\+2/2)))
+\#define \mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (4.\+2/2)))
 \begin{DoxyCompactList}\small\item\em Represents the battery\textquotesingle{}s max capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}maximum charge"{} is 4.\+2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.\+1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. \end{DoxyCompactList}\item 
-\#define {\bfseries BAT\+\_\+\+MIN\+\_\+\+ADC}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (3.\+2/2)))
+\#define \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (3.\+2/2)))
 \begin{DoxyCompactList}\small\item\em Represents the battery\textquotesingle{}s min capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}minimum charge"{} is 3.\+2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.\+6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. \end{DoxyCompactList}\item 
-\#define {\bfseries BAT\+\_\+\+ADC\+\_\+\+PER}~(100.\+0 / (\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}} -\/ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}))
+\#define \mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{BAT\+\_\+\+ADC\+\_\+\+PER}}~(100.\+0 / (\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}} -\/ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}))
 \begin{DoxyCompactList}\small\item\em Looks strange out of context. Used to calculate the batter capacity i.\+e. (Current Battery Value -\/ BAT\+\_\+\+MIN\+\_\+\+ADC) \texorpdfstring{$\ast$}{*} BAT\+\_\+\+ADC\+\_\+\+PER = \% Capacity. \end{DoxyCompactList}\item 
-\#define {\bfseries SEC\+\_\+\+US}~1000000
+\#define \mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{SEC\+\_\+\+US}}~1000000
 \begin{DoxyCompactList}\small\item\em 1 Second in microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -74,3 +65,112 @@ Thomas Chang
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2025 
 \end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{config_8h_a1923668201fdaeaced6d7935492b1a1f}\label{config_8h_a1923668201fdaeaced6d7935492b1a1f} 
+\index{config.h@{config.h}!CUTOFF\_STALL@{CUTOFF\_STALL}}
+\index{CUTOFF\_STALL@{CUTOFF\_STALL}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{CUTOFF\_STALL}{CUTOFF\_STALL}}
+{\footnotesize\ttfamily \#define CUTOFF\+\_\+\+STALL~800.\+0f}
+
+
+
+Stall current that determines when the ZERO state is complete. If the device detects this current, it will be because it has reached the housing. 
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00028}{28}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_a0427c5ee0151d36a621ea2bbbcc33b80}\label{config_8h_a0427c5ee0151d36a621ea2bbbcc33b80} 
+\index{config.h@{config.h}!debounce\_us@{debounce\_us}}
+\index{debounce\_us@{debounce\_us}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{debounce\_us}{debounce\_us}}
+{\footnotesize\ttfamily \#define debounce\+\_\+us~100000}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00020}{20}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_a7e34bd94f3ba8465de287a9663c24b80}\label{config_8h_a7e34bd94f3ba8465de287a9663c24b80} 
+\index{config.h@{config.h}!debug\_us@{debug\_us}}
+\index{debug\_us@{debug\_us}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{debug\_us}{debug\_us}}
+{\footnotesize\ttfamily \#define debug\+\_\+us~5000000}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00023}{23}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_ab8af39ec9ea4179e1236663f82e6be92}\label{config_8h_ab8af39ec9ea4179e1236663f82e6be92} 
+\index{config.h@{config.h}!FX29\_ADDR@{FX29\_ADDR}}
+\index{FX29\_ADDR@{FX29\_ADDR}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{FX29\_ADDR}{FX29\_ADDR}}
+{\footnotesize\ttfamily \#define FX29\+\_\+\+ADDR~0x28}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00017}{17}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_ac6f3299722b682ead61165a15c392922}\label{config_8h_ac6f3299722b682ead61165a15c392922} 
+\index{config.h@{config.h}!hold\_us@{hold\_us}}
+\index{hold\_us@{hold\_us}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{hold\_us}{hold\_us}}
+{\footnotesize\ttfamily \#define hold\+\_\+us~3000000}
+
+
+
+Hold \mbox{[}STATE\mbox{]} for 3 sec to enter ZERO state. 
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00021}{21}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_ac1339fa84c70a1e0606d8d3362c993ee}\label{config_8h_ac1339fa84c70a1e0606d8d3362c993ee} 
+\index{config.h@{config.h}!INA219\_ADDR@{INA219\_ADDR}}
+\index{INA219\_ADDR@{INA219\_ADDR}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{INA219\_ADDR}{INA219\_ADDR}}
+{\footnotesize\ttfamily \#define INA219\+\_\+\+ADDR~0x40}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00016}{16}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_a7dfa2c4cfbfcba36416046052e7943e8}\label{config_8h_a7dfa2c4cfbfcba36416046052e7943e8} 
+\index{config.h@{config.h}!OLED\_ADDR@{OLED\_ADDR}}
+\index{OLED\_ADDR@{OLED\_ADDR}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{OLED\_ADDR}{OLED\_ADDR}}
+{\footnotesize\ttfamily \#define OLED\+\_\+\+ADDR~0x3C}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00015}{15}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_ac10c5e664055ed80b487406ea89b6e72}\label{config_8h_ac10c5e664055ed80b487406ea89b6e72} 
+\index{config.h@{config.h}!potIterations@{potIterations}}
+\index{potIterations@{potIterations}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{potIterations}{potIterations}}
+{\footnotesize\ttfamily \#define pot\+Iterations~1000}
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00022}{22}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_afce5aaf1a0caf368eaf0db8926a30960}\label{config_8h_afce5aaf1a0caf368eaf0db8926a30960} 
+\index{config.h@{config.h}!SPIKE\_TIME@{SPIKE\_TIME}}
+\index{SPIKE\_TIME@{SPIKE\_TIME}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{SPIKE\_TIME}{SPIKE\_TIME}}
+{\footnotesize\ttfamily \#define SPIKE\+\_\+\+TIME~500}
+
+
+
+Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state will exit immediately as it will detect motor startup spikes as collision with the housing. 
+
+
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00027}{27}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+

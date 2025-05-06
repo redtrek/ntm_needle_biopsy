@@ -1,0 +1,70 @@
+\doxysection{ntm\+\_\+helpers.\+cpp}
+\hypertarget{ntm__helpers_8cpp_source}{}\label{ntm__helpers_8cpp_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/ntm\_helpers.cpp@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/ntm\_helpers.cpp}}
+\mbox{\hyperlink{ntm__helpers_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ntm__helpers_8h}{include/ntm\_helpers.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{00018}}\ uint\ \mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}}\ =\ \ pwm\_gpio\_to\_slice\_num(MOTOR\_PWM);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00024}\mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{00024}}\ uint\ \mbox{\hyperlink{ntm__helpers_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}}\ =\ pwm\_gpio\_to\_channel(MOTOR\_PWM);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00026}\mbox{\hyperlink{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8cpp_a8c6d7458362f0a1d72f048e5c28dafc9}{board\_gpio\_init}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Potentiometer\ Input}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00028}00028\ \ \ \ \ adc\_init();}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00029}00029\ \ \ \ \ adc\_gpio\_init(speed\_input);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00030}00030\ \ \ \ \ adc\_gpio\_init(bat\_lvl);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Pushbutton\ State\ Input}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00033}00033\ \ \ \ \ gpio\_init(state\_input);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00034}00034\ \ \ \ \ gpio\_set\_dir(state\_input,\ GPIO\_IN);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00035}00035\ \ \ \ \ gpio\_pull\_down(state\_input);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Pushbutton\ MSC\ Input}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00038}00038\ \ \ \ \ gpio\_init(msc\_input);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00039}00039\ \ \ \ \ gpio\_set\_dir(msc\_input,\ GPIO\_IN);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00040}00040\ \ \ \ \ gpio\_pull\_down(msc\_input);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Motor\ Control}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00043}00043\ \ \ \ \ gpio\_set\_function(MOTOR\_PWM,\ GPIO\_FUNC\_PWM);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00044}00044\ \ \ \ \ pwm\_set\_clkdiv(\mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 48.83f);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00045}00045\ \ \ \ \ pwm\_set\_wrap(\mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 255);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00046}00046\ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \mbox{\hyperlink{ntm__helpers_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}},\ 0);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00047}00047\ \ \ \ \ pwm\_set\_enabled(\mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00048}00048\ \ \ \ \ gpio\_init(MOTOR\_DIR);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00049}00049\ \ \ \ \ gpio\_set\_dir(MOTOR\_DIR,\ GPIO\_OUT);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Motor\ Feedback\ -\/\ Output\ Signals}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00052}00052\ \ \ \ \ gpio\_init(motorA\_out);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00053}00053\ \ \ \ \ gpio\_set\_dir(motorA\_out,\ GPIO\_IN);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00054}00054\ \ \ \ \ gpio\_pull\_up(motorA\_out);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00055}00055\ \ \ \ \ gpio\_init(motorB\_out);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00056}00056\ \ \ \ \ gpio\_set\_dir(motorB\_out,\ GPIO\_IN);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00057}00057\ \ \ \ \ gpio\_pull\_up(motorB\_out);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ I2C\ Initialization}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00060}00060\ \ \ \ \ i2c\_init(MY\_I2C,\ 400000);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00061}00061\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00062}00062\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00063}00063\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00064}00064\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00067}\mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8cpp_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(\textcolor{keywordtype}{bool}\ direction,\ uint16\_t\ power)\ \{}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00068}00068\ \ \ \ \ gpio\_put(MOTOR\_DIR,\ direction);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00069}00069\ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{ntm__helpers_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \mbox{\hyperlink{ntm__helpers_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}},\ power);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00072}\mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{00072}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8cpp_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(ssd1306\_t*\ screen,\ \textcolor{keywordtype}{int}\ y\_pos,\ \textcolor{keywordtype}{float}\ data,\ std::string\ info)\ \{}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00073}00073\ \ \ \ \ std::string\ temp\ =\ info\ +\ std::to\_string(data);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ data\_formatted\ =\ temp.c\_str();}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00075}00075\ \ \ \ \ ssd1306\_draw\_string(screen,\ 0,\ y\_pos,\ 1,\ data\_formatted);}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00078}\mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{00078}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{ntm__helpers_8cpp_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(\textcolor{keywordtype}{int}\ count)\ \{}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{float}\ re\ =\ count/12.0/34.014f;}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{return}\ re;}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{ntm__helpers_8cpp_source_l00082}00082\ }
+
+\end{DoxyCode}
