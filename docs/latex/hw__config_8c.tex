@@ -1,0 +1,77 @@
+\doxysection{/home/redtrek/\+NTM/ntm\+\_\+needle\+\_\+biopsy/code/biopsy\+\_\+needle/src/hw\+\_\+config.c File Reference}
+\hypertarget{hw__config_8c}{}\label{hw__config_8c}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/hw\_config.c@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/hw\_config.c}}
+
+
+This is a modified configuration file from the Fat\+FS library. Configured to communicate with the micro\+SD via SPI with pin definitions dependent on platform.  
+
+
+{\ttfamily \#include "{}hw\+\_\+config.\+h"{}}\newline
+Include dependency graph for hw\+\_\+config.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hw__config_8c_abce6d16c89bc3a3a1744a4ce63a10d54}\label{hw__config_8c_abce6d16c89bc3a3a1744a4ce63a10d54} 
+\#define {\bfseries PCB}~0
+\item 
+\Hypertarget{hw__config_8c_a399911c7ae262415664800482fd362f5}\label{hw__config_8c_a399911c7ae262415664800482fd362f5} 
+\#define {\bfseries MY\+\_\+\+SPI}~spi0
+\item 
+\Hypertarget{hw__config_8c_a750ca7c9b92cfc9e57272ff3a49db48b}\label{hw__config_8c_a750ca7c9b92cfc9e57272ff3a49db48b} 
+\#define {\bfseries SPI\+\_\+\+SCK}~18
+\item 
+\Hypertarget{hw__config_8c_a7dbebab5f7dd57885adccf6711b13592}\label{hw__config_8c_a7dbebab5f7dd57885adccf6711b13592} 
+\#define {\bfseries SPI\+\_\+\+MOSI}~19
+\item 
+\Hypertarget{hw__config_8c_ab142cc77dfa97010c9d2b616d0992b64}\label{hw__config_8c_ab142cc77dfa97010c9d2b616d0992b64} 
+\#define {\bfseries SPI\+\_\+\+MISO}~20
+\item 
+\Hypertarget{hw__config_8c_ade4259fa3cbb71732a4e73c18dcb9b0d}\label{hw__config_8c_ade4259fa3cbb71732a4e73c18dcb9b0d} 
+\#define {\bfseries SPI\+\_\+\+CS}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hw__config_8c_a43d3ae8133310f23860b4f5b8cf4934e}\label{hw__config_8c_a43d3ae8133310f23860b4f5b8cf4934e} 
+size\+\_\+t {\bfseries sd\+\_\+get\+\_\+num} ()
+\item 
+sd\+\_\+card\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hw__config_8c_ae019a1533d42fd3972c3f1eea96d23d4}{sd\+\_\+get\+\_\+by\+\_\+num}} (size\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Get a pointer to an SD card object by its number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a modified configuration file from the Fat\+FS library. Configured to communicate with the micro\+SD via SPI with pin definitions dependent on platform. 
+
+\begin{DoxyAuthor}{Author}
+Carl John Kugler III, Thomas Chang 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hw__config_8c_ae019a1533d42fd3972c3f1eea96d23d4}\label{hw__config_8c_ae019a1533d42fd3972c3f1eea96d23d4} 
+\index{hw\_config.c@{hw\_config.c}!sd\_get\_by\_num@{sd\_get\_by\_num}}
+\index{sd\_get\_by\_num@{sd\_get\_by\_num}!hw\_config.c@{hw\_config.c}}
+\doxysubsubsection{\texorpdfstring{sd\_get\_by\_num()}{sd\_get\_by\_num()}}
+{\footnotesize\ttfamily sd\+\_\+card\+\_\+t \texorpdfstring{$\ast$}{*} sd\+\_\+get\+\_\+by\+\_\+num (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+
+
+Get a pointer to an SD card object by its number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num} & The number of the SD card to get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the SD card object, or {\ttfamily NULL} if the number is invalid. 
+\end{DoxyReturn}

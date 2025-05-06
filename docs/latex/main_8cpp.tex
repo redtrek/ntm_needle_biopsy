@@ -1,0 +1,222 @@
+\doxysection{/home/redtrek/\+NTM/ntm\+\_\+needle\+\_\+biopsy/code/biopsy\+\_\+needle/src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/main.cpp@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/main.cpp}}
+
+
+This is the main file for the smart biopsy needle. It handles the high level operation of the state machine, sensors, motors, and display. If onboarding, LOOK AT THIS FILE FIRST. Close all pragma regions and just try to understand the main function.  
+
+
+{\ttfamily \#include "{}include/ntm\+\_\+helpers.\+h"{}}\newline
+{\ttfamily \#include "{}../libs/\+INA219/\+INA219.\+h"{}}\newline
+{\ttfamily \#include "{}../libs/\+SSD1306/ssd1306.\+h"{}}\newline
+{\ttfamily \#include "{}../libs/\+FX29/fx29.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}\label{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3} 
+\#define {\bfseries MAF\+\_\+\+SZ}~5
+\begin{DoxyCompactList}\small\item\em Window size for Moving Average Filter. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_a9400840ebc875d8e59c484e65a643b77}\label{main_8cpp_a9400840ebc875d8e59c484e65a643b77} 
+\#define {\bfseries LP\+\_\+\+ALPHA}~0.\+1f
+\begin{DoxyCompactList}\small\item\em Smoothing factor for LP Filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677}\label{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677} 
+enum {\bfseries states} \{ \newline
+{\bfseries WAIT}
+, {\bfseries STANDBY}
+, {\bfseries CUTTING}
+, {\bfseries REMOVAL}
+, \newline
+{\bfseries EXITING}
+, {\bfseries FINISH}
+, {\bfseries ZERO}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a8c50659733df2acac1580d209db8e97f}\label{main_8cpp_a8c50659733df2acac1580d209db8e97f} 
+void {\bfseries oled\+\_\+init} ()
+\item 
+\Hypertarget{main_8cpp_a77605eb86157d0b0194fc72a25738a22}\label{main_8cpp_a77605eb86157d0b0194fc72a25738a22} 
+void {\bfseries display\+Input\+Speed} (int y\+\_\+pos)
+\item 
+\Hypertarget{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}\label{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89} 
+void {\bfseries display\+Bat} (int y\+\_\+pos)
+\item 
+\Hypertarget{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}\label{main_8cpp_ac59ebf0340587075ef7d1fc943c78408} 
+void {\bfseries display\+State} ()
+\item 
+\Hypertarget{main_8cpp_ac7c42980e08859e81090559d51a512b0}\label{main_8cpp_ac7c42980e08859e81090559d51a512b0} 
+void {\bfseries handle\+Button} ()
+\item 
+\Hypertarget{main_8cpp_ae2e93a7266c27d56845381cb2076d391}\label{main_8cpp_ae2e93a7266c27d56845381cb2076d391} 
+void {\bfseries handle\+Release} ()
+\item 
+\Hypertarget{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}\label{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524} 
+void {\bfseries handle\+MSCButton} ()
+\item 
+\Hypertarget{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}\label{main_8cpp_a5ab132489f70371e1c876ba54e9d7011} 
+void {\bfseries create\+Data\+File} ()
+\item 
+\Hypertarget{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}\label{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3} 
+void {\bfseries reset\+Filtering} ()
+\item 
+\Hypertarget{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}\label{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11} 
+float {\bfseries get\+Bat\+Level} ()
+\item 
+\Hypertarget{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}\label{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd} 
+long {\bfseries get\+Input\+Speed} ()
+\item 
+\Hypertarget{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}\label{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664} 
+void {\bfseries get\+RPM} ()
+\item 
+\Hypertarget{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}\label{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6} 
+void {\bfseries enable\+MSC} ()
+\item 
+\Hypertarget{main_8cpp_ae995a6024db644fcec928354bc4f5f67}\label{main_8cpp_ae995a6024db644fcec928354bc4f5f67} 
+void {\bfseries disable\+MSC} ()
+\item 
+\Hypertarget{main_8cpp_a64461563174d034ff94d443f2c172622}\label{main_8cpp_a64461563174d034ff94d443f2c172622} 
+void {\bfseries testing\+Suite} ()
+\item 
+\Hypertarget{main_8cpp_a4765141d8281f1873714923a260f93fc}\label{main_8cpp_a4765141d8281f1873714923a260f93fc} 
+void {\bfseries test\+MSC} ()
+\item 
+\Hypertarget{main_8cpp_ada5a15c76153823533f203632f7d1d62}\label{main_8cpp_ada5a15c76153823533f203632f7d1d62} 
+void {\bfseries test\+SD} ()
+\item 
+\Hypertarget{main_8cpp_a68ec483eb29785695a1b3b255b3dc8b9}\label{main_8cpp_a68ec483eb29785695a1b3b255b3dc8b9} 
+void {\bfseries test\+Pins} ()
+\item 
+\Hypertarget{main_8cpp_af70581e416f69b14c5a0bc5e4918b479}\label{main_8cpp_af70581e416f69b14c5a0bc5e4918b479} 
+void {\bfseries gpio\+\_\+\+ISR} (uint gpio, uint32\+\_\+t events)
+\item 
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}\label{main_8cpp_a92c826e08ae550b58a56ea3f55c49311} 
+int {\bfseries fw\+Rev} = 50
+\begin{DoxyCompactList}\small\item\em Sets the max forward revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_a5988591b58aabf7567019b975da7e7aa}\label{main_8cpp_a5988591b58aabf7567019b975da7e7aa} 
+int {\bfseries bw\+Rev} = 0
+\begin{DoxyCompactList}\small\item\em Sets the max backwards revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_a03de839a9debec4f2265023b765444ad}\label{main_8cpp_a03de839a9debec4f2265023b765444ad} 
+ssd1306\+\_\+t {\bfseries oled}
+\item 
+\Hypertarget{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}\label{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb} 
+uint16\+\_\+t {\bfseries speed\+\_\+lvl} = 0
+\item 
+\Hypertarget{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}\label{main_8cpp_af04968100075345ffc60b9ffe62b4c9c} 
+long {\bfseries temp\+\_\+speed} = 0
+\item 
+\Hypertarget{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b}\label{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b} 
+long {\bfseries bat\+\_\+per} = 0
+\item 
+\Hypertarget{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf} 
+int {\bfseries count} = 0
+\item 
+\Hypertarget{main_8cpp_ac6f130727d2275823bd3040581e801a5}\label{main_8cpp_ac6f130727d2275823bd3040581e801a5} 
+int {\bfseries num\+Pulses} = 0
+\item 
+\Hypertarget{main_8cpp_ae1f37897ed52586bce688beb5be8f50e}\label{main_8cpp_ae1f37897ed52586bce688beb5be8f50e} 
+absolute\+\_\+time\+\_\+t {\bfseries now} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}\label{main_8cpp_a597777ddfcfc40b6553d91789dfd343f} 
+absolute\+\_\+time\+\_\+t {\bfseries prev\+Time} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63}\label{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63} 
+absolute\+\_\+time\+\_\+t {\bfseries press\+Time} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a029fea14c173ec8d34f33c8594b95db0}\label{main_8cpp_a029fea14c173ec8d34f33c8594b95db0} 
+absolute\+\_\+time\+\_\+t {\bfseries pressed\+Time} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a6564e8259eebddb283f25451cd7fd364}\label{main_8cpp_a6564e8259eebddb283f25451cd7fd364} 
+absolute\+\_\+time\+\_\+t {\bfseries msc\+Press\+Time} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}\label{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910} 
+float {\bfseries rpm} = 0
+\item 
+\Hypertarget{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3}\label{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3} 
+float {\bfseries current\+\_\+mA} = 0
+\item 
+\Hypertarget{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b}\label{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b} 
+float {\bfseries force} = 0
+\item 
+\Hypertarget{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832}\label{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832} 
+float {\bfseries displacement} = 0
+\item 
+\Hypertarget{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2}\label{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2} 
+float {\bfseries lp\+\_\+current} = 0
+\item 
+\Hypertarget{main_8cpp_a37794ae42b6a8116fa24f997b634dba9}\label{main_8cpp_a37794ae42b6a8116fa24f997b634dba9} 
+float {\bfseries MAF} \mbox{[}\mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\+\_\+\+SZ}}\mbox{]} = \{0\}
+\item 
+\Hypertarget{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8}\label{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8} 
+int {\bfseries MAF\+\_\+counter} = 0
+\item 
+\Hypertarget{main_8cpp_aef72076a36ad8bc9405e594d784e040b}\label{main_8cpp_aef72076a36ad8bc9405e594d784e040b} 
+float {\bfseries MAF\+\_\+sum} = 0
+\item 
+\Hypertarget{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}\label{main_8cpp_ac7597a58fd0a9415759b81dffee974e6} 
+uint {\bfseries slice}
+\begin{DoxyCompactList}\small\item\em Global slice value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to the organization of PWM configurations by clock. Please see RP2040 documentation. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}\label{main_8cpp_a23777d4d3d69af11916d27e48261cfb1} 
+uint {\bfseries channel}
+\begin{DoxyCompactList}\small\item\em Global channel value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to PWM output pin itself. Please see RP2040 documentation. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c}\label{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c} 
+absolute\+\_\+time\+\_\+t {\bfseries prev\+Bug} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a21215ef0aca60874669e1e2f7425e70c}\label{main_8cpp_a21215ef0aca60874669e1e2f7425e70c} 
+absolute\+\_\+time\+\_\+t {\bfseries curr\+Bug} = get\+\_\+absolute\+\_\+time()
+\item 
+\Hypertarget{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed}\label{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed} 
+volatile bool {\bfseries motor\+\_\+flag} = false
+\item 
+\Hypertarget{main_8cpp_ae964ac24618b7c245998d37cdd06acd3}\label{main_8cpp_ae964ac24618b7c245998d37cdd06acd3} 
+volatile bool {\bfseries button\+\_\+press\+\_\+flag} = false
+\item 
+\Hypertarget{main_8cpp_a548278ea37054952a50f6ef9ce6413ce}\label{main_8cpp_a548278ea37054952a50f6ef9ce6413ce} 
+volatile bool {\bfseries button\+\_\+release\+\_\+flag} = false
+\item 
+\Hypertarget{main_8cpp_a268172ec6be901b1e9c5f4212cee806b}\label{main_8cpp_a268172ec6be901b1e9c5f4212cee806b} 
+volatile bool {\bfseries button\+\_\+msc\+\_\+flag} = false
+\item 
+\Hypertarget{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}\label{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f} 
+FATFS {\bfseries filesys}
+\item 
+\Hypertarget{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}\label{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714} 
+FIL {\bfseries fil}
+\item 
+\Hypertarget{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed}\label{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed} 
+TCHAR {\bfseries filename} \mbox{[}20\mbox{]} = "{}data0.\+csv\textbackslash{}0"{}
+\item 
+\Hypertarget{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}\label{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49} 
+enum states state {\bfseries next\+State}
+\item 
+\Hypertarget{main_8cpp_accd9653a1b3ee09644723877d2aa36e1}\label{main_8cpp_accd9653a1b3ee09644723877d2aa36e1} 
+bool {\bfseries valid\+Press} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file for the smart biopsy needle. It handles the high level operation of the state machine, sensors, motors, and display. If onboarding, LOOK AT THIS FILE FIRST. Close all pragma regions and just try to understand the main function. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Chang 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/04-\/30
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
