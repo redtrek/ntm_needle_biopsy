@@ -1,4 +1,4 @@
-# Install script for directory: /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cyw43_driver
+# Install script for directory: /home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2_common/pico_cyw43_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cmake_install.cmake")
+  include("/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cmake_install.cmake")
 endif()
 

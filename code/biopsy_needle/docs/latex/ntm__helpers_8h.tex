@@ -1,0 +1,113 @@
+\doxysection{/home/redtrek/\+NTM/ntm\+\_\+needle\+\_\+biopsy/code/biopsy\+\_\+needle/src/include/ntm\+\_\+helpers.h File Reference}
+\hypertarget{ntm__helpers_8h}{}\label{ntm__helpers_8h}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/ntm\_helpers.h@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/ntm\_helpers.h}}
+
+
+This file holds the prototypes for smart needle\textquotesingle{}s helper functions.  
+
+
+{\ttfamily \#include "{}pins.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}../../libs/\+SSD1306/ssd1306.\+h"{}}\newline
+{\ttfamily \#include "{}pico/stdlib.\+h"{}}\newline
+{\ttfamily \#include "{}hw\+\_\+config.\+h"{}}\newline
+{\ttfamily \#include "{}f\+\_\+util.\+h"{}}\newline
+{\ttfamily \#include "{}ff.\+h"{}}\newline
+{\ttfamily \#include $<$bsp/board.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$tusb.\+h$>$}\newline
+{\ttfamily \#include "{}tusb\+\_\+config.\+h"{}}\newline
+Include dependency graph for ntm\+\_\+helpers.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}\label{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9} 
+void {\bfseries board\+\_\+gpio\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initiates all GPIO pins as well as communication protocols. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{set\+Motor}} (bool direction, uint16\+\_\+t power)
+\begin{DoxyCompactList}\small\item\em Turns on motor with configureable speed and direction values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{display\+Data}} (ssd1306\+\_\+t \texorpdfstring{$\ast$}{*}screen, int y\+\_\+pos, float data, std\+::string info)
+\begin{DoxyCompactList}\small\item\em Helper function used to abstract how sensor data is shown on the OLED screen. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{get\+Revolutions}} (int count)
+\begin{DoxyCompactList}\small\item\em Takes detected motor signals and converts them to the real-\/world number of revolutions of the motor shaft. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file holds the prototypes for smart needle\textquotesingle{}s helper functions. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Chang 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}\label{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07} 
+\index{ntm\_helpers.h@{ntm\_helpers.h}!displayData@{displayData}}
+\index{displayData@{displayData}!ntm\_helpers.h@{ntm\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{displayData()}{displayData()}}
+{\footnotesize\ttfamily void display\+Data (\begin{DoxyParamCaption}\item[{ssd1306\+\_\+t \texorpdfstring{$\ast$}{*}}]{screen,  }\item[{int}]{y\+\_\+pos,  }\item[{float}]{data,  }\item[{std\+::string}]{info }\end{DoxyParamCaption})}
+
+
+
+Helper function used to abstract how sensor data is shown on the OLED screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & OLED object representing the actual screen in firmware. \\
+\hline
+{\em y\+\_\+pos} & The y position in pixels (bottom left) of where the text is written. \\
+\hline
+{\em data} & The actual sensor information. \\
+\hline
+{\em info} & Any string messages detailing what the sensor information is measuring. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}\label{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874} 
+\index{ntm\_helpers.h@{ntm\_helpers.h}!getRevolutions@{getRevolutions}}
+\index{getRevolutions@{getRevolutions}!ntm\_helpers.h@{ntm\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{getRevolutions()}{getRevolutions()}}
+{\footnotesize\ttfamily float get\+Revolutions (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Takes detected motor signals and converts them to the real-\/world number of revolutions of the motor shaft. 
+
+The conversion is as follows\+: number\+\_\+of\+\_\+counts \texorpdfstring{$\ast$}{*} (1 small revolution / 12 counts) \texorpdfstring{$\ast$}{*} (1 big revolution / 34.\+014 small revolutions). 34.\+014 is the gear ratio whilst the (small revolutions / counts) is from the motor documentation. 
+\begin{DoxyParams}{Parameters}
+{\em count} & Number of signal edges recieved from motor (see quadrature encoder information in motor documentation). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\Hypertarget{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}\label{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62} 
+\index{ntm\_helpers.h@{ntm\_helpers.h}!setMotor@{setMotor}}
+\index{setMotor@{setMotor}!ntm\_helpers.h@{ntm\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{setMotor()}{setMotor()}}
+{\footnotesize\ttfamily void set\+Motor (\begin{DoxyParamCaption}\item[{bool}]{direction,  }\item[{uint16\+\_\+t}]{power }\end{DoxyParamCaption})}
+
+
+
+Turns on motor with configureable speed and direction values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Integer value where 1 means forward and 0 means backward. \\
+\hline
+{\em power} & Integer value representing power of the motor ranging from 0-\/255 where 255 is the maximum. \\
+\hline
+\end{DoxyParams}

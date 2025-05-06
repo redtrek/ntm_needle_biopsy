@@ -20,6 +20,17 @@ See
 https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/tree/main#customizing-for-the-hardware-configuration
 */
 
+/**
+ * @file hw_config.c
+ * @author Carl John Kugler III, Thomas Chang
+ * @brief This is a modified configuration file from the FatFS library. Configured to communicate with the microSD via SPI with pin definitions dependent on platform.
+ * @version 0.1
+ * @date 2025-05-06
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
 #include "hw_config.h"
 
 #ifndef PCB

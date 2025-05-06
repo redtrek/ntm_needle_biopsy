@@ -1,7 +1,7 @@
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/pioasm.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/edit_cache.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/rebuild_cache.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/list_install_components.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install/local.dir
-/home/redtrek/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install/strip.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/pioasm.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/edit_cache.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/list_install_components.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install/local.dir
+/home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/build/pioasm/CMakeFiles/install/strip.dir

@@ -1,4 +1,4 @@
-# Install script for directory: /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src
+# Install script for directory: /home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/libs/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

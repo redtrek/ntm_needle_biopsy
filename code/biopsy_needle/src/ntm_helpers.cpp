@@ -1,7 +1,26 @@
+/**
+ * @file ntm_helpers.cpp
+ * @author Thomas Chang
+ * @brief This file holds the definitions for the smart needle's helper functions.
+ * @version 0.1
+ * @date 2025-05-06
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
 #include "include/ntm_helpers.h"
 
-
+/**
+ * @brief Global slice value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to the organization of PWM configurations by clock. Please see RP2040 documentation.
+ * 
+ */
 uint slice =  pwm_gpio_to_slice_num(MOTOR_PWM);
+
+/**
+ * @brief Global channel value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to PWM output pin itself. Please see RP2040 documentation.
+ * 
+ */
 uint channel = pwm_gpio_to_channel(MOTOR_PWM);
 
 void board_gpio_init() {

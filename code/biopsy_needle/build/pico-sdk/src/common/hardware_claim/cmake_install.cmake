@@ -1,4 +1,4 @@
-# Install script for directory: /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/hardware_claim
+# Install script for directory: /home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/common/hardware_claim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

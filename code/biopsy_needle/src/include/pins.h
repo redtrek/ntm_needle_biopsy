@@ -1,3 +1,14 @@
+/**
+ * @file pins.h
+ * @author Thomas Chang
+ * @brief This file handles the pin definitions for the device dependent on the selected platform (PCB or Breadboard).
+ * @version 0.1
+ * @date 2025-05-06
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
 #pragma once
 #include "hardware/adc.h"
 #include "hardware/pwm.h"
@@ -10,8 +21,7 @@
 #include <stdlib.h>
 
 
-// Pin Defintions (see hw_config.c for SPI)
-// Please see hw_config.c to change SPI configuration.
+/// Pin Defintions (see hw_config.c for SPI)
 #ifndef PCB
 #define PCB 0
 #endif
@@ -23,9 +33,9 @@
     #define state_input 11
     #define msc_input   10
     #define speed_input 29 // A3 on Feather
-    #define bat_lvl         26 // A0 on Feather
-    #define MOTOR_PWM       0  // TX on Feather
-    #define MOTOR_DIR       6  // D4 on Feather
+    #define bat_lvl     26 // A0 on Feather
+    #define MOTOR_PWM   0  // TX on Feather
+    #define MOTOR_DIR   6  // D4 on Feather
     #define motorA_out  9
     #define motorB_out  8  // SCL on Feather
 #elif PCB == 1
@@ -36,8 +46,8 @@
     #define msc_input   24
     #define speed_input 29
     #define bat_lvl     26
-    #define MOTOR_PWM         0
-    #define MOTOR_DIR         4
+    #define MOTOR_PWM   0
+    #define MOTOR_DIR   4
     #define motorA_out  9
     #define motorB_out  8  
 #else

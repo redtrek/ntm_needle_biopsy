@@ -1,4 +1,4 @@
-# Install script for directory: /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform
+# Install script for directory: /home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/libs/pico-sdk/src/rp2040/pico_platform
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

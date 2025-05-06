@@ -1,4 +1,4 @@
-# Install script for directory: /home/redtrek/ntm_needle_biopsy/code/biopsy_needle/libs/INA219
+# Install script for directory: /home/redtrek/NTM/ntm_needle_biopsy/code/biopsy_needle/libs/INA219
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
