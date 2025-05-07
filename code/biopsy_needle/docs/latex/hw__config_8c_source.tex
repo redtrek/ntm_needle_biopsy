@@ -27,16 +27,16 @@
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00034}00034\ \textcolor{preprocessor}{\#include\ "{}hw\_config.h"{}}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00035}00035\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00036}00036\ \textcolor{preprocessor}{\#ifndef\ PCB}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00037}\mbox{\hyperlink{hw__config_8c_abce6d16c89bc3a3a1744a4ce63a10d54}{00037}}\ \textcolor{preprocessor}{\#define\ PCB\ 0}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00037}00037\ \textcolor{preprocessor}{\#define\ PCB\ 0}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00039}00039\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00040}00040\ \textcolor{comment}{//\ Pin\ Defintions\ (see\ hw\_config.c\ for\ SPI)}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00041}00041\ \textcolor{preprocessor}{\#if\ PCB\ ==\ 0}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00042}\mbox{\hyperlink{hw__config_8c_a399911c7ae262415664800482fd362f5}{00042}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ MY\_SPI\ \ \ \ \ \ spi0}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00043}\mbox{\hyperlink{hw__config_8c_a750ca7c9b92cfc9e57272ff3a49db48b}{00043}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_SCK\ \ \ \ 18\ \ }\textcolor{comment}{//\ SCK}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00044}\mbox{\hyperlink{hw__config_8c_a7dbebab5f7dd57885adccf6711b13592}{00044}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_MOSI\ \ \ 19\ \ }\textcolor{comment}{//\ MOSI}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00045}\mbox{\hyperlink{hw__config_8c_ab142cc77dfa97010c9d2b616d0992b64}{00045}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_MISO\ \ \ 20\ \ }\textcolor{comment}{//\ MISO}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00046}\mbox{\hyperlink{hw__config_8c_ade4259fa3cbb71732a4e73c18dcb9b0d}{00046}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_CS\ \ \ \ \ 1\ \ \ }\textcolor{comment}{//\ RX\ (BB\ Pin)}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00042}00042\ \textcolor{preprocessor}{\ \ \ \ \#define\ MY\_SPI\ \ \ \ \ \ spi0}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_SCK\ \ \ \ 18\ \ }\textcolor{comment}{//\ SCK}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00044}00044\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_MOSI\ \ \ 19\ \ }\textcolor{comment}{//\ MOSI}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00045}00045\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_MISO\ \ \ 20\ \ }\textcolor{comment}{//\ MISO}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00046}00046\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_CS\ \ \ \ \ 1\ \ \ }\textcolor{comment}{//\ RX\ (BB\ Pin)}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00047}00047\ \textcolor{preprocessor}{\#elif\ PCB\ ==\ 1}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00048}00048\ \textcolor{preprocessor}{\ \ \ \ \#define\ MY\_SPI\ \ \ \ \ \ spi0}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00049}00049\ \textcolor{preprocessor}{\ \ \ \ \#define\ SPI\_SCK\ \ \ \ 18}}
@@ -49,10 +49,10 @@
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00056}00056\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00057}00057\ \textcolor{comment}{/*\ Configuration\ of\ hardware\ SPI\ object\ */}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00058}00058\ \textcolor{keyword}{static}\ spi\_t\ spi\ =\ \{}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00059}00059\ \ \ \ \ .hw\_inst\ \ \ \ \ =\ \mbox{\hyperlink{hw__config_8c_a399911c7ae262415664800482fd362f5}{MY\_SPI}},\ \ \textcolor{comment}{//\ SPI\ component}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00060}00060\ \ \ \ \ .sck\_gpio\ \ \ \ =\ \mbox{\hyperlink{hw__config_8c_a750ca7c9b92cfc9e57272ff3a49db48b}{SPI\_SCK}},\ \ \ \ \textcolor{comment}{//\ GPIO\ number\ (not\ Pico\ pin\ number)}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00061}00061\ \ \ \ \ .mosi\_gpio\ \ \ =\ \mbox{\hyperlink{hw__config_8c_a7dbebab5f7dd57885adccf6711b13592}{SPI\_MOSI}},}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00062}00062\ \ \ \ \ .miso\_gpio\ \ \ =\ \mbox{\hyperlink{hw__config_8c_ab142cc77dfa97010c9d2b616d0992b64}{SPI\_MISO}},}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00059}00059\ \ \ \ \ .hw\_inst\ \ \ \ \ =\ MY\_SPI,\ \ \textcolor{comment}{//\ SPI\ component}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00060}00060\ \ \ \ \ .sck\_gpio\ \ \ \ =\ SPI\_SCK,\ \ \ \ \textcolor{comment}{//\ GPIO\ number\ (not\ Pico\ pin\ number)}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00061}00061\ \ \ \ \ .mosi\_gpio\ \ \ =\ SPI\_MOSI,}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00062}00062\ \ \ \ \ .miso\_gpio\ \ \ =\ SPI\_MISO,}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ THOMAS\ CHANG:\ We've\ kept\ this\ baud\ rate\ to\ match\ that\ of\ the\ 2040}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00064}00064\ \ \ \ \ .baud\_rate\ =\ 125\ *\ 1000\ *\ 1000\ /\ 4\ \ \textcolor{comment}{//\ 31250000\ Hz}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00065}00065\ }
@@ -61,7 +61,7 @@
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00068}00068\ \textcolor{comment}{/*\ SPI\ Interface\ */}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00069}00069\ \textcolor{keyword}{static}\ sd\_spi\_if\_t\ spi\_if\ =\ \{}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00070}00070\ \ \ \ \ .spi\ =\ \&spi,\ \ \textcolor{comment}{//\ Pointer\ to\ the\ SPI\ driving\ this\ card}}
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00071}00071\ \ \ \ \ .ss\_gpio\ \ \ \ \ =\ \mbox{\hyperlink{hw__config_8c_ade4259fa3cbb71732a4e73c18dcb9b0d}{SPI\_CS}}\ \ \textcolor{comment}{//\ The\ SPI\ slave\ select\ GPIO\ for\ this\ SD\ card}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00071}00071\ \ \ \ \ .ss\_gpio\ \ \ \ \ =\ SPI\_CS\ \ \textcolor{comment}{//\ The\ SPI\ slave\ select\ GPIO\ for\ this\ SD\ card}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00072}00072\ \};}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00073}00073\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00074}00074\ \textcolor{comment}{/*\ Configuration\ of\ the\ SD\ Card\ socket\ object\ */}}
@@ -72,7 +72,7 @@
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00080}00080\ \textcolor{comment}{/*\ **********************************************************************\ */}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00082}\mbox{\hyperlink{hw__config_8c_a43d3ae8133310f23860b4f5b8cf4934e}{00082}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{hw__config_8c_a43d3ae8133310f23860b4f5b8cf4934e}{sd\_get\_num}}()\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00082}00082\ \textcolor{keywordtype}{size\_t}\ sd\_get\_num()\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00083}00083\ }
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00091}\mbox{\hyperlink{hw__config_8c_ae019a1533d42fd3972c3f1eea96d23d4}{00091}}\ sd\_card\_t\ *\mbox{\hyperlink{hw__config_8c_ae019a1533d42fd3972c3f1eea96d23d4}{sd\_get\_by\_num}}(\textcolor{keywordtype}{size\_t}\ num)\ \{}
 \DoxyCodeLine{\Hypertarget{hw__config_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (0\ ==\ num)\ \{}

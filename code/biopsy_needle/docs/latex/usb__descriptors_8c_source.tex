@@ -1,6 +1,6 @@
 \doxysection{usb\+\_\+descriptors.\+c}
 \hypertarget{usb__descriptors_8c_source}{}\label{usb__descriptors_8c_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/usb\_descriptors.c@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/usb\_descriptors.c}}
-\mbox{\hyperlink{usb__descriptors_8c}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00001}00001\ \textcolor{comment}{/*\ }}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00002}00002\ \textcolor{comment}{\ *\ The\ MIT\ License\ (MIT)}}
@@ -36,21 +36,21 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00032}00032\ \textcolor{comment}{\ *\ Auto\ ProductID\ layout's\ Bitmap:}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00033}00033\ \textcolor{comment}{\ *\ \ \ [MSB]\ \ \ \ \ \ \ \ \ HID\ |\ MSC\ |\ CDC\ \ \ \ \ \ \ \ \ \ [LSB]}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00034}00034\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00035}\mbox{\hyperlink{usb__descriptors_8c_aa6eee64ef847fafb5261d9c5df05ad2f}{00035}}\ \textcolor{preprocessor}{\#define\ \_PID\_MAP(itf,\ n)\ \ (\ (CFG\_TUD\_\#\#itf)\ <<\ (n)\ )}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00036}\mbox{\hyperlink{usb__descriptors_8c_a989c980e0b99f803f7ce0ca224cdb733}{00036}}\ \textcolor{preprocessor}{\#define\ USB\_PID\ \ \ \ \ \ \ \ \ \ \ (0x4000\ |\ \_PID\_MAP(CDC,\ 0)\ |\ \_PID\_MAP(MSC,\ 1)\ |\ \_PID\_MAP(HID,\ 2)\ |\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00035}00035\ \textcolor{preprocessor}{\#define\ \_PID\_MAP(itf,\ n)\ \ (\ (CFG\_TUD\_\#\#itf)\ <<\ (n)\ )}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00036}00036\ \textcolor{preprocessor}{\#define\ USB\_PID\ \ \ \ \ \ \ \ \ \ \ (0x4000\ |\ \_PID\_MAP(CDC,\ 0)\ |\ \_PID\_MAP(MSC,\ 1)\ |\ \_PID\_MAP(HID,\ 2)\ |\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_PID\_MAP(MIDI,\ 3)\ |\ \_PID\_MAP(VENDOR,\ 4)\ )}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00039}\mbox{\hyperlink{usb__descriptors_8c_a3398c7225386f04c72fd9025fcb44734}{00039}}\ \textcolor{preprocessor}{\#define\ USB\_VID\ \ \ 0xCafe}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00040}\mbox{\hyperlink{usb__descriptors_8c_ae790349d8541544653e087fda6c3dcf1}{00040}}\ \textcolor{preprocessor}{\#define\ USB\_BCD\ \ \ 0x0200}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00039}00039\ \textcolor{preprocessor}{\#define\ USB\_VID\ \ \ 0xCafe}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00040}00040\ \textcolor{preprocessor}{\#define\ USB\_BCD\ \ \ 0x0200}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00042}00042\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00043}00043\ \textcolor{comment}{//\ Device\ Descriptors}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00044}00044\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00045}\mbox{\hyperlink{usb__descriptors_8c_ae4653a41146db1badedb5a6126e6b6b7}{00045}}\ tusb\_desc\_device\_t\ \textcolor{keyword}{const}\ \mbox{\hyperlink{usb__descriptors_8c_ae4653a41146db1badedb5a6126e6b6b7}{desc\_device}}\ =}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00045}00045\ tusb\_desc\_device\_t\ \textcolor{keyword}{const}\ desc\_device\ =}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00046}00046\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00047}00047\ \ \ .bLength\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{sizeof}(tusb\_desc\_device\_t),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00048}00048\ \ \ .bDescriptorType\ \ \ \ =\ TUSB\_DESC\_DEVICE,}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00049}00049\ \ \ .bcdUSB\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{usb__descriptors_8c_ae790349d8541544653e087fda6c3dcf1}{USB\_BCD}},}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00049}00049\ \ \ .bcdUSB\ \ \ \ \ \ \ \ \ \ \ \ \ =\ USB\_BCD,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00050}00050\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00051}00051\ \ \ \textcolor{comment}{//\ Use\ Interface\ Association\ Descriptor\ (IAD)\ for\ CDC}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00052}00052\ \ \ \textcolor{comment}{//\ As\ required\ by\ USB\ Specs\ IAD's\ subclass\ must\ be\ common\ class\ (2)\ and\ protocol\ must\ be\ IAD\ (1)}}
@@ -60,8 +60,8 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00056}00056\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00057}00057\ \ \ .bMaxPacketSize0\ \ \ \ =\ CFG\_TUD\_ENDPOINT0\_SIZE,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00059}00059\ \ \ .idVendor\ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{usb__descriptors_8c_a3398c7225386f04c72fd9025fcb44734}{USB\_VID}},}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00060}00060\ \ \ .idProduct\ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{usb__descriptors_8c_a989c980e0b99f803f7ce0ca224cdb733}{USB\_PID}},}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00059}00059\ \ \ .idVendor\ \ \ \ \ \ \ \ \ \ \ =\ USB\_VID,}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00060}00060\ \ \ .idProduct\ \ \ \ \ \ \ \ \ \ =\ USB\_PID,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00061}00061\ \ \ .bcdDevice\ \ \ \ \ \ \ \ \ \ =\ 0x0100,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00062}00062\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00063}00063\ \ \ .iManufacturer\ \ \ \ \ \ =\ 0x01,}
@@ -73,9 +73,9 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00069}00069\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00070}00070\ \textcolor{comment}{//\ Invoked\ when\ received\ GET\ DEVICE\ DESCRIPTOR}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00071}00071\ \textcolor{comment}{//\ Application\ return\ pointer\ to\ descriptor}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00072}\mbox{\hyperlink{usb__descriptors_8c_a1f453b8b047af5e8a9c9a2ebd8a09259}{00072}}\ uint8\_t\ \textcolor{keyword}{const}\ *\ \mbox{\hyperlink{usb__descriptors_8c_a1f453b8b047af5e8a9c9a2ebd8a09259}{tud\_descriptor\_device\_cb}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00072}00072\ uint8\_t\ \textcolor{keyword}{const}\ *\ tud\_descriptor\_device\_cb(\textcolor{keywordtype}{void})}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00073}00073\ \{}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00074}00074\ \ \ \textcolor{keywordflow}{return}\ (uint8\_t\ \textcolor{keyword}{const}\ *)\ \&\mbox{\hyperlink{usb__descriptors_8c_ae4653a41146db1badedb5a6126e6b6b7}{desc\_device}};}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00074}00074\ \ \ \textcolor{keywordflow}{return}\ (uint8\_t\ \textcolor{keyword}{const}\ *)\ \&desc\_device;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00075}00075\ \}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00076}00076\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00077}00077\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}}
@@ -84,21 +84,21 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00080}00080\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00081}00081\ \textcolor{keyword}{enum}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00082}00082\ \{}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00083}\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba417a1b5f14108f730ac4ba859fb2c198}{00083}}\ \ \ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba417a1b5f14108f730ac4ba859fb2c198}{ITF\_NUM\_CDC}}\ =\ 0,}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00084}\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55bafeba5ae5caa5e06004f48aee0bcde1d8}{00084}}\ \ \ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55bafeba5ae5caa5e06004f48aee0bcde1d8}{ITF\_NUM\_CDC\_DATA}},}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00085}\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba934bb58dcdee9c977f336670b5b9d9a2}{00085}}\ \ \ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba934bb58dcdee9c977f336670b5b9d9a2}{ITF\_NUM\_MSC}},}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00086}00086\ \ \ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba936a2a3258df7c0ac994897782e04bed}{ITF\_NUM\_TOTAL}}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00087}\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba936a2a3258df7c0ac994897782e04bed}{00087}}\ \};}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00083}00083\ \ \ ITF\_NUM\_CDC\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00084}00084\ \ \ ITF\_NUM\_CDC\_DATA,}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00085}00085\ \ \ ITF\_NUM\_MSC,}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00086}00086\ \ \ ITF\_NUM\_TOTAL}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00087}00087\ \};}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00088}00088\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00089}00089\ \textcolor{preprocessor}{\#if\ CFG\_TUSB\_MCU\ ==\ OPT\_MCU\_LPC175X\_6X\ ||\ CFG\_TUSB\_MCU\ ==\ OPT\_MCU\_LPC177X\_8X\ ||\ CFG\_TUSB\_MCU\ ==\ OPT\_MCU\_LPC40XX}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00090}00090\ \ \ \textcolor{comment}{//\ LPC\ 17xx\ and\ 40xx\ endpoint\ type\ (bulk/interrupt/iso)\ are\ fixed\ by\ its\ number}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00091}00091\ \ \ \textcolor{comment}{//\ 0\ control,\ 1\ In,\ 2\ Bulk,\ 3\ Iso,\ 4\ In,\ 5\ Bulk\ etc\ ...}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00092}\mbox{\hyperlink{usb__descriptors_8c_a1954b234c7f10ee7bc2aae113fdfd9c4}{00092}}\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_NOTIF\ \ \ 0x81}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00093}\mbox{\hyperlink{usb__descriptors_8c_aa28ada903072dee41c869b03522dc5b9}{00093}}\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_OUT\ \ \ \ \ 0x02}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00094}\mbox{\hyperlink{usb__descriptors_8c_aeeb12a4af5853f54202fa79a4af790db}{00094}}\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_IN\ \ \ \ \ \ 0x82}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00092}00092\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_NOTIF\ \ \ 0x81}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00093}00093\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_OUT\ \ \ \ \ 0x02}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00094}00094\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_CDC\_IN\ \ \ \ \ \ 0x82}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00095}00095\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00096}\mbox{\hyperlink{usb__descriptors_8c_a0c27f9fc321172575a315b83d1fb75d4}{00096}}\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_MSC\_OUT\ \ \ \ \ 0x05}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00097}\mbox{\hyperlink{usb__descriptors_8c_a8300bc4e12e83ce01cfcdf45e050069e}{00097}}\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_MSC\_IN\ \ \ \ \ \ 0x85}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00096}00096\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_MSC\_OUT\ \ \ \ \ 0x05}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00097}00097\ \textcolor{preprocessor}{\ \ \#define\ EPNUM\_MSC\_IN\ \ \ \ \ \ 0x85}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00098}00098\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00099}00099\ \textcolor{preprocessor}{\#elif\ CFG\_TUSB\_MCU\ ==\ OPT\_MCU\_SAMG\ \ ||\ CFG\_TUSB\_MCU\ ==\ \ OPT\_MCU\_SAMX7X}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00100}00100\ \ \ \textcolor{comment}{//\ SAMG\ \&\ SAME70\ don't\ support\ a\ same\ endpoint\ number\ with\ different\ direction\ IN\ and\ OUT}}
@@ -142,19 +142,19 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00138}00138\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00139}00139\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00141}\mbox{\hyperlink{usb__descriptors_8c_a76e2168140a8a6693bf0588641c8252a}{00141}}\ \textcolor{preprocessor}{\#define\ CONFIG\_TOTAL\_LEN\ \ \ \ (TUD\_CONFIG\_DESC\_LEN\ +\ TUD\_CDC\_DESC\_LEN\ +\ TUD\_MSC\_DESC\_LEN)}}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00141}00141\ \textcolor{preprocessor}{\#define\ CONFIG\_TOTAL\_LEN\ \ \ \ (TUD\_CONFIG\_DESC\_LEN\ +\ TUD\_CDC\_DESC\_LEN\ +\ TUD\_MSC\_DESC\_LEN)}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00142}00142\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00143}00143\ \textcolor{comment}{//\ full\ speed\ configuration}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00144}\mbox{\hyperlink{usb__descriptors_8c_a34140533069ca5f678f63e383bc90279}{00144}}\ uint8\_t\ \textcolor{keyword}{const}\ \mbox{\hyperlink{usb__descriptors_8c_a34140533069ca5f678f63e383bc90279}{desc\_fs\_configuration}}[]\ =}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00144}00144\ uint8\_t\ \textcolor{keyword}{const}\ desc\_fs\_configuration[]\ =}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00145}00145\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00146}00146\ \ \ \textcolor{comment}{//\ Config\ number,\ interface\ count,\ string\ index,\ total\ length,\ attribute,\ power\ in\ mA}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00147}00147\ \ \ TUD\_CONFIG\_DESCRIPTOR(1,\ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba936a2a3258df7c0ac994897782e04bed}{ITF\_NUM\_TOTAL}},\ 0,\ \mbox{\hyperlink{usb__descriptors_8c_a76e2168140a8a6693bf0588641c8252a}{CONFIG\_TOTAL\_LEN}},\ 0x00,\ 100),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00147}00147\ \ \ TUD\_CONFIG\_DESCRIPTOR(1,\ ITF\_NUM\_TOTAL,\ 0,\ CONFIG\_TOTAL\_LEN,\ 0x00,\ 100),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00148}00148\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00149}00149\ \ \ \textcolor{comment}{//\ Interface\ number,\ string\ index,\ EP\ notification\ address\ and\ size,\ EP\ data\ address\ (out,\ in)\ and\ size.}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00150}00150\ \ \ TUD\_CDC\_DESCRIPTOR(\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba417a1b5f14108f730ac4ba859fb2c198}{ITF\_NUM\_CDC}},\ 4,\ \mbox{\hyperlink{usb__descriptors_8c_a1954b234c7f10ee7bc2aae113fdfd9c4}{EPNUM\_CDC\_NOTIF}},\ 8,\ \mbox{\hyperlink{usb__descriptors_8c_aa28ada903072dee41c869b03522dc5b9}{EPNUM\_CDC\_OUT}},\ \mbox{\hyperlink{usb__descriptors_8c_aeeb12a4af5853f54202fa79a4af790db}{EPNUM\_CDC\_IN}},\ 64),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00150}00150\ \ \ TUD\_CDC\_DESCRIPTOR(ITF\_NUM\_CDC,\ 4,\ EPNUM\_CDC\_NOTIF,\ 8,\ EPNUM\_CDC\_OUT,\ EPNUM\_CDC\_IN,\ 64),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00151}00151\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00152}00152\ \ \ \textcolor{comment}{//\ Interface\ number,\ string\ index,\ EP\ Out\ \&\ EP\ In\ address,\ EP\ size}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00153}00153\ \ \ TUD\_MSC\_DESCRIPTOR(\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba934bb58dcdee9c977f336670b5b9d9a2}{ITF\_NUM\_MSC}},\ 5,\ \mbox{\hyperlink{usb__descriptors_8c_a0c27f9fc321172575a315b83d1fb75d4}{EPNUM\_MSC\_OUT}},\ \mbox{\hyperlink{usb__descriptors_8c_a8300bc4e12e83ce01cfcdf45e050069e}{EPNUM\_MSC\_IN}},\ 64),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00153}00153\ \ \ TUD\_MSC\_DESCRIPTOR(ITF\_NUM\_MSC,\ 5,\ EPNUM\_MSC\_OUT,\ EPNUM\_MSC\_IN,\ 64),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00154}00154\ \};}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00155}00155\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00156}00156\ \textcolor{preprocessor}{\#if\ TUD\_OPT\_HIGH\_SPEED}}
@@ -164,24 +164,24 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00160}00160\ uint8\_t\ \textcolor{keyword}{const}\ desc\_hs\_configuration[]\ =}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00161}00161\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00162}00162\ \ \ \textcolor{comment}{//\ Config\ number,\ interface\ count,\ string\ index,\ total\ length,\ attribute,\ power\ in\ mA}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00163}00163\ \ \ TUD\_CONFIG\_DESCRIPTOR(1,\ \mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba936a2a3258df7c0ac994897782e04bed}{ITF\_NUM\_TOTAL}},\ 0,\ \mbox{\hyperlink{usb__descriptors_8c_a76e2168140a8a6693bf0588641c8252a}{CONFIG\_TOTAL\_LEN}},\ 0x00,\ 100),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00163}00163\ \ \ TUD\_CONFIG\_DESCRIPTOR(1,\ ITF\_NUM\_TOTAL,\ 0,\ CONFIG\_TOTAL\_LEN,\ 0x00,\ 100),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00164}00164\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00165}00165\ \ \ \textcolor{comment}{//\ Interface\ number,\ string\ index,\ EP\ notification\ address\ and\ size,\ EP\ data\ address\ (out,\ in)\ and\ size.}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00166}00166\ \ \ TUD\_CDC\_DESCRIPTOR(\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba417a1b5f14108f730ac4ba859fb2c198}{ITF\_NUM\_CDC}},\ 4,\ \mbox{\hyperlink{usb__descriptors_8c_a1954b234c7f10ee7bc2aae113fdfd9c4}{EPNUM\_CDC\_NOTIF}},\ 8,\ \mbox{\hyperlink{usb__descriptors_8c_aa28ada903072dee41c869b03522dc5b9}{EPNUM\_CDC\_OUT}},\ \mbox{\hyperlink{usb__descriptors_8c_aeeb12a4af5853f54202fa79a4af790db}{EPNUM\_CDC\_IN}},\ 512),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00166}00166\ \ \ TUD\_CDC\_DESCRIPTOR(ITF\_NUM\_CDC,\ 4,\ EPNUM\_CDC\_NOTIF,\ 8,\ EPNUM\_CDC\_OUT,\ EPNUM\_CDC\_IN,\ 512),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00167}00167\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00168}00168\ \ \ \textcolor{comment}{//\ Interface\ number,\ string\ index,\ EP\ Out\ \&\ EP\ In\ address,\ EP\ size}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00169}00169\ \ \ TUD\_MSC\_DESCRIPTOR(\mbox{\hyperlink{usb__descriptors_8c_a06fc87d81c62e9abb8790b6e5713c55ba934bb58dcdee9c977f336670b5b9d9a2}{ITF\_NUM\_MSC}},\ 5,\ \mbox{\hyperlink{usb__descriptors_8c_a0c27f9fc321172575a315b83d1fb75d4}{EPNUM\_MSC\_OUT}},\ \mbox{\hyperlink{usb__descriptors_8c_a8300bc4e12e83ce01cfcdf45e050069e}{EPNUM\_MSC\_IN}},\ 512),}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00169}00169\ \ \ TUD\_MSC\_DESCRIPTOR(ITF\_NUM\_MSC,\ 5,\ EPNUM\_MSC\_OUT,\ EPNUM\_MSC\_IN,\ 512),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00170}00170\ \};}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00171}00171\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00172}00172\ \textcolor{comment}{//\ other\ speed\ configuration}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00173}00173\ uint8\_t\ desc\_other\_speed\_config[\mbox{\hyperlink{usb__descriptors_8c_a76e2168140a8a6693bf0588641c8252a}{CONFIG\_TOTAL\_LEN}}];}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00173}00173\ uint8\_t\ desc\_other\_speed\_config[CONFIG\_TOTAL\_LEN];}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00174}00174\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00175}00175\ \textcolor{comment}{//\ device\ qualifier\ is\ mostly\ similar\ to\ device\ descriptor\ since\ we\ don't\ change\ configuration\ based\ on\ speed}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00176}00176\ tusb\_desc\_device\_qualifier\_t\ \textcolor{keyword}{const}\ desc\_device\_qualifier\ =}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00177}00177\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00178}00178\ \ \ .bLength\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{sizeof}(tusb\_desc\_device\_qualifier\_t),}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00179}00179\ \ \ .bDescriptorType\ \ \ \ =\ TUSB\_DESC\_DEVICE\_QUALIFIER,}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00180}00180\ \ \ .bcdUSB\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{usb__descriptors_8c_ae790349d8541544653e087fda6c3dcf1}{USB\_BCD}},}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00180}00180\ \ \ .bcdUSB\ \ \ \ \ \ \ \ \ \ \ \ \ =\ USB\_BCD,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00181}00181\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00182}00182\ \ \ .bDeviceClass\ \ \ \ \ \ \ =\ TUSB\_CLASS\_MISC,}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00183}00183\ \ \ .bDeviceSubClass\ \ \ \ =\ MISC\_SUBCLASS\_COMMON,}
@@ -211,8 +211,8 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00207}00207\ \ \ \textcolor{comment}{//\ if\ link\ speed\ is\ high\ return\ fullspeed\ config,\ and\ vice\ versa}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00208}00208\ \ \ \textcolor{comment}{//\ Note:\ the\ descriptor\ type\ is\ OHER\_SPEED\_CONFIG\ instead\ of\ CONFIG}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00209}00209\ \ \ memcpy(desc\_other\_speed\_config,}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ \ (tud\_speed\_get()\ ==\ TUSB\_SPEED\_HIGH)\ ?\ \mbox{\hyperlink{usb__descriptors_8c_a34140533069ca5f678f63e383bc90279}{desc\_fs\_configuration}}\ :\ desc\_hs\_configuration,}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{usb__descriptors_8c_a76e2168140a8a6693bf0588641c8252a}{CONFIG\_TOTAL\_LEN}});}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ \ (tud\_speed\_get()\ ==\ TUSB\_SPEED\_HIGH)\ ?\ desc\_fs\_configuration\ :\ desc\_hs\_configuration,}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ \ CONFIG\_TOTAL\_LEN);}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00212}00212\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00213}00213\ \ \ desc\_other\_speed\_config[1]\ =\ TUSB\_DESC\_OTHER\_SPEED\_CONFIG;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00214}00214\ }
@@ -225,15 +225,15 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00221}00221\ \textcolor{comment}{//\ Invoked\ when\ received\ GET\ CONFIGURATION\ DESCRIPTOR}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00222}00222\ \textcolor{comment}{//\ Application\ return\ pointer\ to\ descriptor}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00223}00223\ \textcolor{comment}{//\ Descriptor\ contents\ must\ exist\ long\ enough\ for\ transfer\ to\ complete}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00224}\mbox{\hyperlink{usb__descriptors_8c_ab8ee9fe0bc8bf4d317c4e7c7fa52194e}{00224}}\ uint8\_t\ \textcolor{keyword}{const}\ *\ \mbox{\hyperlink{usb__descriptors_8c_ab8ee9fe0bc8bf4d317c4e7c7fa52194e}{tud\_descriptor\_configuration\_cb}}(uint8\_t\ index)}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00224}00224\ uint8\_t\ \textcolor{keyword}{const}\ *\ tud\_descriptor\_configuration\_cb(uint8\_t\ index)}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00225}00225\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00226}00226\ \ \ (void)\ index;\ \textcolor{comment}{//\ for\ multiple\ configurations}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00227}00227\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00228}00228\ \textcolor{preprocessor}{\#if\ TUD\_OPT\_HIGH\_SPEED}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00229}00229\ \ \ \textcolor{comment}{//\ Although\ we\ are\ highspeed,\ host\ may\ be\ fullspeed.}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00230}00230\ \ \ \textcolor{keywordflow}{return}\ (tud\_speed\_get()\ ==\ TUSB\_SPEED\_HIGH)\ ?\ \ desc\_hs\_configuration\ :\ \mbox{\hyperlink{usb__descriptors_8c_a34140533069ca5f678f63e383bc90279}{desc\_fs\_configuration}};}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00230}00230\ \ \ \textcolor{keywordflow}{return}\ (tud\_speed\_get()\ ==\ TUSB\_SPEED\_HIGH)\ ?\ \ desc\_hs\_configuration\ :\ desc\_fs\_configuration;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00231}00231\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00232}00232\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{usb__descriptors_8c_a34140533069ca5f678f63e383bc90279}{desc\_fs\_configuration}};}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00232}00232\ \ \ \textcolor{keywordflow}{return}\ desc\_fs\_configuration;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00233}00233\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00234}00234\ \}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00235}00235\ }
@@ -242,7 +242,7 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00238}00238\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00239}00239\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00240}00240\ \textcolor{comment}{//\ array\ of\ pointer\ to\ string\ descriptors}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00241}\mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{00241}}\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{string\_desc\_arr}}\ []\ =}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00241}00241\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ string\_desc\_arr\ []\ =}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00242}00242\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00243}00243\ \ \ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}[])\ \{\ 0x09,\ 0x04\ \},\ \textcolor{comment}{//\ 0:\ is\ supported\ language\ is\ English\ (0x0409)}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00244}00244\ \ \ \textcolor{stringliteral}{"{}TinyUSB"{}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1:\ Manufacturer}}
@@ -256,7 +256,7 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00252}00252\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00253}00253\ \textcolor{comment}{//\ Invoked\ when\ received\ GET\ STRING\ DESCRIPTOR\ request}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00254}00254\ \textcolor{comment}{//\ Application\ return\ pointer\ to\ descriptor,\ whose\ contents\ must\ exist\ long\ enough\ for\ transfer\ to\ complete}}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00255}\mbox{\hyperlink{usb__descriptors_8c_a1876e368b150921b252b6f3b0a2cbdc7}{00255}}\ uint16\_t\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{usb__descriptors_8c_a1876e368b150921b252b6f3b0a2cbdc7}{tud\_descriptor\_string\_cb}}(uint8\_t\ index,\ uint16\_t\ langid)}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00255}00255\ uint16\_t\ \textcolor{keyword}{const}*\ tud\_descriptor\_string\_cb(uint8\_t\ index,\ uint16\_t\ langid)}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00256}00256\ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00257}00257\ \ \ (void)\ langid;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00258}00258\ }
@@ -264,16 +264,16 @@
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00260}00260\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00261}00261\ \ \ \textcolor{keywordflow}{if}\ (\ index\ ==\ 0)}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00262}00262\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00263}00263\ \ \ \ \ memcpy(\&\_desc\_str[1],\ \mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{string\_desc\_arr}}[0],\ 2);}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00263}00263\ \ \ \ \ memcpy(\&\_desc\_str[1],\ string\_desc\_arr[0],\ 2);}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00264}00264\ \ \ \ \ chr\_count\ =\ 1;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00265}00265\ \ \ \}\textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00266}00266\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00267}00267\ \ \ \ \ \textcolor{comment}{//\ Note:\ the\ 0xEE\ index\ string\ is\ a\ Microsoft\ OS\ 1.0\ Descriptors.}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00268}00268\ \ \ \ \ \textcolor{comment}{//\ https://docs.microsoft.com/en-\/us/windows-\/hardware/drivers/usbcon/microsoft-\/defined-\/usb-\/descriptors}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00269}00269\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !(index\ <\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{string\_desc\_arr}})/\textcolor{keyword}{sizeof}(\mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{string\_desc\_arr}}[0]))\ )\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !(index\ <\ \textcolor{keyword}{sizeof}(string\_desc\_arr)/\textcolor{keyword}{sizeof}(string\_desc\_arr[0]))\ )\ \textcolor{keywordflow}{return}\ NULL;}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00271}00271\ }
-\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00272}00272\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ str\ =\ \mbox{\hyperlink{usb__descriptors_8c_a2f3128b5953024e2d3e923d556777a49}{string\_desc\_arr}}[index];}
+\DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00272}00272\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ str\ =\ string\_desc\_arr[index];}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00273}00273\ }
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00274}00274\ \ \ \ \ \textcolor{comment}{//\ Cap\ at\ max\ char}}
 \DoxyCodeLine{\Hypertarget{usb__descriptors_8c_source_l00275}00275\ \ \ \ \ chr\_count\ =\ (uint8\_t)\ strlen(str);}

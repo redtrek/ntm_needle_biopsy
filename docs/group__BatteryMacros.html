@@ -79,33 +79,164 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga24c290b5fa8c0bb248fc15b5bcf873d7" id="r_ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memItemLeft" align="right" valign="top"><a id="ga24c290b5fa8c0bb248fc15b5bcf873d7" name="ga24c290b5fa8c0bb248fc15b5bcf873d7"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NTM_MAX</b>(A,  B)&#160;&#160;&#160;((A) &gt;= (B) ? (A) : (B))</td></tr>
-<tr class="memdesc:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A. Else return B. <br /></td></tr>
+<tr class="memitem:ga24c290b5fa8c0bb248fc15b5bcf873d7" id="r_ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga24c290b5fa8c0bb248fc15b5bcf873d7">NTM_MAX</a>(A,  B)&#160;&#160;&#160;((A) &gt;= (B) ? (A) : (B))</td></tr>
+<tr class="memdesc:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A. Else return B.  <br /></td></tr>
 <tr class="separator:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a187ecf82734a12819e1283bcb69bab" id="r_ga9a187ecf82734a12819e1283bcb69bab"><td class="memItemLeft" align="right" valign="top"><a id="ga9a187ecf82734a12819e1283bcb69bab" name="ga9a187ecf82734a12819e1283bcb69bab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NTM_MIN</b>(A,  B)&#160;&#160;&#160;((A) &lt;= (B) ? (A) : (B))</td></tr>
-<tr class="memdesc:ga9a187ecf82734a12819e1283bcb69bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the smaller value between A and B using operator. Essentially: if (A) &lt;= (B) return A. Else return B. <br /></td></tr>
+<tr class="memitem:ga9a187ecf82734a12819e1283bcb69bab" id="r_ga9a187ecf82734a12819e1283bcb69bab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga9a187ecf82734a12819e1283bcb69bab">NTM_MIN</a>(A,  B)&#160;&#160;&#160;((A) &lt;= (B) ? (A) : (B))</td></tr>
+<tr class="memdesc:ga9a187ecf82734a12819e1283bcb69bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the smaller value between A and B using operator. Essentially: if (A) &lt;= (B) return A. Else return B.  <br /></td></tr>
 <tr class="separator:ga9a187ecf82734a12819e1283bcb69bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7703a5d829fb6d1223ad111a9474fa9b" id="r_ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memItemLeft" align="right" valign="top"><a id="ga7703a5d829fb6d1223ad111a9474fa9b" name="ga7703a5d829fb6d1223ad111a9474fa9b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_MAX_ADC</b>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (4.2/2)))</td></tr>
-<tr class="memdesc:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's max capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "maximum charge" is 4.2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. <br /></td></tr>
+<tr class="memitem:ga7703a5d829fb6d1223ad111a9474fa9b" id="r_ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (4.2/2)))</td></tr>
+<tr class="memdesc:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's max capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "maximum charge" is 4.2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer.  <br /></td></tr>
 <tr class="separator:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad380f4a571d5444566336f067dfb7b01" id="r_gad380f4a571d5444566336f067dfb7b01"><td class="memItemLeft" align="right" valign="top"><a id="gad380f4a571d5444566336f067dfb7b01" name="gad380f4a571d5444566336f067dfb7b01"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_MIN_ADC</b>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (3.2/2)))</td></tr>
-<tr class="memdesc:gad380f4a571d5444566336f067dfb7b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's min capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "minimum charge" is 3.2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. <br /></td></tr>
+<tr class="memitem:gad380f4a571d5444566336f067dfb7b01" id="r_gad380f4a571d5444566336f067dfb7b01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (3.2/2)))</td></tr>
+<tr class="memdesc:gad380f4a571d5444566336f067dfb7b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's min capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "minimum charge" is 3.2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer.  <br /></td></tr>
 <tr class="separator:gad380f4a571d5444566336f067dfb7b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4ea44361cc7ac80f146feb2806720fda" id="r_ga4ea44361cc7ac80f146feb2806720fda"><td class="memItemLeft" align="right" valign="top"><a id="ga4ea44361cc7ac80f146feb2806720fda" name="ga4ea44361cc7ac80f146feb2806720fda"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_ADC_PER</b>&#160;&#160;&#160;(100.0 / (<a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a> - <a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>))</td></tr>
-<tr class="memdesc:ga4ea44361cc7ac80f146feb2806720fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT_MIN_ADC) * BAT_ADC_PER = % Capacity. <br /></td></tr>
+<tr class="memitem:ga4ea44361cc7ac80f146feb2806720fda" id="r_ga4ea44361cc7ac80f146feb2806720fda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga4ea44361cc7ac80f146feb2806720fda">BAT_ADC_PER</a>&#160;&#160;&#160;(100.0 / (<a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a> - <a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>))</td></tr>
+<tr class="memdesc:ga4ea44361cc7ac80f146feb2806720fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT_MIN_ADC) * BAT_ADC_PER = % Capacity.  <br /></td></tr>
 <tr class="separator:ga4ea44361cc7ac80f146feb2806720fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga81b58a672e9a97383f06a46f89660b1d" id="r_ga81b58a672e9a97383f06a46f89660b1d"><td class="memItemLeft" align="right" valign="top"><a id="ga81b58a672e9a97383f06a46f89660b1d" name="ga81b58a672e9a97383f06a46f89660b1d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SEC_US</b>&#160;&#160;&#160;1000000</td></tr>
-<tr class="memdesc:ga81b58a672e9a97383f06a46f89660b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 Second in microseconds. <br /></td></tr>
+<tr class="memitem:ga81b58a672e9a97383f06a46f89660b1d" id="r_ga81b58a672e9a97383f06a46f89660b1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga81b58a672e9a97383f06a46f89660b1d">SEC_US</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:ga81b58a672e9a97383f06a46f89660b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 Second in microseconds.  <br /></td></tr>
 <tr class="separator:ga81b58a672e9a97383f06a46f89660b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Macros used for calculating the battery capacity. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga4ea44361cc7ac80f146feb2806720fda" name="ga4ea44361cc7ac80f146feb2806720fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ea44361cc7ac80f146feb2806720fda">&#9670;&#160;</a></span>BAT_ADC_PER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAT_ADC_PER&#160;&#160;&#160;(100.0 / (<a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a> - <a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT_MIN_ADC) * BAT_ADC_PER = % Capacity. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00082">82</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a id="ga7703a5d829fb6d1223ad111a9474fa9b" name="ga7703a5d829fb6d1223ad111a9474fa9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7703a5d829fb6d1223ad111a9474fa9b">&#9670;&#160;</a></span>BAT_MAX_ADC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAT_MAX_ADC&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (4.2/2)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents the battery's max capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "maximum charge" is 4.2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00069">69</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a id="gad380f4a571d5444566336f067dfb7b01" name="gad380f4a571d5444566336f067dfb7b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad380f4a571d5444566336f067dfb7b01">&#9670;&#160;</a></span>BAT_MIN_ADC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BAT_MIN_ADC&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (3.2/2)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents the battery's min capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "minimum charge" is 3.2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00079">79</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a id="ga24c290b5fa8c0bb248fc15b5bcf873d7" name="ga24c290b5fa8c0bb248fc15b5bcf873d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24c290b5fa8c0bb248fc15b5bcf873d7">&#9670;&#160;</a></span>NTM_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NTM_MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">B&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((A) &gt;= (B) ? (A) : (B))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A. Else return B. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00056">56</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9a187ecf82734a12819e1283bcb69bab" name="ga9a187ecf82734a12819e1283bcb69bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a187ecf82734a12819e1283bcb69bab">&#9670;&#160;</a></span>NTM_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NTM_MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">B&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((A) &lt;= (B) ? (A) : (B))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the smaller value between A and B using operator. Essentially: if (A) &lt;= (B) return A. Else return B. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00059">59</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a id="ga81b58a672e9a97383f06a46f89660b1d" name="ga81b58a672e9a97383f06a46f89660b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81b58a672e9a97383f06a46f89660b1d">&#9670;&#160;</a></span>SEC_US</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEC_US&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1 Second in microseconds. </p>
+
+<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00085">85</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

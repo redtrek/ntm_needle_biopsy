@@ -166,9 +166,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8c6d7458362f0a1d72f048e5c28dafc9" id="r_a8c6d7458362f0a1d72f048e5c28dafc9"><td class="memItemLeft" align="right" valign="top"><a id="a8c6d7458362f0a1d72f048e5c28dafc9" name="a8c6d7458362f0a1d72f048e5c28dafc9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>board_gpio_init</b> ()</td></tr>
-<tr class="memdesc:a8c6d7458362f0a1d72f048e5c28dafc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates all GPIO pins as well as communication protocols. <br /></td></tr>
+<tr class="memitem:a8c6d7458362f0a1d72f048e5c28dafc9" id="r_a8c6d7458362f0a1d72f048e5c28dafc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntm__helpers_8h.html#a8c6d7458362f0a1d72f048e5c28dafc9">board_gpio_init</a> ()</td></tr>
+<tr class="memdesc:a8c6d7458362f0a1d72f048e5c28dafc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates all GPIO pins as well as communication protocols.  <br /></td></tr>
 <tr class="separator:a8c6d7458362f0a1d72f048e5c28dafc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a668d0f88bcacc451fca6bf25511b62" id="r_a1a668d0f88bcacc451fca6bf25511b62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a> (bool direction, uint16_t power)</td></tr>
 <tr class="memdesc:a1a668d0f88bcacc451fca6bf25511b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns on motor with configureable speed and direction values.  <br /></td></tr>
@@ -186,7 +185,72 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>board_gpio_init</b> (
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-05-06</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="ntm__helpers_8h_source.html">ntm_helpers.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a8c6d7458362f0a1d72f048e5c28dafc9" name="a8c6d7458362f0a1d72f048e5c28dafc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6d7458362f0a1d72f048e5c28dafc9">&#9670;&#160;</a></span>board_gpio_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void board_gpio_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initiates all GPIO pins as well as communication protocols. </p>
+
+<p class="definition">Definition at line <a class="el" href="ntm__helpers_8cpp_source.html#l00026">26</a> of file <a class="el" href="ntm__helpers_8cpp_source.html">ntm_helpers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                       {</div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// Potentiometer Input</span></div>
+<div class="line"><span class="lineno">   28</span>    adc_init();</div>
+<div class="line"><span class="lineno">   29</span>    adc_gpio_init(speed_input);</div>
+<div class="line"><span class="lineno">   30</span>    adc_gpio_init(bat_lvl);</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>    <span class="comment">// Pushbutton State Input</span></div>
+<div class="line"><span class="lineno">   33</span>    gpio_init(state_input);</div>
+<div class="line"><span class="lineno">   34</span>    gpio_set_dir(state_input, GPIO_IN);</div>
+<div class="line"><span class="lineno">   35</span>    gpio_pull_down(state_input);</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    <span class="comment">// Pushbutton MSC Input</span></div>
+<div class="line"><span class="lineno">   38</span>    gpio_init(msc_input);</div>
+<div class="line"><span class="lineno">   39</span>    gpio_set_dir(msc_input, GPIO_IN);</div>
+<div class="line"><span class="lineno">   40</span>    gpio_pull_down(msc_input);</div>
+<div class="line"><span class="lineno">   41</span>    </div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// Motor Control</span></div>
+<div class="line"><span class="lineno">   43</span>    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);</div>
+<div class="line"><span class="lineno">   44</span>    pwm_set_clkdiv(<a class="code hl_variable" href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 48.83f);</div>
+<div class="line"><span class="lineno">   45</span>    pwm_set_wrap(<a class="code hl_variable" href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 255);</div>
+<div class="line"><span class="lineno">   46</span>    pwm_set_chan_level(<a class="code hl_variable" href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <a class="code hl_variable" href="ntm__helpers_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a>, 0);</div>
+<div class="line"><span class="lineno">   47</span>    pwm_set_enabled(<a class="code hl_variable" href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>    gpio_init(MOTOR_DIR);</div>
+<div class="line"><span class="lineno">   49</span>    gpio_set_dir(MOTOR_DIR, GPIO_OUT);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">// Motor Feedback - Output Signals</span></div>
+<div class="line"><span class="lineno">   52</span>    gpio_init(motorA_out);</div>
+<div class="line"><span class="lineno">   53</span>    gpio_set_dir(motorA_out, GPIO_IN);</div>
+<div class="line"><span class="lineno">   54</span>    gpio_pull_up(motorA_out);</div>
+<div class="line"><span class="lineno">   55</span>    gpio_init(motorB_out);</div>
+<div class="line"><span class="lineno">   56</span>    gpio_set_dir(motorB_out, GPIO_IN);</div>
+<div class="line"><span class="lineno">   57</span>    gpio_pull_up(motorB_out);</div>
+<div class="line"><span class="lineno">   58</span>    </div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment">// I2C Initialization</span></div>
+<div class="line"><span class="lineno">   60</span>    i2c_init(MY_I2C, 400000);</div>
+<div class="line"><span class="lineno">   61</span>    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">   62</span>    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">   63</span>    gpio_pull_up(I2C_SDA);</div>
+<div class="line"><span class="lineno">   64</span>    gpio_pull_up(I2C_SCL);</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="antm__helpers_8cpp_html_a23777d4d3d69af11916d27e48261cfb1"><div class="ttname"><a href="ntm__helpers_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a></div><div class="ttdeci">uint channel</div><div class="ttdoc">Global channel value for the PWM module. Automatically determined by chosen pin at runtime....</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00024">ntm_helpers.cpp:24</a></div></div>
+<div class="ttc" id="antm__helpers_8cpp_html_ac7597a58fd0a9415759b81dffee974e6"><div class="ttname"><a href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a></div><div class="ttdeci">uint slice</div><div class="ttdoc">Global slice value for the PWM module. Automatically determined by chosen pin at runtime....</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00018">ntm_helpers.cpp:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a42ebef78c974c5dd10ee53b6bea5ac07" name="a42ebef78c974c5dd10ee53b6bea5ac07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42ebef78c974c5dd10ee53b6bea5ac07">&#9670;&#160;</a></span>displayData()</h2>
 
@@ -236,6 +300,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>board_gpio_init</b> (
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ntm__helpers_8cpp_source.html#l00072">72</a> of file <a class="el" href="ntm__helpers_8cpp_source.html">ntm_helpers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                           {</div>
+<div class="line"><span class="lineno">   73</span>    std::string temp = info + std::to_string(data);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* data_formatted = temp.c_str();</div>
+<div class="line"><span class="lineno">   75</span>    ssd1306_draw_string(screen, 0, y_pos, 1, data_formatted);</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8b0e682ac7928c7d2592cb80a81a2874" name="a8b0e682ac7928c7d2592cb80a81a2874"></a>
@@ -263,6 +334,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>board_gpio_init</b> (
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="ntm__helpers_8cpp_source.html#l00078">78</a> of file <a class="el" href="ntm__helpers_8cpp_source.html">ntm_helpers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                {</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordtype">float</span> re = count/12.0/34.014f;</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> re;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1a668d0f88bcacc451fca6bf25511b62" name="a1a668d0f88bcacc451fca6bf25511b62"></a>
@@ -300,6 +377,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>board_gpio_init</b> (
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ntm__helpers_8cpp_source.html#l00067">67</a> of file <a class="el" href="ntm__helpers_8cpp_source.html">ntm_helpers.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                              {</div>
+<div class="line"><span class="lineno">   68</span>    gpio_put(MOTOR_DIR, direction);</div>
+<div class="line"><span class="lineno">   69</span>    pwm_set_chan_level(<a class="code hl_variable" href="ntm__helpers_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <a class="code hl_variable" href="ntm__helpers_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a>, power);</div>
+<div class="line"><span class="lineno">   70</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

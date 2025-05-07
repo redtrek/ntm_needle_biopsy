@@ -2,50 +2,50 @@
 \hypertarget{config_8h_source}{}\label{config_8h_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/config.h@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/config.h}}
 \mbox{\hyperlink{config_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{comment}{//\ I2C\ addresses\ for\ peripheral\ modules}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ OLED\_ADDR\ \ \ 0x3C}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ INA219\_ADDR\ 0x40}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ FX29\_ADDR\ \ \ 0x28}}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{comment}{//\ General\ timing}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ debounce\_us\ \ \ 100000}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ hold\_us\ \ \ \ \ \ \ 3000000\ \ \ }}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ potIterations\ 1000}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ debug\_us\ \ \ \ \ \ 5000000}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{comment}{//====\ ZERO\ STATE\ ====//}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SPIKE\_TIME\ \ \ \ \ \ 500\ \ \ \ \ }}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ CUTOFF\_STALL\ \ \ \ 800.0f\ \ }}
-\DoxyCodeLine{00029\ \textcolor{comment}{//====\ ZERO\ STATE\ ====//}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{comment}{//====\ MOTOR\ COMMANDS\ ====//}}
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ MOTOR\_FW\ \ \ \ \ \ \ \ \ \ 1\ \ \ \ \ }}
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ MOTOR\_BW\ \ \ \ \ \ \ \ \ \ 0\ \ \ \ \ }}
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ MOTOR\_ON\ \ \ \ \ \ \ \ \ \ 255\ \ \ }}
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ MOTOR\_OFF\ \ \ \ \ \ \ \ \ 0\ \ \ \ \ }}
-\DoxyCodeLine{00044\ \textcolor{comment}{//====\ MOTOR\ COMMANDS\ ====//}}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{comment}{//====\ BATTERY\ CALCULATIONS\ ====//}}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ NTM\_MAX(A,\ B)\ ((A)\ >=\ (B)\ ?\ (A)\ :\ (B))}}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ NTM\_MIN(A,\ B)\ ((A)\ <=\ (B)\ ?\ (A)\ :\ (B))}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ BAT\_MAX\_ADC\ ((int)(0.5\ +\ (4095/3.3)\ *\ (4.2/2)))}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ BAT\_MIN\_ADC\ ((int)(0.5\ +\ (4095/3.3)\ *\ (3.2/2)))}}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ BAT\_ADC\_PER\ (100.0\ /\ (BAT\_MAX\_ADC\ -\/\ BAT\_MIN\_ADC))}}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ SEC\_US\ \ \ \ \ \ 1000000}}
-\DoxyCodeLine{00087\ \textcolor{comment}{//====\ BATTERY\ CALCULATIONS\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00012}00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00014}00014\ \textcolor{comment}{//\ I2C\ addresses\ for\ peripheral\ modules}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ OLED\_ADDR\ \ \ 0x3C}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00016}00016\ \textcolor{preprocessor}{\#define\ INA219\_ADDR\ 0x40}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ FX29\_ADDR\ \ \ 0x28}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00019}00019\ \textcolor{comment}{//\ General\ timing}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00020}00020\ \textcolor{preprocessor}{\#define\ debounce\_us\ \ \ 100000}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00021}\mbox{\hyperlink{config_8h_ac6f3299722b682ead61165a15c392922}{00021}}\ \textcolor{preprocessor}{\#define\ hold\_us\ \ \ \ \ \ \ 3000000\ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ potIterations\ 1000}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ debug\_us\ \ \ \ \ \ 5000000}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00026}00026\ \textcolor{comment}{//====\ ZERO\ STATE\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00027}\mbox{\hyperlink{config_8h_afce5aaf1a0caf368eaf0db8926a30960}{00027}}\ \textcolor{preprocessor}{\#define\ SPIKE\_TIME\ \ \ \ \ \ 500\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00028}\mbox{\hyperlink{config_8h_a1923668201fdaeaced6d7935492b1a1f}{00028}}\ \textcolor{preprocessor}{\#define\ CUTOFF\_STALL\ \ \ \ 800.0f\ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00029}00029\ \textcolor{comment}{//====\ ZERO\ STATE\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00033}00033\ \textcolor{comment}{//====\ MOTOR\ COMMANDS\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00039}00039\ \textcolor{preprocessor}{\#define\ MOTOR\_FW\ \ \ \ \ \ \ \ \ \ 1\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00040}00040\ \textcolor{preprocessor}{\#define\ MOTOR\_BW\ \ \ \ \ \ \ \ \ \ 0\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00041}\mbox{\hyperlink{group__MotorMacros_ga3249ae087e43a52e0182917edca0dc12}{00041}}\ \textcolor{preprocessor}{\#define\ MOTOR\_ON\ \ \ \ \ \ \ \ \ \ 255\ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00042}\mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{00042}}\ \textcolor{preprocessor}{\#define\ MOTOR\_OFF\ \ \ \ \ \ \ \ \ 0\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00044}00044\ \textcolor{comment}{//====\ MOTOR\ COMMANDS\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00048}00048\ \textcolor{comment}{//====\ BATTERY\ CALCULATIONS\ ====//}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00056}\mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{00056}}\ \textcolor{preprocessor}{\#define\ NTM\_MAX(A,\ B)\ ((A)\ >=\ (B)\ ?\ (A)\ :\ (B))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00059}\mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{00059}}\ \textcolor{preprocessor}{\#define\ NTM\_MIN(A,\ B)\ ((A)\ <=\ (B)\ ?\ (A)\ :\ (B))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00069}\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{00069}}\ \textcolor{preprocessor}{\#define\ BAT\_MAX\_ADC\ ((int)(0.5\ +\ (4095/3.3)\ *\ (4.2/2)))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00079}\mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{00079}}\ \textcolor{preprocessor}{\#define\ BAT\_MIN\_ADC\ ((int)(0.5\ +\ (4095/3.3)\ *\ (3.2/2)))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00082}\mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{00082}}\ \textcolor{preprocessor}{\#define\ BAT\_ADC\_PER\ (100.0\ /\ (BAT\_MAX\_ADC\ -\/\ BAT\_MIN\_ADC))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00085}\mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{00085}}\ \textcolor{preprocessor}{\#define\ SEC\_US\ \ \ \ \ \ 1000000}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00087}00087\ \textcolor{comment}{//====\ BATTERY\ CALCULATIONS\ ====//}}
 
 \end{DoxyCode}

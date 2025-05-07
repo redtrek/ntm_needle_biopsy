@@ -1,21 +1,23 @@
-# Nontraditional Manufacturing Laboratory - Aspiration Assisted Needle Biopsy Device
+# Nontraditional Manufacturing Laboratory - Smart Biopsy Needle
 This repository contains the all the relevant code, documentation, and PCB design files for the needle biopsy device.
 
+https://redtrek.github.io/ntm_needle_biopsy/
+
 # Progress Overview
-**Biopsy Needle Code:**
+**Biopsy Needle Firmware:**
 - This has been cleaned with legacy code removed, a rewritten state machine, and added documentation for all functions.
 - Completely reorganized and formatted for new components.
-- Saving current, position, RPM, and force data to MicroSD card.
+- Saving current, position, RPM, and force data to microSD card.
 - Adjustable inputs have been added allowing for variable speeds. Now fully implemented.
 - Button holding supported as a form of input to zero and return the device to origin.
 
-**OLED Input Display:**
+**OLED Display:**
 - Supports input via a potentiometer and accurately displays in real time.
-- Shows maximum current during operation and rpm in real time.
-- Custom function implemented to add new features such as battery messages and general status information.
+- Shows current, RPM, position, and force information in real-time.
+- General status and battery capacity information.
 
 **Real-time Data Collection**
-- Device can track position, current, RPM, and force information in real time.
+- Device can track and log position, current, RPM, and force information in real time.
 - Navigation of state machine through calculated sensor values.
 - Automated safety limits based on distance traveled by device.
 - Real-time low pass and moving average filter calculations and logging.
