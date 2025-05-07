@@ -3,105 +3,25 @@
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{NTM\+\_\+\+MAX}}(A,  B)~((A) $>$= (B) ? (A) \+: (B))
+\Hypertarget{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}\label{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7} 
+\#define {\bfseries NTM\+\_\+\+MAX}(A,  B)~((A) $>$= (B) ? (A) \+: (B))
 \begin{DoxyCompactList}\small\item\em Calculates the bigger value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$>$}{>}= (B) return A. Else return B. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{NTM\+\_\+\+MIN}}(A,  B)~((A) $<$= (B) ? (A) \+: (B))
+\Hypertarget{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}\label{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab} 
+\#define {\bfseries NTM\+\_\+\+MIN}(A,  B)~((A) $<$= (B) ? (A) \+: (B))
 \begin{DoxyCompactList}\small\item\em Calculates the smaller value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$<$}{<}= (B) return A. Else return B. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (4.\+2/2)))
+\Hypertarget{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}\label{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b} 
+\#define {\bfseries BAT\+\_\+\+MAX\+\_\+\+ADC}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (4.\+2/2)))
 \begin{DoxyCompactList}\small\item\em Represents the battery\textquotesingle{}s max capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}maximum charge"{} is 4.\+2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.\+1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (3.\+2/2)))
+\Hypertarget{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}\label{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01} 
+\#define {\bfseries BAT\+\_\+\+MIN\+\_\+\+ADC}~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (3.\+2/2)))
 \begin{DoxyCompactList}\small\item\em Represents the battery\textquotesingle{}s min capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}minimum charge"{} is 3.\+2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.\+6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{BAT\+\_\+\+ADC\+\_\+\+PER}}~(100.\+0 / (\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}} -\/ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}))
+\Hypertarget{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}\label{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda} 
+\#define {\bfseries BAT\+\_\+\+ADC\+\_\+\+PER}~(100.\+0 / (\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}} -\/ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}))
 \begin{DoxyCompactList}\small\item\em Looks strange out of context. Used to calculate the batter capacity i.\+e. (Current Battery Value -\/ BAT\+\_\+\+MIN\+\_\+\+ADC) \texorpdfstring{$\ast$}{*} BAT\+\_\+\+ADC\+\_\+\+PER = \% Capacity. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{SEC\+\_\+\+US}}~1000000
+\Hypertarget{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}\label{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d} 
+\#define {\bfseries SEC\+\_\+\+US}~1000000
 \begin{DoxyCompactList}\small\item\em 1 Second in microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Macros used for calculating the battery capacity. 
-
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}\label{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda} 
-\index{Battery Macros@{Battery Macros}!BAT\_ADC\_PER@{BAT\_ADC\_PER}}
-\index{BAT\_ADC\_PER@{BAT\_ADC\_PER}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{BAT\_ADC\_PER}{BAT\_ADC\_PER}}
-{\footnotesize\ttfamily \#define BAT\+\_\+\+ADC\+\_\+\+PER~(100.\+0 / (\mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\+\_\+\+MAX\+\_\+\+ADC}} -\/ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\+\_\+\+MIN\+\_\+\+ADC}}))}
-
-
-
-Looks strange out of context. Used to calculate the batter capacity i.\+e. (Current Battery Value -\/ BAT\+\_\+\+MIN\+\_\+\+ADC) \texorpdfstring{$\ast$}{*} BAT\+\_\+\+ADC\+\_\+\+PER = \% Capacity. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00082}{82}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
-\Hypertarget{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}\label{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b} 
-\index{Battery Macros@{Battery Macros}!BAT\_MAX\_ADC@{BAT\_MAX\_ADC}}
-\index{BAT\_MAX\_ADC@{BAT\_MAX\_ADC}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{BAT\_MAX\_ADC}{BAT\_MAX\_ADC}}
-{\footnotesize\ttfamily \#define BAT\+\_\+\+MAX\+\_\+\+ADC~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (4.\+2/2)))}
-
-
-
-Represents the battery\textquotesingle{}s max capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}maximum charge"{} is 4.\+2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.\+1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00069}{69}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
-\Hypertarget{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}\label{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01} 
-\index{Battery Macros@{Battery Macros}!BAT\_MIN\_ADC@{BAT\_MIN\_ADC}}
-\index{BAT\_MIN\_ADC@{BAT\_MIN\_ADC}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{BAT\_MIN\_ADC}{BAT\_MIN\_ADC}}
-{\footnotesize\ttfamily \#define BAT\+\_\+\+MIN\+\_\+\+ADC~((int)(0.\+5 + (4095/3.\+3) \texorpdfstring{$\ast$}{*} (3.\+2/2)))}
-
-
-
-Represents the battery\textquotesingle{}s min capacity from the perspective of the microcontroller. This code maps the battery\textquotesingle{}s voltage to the ADC module value. The battery\textquotesingle{}s "{}minimum charge"{} is 3.\+2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.\+6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.\+3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.\+2 V / 2) 0.\+5 is just a value to round this result to the nearest whole integer. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00079}{79}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
-\Hypertarget{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}\label{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7} 
-\index{Battery Macros@{Battery Macros}!NTM\_MAX@{NTM\_MAX}}
-\index{NTM\_MAX@{NTM\_MAX}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{NTM\_MAX}{NTM\_MAX}}
-{\footnotesize\ttfamily \#define NTM\+\_\+\+MAX(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~((A) $>$= (B) ? (A) \+: (B))}
-
-
-
-Calculates the bigger value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$>$}{>}= (B) return A. Else return B. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00056}{56}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
-\Hypertarget{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}\label{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab} 
-\index{Battery Macros@{Battery Macros}!NTM\_MIN@{NTM\_MIN}}
-\index{NTM\_MIN@{NTM\_MIN}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{NTM\_MIN}{NTM\_MIN}}
-{\footnotesize\ttfamily \#define NTM\+\_\+\+MIN(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~((A) $<$= (B) ? (A) \+: (B))}
-
-
-
-Calculates the smaller value between A and B using operator. Essentially\+: if (A) \texorpdfstring{$<$}{<}= (B) return A. Else return B. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00059}{59}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
-\Hypertarget{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}\label{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d} 
-\index{Battery Macros@{Battery Macros}!SEC\_US@{SEC\_US}}
-\index{SEC\_US@{SEC\_US}!Battery Macros@{Battery Macros}}
-\doxysubsubsection{\texorpdfstring{SEC\_US}{SEC\_US}}
-{\footnotesize\ttfamily \#define SEC\+\_\+\+US~1000000}
-
-
-
-1 Second in microseconds. 
-
-
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00085}{85}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-

@@ -2,38 +2,38 @@
 \hypertarget{ntm__helpers_8h_source}{}\label{ntm__helpers_8h_source}\index{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/ntm\_helpers.h@{/home/redtrek/NTM/ntm\_needle\_biopsy/code/biopsy\_needle/src/include/ntm\_helpers.h}}
 \mbox{\hyperlink{ntm__helpers_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00012}00012\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pins_8h}{pins.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00021}00021\ \textcolor{comment}{//\ Peripherals}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}../../libs/SSD1306/ssd1306.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00024}00024\ \textcolor{comment}{//\ Includes\ for\ the\ FatFS\ Library}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}pico/stdlib.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}hw\_config.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}f\_util.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}ff.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00030}00030\ \textcolor{comment}{//\ MSC-\/specific}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00031}00031\ \textcolor{preprocessor}{\#include\ <bsp/board.h>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <tusb.h>}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00034}00034\ \textcolor{preprocessor}{\#include\ "{}tusb\_config.h"{}}}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}{board\_gpio\_init}}();}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(\textcolor{keywordtype}{bool}\ direction,\ uint16\_t\ power);}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(ssd1306\_t*\ screen,\ \textcolor{keywordtype}{int}\ y\_pos,\ \textcolor{keywordtype}{float}\ data,\ std::string\ info);}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00067}00067\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(\textcolor{keywordtype}{int}\ count);}
-\DoxyCodeLine{\Hypertarget{ntm__helpers_8h_source_l00068}00068\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pins_8h}{pins.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Peripherals}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../../libs/SSD1306/ssd1306.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Includes\ for\ the\ FatFS\ Library}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}pico/stdlib.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}hw\_config.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}f\_util.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}ff.h"{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ MSC-\/specific}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <bsp/board.h>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <tusb.h>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}tusb\_config.h"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}{board\_gpio\_init}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(\textcolor{keywordtype}{bool}\ direction,\ uint16\_t\ power);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(ssd1306\_t*\ screen,\ \textcolor{keywordtype}{int}\ y\_pos,\ \textcolor{keywordtype}{float}\ data,\ std::string\ info);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00068\ }
 
 \end{DoxyCode}

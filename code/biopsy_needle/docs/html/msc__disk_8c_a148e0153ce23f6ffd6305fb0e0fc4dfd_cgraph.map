@@ -1,0 +1,5 @@
+<map id="tud_msc_read10_cb" name="tud_msc_read10_cb">
+<area shape="rect" id="Node000001" title="Reads data from the disk." alt="" coords="5,5,156,31"/>
+<area shape="rect" id="Node000002" href="$msc__disk_8c.html#abbb293c273679cadfae2b360ccd5e437" title="Checks if the unit is ready." alt="" coords="204,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,15,190,15,190,21,157,21"/>
+</map>

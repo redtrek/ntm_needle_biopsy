@@ -12,6 +12,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,9 +22,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Smart Biopsy Needle<span id="projectnumber">&#160;v1.0.0</span>
+   <div id="projectname">Smart Biopsy Needle<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">This project focuses on the electronics implementation for the University of Florida Nontraditional Manufacturing Lab&#39;s aspiration-assisted biopsy needle.</div>
+   <div id="projectbrief">The smart biopsy needle is a aspiration-assisted motor-driven device intended for cancer diagnostic research in the Nontraditional Manufacturing Lab of the University of Florida.</div>
   </td>
  </tr>
  </tbody>
@@ -86,60 +87,88 @@ $(function() {
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="config_8h__dep__incl.png" border="0" usemap="#a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2include_2config_8hdep" alt=""/></div>
+<map name="a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2include_2config_8hdep" id="a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2include_2config_8hdep">
+<area shape="rect" title="This holds the macros for I2C device addresses, general debug and timing values, control abstractions..." alt="" coords="120,5,325,60"/>
+<area shape="rect" href="ntm__helpers_8h.html" title="This file holds the prototypes for smart needle&#39;s helper functions." alt="" coords="101,108,345,163"/>
+<area shape="poly" title=" " alt="" coords="225,74,225,108,220,108,220,74"/>
+<area shape="rect" href="main_8cpp.html" title="This is the main file for the smart biopsy needle. It handles the high level operation of the state m..." alt="" coords="5,211,211,265"/>
+<area shape="poly" title=" " alt="" coords="184,174,140,213,136,209,181,170"/>
+<area shape="rect" href="ntm__helpers_8cpp.html" title="This file holds the definitions for the smart needle&#39;s helper functions." alt="" coords="235,211,443,265"/>
+<area shape="poly" title=" " alt="" coords="265,170,310,209,307,213,262,174"/>
+</map>
 </div>
 </div>
 <p><a href="config_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7dfa2c4cfbfcba36416046052e7943e8" id="r_a7dfa2c4cfbfcba36416046052e7943e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>&#160;&#160;&#160;0x3C</td></tr>
+<tr class="memitem:a7dfa2c4cfbfcba36416046052e7943e8" id="r_a7dfa2c4cfbfcba36416046052e7943e8"><td class="memItemLeft" align="right" valign="top"><a id="a7dfa2c4cfbfcba36416046052e7943e8" name="a7dfa2c4cfbfcba36416046052e7943e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>OLED_ADDR</b>&#160;&#160;&#160;0x3C</td></tr>
 <tr class="separator:a7dfa2c4cfbfcba36416046052e7943e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1339fa84c70a1e0606d8d3362c993ee" id="r_ac1339fa84c70a1e0606d8d3362c993ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ac1339fa84c70a1e0606d8d3362c993ee">INA219_ADDR</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="memitem:ac1339fa84c70a1e0606d8d3362c993ee" id="r_ac1339fa84c70a1e0606d8d3362c993ee"><td class="memItemLeft" align="right" valign="top"><a id="ac1339fa84c70a1e0606d8d3362c993ee" name="ac1339fa84c70a1e0606d8d3362c993ee"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INA219_ADDR</b>&#160;&#160;&#160;0x40</td></tr>
 <tr class="separator:ac1339fa84c70a1e0606d8d3362c993ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8af39ec9ea4179e1236663f82e6be92" id="r_ab8af39ec9ea4179e1236663f82e6be92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab8af39ec9ea4179e1236663f82e6be92">FX29_ADDR</a>&#160;&#160;&#160;0x28</td></tr>
+<tr class="memitem:ab8af39ec9ea4179e1236663f82e6be92" id="r_ab8af39ec9ea4179e1236663f82e6be92"><td class="memItemLeft" align="right" valign="top"><a id="ab8af39ec9ea4179e1236663f82e6be92" name="ab8af39ec9ea4179e1236663f82e6be92"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FX29_ADDR</b>&#160;&#160;&#160;0x28</td></tr>
 <tr class="separator:ab8af39ec9ea4179e1236663f82e6be92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0427c5ee0151d36a621ea2bbbcc33b80" id="r_a0427c5ee0151d36a621ea2bbbcc33b80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0427c5ee0151d36a621ea2bbbcc33b80">debounce_us</a>&#160;&#160;&#160;100000</td></tr>
+<tr class="memitem:a0427c5ee0151d36a621ea2bbbcc33b80" id="r_a0427c5ee0151d36a621ea2bbbcc33b80"><td class="memItemLeft" align="right" valign="top"><a id="a0427c5ee0151d36a621ea2bbbcc33b80" name="a0427c5ee0151d36a621ea2bbbcc33b80"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>debounce_us</b>&#160;&#160;&#160;100000</td></tr>
 <tr class="separator:a0427c5ee0151d36a621ea2bbbcc33b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6f3299722b682ead61165a15c392922" id="r_ac6f3299722b682ead61165a15c392922"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ac6f3299722b682ead61165a15c392922">hold_us</a>&#160;&#160;&#160;3000000</td></tr>
-<tr class="memdesc:ac6f3299722b682ead61165a15c392922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold [STATE] for 3 sec to enter ZERO state.  <br /></td></tr>
+<tr class="memitem:ac6f3299722b682ead61165a15c392922" id="r_ac6f3299722b682ead61165a15c392922"><td class="memItemLeft" align="right" valign="top"><a id="ac6f3299722b682ead61165a15c392922" name="ac6f3299722b682ead61165a15c392922"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>hold_us</b>&#160;&#160;&#160;3000000</td></tr>
+<tr class="memdesc:ac6f3299722b682ead61165a15c392922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold [STATE] for 3 sec to enter ZERO state. <br /></td></tr>
 <tr class="separator:ac6f3299722b682ead61165a15c392922"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac10c5e664055ed80b487406ea89b6e72" id="r_ac10c5e664055ed80b487406ea89b6e72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ac10c5e664055ed80b487406ea89b6e72">potIterations</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memitem:ac10c5e664055ed80b487406ea89b6e72" id="r_ac10c5e664055ed80b487406ea89b6e72"><td class="memItemLeft" align="right" valign="top"><a id="ac10c5e664055ed80b487406ea89b6e72" name="ac10c5e664055ed80b487406ea89b6e72"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>potIterations</b>&#160;&#160;&#160;1000</td></tr>
 <tr class="separator:ac10c5e664055ed80b487406ea89b6e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e34bd94f3ba8465de287a9663c24b80" id="r_a7e34bd94f3ba8465de287a9663c24b80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7e34bd94f3ba8465de287a9663c24b80">debug_us</a>&#160;&#160;&#160;5000000</td></tr>
+<tr class="memitem:a7e34bd94f3ba8465de287a9663c24b80" id="r_a7e34bd94f3ba8465de287a9663c24b80"><td class="memItemLeft" align="right" valign="top"><a id="a7e34bd94f3ba8465de287a9663c24b80" name="a7e34bd94f3ba8465de287a9663c24b80"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>debug_us</b>&#160;&#160;&#160;5000000</td></tr>
 <tr class="separator:a7e34bd94f3ba8465de287a9663c24b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce5aaf1a0caf368eaf0db8926a30960" id="r_afce5aaf1a0caf368eaf0db8926a30960"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#afce5aaf1a0caf368eaf0db8926a30960">SPIKE_TIME</a>&#160;&#160;&#160;500</td></tr>
-<tr class="memdesc:afce5aaf1a0caf368eaf0db8926a30960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state will exit immediately as it will detect motor startup spikes as collision with the housing.  <br /></td></tr>
+<tr class="memitem:afce5aaf1a0caf368eaf0db8926a30960" id="r_afce5aaf1a0caf368eaf0db8926a30960"><td class="memItemLeft" align="right" valign="top"><a id="afce5aaf1a0caf368eaf0db8926a30960" name="afce5aaf1a0caf368eaf0db8926a30960"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPIKE_TIME</b>&#160;&#160;&#160;500</td></tr>
+<tr class="memdesc:afce5aaf1a0caf368eaf0db8926a30960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state will exit immediately as it will detect motor startup spikes as collision with the housing. <br /></td></tr>
 <tr class="separator:afce5aaf1a0caf368eaf0db8926a30960"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1923668201fdaeaced6d7935492b1a1f" id="r_a1923668201fdaeaced6d7935492b1a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1923668201fdaeaced6d7935492b1a1f">CUTOFF_STALL</a>&#160;&#160;&#160;800.0f</td></tr>
-<tr class="memdesc:a1923668201fdaeaced6d7935492b1a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stall current that determines when the ZERO state is complete. If the device detects this current, it will be because it has reached the housing.  <br /></td></tr>
+<tr class="memitem:a1923668201fdaeaced6d7935492b1a1f" id="r_a1923668201fdaeaced6d7935492b1a1f"><td class="memItemLeft" align="right" valign="top"><a id="a1923668201fdaeaced6d7935492b1a1f" name="a1923668201fdaeaced6d7935492b1a1f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CUTOFF_STALL</b>&#160;&#160;&#160;800.0f</td></tr>
+<tr class="memdesc:a1923668201fdaeaced6d7935492b1a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stall current that determines when the ZERO state is complete. If the device detects this current, it will be because it has reached the housing. <br /></td></tr>
 <tr class="separator:a1923668201fdaeaced6d7935492b1a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7217e715c077650b39f693d8fbfa57d0" id="r_ga7217e715c077650b39f693d8fbfa57d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MotorMacros.html#ga7217e715c077650b39f693d8fbfa57d0">MOTOR_FW</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ga7217e715c077650b39f693d8fbfa57d0" id="r_ga7217e715c077650b39f693d8fbfa57d0"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MOTOR_FW</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ga7217e715c077650b39f693d8fbfa57d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabd813818c5b56e7356a571c562b922fb" id="r_gabd813818c5b56e7356a571c562b922fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MotorMacros.html#gabd813818c5b56e7356a571c562b922fb">MOTOR_BW</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:gabd813818c5b56e7356a571c562b922fb" id="r_gabd813818c5b56e7356a571c562b922fb"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MOTOR_BW</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:gabd813818c5b56e7356a571c562b922fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3249ae087e43a52e0182917edca0dc12" id="r_ga3249ae087e43a52e0182917edca0dc12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MotorMacros.html#ga3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a>&#160;&#160;&#160;255</td></tr>
-<tr class="memdesc:ga3249ae087e43a52e0182917edca0dc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum PWM value for motor.  <br /></td></tr>
+<tr class="memitem:ga3249ae087e43a52e0182917edca0dc12" id="r_ga3249ae087e43a52e0182917edca0dc12"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MOTOR_ON</b>&#160;&#160;&#160;255</td></tr>
+<tr class="memdesc:ga3249ae087e43a52e0182917edca0dc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum PWM value for motor. <br /></td></tr>
 <tr class="separator:ga3249ae087e43a52e0182917edca0dc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad1b1c6c44e1e025f7a748396b2e6f9f4" id="r_gad1b1c6c44e1e025f7a748396b2e6f9f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:gad1b1c6c44e1e025f7a748396b2e6f9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum PWM value for motor.  <br /></td></tr>
+<tr class="memitem:gad1b1c6c44e1e025f7a748396b2e6f9f4" id="r_gad1b1c6c44e1e025f7a748396b2e6f9f4"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MOTOR_OFF</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:gad1b1c6c44e1e025f7a748396b2e6f9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum PWM value for motor. <br /></td></tr>
 <tr class="separator:gad1b1c6c44e1e025f7a748396b2e6f9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24c290b5fa8c0bb248fc15b5bcf873d7" id="r_ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga24c290b5fa8c0bb248fc15b5bcf873d7">NTM_MAX</a>(A,  B)&#160;&#160;&#160;((A) &gt;= (B) ? (A) : (B))</td></tr>
-<tr class="memdesc:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A. Else return B.  <br /></td></tr>
+<tr class="memitem:ga24c290b5fa8c0bb248fc15b5bcf873d7" id="r_ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NTM_MAX</b>(A,  B)&#160;&#160;&#160;((A) &gt;= (B) ? (A) : (B))</td></tr>
+<tr class="memdesc:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A. Else return B. <br /></td></tr>
 <tr class="separator:ga24c290b5fa8c0bb248fc15b5bcf873d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a187ecf82734a12819e1283bcb69bab" id="r_ga9a187ecf82734a12819e1283bcb69bab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga9a187ecf82734a12819e1283bcb69bab">NTM_MIN</a>(A,  B)&#160;&#160;&#160;((A) &lt;= (B) ? (A) : (B))</td></tr>
-<tr class="memdesc:ga9a187ecf82734a12819e1283bcb69bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the smaller value between A and B using operator. Essentially: if (A) &lt;= (B) return A. Else return B.  <br /></td></tr>
+<tr class="memitem:ga9a187ecf82734a12819e1283bcb69bab" id="r_ga9a187ecf82734a12819e1283bcb69bab"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NTM_MIN</b>(A,  B)&#160;&#160;&#160;((A) &lt;= (B) ? (A) : (B))</td></tr>
+<tr class="memdesc:ga9a187ecf82734a12819e1283bcb69bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the smaller value between A and B using operator. Essentially: if (A) &lt;= (B) return A. Else return B. <br /></td></tr>
 <tr class="separator:ga9a187ecf82734a12819e1283bcb69bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7703a5d829fb6d1223ad111a9474fa9b" id="r_ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (4.2/2)))</td></tr>
-<tr class="memdesc:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's max capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "maximum charge" is 4.2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer.  <br /></td></tr>
+<tr class="memitem:ga7703a5d829fb6d1223ad111a9474fa9b" id="r_ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_MAX_ADC</b>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (4.2/2)))</td></tr>
+<tr class="memdesc:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's max capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "maximum charge" is 4.2 V which is too much for the pins to handle so we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 2.1 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (4.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. <br /></td></tr>
 <tr class="separator:ga7703a5d829fb6d1223ad111a9474fa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad380f4a571d5444566336f067dfb7b01" id="r_gad380f4a571d5444566336f067dfb7b01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (3.2/2)))</td></tr>
-<tr class="memdesc:gad380f4a571d5444566336f067dfb7b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's min capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "minimum charge" is 3.2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer.  <br /></td></tr>
+<tr class="memitem:gad380f4a571d5444566336f067dfb7b01" id="r_gad380f4a571d5444566336f067dfb7b01"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_MIN_ADC</b>&#160;&#160;&#160;((int)(0.5 + (4095/3.3) * (3.2/2)))</td></tr>
+<tr class="memdesc:gad380f4a571d5444566336f067dfb7b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the battery's min capacity from the perspective of the microcontroller. This code maps the battery's voltage to the ADC module value. The battery's "minimum charge" is 3.2 V. To be consistent with what we did for the maximum voltage we halve it using a voltage divider. Therefore, when the battery is at maximum the microcontroller pin recieves 1.6 V. We then map this to the 12 bit ADC value. There are 12 bits to represent the voltage so 4096 corresponding values (inclusive of 0) with a maximum of 3.3 V recievable by the pin. When we multiply these to values together we are figuring out what the ADC value of the battery is at maximum charge (3.2 V / 2) 0.5 is just a value to round this result to the nearest whole integer. <br /></td></tr>
 <tr class="separator:gad380f4a571d5444566336f067dfb7b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4ea44361cc7ac80f146feb2806720fda" id="r_ga4ea44361cc7ac80f146feb2806720fda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga4ea44361cc7ac80f146feb2806720fda">BAT_ADC_PER</a>&#160;&#160;&#160;(100.0 / (<a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a> - <a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>))</td></tr>
-<tr class="memdesc:ga4ea44361cc7ac80f146feb2806720fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT_MIN_ADC) * BAT_ADC_PER = % Capacity.  <br /></td></tr>
+<tr class="memitem:ga4ea44361cc7ac80f146feb2806720fda" id="r_ga4ea44361cc7ac80f146feb2806720fda"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BAT_ADC_PER</b>&#160;&#160;&#160;(100.0 / (<a class="el" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a> - <a class="el" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>))</td></tr>
+<tr class="memdesc:ga4ea44361cc7ac80f146feb2806720fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT_MIN_ADC) * BAT_ADC_PER = % Capacity. <br /></td></tr>
 <tr class="separator:ga4ea44361cc7ac80f146feb2806720fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga81b58a672e9a97383f06a46f89660b1d" id="r_ga81b58a672e9a97383f06a46f89660b1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__BatteryMacros.html#ga81b58a672e9a97383f06a46f89660b1d">SEC_US</a>&#160;&#160;&#160;1000000</td></tr>
-<tr class="memdesc:ga81b58a672e9a97383f06a46f89660b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 Second in microseconds.  <br /></td></tr>
+<tr class="memitem:ga81b58a672e9a97383f06a46f89660b1d" id="r_ga81b58a672e9a97383f06a46f89660b1d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SEC_US</b>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:ga81b58a672e9a97383f06a46f89660b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 Second in microseconds. <br /></td></tr>
 <tr class="separator:ga81b58a672e9a97383f06a46f89660b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,160 +177,7 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-05-06</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a1923668201fdaeaced6d7935492b1a1f" name="a1923668201fdaeaced6d7935492b1a1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1923668201fdaeaced6d7935492b1a1f">&#9670;&#160;</a></span>CUTOFF_STALL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CUTOFF_STALL&#160;&#160;&#160;800.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stall current that determines when the ZERO state is complete. If the device detects this current, it will be because it has reached the housing. </p>
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00028">28</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="a0427c5ee0151d36a621ea2bbbcc33b80" name="a0427c5ee0151d36a621ea2bbbcc33b80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0427c5ee0151d36a621ea2bbbcc33b80">&#9670;&#160;</a></span>debounce_us</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define debounce_us&#160;&#160;&#160;100000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00020">20</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="a7e34bd94f3ba8465de287a9663c24b80" name="a7e34bd94f3ba8465de287a9663c24b80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e34bd94f3ba8465de287a9663c24b80">&#9670;&#160;</a></span>debug_us</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define debug_us&#160;&#160;&#160;5000000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00023">23</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="ab8af39ec9ea4179e1236663f82e6be92" name="ab8af39ec9ea4179e1236663f82e6be92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8af39ec9ea4179e1236663f82e6be92">&#9670;&#160;</a></span>FX29_ADDR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FX29_ADDR&#160;&#160;&#160;0x28</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00017">17</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="ac6f3299722b682ead61165a15c392922" name="ac6f3299722b682ead61165a15c392922"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6f3299722b682ead61165a15c392922">&#9670;&#160;</a></span>hold_us</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define hold_us&#160;&#160;&#160;3000000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Hold [STATE] for 3 sec to enter ZERO state. </p>
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00021">21</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="ac1339fa84c70a1e0606d8d3362c993ee" name="ac1339fa84c70a1e0606d8d3362c993ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1339fa84c70a1e0606d8d3362c993ee">&#9670;&#160;</a></span>INA219_ADDR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INA219_ADDR&#160;&#160;&#160;0x40</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00016">16</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="a7dfa2c4cfbfcba36416046052e7943e8" name="a7dfa2c4cfbfcba36416046052e7943e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dfa2c4cfbfcba36416046052e7943e8">&#9670;&#160;</a></span>OLED_ADDR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OLED_ADDR&#160;&#160;&#160;0x3C</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00015">15</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="ac10c5e664055ed80b487406ea89b6e72" name="ac10c5e664055ed80b487406ea89b6e72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac10c5e664055ed80b487406ea89b6e72">&#9670;&#160;</a></span>potIterations</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define potIterations&#160;&#160;&#160;1000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00022">22</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-<a id="afce5aaf1a0caf368eaf0db8926a30960" name="afce5aaf1a0caf368eaf0db8926a30960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce5aaf1a0caf368eaf0db8926a30960">&#9670;&#160;</a></span>SPIKE_TIME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SPIKE_TIME&#160;&#160;&#160;500</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state will exit immediately as it will detect motor startup spikes as collision with the housing. </p>
-
-<p class="definition">Definition at line <a class="el" href="config_8h_source.html#l00027">27</a> of file <a class="el" href="config_8h_source.html">config.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

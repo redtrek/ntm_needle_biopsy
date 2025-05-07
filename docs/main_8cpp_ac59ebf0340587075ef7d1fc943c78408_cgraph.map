@@ -1,0 +1,9 @@
+<map id="displayState" name="displayState">
+<area shape="rect" id="Node000001" title="Handles the order of information, titles, and instructions shown on the OLED display by state in FSM." alt="" coords="5,55,108,80"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89" title="Helper function used to display calculated battery capacity value on OLED." alt="" coords="182,5,273,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,52,168,32,170,37,102,57"/>
+<area shape="rect" id="Node000003" href="$ntm__helpers_8cpp.html#a42ebef78c974c5dd10ee53b6bea5ac07" title="Helper function used to abstract how sensor data is shown on the OLED screen." alt="" coords="177,55,277,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,65,163,65,163,70,108,70"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a77605eb86157d0b0194fc72a25738a22" title="Helper function used to abstract how potentiometer input information is shown on the OLED screen." alt="" coords="156,104,299,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,77,170,97,168,102,101,83"/>
+</map>

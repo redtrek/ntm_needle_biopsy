@@ -1,0 +1,5 @@
+<map id="tud_msc_capacity_cb" name="tud_msc_capacity_cb">
+<area shape="rect" id="Node000001" title="Gets the capacity of the disk." alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000002" href="$msc__disk_8c.html#abbb293c273679cadfae2b360ccd5e437" title="Checks if the unit is ready." alt="" coords="215,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,15,201,15,201,21,167,21"/>
+</map>

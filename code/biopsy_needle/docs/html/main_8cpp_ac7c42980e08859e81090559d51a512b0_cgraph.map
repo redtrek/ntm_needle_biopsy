@@ -1,0 +1,11 @@
+<map id="handleButton" name="handleButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,115,80"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408" title="Handles the order of information, titles, and instructions shown on the OLED display by state in FSM." alt="" coords="163,55,265,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,65,149,65,149,70,115,70"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89" title="Helper function used to display calculated battery capacity value on OLED." alt="" coords="339,5,430,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,52,326,32,327,37,259,57"/>
+<area shape="rect" id="Node000004" href="$ntm__helpers_8cpp.html#a42ebef78c974c5dd10ee53b6bea5ac07" title="Helper function used to abstract how sensor data is shown on the OLED screen." alt="" coords="335,55,435,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="266,65,321,65,321,70,266,70"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a77605eb86157d0b0194fc72a25738a22" title="Helper function used to abstract how potentiometer input information is shown on the OLED screen." alt="" coords="313,104,456,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="259,77,327,97,326,102,258,83"/>
+</map>

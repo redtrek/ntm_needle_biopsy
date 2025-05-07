@@ -1,0 +1,5 @@
+<map id="oled_init" name="oled_init">
+<area shape="rect" id="Node000001" title="Initializes the 128x64 OLED display and communication via I2C connections." alt="" coords="5,5,84,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89" title="Helper function used to display calculated battery capacity value on OLED." alt="" coords="132,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,15,118,15,118,21,84,21"/>
+</map>

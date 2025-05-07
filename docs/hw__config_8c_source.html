@@ -107,16 +107,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;hw_config.h&quot;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifndef PCB</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define PCB 0</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="hw__config_8c.html#abce6d16c89bc3a3a1744a4ce63a10d54">   37</a></span><span class="preprocessor">#define PCB 0</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Pin Defintions (see hw_config.c for SPI)</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#if PCB == 0</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    #define MY_SPI      spi0</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #define SPI_SCK    18  </span><span class="comment">// SCK</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">    #define SPI_MOSI   19  </span><span class="comment">// MOSI</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    #define SPI_MISO   20  </span><span class="comment">// MISO</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    #define SPI_CS     1   </span><span class="comment">// RX (BB Pin)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="hw__config_8c.html#a399911c7ae262415664800482fd362f5">   42</a></span><span class="preprocessor">    #define MY_SPI      spi0</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="hw__config_8c.html#a750ca7c9b92cfc9e57272ff3a49db48b">   43</a></span><span class="preprocessor">    #define SPI_SCK    18  </span><span class="comment">// SCK</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="hw__config_8c.html#a7dbebab5f7dd57885adccf6711b13592">   44</a></span><span class="preprocessor">    #define SPI_MOSI   19  </span><span class="comment">// MOSI</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="hw__config_8c.html#ab142cc77dfa97010c9d2b616d0992b64">   45</a></span><span class="preprocessor">    #define SPI_MISO   20  </span><span class="comment">// MISO</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="hw__config_8c.html#ade4259fa3cbb71732a4e73c18dcb9b0d">   46</a></span><span class="preprocessor">    #define SPI_CS     1   </span><span class="comment">// RX (BB Pin)</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#elif PCB == 1</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    #define MY_SPI      spi0</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    #define SPI_SCK    18</span></div>
@@ -129,10 +129,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/* Configuration of hardware SPI object */</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">static</span> spi_t spi = {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    .hw_inst     = MY_SPI,  <span class="comment">// SPI component</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    .sck_gpio    = SPI_SCK,    <span class="comment">// GPIO number (not Pico pin number)</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    .mosi_gpio   = SPI_MOSI,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    .miso_gpio   = SPI_MISO,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    .hw_inst     = <a class="code hl_define" href="hw__config_8c.html#a399911c7ae262415664800482fd362f5">MY_SPI</a>,  <span class="comment">// SPI component</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    .sck_gpio    = <a class="code hl_define" href="hw__config_8c.html#a750ca7c9b92cfc9e57272ff3a49db48b">SPI_SCK</a>,    <span class="comment">// GPIO number (not Pico pin number)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    .mosi_gpio   = <a class="code hl_define" href="hw__config_8c.html#a7dbebab5f7dd57885adccf6711b13592">SPI_MOSI</a>,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    .miso_gpio   = <a class="code hl_define" href="hw__config_8c.html#ab142cc77dfa97010c9d2b616d0992b64">SPI_MISO</a>,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// THOMAS CHANG: We&#39;ve kept this baud rate to match that of the 2040</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    .baud_rate = 125 * 1000 * 1000 / 4  <span class="comment">// 31250000 Hz</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -141,7 +141,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/* SPI Interface */</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> sd_spi_if_t spi_if = {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    .spi = &amp;spi,  <span class="comment">// Pointer to the SPI driving this card</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    .ss_gpio     = SPI_CS  <span class="comment">// The SPI slave select GPIO for this SD card</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    .ss_gpio     = <a class="code hl_define" href="hw__config_8c.html#ade4259fa3cbb71732a4e73c18dcb9b0d">SPI_CS</a>  <span class="comment">// The SPI slave select GPIO for this SD card</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">/* Configuration of the SD Card socket object */</span></div>
@@ -152,7 +152,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">/* ********************************************************************** */</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">size_t</span> sd_get_num() { <span class="keywordflow">return</span> 1; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="hw__config_8c.html#a43d3ae8133310f23860b4f5b8cf4934e">   82</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="hw__config_8c.html#a43d3ae8133310f23860b4f5b8cf4934e">sd_get_num</a>() { <span class="keywordflow">return</span> 1; }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="hw__config_8c.html#ae019a1533d42fd3972c3f1eea96d23d4">   91</a></span>sd_card_t *<a class="code hl_function" href="hw__config_8c.html#ae019a1533d42fd3972c3f1eea96d23d4">sd_get_by_num</a>(<span class="keywordtype">size_t</span> num) {</div>
@@ -168,6 +168,12 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">/* [] END OF FILE */</span></div>
+<div class="ttc" id="ahw__config_8c_html_a399911c7ae262415664800482fd362f5"><div class="ttname"><a href="hw__config_8c.html#a399911c7ae262415664800482fd362f5">MY_SPI</a></div><div class="ttdeci">#define MY_SPI</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00042">hw_config.c:42</a></div></div>
+<div class="ttc" id="ahw__config_8c_html_a43d3ae8133310f23860b4f5b8cf4934e"><div class="ttname"><a href="hw__config_8c.html#a43d3ae8133310f23860b4f5b8cf4934e">sd_get_num</a></div><div class="ttdeci">size_t sd_get_num()</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00082">hw_config.c:82</a></div></div>
+<div class="ttc" id="ahw__config_8c_html_a750ca7c9b92cfc9e57272ff3a49db48b"><div class="ttname"><a href="hw__config_8c.html#a750ca7c9b92cfc9e57272ff3a49db48b">SPI_SCK</a></div><div class="ttdeci">#define SPI_SCK</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00043">hw_config.c:43</a></div></div>
+<div class="ttc" id="ahw__config_8c_html_a7dbebab5f7dd57885adccf6711b13592"><div class="ttname"><a href="hw__config_8c.html#a7dbebab5f7dd57885adccf6711b13592">SPI_MOSI</a></div><div class="ttdeci">#define SPI_MOSI</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00044">hw_config.c:44</a></div></div>
+<div class="ttc" id="ahw__config_8c_html_ab142cc77dfa97010c9d2b616d0992b64"><div class="ttname"><a href="hw__config_8c.html#ab142cc77dfa97010c9d2b616d0992b64">SPI_MISO</a></div><div class="ttdeci">#define SPI_MISO</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00045">hw_config.c:45</a></div></div>
+<div class="ttc" id="ahw__config_8c_html_ade4259fa3cbb71732a4e73c18dcb9b0d"><div class="ttname"><a href="hw__config_8c.html#ade4259fa3cbb71732a4e73c18dcb9b0d">SPI_CS</a></div><div class="ttdeci">#define SPI_CS</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00046">hw_config.c:46</a></div></div>
 <div class="ttc" id="ahw__config_8c_html_ae019a1533d42fd3972c3f1eea96d23d4"><div class="ttname"><a href="hw__config_8c.html#ae019a1533d42fd3972c3f1eea96d23d4">sd_get_by_num</a></div><div class="ttdeci">sd_card_t * sd_get_by_num(size_t num)</div><div class="ttdoc">Get a pointer to an SD card object by its number.</div><div class="ttdef"><b>Definition</b> <a href="hw__config_8c_source.html#l00091">hw_config.c:91</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

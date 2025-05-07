@@ -12,6 +12,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,9 +22,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Smart Biopsy Needle<span id="projectnumber">&#160;v1.0.0</span>
+   <div id="projectname">Smart Biopsy Needle<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">This project focuses on the electronics implementation for the University of Florida Nontraditional Manufacturing Lab&#39;s aspiration-assisted biopsy needle.</div>
+   <div id="projectbrief">The smart biopsy needle is a aspiration-assisted motor-driven device intended for cancer diagnostic research in the Nontraditional Manufacturing Lab of the University of Florida.</div>
   </td>
  </tr>
  </tbody>
@@ -88,28 +89,38 @@ $(function() {
 Include dependency graph for hw_config.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="hw__config_8c__incl.png" border="0" usemap="#a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2hw__config_8c" alt=""/></div>
+<map name="a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2hw__config_8c" id="a_2home_2redtrek_2NTM_2ntm__needle__biopsy_2code_2biopsy__needle_2src_2hw__config_8c">
+<area shape="rect" title="This is a modified configuration file from the FatFS library. Configured to communicate with the micr..." alt="" coords="5,5,211,60"/>
+<area shape="rect" title=" " alt="" coords="59,108,157,133"/>
+<area shape="poly" title=" " alt="" coords="111,60,111,94,105,94,105,60"/>
+</map>
 </div>
-</div>
-<p><a href="hw__config_8c_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abce6d16c89bc3a3a1744a4ce63a10d54" id="r_abce6d16c89bc3a3a1744a4ce63a10d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#abce6d16c89bc3a3a1744a4ce63a10d54">PCB</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:abce6d16c89bc3a3a1744a4ce63a10d54" id="r_abce6d16c89bc3a3a1744a4ce63a10d54"><td class="memItemLeft" align="right" valign="top"><a id="abce6d16c89bc3a3a1744a4ce63a10d54" name="abce6d16c89bc3a3a1744a4ce63a10d54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCB</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:abce6d16c89bc3a3a1744a4ce63a10d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a399911c7ae262415664800482fd362f5" id="r_a399911c7ae262415664800482fd362f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#a399911c7ae262415664800482fd362f5">MY_SPI</a>&#160;&#160;&#160;spi0</td></tr>
+<tr class="memitem:a399911c7ae262415664800482fd362f5" id="r_a399911c7ae262415664800482fd362f5"><td class="memItemLeft" align="right" valign="top"><a id="a399911c7ae262415664800482fd362f5" name="a399911c7ae262415664800482fd362f5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MY_SPI</b>&#160;&#160;&#160;spi0</td></tr>
 <tr class="separator:a399911c7ae262415664800482fd362f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750ca7c9b92cfc9e57272ff3a49db48b" id="r_a750ca7c9b92cfc9e57272ff3a49db48b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#a750ca7c9b92cfc9e57272ff3a49db48b">SPI_SCK</a>&#160;&#160;&#160;18</td></tr>
+<tr class="memitem:a750ca7c9b92cfc9e57272ff3a49db48b" id="r_a750ca7c9b92cfc9e57272ff3a49db48b"><td class="memItemLeft" align="right" valign="top"><a id="a750ca7c9b92cfc9e57272ff3a49db48b" name="a750ca7c9b92cfc9e57272ff3a49db48b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_SCK</b>&#160;&#160;&#160;18</td></tr>
 <tr class="separator:a750ca7c9b92cfc9e57272ff3a49db48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dbebab5f7dd57885adccf6711b13592" id="r_a7dbebab5f7dd57885adccf6711b13592"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#a7dbebab5f7dd57885adccf6711b13592">SPI_MOSI</a>&#160;&#160;&#160;19</td></tr>
+<tr class="memitem:a7dbebab5f7dd57885adccf6711b13592" id="r_a7dbebab5f7dd57885adccf6711b13592"><td class="memItemLeft" align="right" valign="top"><a id="a7dbebab5f7dd57885adccf6711b13592" name="a7dbebab5f7dd57885adccf6711b13592"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_MOSI</b>&#160;&#160;&#160;19</td></tr>
 <tr class="separator:a7dbebab5f7dd57885adccf6711b13592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab142cc77dfa97010c9d2b616d0992b64" id="r_ab142cc77dfa97010c9d2b616d0992b64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#ab142cc77dfa97010c9d2b616d0992b64">SPI_MISO</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memitem:ab142cc77dfa97010c9d2b616d0992b64" id="r_ab142cc77dfa97010c9d2b616d0992b64"><td class="memItemLeft" align="right" valign="top"><a id="ab142cc77dfa97010c9d2b616d0992b64" name="ab142cc77dfa97010c9d2b616d0992b64"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_MISO</b>&#160;&#160;&#160;20</td></tr>
 <tr class="separator:ab142cc77dfa97010c9d2b616d0992b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade4259fa3cbb71732a4e73c18dcb9b0d" id="r_ade4259fa3cbb71732a4e73c18dcb9b0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#ade4259fa3cbb71732a4e73c18dcb9b0d">SPI_CS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ade4259fa3cbb71732a4e73c18dcb9b0d" id="r_ade4259fa3cbb71732a4e73c18dcb9b0d"><td class="memItemLeft" align="right" valign="top"><a id="ade4259fa3cbb71732a4e73c18dcb9b0d" name="ade4259fa3cbb71732a4e73c18dcb9b0d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_CS</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ade4259fa3cbb71732a4e73c18dcb9b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a43d3ae8133310f23860b4f5b8cf4934e" id="r_a43d3ae8133310f23860b4f5b8cf4934e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#a43d3ae8133310f23860b4f5b8cf4934e">sd_get_num</a> ()</td></tr>
+<tr class="memitem:a43d3ae8133310f23860b4f5b8cf4934e" id="r_a43d3ae8133310f23860b4f5b8cf4934e"><td class="memItemLeft" align="right" valign="top"><a id="a43d3ae8133310f23860b4f5b8cf4934e" name="a43d3ae8133310f23860b4f5b8cf4934e"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>sd_get_num</b> ()</td></tr>
 <tr class="separator:a43d3ae8133310f23860b4f5b8cf4934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae019a1533d42fd3972c3f1eea96d23d4" id="r_ae019a1533d42fd3972c3f1eea96d23d4"><td class="memItemLeft" align="right" valign="top">sd_card_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw__config_8c.html#ae019a1533d42fd3972c3f1eea96d23d4">sd_get_by_num</a> (size_t num)</td></tr>
 <tr class="memdesc:ae019a1533d42fd3972c3f1eea96d23d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to an SD card object by its number.  <br /></td></tr>
@@ -121,106 +132,7 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-05-06</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a399911c7ae262415664800482fd362f5" name="a399911c7ae262415664800482fd362f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a399911c7ae262415664800482fd362f5">&#9670;&#160;</a></span>MY_SPI</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MY_SPI&#160;&#160;&#160;spi0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00042">42</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<a id="abce6d16c89bc3a3a1744a4ce63a10d54" name="abce6d16c89bc3a3a1744a4ce63a10d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abce6d16c89bc3a3a1744a4ce63a10d54">&#9670;&#160;</a></span>PCB</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PCB&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00037">37</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<a id="ade4259fa3cbb71732a4e73c18dcb9b0d" name="ade4259fa3cbb71732a4e73c18dcb9b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade4259fa3cbb71732a4e73c18dcb9b0d">&#9670;&#160;</a></span>SPI_CS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SPI_CS&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00046">46</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<a id="ab142cc77dfa97010c9d2b616d0992b64" name="ab142cc77dfa97010c9d2b616d0992b64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab142cc77dfa97010c9d2b616d0992b64">&#9670;&#160;</a></span>SPI_MISO</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SPI_MISO&#160;&#160;&#160;20</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00045">45</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<a id="a7dbebab5f7dd57885adccf6711b13592" name="a7dbebab5f7dd57885adccf6711b13592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dbebab5f7dd57885adccf6711b13592">&#9670;&#160;</a></span>SPI_MOSI</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SPI_MOSI&#160;&#160;&#160;19</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00044">44</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<a id="a750ca7c9b92cfc9e57272ff3a49db48b" name="a750ca7c9b92cfc9e57272ff3a49db48b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a750ca7c9b92cfc9e57272ff3a49db48b">&#9670;&#160;</a></span>SPI_SCK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SPI_SCK&#160;&#160;&#160;18</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00043">43</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ae019a1533d42fd3972c3f1eea96d23d4" name="ae019a1533d42fd3972c3f1eea96d23d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae019a1533d42fd3972c3f1eea96d23d4">&#9670;&#160;</a></span>sd_get_by_num()</h2>
 
@@ -246,38 +158,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the SD card object, or <code>NULL</code> if the number is invalid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00091">91</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                     {</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (0 == num) {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="comment">// The number 0 is a valid SD card number.</span></div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">// Return a pointer to the sd_card object.</span></div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> &amp;sd_card;</div>
-<div class="line"><span class="lineno">   96</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="comment">// The number is invalid. Return @c NULL.</span></div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="line"><span class="lineno">  100</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a43d3ae8133310f23860b4f5b8cf4934e" name="a43d3ae8133310f23860b4f5b8cf4934e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43d3ae8133310f23860b4f5b8cf4934e">&#9670;&#160;</a></span>sd_get_num()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t sd_get_num </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hw__config_8c_source.html#l00082">82</a> of file <a class="el" href="hw__config_8c_source.html">hw_config.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{ <span class="keywordflow">return</span> 1; }</div>
-</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

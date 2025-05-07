@@ -9,18 +9,26 @@ This is the main file for the smart biopsy needle. It handles the high level ope
 {\ttfamily \#include "{}../libs/\+INA219/\+INA219.\+h"{}}\newline
 {\ttfamily \#include "{}../libs/\+SSD1306/ssd1306.\+h"{}}\newline
 {\ttfamily \#include "{}../libs/\+FX29/fx29.\+h"{}}\newline
-Include dependency graph for main.\+cpp\+:
-% FIG 0
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\+\_\+\+SZ}}~5
+\Hypertarget{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}\label{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3} 
+\#define {\bfseries MAF\+\_\+\+SZ}~5
 \begin{DoxyCompactList}\small\item\em Window size for Moving Average Filter. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{main_8cpp_a9400840ebc875d8e59c484e65a643b77}{LP\+\_\+\+ALPHA}}~0.\+1f
+\Hypertarget{main_8cpp_a9400840ebc875d8e59c484e65a643b77}\label{main_8cpp_a9400840ebc875d8e59c484e65a643b77} 
+\#define {\bfseries LP\+\_\+\+ALPHA}~0.\+1f
 \begin{DoxyCompactList}\small\item\em Smoothing factor for LP Filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677}\label{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677} 
 enum {\bfseries states} \{ \newline
 {\bfseries WAIT}
 , {\bfseries STANDBY}
@@ -35,23 +43,30 @@ enum {\bfseries states} \{ \newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\+\_\+init}} ()
+\Hypertarget{main_8cpp_a8c50659733df2acac1580d209db8e97f}\label{main_8cpp_a8c50659733df2acac1580d209db8e97f} 
+void {\bfseries oled\+\_\+init} ()
 \begin{DoxyCompactList}\small\item\em Initializes the 128x64 OLED display and communication via I2C connections. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{display\+Input\+Speed}} (int y\+\_\+pos)
 \begin{DoxyCompactList}\small\item\em Helper function used to abstract how potentiometer input information is shown on the OLED screen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{display\+Bat}} (int y\+\_\+pos)
 \begin{DoxyCompactList}\small\item\em Helper function used to display calculated battery capacity value on OLED. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{display\+State}} ()
+\Hypertarget{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}\label{main_8cpp_ac59ebf0340587075ef7d1fc943c78408} 
+void {\bfseries display\+State} ()
 \begin{DoxyCompactList}\small\item\em Handles the order of information, titles, and instructions shown on the OLED display by state in FSM. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_ac7c42980e08859e81090559d51a512b0}{handle\+Button}} ()
+\Hypertarget{main_8cpp_ac7c42980e08859e81090559d51a512b0}\label{main_8cpp_ac7c42980e08859e81090559d51a512b0} 
+void {\bfseries handle\+Button} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_ae2e93a7266c27d56845381cb2076d391}{handle\+Release}} ()
+\Hypertarget{main_8cpp_ae2e93a7266c27d56845381cb2076d391}\label{main_8cpp_ae2e93a7266c27d56845381cb2076d391} 
+void {\bfseries handle\+Release} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}{handle\+MSCButton}} ()
+\Hypertarget{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}\label{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524} 
+void {\bfseries handle\+MSCButton} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}{create\+Data\+File}} ()
+\Hypertarget{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}\label{main_8cpp_a5ab132489f70371e1c876ba54e9d7011} 
+void {\bfseries create\+Data\+File} ()
 \begin{DoxyCompactList}\small\item\em Creates/writes datalog to the micro\+SD via Fat\+FS implementation. Writes the header of the file if successful and names the file by order of creation. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}{reset\+Filtering}} ()
+\Hypertarget{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}\label{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3} 
+void {\bfseries reset\+Filtering} ()
 \item 
 float \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{get\+Bat\+Level}} ()
 \begin{DoxyCompactList}\small\item\em Calculates the current capacity of the battery using predetermined minimum and maximum charge values. \end{DoxyCompactList}\item 
@@ -59,93 +74,134 @@ long \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{get\+Input\+S
 \begin{DoxyCompactList}\small\item\em Calculates the percentage power represented by the inputted ADC value from the potentiometer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}{get\+RPM}} ()
 \begin{DoxyCompactList}\small\item\em Uses a 1 second timer to extrapolate the revolutions per minute. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}{enable\+MSC}} ()
+\Hypertarget{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}\label{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6} 
+void {\bfseries enable\+MSC} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_ae995a6024db644fcec928354bc4f5f67}{disable\+MSC}} ()
+\Hypertarget{main_8cpp_ae995a6024db644fcec928354bc4f5f67}\label{main_8cpp_ae995a6024db644fcec928354bc4f5f67} 
+void {\bfseries disable\+MSC} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_a64461563174d034ff94d443f2c172622}{testing\+Suite}} ()
+\Hypertarget{main_8cpp_a64461563174d034ff94d443f2c172622}\label{main_8cpp_a64461563174d034ff94d443f2c172622} 
+void {\bfseries testing\+Suite} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_a4765141d8281f1873714923a260f93fc}{test\+MSC}} ()
+\Hypertarget{main_8cpp_a4765141d8281f1873714923a260f93fc}\label{main_8cpp_a4765141d8281f1873714923a260f93fc} 
+void {\bfseries test\+MSC} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_ada5a15c76153823533f203632f7d1d62}{test\+SD}} ()
+\Hypertarget{main_8cpp_ada5a15c76153823533f203632f7d1d62}\label{main_8cpp_ada5a15c76153823533f203632f7d1d62} 
+void {\bfseries test\+SD} ()
 \item 
 \Hypertarget{main_8cpp_a68ec483eb29785695a1b3b255b3dc8b9}\label{main_8cpp_a68ec483eb29785695a1b3b255b3dc8b9} 
 void {\bfseries test\+Pins} ()
 \item 
-void \mbox{\hyperlink{main_8cpp_af70581e416f69b14c5a0bc5e4918b479}{gpio\+\_\+\+ISR}} (uint gpio, uint32\+\_\+t events)
+\Hypertarget{main_8cpp_af70581e416f69b14c5a0bc5e4918b479}\label{main_8cpp_af70581e416f69b14c5a0bc5e4918b479} 
+void {\bfseries gpio\+\_\+\+ISR} (uint gpio, uint32\+\_\+t events)
 \item 
-int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}{fw\+Rev}} = 50
+\Hypertarget{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}\label{main_8cpp_a92c826e08ae550b58a56ea3f55c49311} 
+int {\bfseries fw\+Rev} = 50
 \begin{DoxyCompactList}\small\item\em Sets the max forward revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{main_8cpp_a5988591b58aabf7567019b975da7e7aa}{bw\+Rev}} = 0
+\Hypertarget{main_8cpp_a5988591b58aabf7567019b975da7e7aa}\label{main_8cpp_a5988591b58aabf7567019b975da7e7aa} 
+int {\bfseries bw\+Rev} = 0
 \begin{DoxyCompactList}\small\item\em Sets the max backwards revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) \end{DoxyCompactList}\item 
-ssd1306\+\_\+t \mbox{\hyperlink{main_8cpp_a03de839a9debec4f2265023b765444ad}{oled}}
+\Hypertarget{main_8cpp_a03de839a9debec4f2265023b765444ad}\label{main_8cpp_a03de839a9debec4f2265023b765444ad} 
+ssd1306\+\_\+t {\bfseries oled}
 \item 
-uint16\+\_\+t \mbox{\hyperlink{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}{speed\+\_\+lvl}} = 0
+\Hypertarget{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}\label{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb} 
+uint16\+\_\+t {\bfseries speed\+\_\+lvl} = 0
 \item 
-long \mbox{\hyperlink{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}{temp\+\_\+speed}} = 0
+\Hypertarget{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}\label{main_8cpp_af04968100075345ffc60b9ffe62b4c9c} 
+long {\bfseries temp\+\_\+speed} = 0
 \item 
-long \mbox{\hyperlink{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b}{bat\+\_\+per}} = 0
+\Hypertarget{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b}\label{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b} 
+long {\bfseries bat\+\_\+per} = 0
 \item 
-int \mbox{\hyperlink{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 0
+\Hypertarget{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf} 
+int {\bfseries count} = 0
 \item 
-int \mbox{\hyperlink{main_8cpp_ac6f130727d2275823bd3040581e801a5}{num\+Pulses}} = 0
+\Hypertarget{main_8cpp_ac6f130727d2275823bd3040581e801a5}\label{main_8cpp_ac6f130727d2275823bd3040581e801a5} 
+int {\bfseries num\+Pulses} = 0
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_ae1f37897ed52586bce688beb5be8f50e}{now}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_ae1f37897ed52586bce688beb5be8f50e}\label{main_8cpp_ae1f37897ed52586bce688beb5be8f50e} 
+absolute\+\_\+time\+\_\+t {\bfseries now} = get\+\_\+absolute\+\_\+time()
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}{prev\+Time}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}\label{main_8cpp_a597777ddfcfc40b6553d91789dfd343f} 
+absolute\+\_\+time\+\_\+t {\bfseries prev\+Time} = get\+\_\+absolute\+\_\+time()
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63}{press\+Time}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63}\label{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63} 
+absolute\+\_\+time\+\_\+t {\bfseries press\+Time} = get\+\_\+absolute\+\_\+time()
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_a029fea14c173ec8d34f33c8594b95db0}{pressed\+Time}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_a029fea14c173ec8d34f33c8594b95db0}\label{main_8cpp_a029fea14c173ec8d34f33c8594b95db0} 
+absolute\+\_\+time\+\_\+t {\bfseries pressed\+Time} = get\+\_\+absolute\+\_\+time()
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_a6564e8259eebddb283f25451cd7fd364}{msc\+Press\+Time}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_a6564e8259eebddb283f25451cd7fd364}\label{main_8cpp_a6564e8259eebddb283f25451cd7fd364} 
+absolute\+\_\+time\+\_\+t {\bfseries msc\+Press\+Time} = get\+\_\+absolute\+\_\+time()
 \item 
-float \mbox{\hyperlink{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}{rpm}} = 0
+\Hypertarget{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}\label{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910} 
+float {\bfseries rpm} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3}{current\+\_\+mA}} = 0
+\Hypertarget{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3}\label{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3} 
+float {\bfseries current\+\_\+mA} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b}{force}} = 0
+\Hypertarget{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b}\label{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b} 
+float {\bfseries force} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832}{displacement}} = 0
+\Hypertarget{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832}\label{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832} 
+float {\bfseries displacement} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2}{lp\+\_\+current}} = 0
+\Hypertarget{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2}\label{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2} 
+float {\bfseries lp\+\_\+current} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_a37794ae42b6a8116fa24f997b634dba9}{MAF}} \mbox{[}\mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\+\_\+\+SZ}}\mbox{]} = \{0\}
+\Hypertarget{main_8cpp_a37794ae42b6a8116fa24f997b634dba9}\label{main_8cpp_a37794ae42b6a8116fa24f997b634dba9} 
+float {\bfseries MAF} \mbox{[}\mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\+\_\+\+SZ}}\mbox{]} = \{0\}
 \item 
-int \mbox{\hyperlink{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8}{MAF\+\_\+counter}} = 0
+\Hypertarget{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8}\label{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8} 
+int {\bfseries MAF\+\_\+counter} = 0
 \item 
-float \mbox{\hyperlink{main_8cpp_aef72076a36ad8bc9405e594d784e040b}{MAF\+\_\+sum}} = 0
+\Hypertarget{main_8cpp_aef72076a36ad8bc9405e594d784e040b}\label{main_8cpp_aef72076a36ad8bc9405e594d784e040b} 
+float {\bfseries MAF\+\_\+sum} = 0
 \item 
-uint \mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}}
+\Hypertarget{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}\label{main_8cpp_ac7597a58fd0a9415759b81dffee974e6} 
+uint {\bfseries slice}
 \begin{DoxyCompactList}\small\item\em Global slice value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to the organization of PWM configurations by clock. Please see RP2040 documentation. \end{DoxyCompactList}\item 
-uint \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}}
+\Hypertarget{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}\label{main_8cpp_a23777d4d3d69af11916d27e48261cfb1} 
+uint {\bfseries channel}
 \begin{DoxyCompactList}\small\item\em Global channel value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to PWM output pin itself. Please see RP2040 documentation. \end{DoxyCompactList}\item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c}{prev\+Bug}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c}\label{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c} 
+absolute\+\_\+time\+\_\+t {\bfseries prev\+Bug} = get\+\_\+absolute\+\_\+time()
 \item 
-absolute\+\_\+time\+\_\+t \mbox{\hyperlink{main_8cpp_a21215ef0aca60874669e1e2f7425e70c}{curr\+Bug}} = get\+\_\+absolute\+\_\+time()
+\Hypertarget{main_8cpp_a21215ef0aca60874669e1e2f7425e70c}\label{main_8cpp_a21215ef0aca60874669e1e2f7425e70c} 
+absolute\+\_\+time\+\_\+t {\bfseries curr\+Bug} = get\+\_\+absolute\+\_\+time()
 \item 
-volatile bool \mbox{\hyperlink{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed}{motor\+\_\+flag}} = false
+\Hypertarget{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed}\label{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed} 
+volatile bool {\bfseries motor\+\_\+flag} = false
 \item 
-volatile bool \mbox{\hyperlink{main_8cpp_ae964ac24618b7c245998d37cdd06acd3}{button\+\_\+press\+\_\+flag}} = false
+\Hypertarget{main_8cpp_ae964ac24618b7c245998d37cdd06acd3}\label{main_8cpp_ae964ac24618b7c245998d37cdd06acd3} 
+volatile bool {\bfseries button\+\_\+press\+\_\+flag} = false
 \item 
-volatile bool \mbox{\hyperlink{main_8cpp_a548278ea37054952a50f6ef9ce6413ce}{button\+\_\+release\+\_\+flag}} = false
+\Hypertarget{main_8cpp_a548278ea37054952a50f6ef9ce6413ce}\label{main_8cpp_a548278ea37054952a50f6ef9ce6413ce} 
+volatile bool {\bfseries button\+\_\+release\+\_\+flag} = false
 \item 
-volatile bool \mbox{\hyperlink{main_8cpp_a268172ec6be901b1e9c5f4212cee806b}{button\+\_\+msc\+\_\+flag}} = false
+\Hypertarget{main_8cpp_a268172ec6be901b1e9c5f4212cee806b}\label{main_8cpp_a268172ec6be901b1e9c5f4212cee806b} 
+volatile bool {\bfseries button\+\_\+msc\+\_\+flag} = false
 \item 
-FATFS \mbox{\hyperlink{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}{filesys}}
+\Hypertarget{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}\label{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f} 
+FATFS {\bfseries filesys}
 \item 
-FIL \mbox{\hyperlink{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}{fil}}
+\Hypertarget{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}\label{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714} 
+FIL {\bfseries fil}
 \item 
-TCHAR \mbox{\hyperlink{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed}{filename}} \mbox{[}20\mbox{]} = "{}data0.\+csv\textbackslash{}0"{}
+\Hypertarget{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed}\label{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed} 
+TCHAR {\bfseries filename} \mbox{[}20\mbox{]} = "{}data0.\+csv\textbackslash{}0"{}
 \item 
-enum states state \mbox{\hyperlink{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}{next\+State}}
+\Hypertarget{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}\label{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49} 
+enum states state {\bfseries next\+State}
 \item 
-bool \mbox{\hyperlink{main_8cpp_accd9653a1b3ee09644723877d2aa36e1}{valid\+Press}} = false
+\Hypertarget{main_8cpp_accd9653a1b3ee09644723877d2aa36e1}\label{main_8cpp_accd9653a1b3ee09644723877d2aa36e1} 
+bool {\bfseries valid\+Press} = false
 \end{DoxyCompactItemize}
 
 
@@ -166,118 +222,7 @@ Copyright (c) 2025
 \end{DoxyCopyright}
 
 
-Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{main_8cpp_a9400840ebc875d8e59c484e65a643b77}\label{main_8cpp_a9400840ebc875d8e59c484e65a643b77} 
-\index{main.cpp@{main.cpp}!LP\_ALPHA@{LP\_ALPHA}}
-\index{LP\_ALPHA@{LP\_ALPHA}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{LP\_ALPHA}{LP\_ALPHA}}
-{\footnotesize\ttfamily \#define LP\+\_\+\+ALPHA~0.\+1f}
-
-
-
-Smoothing factor for LP Filter. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}\label{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3} 
-\index{main.cpp@{main.cpp}!MAF\_SZ@{MAF\_SZ}}
-\index{MAF\_SZ@{MAF\_SZ}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{MAF\_SZ}{MAF\_SZ}}
-{\footnotesize\ttfamily \#define MAF\+\_\+\+SZ~5}
-
-
-
-Window size for Moving Average Filter. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-
-\doxysubsection{Enumeration Type Documentation}
-\Hypertarget{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677}\label{main_8cpp_aa19be6305a5a4485e1e70de70ed7d677} 
-\index{main.cpp@{main.cpp}!states@{states}}
-\index{states@{states}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{states}{states}}
-{\footnotesize\ttfamily enum states}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00101\ \ \ \ \ WAIT,}
-\DoxyCodeLine{00102\ \ \ \ \ STANDBY,}
-\DoxyCodeLine{00103\ \ \ \ \ CUTTING,}
-\DoxyCodeLine{00104\ \ \ \ \ REMOVAL,}
-\DoxyCodeLine{00105\ \ \ \ \ EXITING,}
-\DoxyCodeLine{00106\ \ \ \ \ FINISH,}
-\DoxyCodeLine{00107\ \ \ \ \ ZERO}
-\DoxyCodeLine{00108\ \};}
-
-\end{DoxyCode}
-
-
 \doxysubsection{Function Documentation}
-\Hypertarget{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}\label{main_8cpp_a5ab132489f70371e1c876ba54e9d7011} 
-\index{main.cpp@{main.cpp}!createDataFile@{createDataFile}}
-\index{createDataFile@{createDataFile}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{createDataFile()}{createDataFile()}}
-{\footnotesize\ttfamily void create\+Data\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Creates/writes datalog to the micro\+SD via Fat\+FS implementation. Writes the header of the file if successful and names the file by order of creation. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00322}{322}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00323\ \ \ \ \ }
-\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordtype}{int}\ fileNum\ =\ 0;}
-\DoxyCodeLine{00325\ \ \ \ \ FRESULT\ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
-\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordflow}{while}\ (file\_created\ ==\ FR\_EXIST)\ \{}
-\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ fileNum++;}
-\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ sprintf(filename,\ \textcolor{stringliteral}{"{}data\%d.csv"{}},\ fileNum);}
-\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
-\DoxyCodeLine{00330\ \ \ \ \ \}}
-\DoxyCodeLine{00331\ }
-\DoxyCodeLine{00332\ \ \ \ \ \textcolor{comment}{//\ Print\ header\ of\ file}}
-\DoxyCodeLine{00333\ \ \ \ \ f\_printf(\&fil,\ \textcolor{stringliteral}{"{}State,\ Time(ms),\ Current(mA),\ CurrentLP(mA),\ CurrentMAF(mA),\ RPM,\ Displacement(mm),\ Force(N)\(\backslash\)n"{}});}
-\DoxyCodeLine{00334\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ae995a6024db644fcec928354bc4f5f67}\label{main_8cpp_ae995a6024db644fcec928354bc4f5f67} 
-\index{main.cpp@{main.cpp}!disableMSC@{disableMSC}}
-\index{disableMSC@{disableMSC}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{disableMSC()}{disableMSC()}}
-{\footnotesize\ttfamily void disable\+MSC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00542}{542}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00543\ \ \ \ \ tud\_disconnect();}
-\DoxyCodeLine{00544\ \ \ \ \ f\_mount(\&filesys,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
-\DoxyCodeLine{00545\ \ \ \ \ tud\_deinit(BOARD\_TUD\_RHPORT);}
-\DoxyCodeLine{00546\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}\label{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89} 
 \index{main.cpp@{main.cpp}!displayBat@{displayBat}}
 \index{displayBat@{displayBat}!main.cpp@{main.cpp}}
@@ -293,28 +238,6 @@ When below the 0 threshold, will display LO on the screen. Automatically adjusts
 {\em y\+\_\+pos} & The y position in pixels (bottom left) of where the text is written. \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00408}{408}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00409\ \ \ \ \ std::string\ temp\ =\ to\_string(bat\_per)\ +\ \textcolor{stringliteral}{"{}\%"{}};}
-\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_pos\ =\ 110;}
-\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{if}\ (bat\_per\ ==\ 0)\ \{}
-\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
-\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 116,\ y\_pos\ +\ 8,\ 1,\ \textcolor{stringliteral}{"{}LO"{}});}
-\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00415\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bat\_per\ <\ 10)\ \{}
-\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ x\_pos\ =\ 116;}
-\DoxyCodeLine{00417\ \ \ \ \ \}}
-\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ bat\ =\ temp.c\_str();}
-\DoxyCodeLine{00419\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
-\DoxyCodeLine{00420\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ x\_pos,\ y\_pos\ +\ 8,\ 1,\ bat);}
-\DoxyCodeLine{00421\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8cpp_a77605eb86157d0b0194fc72a25738a22}\label{main_8cpp_a77605eb86157d0b0194fc72a25738a22} 
 \index{main.cpp@{main.cpp}!displayInputSpeed@{displayInputSpeed}}
 \index{displayInputSpeed@{displayInputSpeed}!main.cpp@{main.cpp}}
@@ -330,106 +253,6 @@ Helper function used to abstract how potentiometer input information is shown on
 {\em y\+\_\+pos} & The y position in pixels (bottom left) of where the text is written. \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00341}{341}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00342\ \ \ \ \ std::string\ temp\ =\ \textcolor{stringliteral}{"{}INPUT\ SPEED:\ [\ "{}}\ +\ to\_string(temp\_speed)\ +\ \textcolor{stringliteral}{"{}\%\ ]"{}};}
-\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ in\_speed\ =\ temp.c\_str();}
-\DoxyCodeLine{00344\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ y\_pos,\ 1,\ in\_speed);}
-\DoxyCodeLine{00345\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}\label{main_8cpp_ac59ebf0340587075ef7d1fc943c78408} 
-\index{main.cpp@{main.cpp}!displayState@{displayState}}
-\index{displayState@{displayState}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{displayState()}{displayState()}}
-{\footnotesize\ttfamily void display\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Handles the order of information, titles, and instructions shown on the OLED display by state in FSM. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00351}{351}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00352\ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordflow}{switch}(state)\ \{}
-\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STANDBY:}
-\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}STANDBY"{}});}
-\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
-\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{displayInputSpeed}}(50);}
-\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CUTTING:}
-\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}CUTTING"{}});}
-\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
-\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
-\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ REMOVAL:}
-\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}REMOVAL"{}});}
-\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{displayInputSpeed}}(50);}
-\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EXITING:}
-\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}EXITING"{}});}
-\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
-\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
-\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FINISH:\ \textcolor{comment}{//\ For\ debugging\ purposes.}}
-\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}COMPLETE"{}});}
-\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
-\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ZERO:}
-\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}ZERO"{}});}
-\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}Resetting\ to\ origin"{}});}
-\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00400\ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00401\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}\label{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6} 
-\index{main.cpp@{main.cpp}!enableMSC@{enableMSC}}
-\index{enableMSC@{enableMSC}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{enableMSC()}{enableMSC()}}
-{\footnotesize\ttfamily void enable\+MSC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00537}{537}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00538\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00539\ \ \ \ \ tud\_task();}
-\DoxyCodeLine{00540\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}\label{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11} 
 \index{main.cpp@{main.cpp}!getBatLevel@{getBatLevel}}
 \index{getBatLevel@{getBatLevel}!main.cpp@{main.cpp}}
@@ -443,26 +266,6 @@ Calculates the current capacity of the battery using predetermined minimum and m
 Relies on ADC averaging and makes calculations based on battery voltage. \begin{DoxyReturn}{Returns}
 float 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00429}{429}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00430\ \ \ \ \ adc\_select\_input(0);}
-\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keywordtype}{long}\ bat\ =\ adc\_read();}
-\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
-\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ bat\ +=\ adc\_read();}
-\DoxyCodeLine{00434\ \ \ \ \ \}}
-\DoxyCodeLine{00435\ \ \ \ \ bat\ /=\ 1.0\ *\ potIterations;}
-\DoxyCodeLine{00436\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{NTM\_MAX}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}});}
-\DoxyCodeLine{00437\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{NTM\_MIN}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\_MAX\_ADC}});}
-\DoxyCodeLine{00438\ \ \ \ \ bat\ =\ (bat\ -\/\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}})\ *\ \mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{BAT\_ADC\_PER}};}
-\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordflow}{return}\ bat;}
-\DoxyCodeLine{00440\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}\label{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd} 
 \index{main.cpp@{main.cpp}!getInputSpeed@{getInputSpeed}}
 \index{getInputSpeed@{getInputSpeed}!main.cpp@{main.cpp}}
@@ -476,23 +279,6 @@ Calculates the percentage power represented by the inputted ADC value from the p
 \begin{DoxyReturn}{Returns}
 long 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00447}{447}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00448\ \ \ \ \ adc\_select\_input(3);}
-\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordtype}{long}\ val\ =\ 0;}
-\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
-\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ val\ +=\ adc\_read();}
-\DoxyCodeLine{00452\ \ \ \ \ \}}
-\DoxyCodeLine{00453\ \ \ \ \ }
-\DoxyCodeLine{00454\ \ \ \ \ \textcolor{keywordflow}{return}\ long(0.0243\ *\ (val\ *\ 1.0\ /\ potIterations)\ +\ 1);}
-\DoxyCodeLine{00455\ \}}
-
-\end{DoxyCode}
 \Hypertarget{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}\label{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664} 
 \index{main.cpp@{main.cpp}!getRPM@{getRPM}}
 \index{getRPM@{getRPM}!main.cpp@{main.cpp}}
@@ -504,915 +290,3 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00447}{447}} of file \mbox
 Uses a 1 second timer to extrapolate the revolutions per minute. 
 
 Determines the number of revolutions that occur within a second and multiplies it by 60. 
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00462}{462}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00463\ \ \ \ \ \textcolor{keyword}{static}\ absolute\_time\_t\ prevRPMTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00464\ \ \ \ \ absolute\_time\_t\ currRPMTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00465\ }
-\DoxyCodeLine{00466\ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(prevRPMTime,\ currRPMTime)\ >=\ \mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{SEC\_US}})\ \{}
-\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ rpm\ =\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(numPulses)\ *\ 60.0f;}
-\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ numPulses\ =\ 0;}
-\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ prevRPMTime\ =\ currRPMTime;}
-\DoxyCodeLine{00470\ \ \ \ \ \}}
-\DoxyCodeLine{00471\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_af70581e416f69b14c5a0bc5e4918b479}\label{main_8cpp_af70581e416f69b14c5a0bc5e4918b479} 
-\index{main.cpp@{main.cpp}!gpio\_ISR@{gpio\_ISR}}
-\index{gpio\_ISR@{gpio\_ISR}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{gpio\_ISR()}{gpio\_ISR()}}
-{\footnotesize\ttfamily void gpio\+\_\+\+ISR (\begin{DoxyParamCaption}\item[{uint}]{gpio,  }\item[{uint32\+\_\+t}]{events }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\ ==\ motorA\_out)\ \{}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ numPulses++;}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(MOTOR\_DIR)\ ==\ 0)\ \{}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count-\/-\/;}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00120\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (gpio\ ==\ state\_input)\ \{}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ pressTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 0)\ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ button\_release\_flag\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00128\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (gpio\ ==\ msc\_input)\ \{}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ mscPressTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ button\_msc\_flag\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00131\ \ \ \ \ \}}
-\DoxyCodeLine{00132\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ac7c42980e08859e81090559d51a512b0}\label{main_8cpp_ac7c42980e08859e81090559d51a512b0} 
-\index{main.cpp@{main.cpp}!handleButton@{handleButton}}
-\index{handleButton@{handleButton}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{handleButton()}{handleButton()}}
-{\footnotesize\ttfamily void handle\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00475}{475}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_press\_flag)\ \{}
-\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ debounce\_us)\ \{}
-\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00484\ }
-\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
-\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ \mbox{\hyperlink{config_8h_ac6f3299722b682ead61165a15c392922}{hold\_us}})\ \{}
-\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ ZERO;}
-\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
-\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(MOTOR\_DIR,\ 0);}
-\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}},\ 255);}
-\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(\mbox{\hyperlink{config_8h_afce5aaf1a0caf368eaf0db8926a30960}{SPIKE\_TIME}});}
-\DoxyCodeLine{00493\ }
-\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
-\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00498\ \ \ \ \ \}}
-\DoxyCodeLine{00499\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}\label{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524} 
-\index{main.cpp@{main.cpp}!handleMSCButton@{handleMSCButton}}
-\index{handleMSCButton@{handleMSCButton}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{handleMSCButton()}{handleMSCButton()}}
-{\footnotesize\ttfamily void handle\+MSCButton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00514}{514}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_msc\_flag)\ \{}
-\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(mscPressTime,\ now)\ >=\ debounce\_us)\ \{}
-\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ STANDBY\ ||\ state\ ==\ FINISH)\ \{}
-\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 0)\ \{}
-\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ watchdog\_enable(1,\ 1);}
-\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ button\_msc\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00524\ \ \ \ \ \}}
-\DoxyCodeLine{00525\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ae2e93a7266c27d56845381cb2076d391}\label{main_8cpp_ae2e93a7266c27d56845381cb2076d391} 
-\index{main.cpp@{main.cpp}!handleRelease@{handleRelease}}
-\index{handleRelease@{handleRelease}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{handleRelease()}{handleRelease()}}
-{\footnotesize\ttfamily void handle\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00501}{501}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00502\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_release\_flag)\ \{}
-\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
-\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ nextState;}
-\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ CUTTING)\ \{}
-\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}{createDataFile}}();}
-\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ button\_release\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00511\ \ \ \ \ \}}
-\DoxyCodeLine{00512\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
-\index{main.cpp@{main.cpp}!main@{main}}
-\index{main@{main}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00135\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ region\ TESTING}}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//testingSuite();}}
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//testMSC();}}
-\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//testSD();}}
-\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//testSPI();}}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ endregion}}
-\DoxyCodeLine{00143\ }
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ MSC:\ Initialize\ board}}
-\DoxyCodeLine{00145\ \ \ \ \ board\_init();}
-\DoxyCodeLine{00146\ \ \ \ \ tud\_init(BOARD\_TUD\_RHPORT);}
-\DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ Initialize\ serial\ port\ and\ wait\ for\ serial\ monitor}}
-\DoxyCodeLine{00149\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00150\ \ \ \ \ gpio\_init(MOTOR\_PWM);}
-\DoxyCodeLine{00151\ \ \ \ \ gpio\_put(MOTOR\_PWM,\ 0);}
-\DoxyCodeLine{00152\ \ \ \ \ sleep\_ms(1000);}
-\DoxyCodeLine{00153\ \ \ \ \ }
-\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ ====\ General\ Initialization\ ====\ //}}
-\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}{board\_gpio\_init}}();}
-\DoxyCodeLine{00156\ \ \ \ \ bat\_per\ =\ \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{getBatLevel}}();}
-\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\_init}}();}
-\DoxyCodeLine{00158\ \ \ \ \ state\ =\ WAIT;}
-\DoxyCodeLine{00159\ \ \ \ \ nextState\ =\ STANDBY;}
-\DoxyCodeLine{00160\ \ \ \ \ INA219\ ina219(MY\_I2C,\ INA219\_ADDR);}
-\DoxyCodeLine{00161\ \ \ \ \ ina219.calibrate(0.1,\ 3.2);}
-\DoxyCodeLine{00162\ }
-\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//\ ====\ Interrupts\ ====\ //}}
-\DoxyCodeLine{00164\ \ \ \ \ gpio\_set\_irq\_enabled\_with\_callback(motorA\_out,\ GPIO\_IRQ\_EDGE\_FALL,\ \textcolor{keyword}{true},\ \&gpio\_ISR);}
-\DoxyCodeLine{00165\ \ \ \ \ gpio\_set\_irq\_enabled(state\_input,\ GPIO\_IRQ\_EDGE\_RISE\ |\ GPIO\_IRQ\_EDGE\_FALL,\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00166\ \ \ \ \ gpio\_set\_irq\_enabled(msc\_input,\ GPIO\_IRQ\_EDGE\_FALL,\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00167\ }
-\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ now\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ int64\_t\ time\_ms\ =\ to\_ms\_since\_boot(now);}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ handleRelease();}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ handleButton();}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ handleMSCButton();}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}{getRPM}}();}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ bat\_per\ =\ \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{getBatLevel}}();}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ current\_mA\ =\ ina219.read\_current()\ *\ 1000;}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ displacement\ =\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(count)\ *\ 0.5f;}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ force\ =\ compute\_force(FX29\_read(MY\_I2C,\ FX29\_ADDR));}
-\DoxyCodeLine{00181\ }
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MAF\_counter\ ==\ \mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\_SZ}})\ \{}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ MAF\_counter\ =\ 0;}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ oldest\ value\ and\ add\ newest\ value\ to\ sum}}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ MAF\_sum\ -\/=\ MAF[MAF\_counter];}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ MAF\_sum\ +=\ current\_mA;}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ MAF[MAF\_counter]\ =\ current\_mA;}
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ MAF\_counter++;}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ MAF\_current\ =\ MAF\_sum\ *\ 1.0f/\mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\_SZ}};}
-\DoxyCodeLine{00192\ }
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(state)\ \{}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WAIT:\ \{}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enableMSC();}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ STANDBY;}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STANDBY:\ \{}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ disableMSC();}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}();}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ uint16\_t(temp\_speed\ /\ 100.0f\ *\ 255.0f);\ }
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resetFiltering();}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ CUTTING;}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CUTTING:\ \{}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ speed\_lvl;}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lp\_current\ =\ \mbox{\hyperlink{main_8cpp_a9400840ebc875d8e59c484e65a643b77}{LP\_ALPHA}}\ *\ current\_mA\ +\ (1\ -\/\ \mbox{\hyperlink{main_8cpp_a9400840ebc875d8e59c484e65a643b77}{LP\_ALPHA}})\ *\ lp\_current;}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f\_printf(\&fil,\ \textcolor{stringliteral}{"{}\%s,\%lld,\%f,\%f,\%f,\%f,\%f,\%f\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}CUTTING"{}},\ time\_ms,\ current\_mA,\ lp\_current,\ MAF\_current,\ rpm,\ displacement,\ force);}
-\DoxyCodeLine{00216\ }
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ====\ SAFETY\ CHECK\ ====\ //}}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(count)\ >\ \mbox{\hyperlink{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}{fwRev}})\ \{}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ REMOVAL;}
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ speed\_lvl);}
-\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ REMOVAL;}
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ REMOVAL:\ \{}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ 0);}
-\DoxyCodeLine{00231\ }
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}();}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ int(temp\_speed\ /\ 100.0f\ *\ 255.0f);}
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resetFiltering();}
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ EXITING;}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EXITING:\ \{}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ speed\_lvl;}
-\DoxyCodeLine{00242\ }
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lp\_current\ =\ \mbox{\hyperlink{main_8cpp_a9400840ebc875d8e59c484e65a643b77}{LP\_ALPHA}}\ *\ current\_mA\ +\ (1\ -\/\ \mbox{\hyperlink{main_8cpp_a9400840ebc875d8e59c484e65a643b77}{LP\_ALPHA}})\ *\ lp\_current;}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f\_printf(\&fil,\ \textcolor{stringliteral}{"{}\%s,\%lld,\%f,\%f,\%f,\%f,\%f,\%f\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{}EXITING"{}},\ time\_ms,\ current\_mA,\ lp\_current,\ MAF\_current,\ rpm,\ displacement,\ force);}
-\DoxyCodeLine{00245\ }
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ====\ SAFETY\ CHECK\ ====\ //}}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(count)\ <\ \mbox{\hyperlink{main_8cpp_a5988591b58aabf7567019b975da7e7aa}{bwRev}})\ \{}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FINISH;}
-\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ speed\_lvl);}
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FINISH:\ \{}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f\_close(\&fil);}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00261\ }
-\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00263\ }
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00265\ }
-\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ STANDBY;}
-\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ZERO:\ \{}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ \mbox{\hyperlink{group__MotorMacros_ga3249ae087e43a52e0182917edca0dc12}{MOTOR\_ON}});}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current\_mA\ >\ \mbox{\hyperlink{config_8h_a1923668201fdaeaced6d7935492b1a1f}{CUTOFF\_STALL}})\ \{}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\ =\ 0;}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FINISH;}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
-\DoxyCodeLine{00278\ }
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00283\ \ \ \ \ \}}
-\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00285\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a8c50659733df2acac1580d209db8e97f}\label{main_8cpp_a8c50659733df2acac1580d209db8e97f} 
-\index{main.cpp@{main.cpp}!oled\_init@{oled\_init}}
-\index{oled\_init@{oled\_init}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{oled\_init()}{oled\_init()}}
-{\footnotesize\ttfamily void oled\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Initializes the 128x64 OLED display and communication via I2C connections. 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00294\ \ \ \ \ \textcolor{comment}{//\ External\_vcc\ must\ be\ false\ for\ this\ to\ work}}
-\DoxyCodeLine{00295\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \&oled,}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ 128,}
-\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ 64,}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ OLED\_ADDR,}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ MY\_I2C}
-\DoxyCodeLine{00302\ \ \ \ \ );}
-\DoxyCodeLine{00303\ }
-\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}RECORDS"{}});}
-\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ HOLD\ \ STA\ \ :\ ZERO\ ]"{}});}
-\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 45,\ 1,\ \textcolor{stringliteral}{"{}V1.0\ -\/\ 5/6/25"{}});}
-\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 55,\ 1,\ \textcolor{stringliteral}{"{}Author:\ Thomas\ Chang"{}});}
-\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
-\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00313\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
-\DoxyCodeLine{00315\ \ \ \ \ \}}
-\DoxyCodeLine{00316\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}\label{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3} 
-\index{main.cpp@{main.cpp}!resetFiltering@{resetFiltering}}
-\index{resetFiltering@{resetFiltering}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{resetFiltering()}{resetFiltering()}}
-{\footnotesize\ttfamily void reset\+Filtering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00527}{527}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00528\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ moving\ average\ filter\ values\ to\ zero.}}
-\DoxyCodeLine{00529\ \ \ \ \ MAF\_counter\ =\ 0;}
-\DoxyCodeLine{00530\ \ \ \ \ MAF\_sum\ =\ 0;}
-\DoxyCodeLine{00531\ \ \ \ \ memset(MAF,\ 0,\ \textcolor{keyword}{sizeof}(MAF));}
-\DoxyCodeLine{00532\ }
-\DoxyCodeLine{00533\ \ \ \ \ \textcolor{comment}{//\ Reset\ previous\ low\ pass\ output.}}
-\DoxyCodeLine{00534\ \ \ \ \ lp\_current\ =\ 0;}
-\DoxyCodeLine{00535\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a64461563174d034ff94d443f2c172622}\label{main_8cpp_a64461563174d034ff94d443f2c172622} 
-\index{main.cpp@{main.cpp}!testingSuite@{testingSuite}}
-\index{testingSuite@{testingSuite}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{testingSuite()}{testingSuite()}}
-{\footnotesize\ttfamily void testing\+Suite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00548}{548}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00549\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00550\ \ \ \ \ sleep\_ms(1000);}
-\DoxyCodeLine{00551\ }
-\DoxyCodeLine{00552\ \ \ \ \ gpio\_init(26);}
-\DoxyCodeLine{00553\ \ \ \ \ gpio\_set\_dir(26,\ GPIO\_OUT);}
-\DoxyCodeLine{00554\ }
-\DoxyCodeLine{00555\ \ \ \ \ \textcolor{comment}{//\ I2C}}
-\DoxyCodeLine{00556\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
-\DoxyCodeLine{00557\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00558\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00559\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
-\DoxyCodeLine{00560\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
-\DoxyCodeLine{00561\ }
-\DoxyCodeLine{00562\ \ \ \ \ \textcolor{comment}{//\ OLED}}
-\DoxyCodeLine{00563\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\_init}}();}
-\DoxyCodeLine{00564\ }
-\DoxyCodeLine{00565\ \ \ \ \ \textcolor{comment}{//\ BUTTMOTOR\_ONS}}
-\DoxyCodeLine{00566\ \ \ \ \ gpio\_init(state\_input);}
-\DoxyCodeLine{00567\ \ \ \ \ gpio\_set\_dir(state\_input,\ GPIO\_IN);}
-\DoxyCodeLine{00568\ \ \ \ \ gpio\_pull\_down(state\_input);}
-\DoxyCodeLine{00569\ \ \ \ \ gpio\_init(msc\_input);}
-\DoxyCodeLine{00570\ \ \ \ \ gpio\_set\_dir(msc\_input,\ GPIO\_IN);}
-\DoxyCodeLine{00571\ \ \ \ \ gpio\_pull\_down(msc\_input);}
-\DoxyCodeLine{00572\ }
-\DoxyCodeLine{00573\ \ \ \ \ \textcolor{comment}{//\ POTENTIOMETER}}
-\DoxyCodeLine{00574\ \ \ \ \ adc\_init();}
-\DoxyCodeLine{00575\ \ \ \ \ adc\_gpio\_init(speed\_input);}
-\DoxyCodeLine{00576\ }
-\DoxyCodeLine{00577\ \ \ \ \ \textcolor{comment}{//\ Motor\ Control}}
-\DoxyCodeLine{00578\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}}\ =\ pwm\_gpio\_to\_slice\_num(MOTOR\_PWM);}
-\DoxyCodeLine{00579\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}}\ =\ pwm\_gpio\_to\_channel(MOTOR\_PWM);}
-\DoxyCodeLine{00580\ \ \ \ \ gpio\_set\_function(MOTOR\_PWM,\ GPIO\_FUNC\_PWM);}
-\DoxyCodeLine{00581\ \ \ \ \ pwm\_set\_clkdiv(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 48.83f);}
-\DoxyCodeLine{00582\ \ \ \ \ pwm\_set\_wrap(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 255);}
-\DoxyCodeLine{00583\ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ PWM\_CHAN\_A,\ 0);}
-\DoxyCodeLine{00584\ \ \ \ \ pwm\_set\_enabled(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00585\ \ \ \ \ gpio\_init(MOTOR\_DIR);}
-\DoxyCodeLine{00586\ \ \ \ \ gpio\_set\_dir(MOTOR\_DIR,\ GPIO\_OUT);}
-\DoxyCodeLine{00587\ }
-\DoxyCodeLine{00588\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ pushbuttons.}}
-\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (gpio\_get(msc\_input)\ ==\ 1\ ||\ gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
-\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ potentiometer.}}
-\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ test\_pot\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}()\ *\ 10;}
-\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
-\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
-\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 0);}
-\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
-\DoxyCodeLine{00600\ }
-\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ motor.}}
-\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ 255);}
-\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(3000);}
-\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00608\ \ \ \ \ \}}
-\DoxyCodeLine{00609\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a4765141d8281f1873714923a260f93fc}\label{main_8cpp_a4765141d8281f1873714923a260f93fc} 
-\index{main.cpp@{main.cpp}!testMSC@{testMSC}}
-\index{testMSC@{testMSC}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{testMSC()}{testMSC()}}
-{\footnotesize\ttfamily void test\+MSC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00610}{610}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00611\ \ \ \ \ board\_init();}
-\DoxyCodeLine{00612\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)033[2J\(\backslash\)033[H"{}});}
-\DoxyCodeLine{00613\ \ \ \ \ tud\_init(BOARD\_TUD\_RHPORT);}
-\DoxyCodeLine{00614\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00615\ }
-\DoxyCodeLine{00616\ \ \ \ \ \textcolor{comment}{//\ I2C}}
-\DoxyCodeLine{00617\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
-\DoxyCodeLine{00618\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00619\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00620\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
-\DoxyCodeLine{00621\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
-\DoxyCodeLine{00622\ }
-\DoxyCodeLine{00623\ \ \ \ \ uint32\_t\ sys\_freq\ =\ clock\_get\_hz(clk\_sys);}
-\DoxyCodeLine{00624\ \ \ \ \ std::string\ temp\ =\ to\_string(sys\_freq);}
-\DoxyCodeLine{00625\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sys\_freq\_str\ =\ temp.c\_str();}
-\DoxyCodeLine{00626\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00627\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(\&oled,\ 128,\ 64,\ OLED\_ADDR,\ MY\_I2C);}
-\DoxyCodeLine{00628\ \ \ \ \ }
-\DoxyCodeLine{00629\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
-\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}Sys\ Clock:"{}});}
-\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1\ ,\ sys\_freq\_str);}
-\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00634\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
-\DoxyCodeLine{00636\ \ \ \ \ \}}
-\DoxyCodeLine{00637\ \ \ \ \ }
-\DoxyCodeLine{00638\ }
-\DoxyCodeLine{00639\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ tud\_task();}
-\DoxyCodeLine{00641\ \ \ \ \ \}}
-\DoxyCodeLine{00642\ \}}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_ada5a15c76153823533f203632f7d1d62}\label{main_8cpp_ada5a15c76153823533f203632f7d1d62} 
-\index{main.cpp@{main.cpp}!testSD@{testSD}}
-\index{testSD@{testSD}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{testSD()}{testSD()}}
-{\footnotesize\ttfamily void test\+SD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00643}{643}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00644\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00645\ \ \ \ \ tusb\_init();}
-\DoxyCodeLine{00646\ \ \ \ \ sleep\_ms(5000);}
-\DoxyCodeLine{00647\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ if\ seral\ works.\(\backslash\)n"{}});}
-\DoxyCodeLine{00648\ }
-\DoxyCodeLine{00649\ \ \ \ \ FATFS\ fs;}
-\DoxyCodeLine{00650\ \ \ \ \ FRESULT\ fr\ =\ f\_mount(\&fs,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
-\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
-\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_mount\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00653\ \ \ \ \ \}}
-\DoxyCodeLine{00654\ }
-\DoxyCodeLine{00655\ \ \ \ \ \textcolor{comment}{//\ Open\ a\ file\ and\ write\ to\ it}}
-\DoxyCodeLine{00656\ \ \ \ \ FIL\ fil;}
-\DoxyCodeLine{00657\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ filename\ =\ \textcolor{stringliteral}{"{}filename.txt"{}};}
-\DoxyCodeLine{00658\ \ \ \ \ fr\ =\ f\_open(\&fil,\ filename,\ FA\_OPEN\_APPEND\ |\ FA\_WRITE);}
-\DoxyCodeLine{00659\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr\ \&\&\ FR\_EXIST\ !=\ fr)\ \{}
-\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_open(\%s)\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ filename,\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00661\ \ \ \ \ \}}
-\DoxyCodeLine{00662\ \ \ \ \ \textcolor{keywordflow}{if}\ (f\_printf(\&fil,\ \textcolor{stringliteral}{"{}Hello,\ world!\(\backslash\)n"{}})\ <\ 0)\ \{}
-\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_printf\ failed\(\backslash\)n"{}});}
-\DoxyCodeLine{00664\ \ \ \ \ \}}
-\DoxyCodeLine{00665\ }
-\DoxyCodeLine{00666\ \ \ \ \ \textcolor{comment}{//\ Close\ the\ file}}
-\DoxyCodeLine{00667\ \ \ \ \ fr\ =\ f\_close(\&fil);}
-\DoxyCodeLine{00668\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
-\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_close\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00670\ \ \ \ \ \}}
-\DoxyCodeLine{00671\ }
-\DoxyCodeLine{00672\ \ \ \ \ \textcolor{comment}{//\ Unmount\ the\ SD\ card}}
-\DoxyCodeLine{00673\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00674\ }
-\DoxyCodeLine{00675\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ serial.\(\backslash\)n"{}});}
-\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ sleep\_ms(1000);}
-\DoxyCodeLine{00678\ \ \ \ \ \}}
-\DoxyCodeLine{00679\ \}}
-
-\end{DoxyCode}
-
-
-\doxysubsection{Variable Documentation}
-\Hypertarget{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b}\label{main_8cpp_a3e2ce6f76284e4e63fab85506c67907b} 
-\index{main.cpp@{main.cpp}!bat\_per@{bat\_per}}
-\index{bat\_per@{bat\_per}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{bat\_per}{bat\_per}}
-{\footnotesize\ttfamily long bat\+\_\+per = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a268172ec6be901b1e9c5f4212cee806b}\label{main_8cpp_a268172ec6be901b1e9c5f4212cee806b} 
-\index{main.cpp@{main.cpp}!button\_msc\_flag@{button\_msc\_flag}}
-\index{button\_msc\_flag@{button\_msc\_flag}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{button\_msc\_flag}{button\_msc\_flag}}
-{\footnotesize\ttfamily volatile bool button\+\_\+msc\+\_\+flag = false}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ae964ac24618b7c245998d37cdd06acd3}\label{main_8cpp_ae964ac24618b7c245998d37cdd06acd3} 
-\index{main.cpp@{main.cpp}!button\_press\_flag@{button\_press\_flag}}
-\index{button\_press\_flag@{button\_press\_flag}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{button\_press\_flag}{button\_press\_flag}}
-{\footnotesize\ttfamily volatile bool button\+\_\+press\+\_\+flag = false}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a548278ea37054952a50f6ef9ce6413ce}\label{main_8cpp_a548278ea37054952a50f6ef9ce6413ce} 
-\index{main.cpp@{main.cpp}!button\_release\_flag@{button\_release\_flag}}
-\index{button\_release\_flag@{button\_release\_flag}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{button\_release\_flag}{button\_release\_flag}}
-{\footnotesize\ttfamily volatile bool button\+\_\+release\+\_\+flag = false}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a5988591b58aabf7567019b975da7e7aa}\label{main_8cpp_a5988591b58aabf7567019b975da7e7aa} 
-\index{main.cpp@{main.cpp}!bwRev@{bwRev}}
-\index{bwRev@{bwRev}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{bwRev}{bwRev}}
-{\footnotesize\ttfamily int bw\+Rev = 0}
-
-
-
-Sets the max backwards revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}\label{main_8cpp_a23777d4d3d69af11916d27e48261cfb1} 
-\index{main.cpp@{main.cpp}!channel@{channel}}
-\index{channel@{channel}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{channel}{channel}}
-{\footnotesize\ttfamily uint channel\hspace{0.3cm}{\ttfamily [extern]}}
-
-
-
-Global channel value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to PWM output pin itself. Please see RP2040 documentation. 
-
-
-
-Definition at line \mbox{\hyperlink{ntm__helpers_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{ntm__helpers_8cpp_source}{ntm\+\_\+helpers.\+cpp}}.
-
-\Hypertarget{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{main_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf} 
-\index{main.cpp@{main.cpp}!count@{count}}
-\index{count@{count}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{count}{count}}
-{\footnotesize\ttfamily int count = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a21215ef0aca60874669e1e2f7425e70c}\label{main_8cpp_a21215ef0aca60874669e1e2f7425e70c} 
-\index{main.cpp@{main.cpp}!currBug@{currBug}}
-\index{currBug@{currBug}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{currBug}{currBug}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t curr\+Bug = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3}\label{main_8cpp_aa7d2f7d0c2e8d8f3a6428b8225202ea3} 
-\index{main.cpp@{main.cpp}!current\_mA@{current\_mA}}
-\index{current\_mA@{current\_mA}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{current\_mA}{current\_mA}}
-{\footnotesize\ttfamily float current\+\_\+mA = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832}\label{main_8cpp_a23d4a56445e448ecc3a9c7143fe0c832} 
-\index{main.cpp@{main.cpp}!displacement@{displacement}}
-\index{displacement@{displacement}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{displacement}{displacement}}
-{\footnotesize\ttfamily float displacement = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714}\label{main_8cpp_a4be63952e3c9cb0f46f9e592b3c78714} 
-\index{main.cpp@{main.cpp}!fil@{fil}}
-\index{fil@{fil}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{fil}{fil}}
-{\footnotesize\ttfamily FIL fil}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed}\label{main_8cpp_ab1e3ee7820c8f54b680f492ef5c0d1ed} 
-\index{main.cpp@{main.cpp}!filename@{filename}}
-\index{filename@{filename}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{filename}{filename}}
-{\footnotesize\ttfamily TCHAR filename\mbox{[}20\mbox{]} = "{}data0.\+csv\textbackslash{}0"{}}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f}\label{main_8cpp_ad5af4859884ea5c925366abfbdb0ef8f} 
-\index{main.cpp@{main.cpp}!filesys@{filesys}}
-\index{filesys@{filesys}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{filesys}{filesys}}
-{\footnotesize\ttfamily FATFS filesys}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b}\label{main_8cpp_ad0952eff2667e5af2b307ba4f6d0b06b} 
-\index{main.cpp@{main.cpp}!force@{force}}
-\index{force@{force}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{force}{force}}
-{\footnotesize\ttfamily float force = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a92c826e08ae550b58a56ea3f55c49311}\label{main_8cpp_a92c826e08ae550b58a56ea3f55c49311} 
-\index{main.cpp@{main.cpp}!fwRev@{fwRev}}
-\index{fwRev@{fwRev}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{fwRev}{fwRev}}
-{\footnotesize\ttfamily int fw\+Rev = 50}
-
-
-
-Sets the max forward revolutions of the device from start position. Current ratio of (revolutions \+: distance) = (2 \+: 1) 
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2}\label{main_8cpp_ad5f7a9c2f3b2608343ddf46bcfcac2c2} 
-\index{main.cpp@{main.cpp}!lp\_current@{lp\_current}}
-\index{lp\_current@{lp\_current}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{lp\_current}{lp\_current}}
-{\footnotesize\ttfamily float lp\+\_\+current = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a37794ae42b6a8116fa24f997b634dba9}\label{main_8cpp_a37794ae42b6a8116fa24f997b634dba9} 
-\index{main.cpp@{main.cpp}!MAF@{MAF}}
-\index{MAF@{MAF}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{MAF}{MAF}}
-{\footnotesize\ttfamily float MAF\mbox{[}\mbox{\hyperlink{main_8cpp_a6af9f0d27369b3f4a063f61c51c198f3}{MAF\+\_\+\+SZ}}\mbox{]} = \{0\}}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00071\ \{0\};}
-
-\end{DoxyCode}
-\Hypertarget{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8}\label{main_8cpp_a891ae364a9c7853fd67cdb10cfc870c8} 
-\index{main.cpp@{main.cpp}!MAF\_counter@{MAF\_counter}}
-\index{MAF\_counter@{MAF\_counter}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{MAF\_counter}{MAF\_counter}}
-{\footnotesize\ttfamily int MAF\+\_\+counter = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_aef72076a36ad8bc9405e594d784e040b}\label{main_8cpp_aef72076a36ad8bc9405e594d784e040b} 
-\index{main.cpp@{main.cpp}!MAF\_sum@{MAF\_sum}}
-\index{MAF\_sum@{MAF\_sum}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{MAF\_sum}{MAF\_sum}}
-{\footnotesize\ttfamily float MAF\+\_\+sum = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed}\label{main_8cpp_a0d24a7e8ef01eb2683901eb25396beed} 
-\index{main.cpp@{main.cpp}!motor\_flag@{motor\_flag}}
-\index{motor\_flag@{motor\_flag}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{motor\_flag}{motor\_flag}}
-{\footnotesize\ttfamily volatile bool motor\+\_\+flag = false}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a6564e8259eebddb283f25451cd7fd364}\label{main_8cpp_a6564e8259eebddb283f25451cd7fd364} 
-\index{main.cpp@{main.cpp}!mscPressTime@{mscPressTime}}
-\index{mscPressTime@{mscPressTime}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{mscPressTime}{mscPressTime}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t msc\+Press\+Time = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49}\label{main_8cpp_a434ef2e67e7d14c2f6a753c08a5eae49} 
-\index{main.cpp@{main.cpp}!nextState@{nextState}}
-\index{nextState@{nextState}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{nextState}{nextState}}
-{\footnotesize\ttfamily enum states state next\+State}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ae1f37897ed52586bce688beb5be8f50e}\label{main_8cpp_ae1f37897ed52586bce688beb5be8f50e} 
-\index{main.cpp@{main.cpp}!now@{now}}
-\index{now@{now}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{now}{now}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t now = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ac6f130727d2275823bd3040581e801a5}\label{main_8cpp_ac6f130727d2275823bd3040581e801a5} 
-\index{main.cpp@{main.cpp}!numPulses@{numPulses}}
-\index{numPulses@{numPulses}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{numPulses}{numPulses}}
-{\footnotesize\ttfamily int num\+Pulses = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a03de839a9debec4f2265023b765444ad}\label{main_8cpp_a03de839a9debec4f2265023b765444ad} 
-\index{main.cpp@{main.cpp}!oled@{oled}}
-\index{oled@{oled}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{oled}{oled}}
-{\footnotesize\ttfamily ssd1306\+\_\+t oled}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a029fea14c173ec8d34f33c8594b95db0}\label{main_8cpp_a029fea14c173ec8d34f33c8594b95db0} 
-\index{main.cpp@{main.cpp}!pressedTime@{pressedTime}}
-\index{pressedTime@{pressedTime}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{pressedTime}{pressedTime}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t pressed\+Time = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63}\label{main_8cpp_ad5a5c46842ef8862d2ccd9e7bd3aec63} 
-\index{main.cpp@{main.cpp}!pressTime@{pressTime}}
-\index{pressTime@{pressTime}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{pressTime}{pressTime}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t press\+Time = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c}\label{main_8cpp_ac0799c2e54cccc1be7e9b4a1a9fa780c} 
-\index{main.cpp@{main.cpp}!prevBug@{prevBug}}
-\index{prevBug@{prevBug}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{prevBug}{prevBug}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t prev\+Bug = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a597777ddfcfc40b6553d91789dfd343f}\label{main_8cpp_a597777ddfcfc40b6553d91789dfd343f} 
-\index{main.cpp@{main.cpp}!prevTime@{prevTime}}
-\index{prevTime@{prevTime}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{prevTime}{prevTime}}
-{\footnotesize\ttfamily absolute\+\_\+time\+\_\+t prev\+Time = get\+\_\+absolute\+\_\+time()}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910}\label{main_8cpp_a25e39b399c2a11f0d76e42ab8241a910} 
-\index{main.cpp@{main.cpp}!rpm@{rpm}}
-\index{rpm@{rpm}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{rpm}{rpm}}
-{\footnotesize\ttfamily float rpm = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}\label{main_8cpp_ac7597a58fd0a9415759b81dffee974e6} 
-\index{main.cpp@{main.cpp}!slice@{slice}}
-\index{slice@{slice}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{slice}{slice}}
-{\footnotesize\ttfamily uint slice\hspace{0.3cm}{\ttfamily [extern]}}
-
-
-
-Global slice value for the PWM module. Automatically determined by chosen pin at runtime. Corresponds to the organization of PWM configurations by clock. Please see RP2040 documentation. 
-
-
-
-Definition at line \mbox{\hyperlink{ntm__helpers_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{ntm__helpers_8cpp_source}{ntm\+\_\+helpers.\+cpp}}.
-
-\Hypertarget{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb}\label{main_8cpp_a1fef9435f436bfd601806a7a0bef54bb} 
-\index{main.cpp@{main.cpp}!speed\_lvl@{speed\_lvl}}
-\index{speed\_lvl@{speed\_lvl}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{speed\_lvl}{speed\_lvl}}
-{\footnotesize\ttfamily uint16\+\_\+t speed\+\_\+lvl = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_af04968100075345ffc60b9ffe62b4c9c}\label{main_8cpp_af04968100075345ffc60b9ffe62b4c9c} 
-\index{main.cpp@{main.cpp}!temp\_speed@{temp\_speed}}
-\index{temp\_speed@{temp\_speed}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{temp\_speed}{temp\_speed}}
-{\footnotesize\ttfamily long temp\+\_\+speed = 0}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
-\Hypertarget{main_8cpp_accd9653a1b3ee09644723877d2aa36e1}\label{main_8cpp_accd9653a1b3ee09644723877d2aa36e1} 
-\index{main.cpp@{main.cpp}!validPress@{validPress}}
-\index{validPress@{validPress}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{validPress}{validPress}}
-{\footnotesize\ttfamily bool valid\+Press = false}
-
-
-
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00473}{473}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
-
