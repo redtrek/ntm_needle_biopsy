@@ -124,12 +124,16 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8c50659733df2acac1580d209db8e97f" id="r_a8c50659733df2acac1580d209db8e97f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8c50659733df2acac1580d209db8e97f">oled_init</a> ()</td></tr>
+<tr class="memdesc:a8c50659733df2acac1580d209db8e97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the 128x64 OLED display and communication via I2C connections.  <br /></td></tr>
 <tr class="separator:a8c50659733df2acac1580d209db8e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77605eb86157d0b0194fc72a25738a22" id="r_a77605eb86157d0b0194fc72a25738a22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a77605eb86157d0b0194fc72a25738a22">displayInputSpeed</a> (int y_pos)</td></tr>
+<tr class="memdesc:a77605eb86157d0b0194fc72a25738a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function used to abstract how potentiometer input information is shown on the OLED screen.  <br /></td></tr>
 <tr class="separator:a77605eb86157d0b0194fc72a25738a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ea220abd9e6d180734b3b2bc0750f89" id="r_a9ea220abd9e6d180734b3b2bc0750f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a> (int y_pos)</td></tr>
+<tr class="memdesc:a9ea220abd9e6d180734b3b2bc0750f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function used to display calculated battery capacity value on OLED.  <br /></td></tr>
 <tr class="separator:a9ea220abd9e6d180734b3b2bc0750f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac59ebf0340587075ef7d1fc943c78408" id="r_ac59ebf0340587075ef7d1fc943c78408"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a> ()</td></tr>
+<tr class="memdesc:ac59ebf0340587075ef7d1fc943c78408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the order of information, titles, and instructions shown on the OLED display by state in FSM.  <br /></td></tr>
 <tr class="separator:ac59ebf0340587075ef7d1fc943c78408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7c42980e08859e81090559d51a512b0" id="r_ac7c42980e08859e81090559d51a512b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac7c42980e08859e81090559d51a512b0">handleButton</a> ()</td></tr>
 <tr class="separator:ac7c42980e08859e81090559d51a512b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,14 +142,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a4acf41dad5576bfc9ced017baa2bf524" id="r_a4acf41dad5576bfc9ced017baa2bf524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4acf41dad5576bfc9ced017baa2bf524">handleMSCButton</a> ()</td></tr>
 <tr class="separator:a4acf41dad5576bfc9ced017baa2bf524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab132489f70371e1c876ba54e9d7011" id="r_a5ab132489f70371e1c876ba54e9d7011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5ab132489f70371e1c876ba54e9d7011">createDataFile</a> ()</td></tr>
+<tr class="memdesc:a5ab132489f70371e1c876ba54e9d7011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates/writes datalog to the microSD via FatFS implementation. Writes the header of the file if successful and names the file by order of creation.  <br /></td></tr>
 <tr class="separator:a5ab132489f70371e1c876ba54e9d7011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7e37f59651692a7089d2b8ed312c7d3" id="r_af7e37f59651692a7089d2b8ed312c7d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af7e37f59651692a7089d2b8ed312c7d3">resetFiltering</a> ()</td></tr>
 <tr class="separator:af7e37f59651692a7089d2b8ed312c7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14b5f26e2ea4e4c247dc26ea786e9b11" id="r_a14b5f26e2ea4e4c247dc26ea786e9b11"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a14b5f26e2ea4e4c247dc26ea786e9b11">getBatLevel</a> ()</td></tr>
+<tr class="memdesc:a14b5f26e2ea4e4c247dc26ea786e9b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the current capacity of the battery using predetermined minimum and maximum charge values.  <br /></td></tr>
 <tr class="separator:a14b5f26e2ea4e4c247dc26ea786e9b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ff0abbdc7d6bd7b82553d2037889fd" id="r_a70ff0abbdc7d6bd7b82553d2037889fd"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a70ff0abbdc7d6bd7b82553d2037889fd">getInputSpeed</a> ()</td></tr>
+<tr class="memdesc:a70ff0abbdc7d6bd7b82553d2037889fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the percentage power represented by the inputted ADC value from the potentiometer.  <br /></td></tr>
 <tr class="separator:a70ff0abbdc7d6bd7b82553d2037889fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e74d3c55ba6d356cd90823775f2d664" id="r_a5e74d3c55ba6d356cd90823775f2d664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5e74d3c55ba6d356cd90823775f2d664">getRPM</a> ()</td></tr>
+<tr class="memdesc:a5e74d3c55ba6d356cd90823775f2d664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses a 1 second timer to extrapolate the revolutions per minute.  <br /></td></tr>
 <tr class="separator:a5e74d3c55ba6d356cd90823775f2d664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b614e0add50e5ae36d208fe910f90c6" id="r_a0b614e0add50e5ae36d208fe910f90c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0b614e0add50e5ae36d208fe910f90c6">enableMSC</a> ()</td></tr>
 <tr class="separator:a0b614e0add50e5ae36d208fe910f90c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,20 +335,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00314">314</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>                      {</div>
-<div class="line"><span class="lineno">  315</span>    </div>
-<div class="line"><span class="lineno">  316</span>    <span class="keywordtype">int</span> fileNum = 0;</div>
-<div class="line"><span class="lineno">  317</span>    FRESULT file_created = f_open(&amp;fil, filename, FA_CREATE_NEW | FA_WRITE);</div>
-<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">while</span> (file_created == FR_EXIST) {</div>
-<div class="line"><span class="lineno">  319</span>        fileNum++;</div>
-<div class="line"><span class="lineno">  320</span>        sprintf(filename, <span class="stringliteral">&quot;data%d.csv&quot;</span>, fileNum);</div>
-<div class="line"><span class="lineno">  321</span>        file_created = f_open(&amp;fil, filename, FA_CREATE_NEW | FA_WRITE);</div>
-<div class="line"><span class="lineno">  322</span>    }</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>    <span class="comment">// Print header of file</span></div>
-<div class="line"><span class="lineno">  325</span>    f_printf(&amp;fil, <span class="stringliteral">&quot;State, Time(ms), Current(mA), CurrentLP(mA), CurrentMAF(mA), RPM, Displacement(mm), Force(N)\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  326</span>}</div>
+<p>Creates/writes datalog to the microSD via FatFS implementation. Writes the header of the file if successful and names the file by order of creation. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00322">322</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>                      {</div>
+<div class="line"><span class="lineno">  323</span>    </div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordtype">int</span> fileNum = 0;</div>
+<div class="line"><span class="lineno">  325</span>    FRESULT file_created = f_open(&amp;fil, filename, FA_CREATE_NEW | FA_WRITE);</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">while</span> (file_created == FR_EXIST) {</div>
+<div class="line"><span class="lineno">  327</span>        fileNum++;</div>
+<div class="line"><span class="lineno">  328</span>        sprintf(filename, <span class="stringliteral">&quot;data%d.csv&quot;</span>, fileNum);</div>
+<div class="line"><span class="lineno">  329</span>        file_created = f_open(&amp;fil, filename, FA_CREATE_NEW | FA_WRITE);</div>
+<div class="line"><span class="lineno">  330</span>    }</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>    <span class="comment">// Print header of file</span></div>
+<div class="line"><span class="lineno">  333</span>    f_printf(&amp;fil, <span class="stringliteral">&quot;State, Time(ms), Current(mA), CurrentLP(mA), CurrentMAF(mA), RPM, Displacement(mm), Force(N)\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  334</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -359,12 +369,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00504">504</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  504</span>                  {</div>
-<div class="line"><span class="lineno">  505</span>    tud_disconnect();</div>
-<div class="line"><span class="lineno">  506</span>    f_mount(&amp;filesys, <span class="stringliteral">&quot;&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">  507</span>    tud_deinit(BOARD_TUD_RHPORT);</div>
-<div class="line"><span class="lineno">  508</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00542">542</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  542</span>                  {</div>
+<div class="line"><span class="lineno">  543</span>    tud_disconnect();</div>
+<div class="line"><span class="lineno">  544</span>    f_mount(&amp;filesys, <span class="stringliteral">&quot;&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  545</span>    tud_deinit(BOARD_TUD_RHPORT);</div>
+<div class="line"><span class="lineno">  546</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -384,21 +394,29 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00386">386</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  386</span>                           {</div>
-<div class="line"><span class="lineno">  387</span>    std::string temp = to_string(bat_per) + <span class="stringliteral">&quot;%&quot;</span>;</div>
-<div class="line"><span class="lineno">  388</span>    <span class="keywordtype">int</span> x_pos = 110;</div>
-<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">if</span> (bat_per == 0) {</div>
-<div class="line"><span class="lineno">  390</span>        ssd1306_draw_string(&amp;oled, 110, y_pos, 1, <span class="stringliteral">&quot;BAT&quot;</span>);</div>
-<div class="line"><span class="lineno">  391</span>        ssd1306_draw_string(&amp;oled, 116, y_pos + 8, 1, <span class="stringliteral">&quot;LO&quot;</span>);</div>
-<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  393</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bat_per &lt; 10) {</div>
-<div class="line"><span class="lineno">  394</span>        x_pos = 116;</div>
-<div class="line"><span class="lineno">  395</span>    }</div>
-<div class="line"><span class="lineno">  396</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* bat = temp.c_str();</div>
-<div class="line"><span class="lineno">  397</span>    ssd1306_draw_string(&amp;oled, 110, y_pos, 1, <span class="stringliteral">&quot;BAT&quot;</span>);</div>
-<div class="line"><span class="lineno">  398</span>    ssd1306_draw_string(&amp;oled, x_pos, y_pos + 8, 1, bat);</div>
-<div class="line"><span class="lineno">  399</span>}</div>
+<p>Helper function used to display calculated battery capacity value on OLED. </p>
+<p>When below the 0 threshold, will display LO on the screen. Automatically adjusts depending on if 3 digits are required. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y_pos</td><td>The y position in pixels (bottom left) of where the text is written. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00408">408</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>                           {</div>
+<div class="line"><span class="lineno">  409</span>    std::string temp = to_string(bat_per) + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordtype">int</span> x_pos = 110;</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">if</span> (bat_per == 0) {</div>
+<div class="line"><span class="lineno">  412</span>        ssd1306_draw_string(&amp;oled, 110, y_pos, 1, <span class="stringliteral">&quot;BAT&quot;</span>);</div>
+<div class="line"><span class="lineno">  413</span>        ssd1306_draw_string(&amp;oled, 116, y_pos + 8, 1, <span class="stringliteral">&quot;LO&quot;</span>);</div>
+<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  415</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bat_per &lt; 10) {</div>
+<div class="line"><span class="lineno">  416</span>        x_pos = 116;</div>
+<div class="line"><span class="lineno">  417</span>    }</div>
+<div class="line"><span class="lineno">  418</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* bat = temp.c_str();</div>
+<div class="line"><span class="lineno">  419</span>    ssd1306_draw_string(&amp;oled, 110, y_pos, 1, <span class="stringliteral">&quot;BAT&quot;</span>);</div>
+<div class="line"><span class="lineno">  420</span>    ssd1306_draw_string(&amp;oled, x_pos, y_pos + 8, 1, bat);</div>
+<div class="line"><span class="lineno">  421</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -418,12 +436,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00328">328</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>                                  {</div>
-<div class="line"><span class="lineno">  329</span>    std::string temp = <span class="stringliteral">&quot;INPUT SPEED: [ &quot;</span> + to_string(temp_speed) + <span class="stringliteral">&quot;% ]&quot;</span>;</div>
-<div class="line"><span class="lineno">  330</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* in_speed = temp.c_str();</div>
-<div class="line"><span class="lineno">  331</span>    ssd1306_draw_string(&amp;oled, 0, y_pos, 1, in_speed);</div>
-<div class="line"><span class="lineno">  332</span>}</div>
+<p>Helper function used to abstract how potentiometer input information is shown on the OLED screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y_pos</td><td>The y position in pixels (bottom left) of where the text is written. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00341">341</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>                                  {</div>
+<div class="line"><span class="lineno">  342</span>    std::string temp = <span class="stringliteral">&quot;INPUT SPEED: [ &quot;</span> + to_string(temp_speed) + <span class="stringliteral">&quot;% ]&quot;</span>;</div>
+<div class="line"><span class="lineno">  343</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* in_speed = temp.c_str();</div>
+<div class="line"><span class="lineno">  344</span>    ssd1306_draw_string(&amp;oled, 0, y_pos, 1, in_speed);</div>
+<div class="line"><span class="lineno">  345</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,58 +468,62 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00334">334</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  334</span>                    {</div>
-<div class="line"><span class="lineno">  335</span>    ssd1306_clear(&amp;oled);</div>
-<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">switch</span>(state) {</div>
-<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">case</span> STANDBY:</div>
-<div class="line"><span class="lineno">  338</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;STANDBY&quot;</span>);</div>
-<div class="line"><span class="lineno">  339</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  340</span>                ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ PRESS MSC  : LOGS ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  341</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  342</span>                displayInputSpeed(50);</div>
-<div class="line"><span class="lineno">  343</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  344</span>            </div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">case</span> CUTTING:</div>
-<div class="line"><span class="lineno">  346</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;CUTTING&quot;</span>);</div>
-<div class="line"><span class="lineno">  347</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  348</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  349</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, rpm, <span class="stringliteral">&quot;SPD (RPM) : &quot;</span>);</div>
-<div class="line"><span class="lineno">  350</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 40, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 50, force, <span class="stringliteral">&quot;FRC (N)   : &quot;</span>);</div>
-<div class="line"><span class="lineno">  352</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  353</span>            </div>
-<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">case</span> REMOVAL:</div>
-<div class="line"><span class="lineno">  355</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;REMOVAL&quot;</span>);</div>
-<div class="line"><span class="lineno">  356</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  357</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  358</span>                displayInputSpeed(50);</div>
-<div class="line"><span class="lineno">  359</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  360</span>            </div>
-<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">case</span> EXITING:</div>
-<div class="line"><span class="lineno">  362</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;EXITING&quot;</span>);</div>
-<div class="line"><span class="lineno">  363</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  364</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  365</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, rpm, <span class="stringliteral">&quot;SPD (RPM) : &quot;</span>);</div>
-<div class="line"><span class="lineno">  366</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 40, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  367</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 50, force, <span class="stringliteral">&quot;FRC (N)   : &quot;</span>);</div>
-<div class="line"><span class="lineno">  368</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  369</span>            </div>
-<div class="line"><span class="lineno">  370</span>            <span class="keywordflow">case</span> FINISH: <span class="comment">// For debugging purposes.</span></div>
-<div class="line"><span class="lineno">  371</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;COMPLETE&quot;</span>);</div>
-<div class="line"><span class="lineno">  372</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  373</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  374</span>                ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ PRESS MSC  : LOGS ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  375</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">case</span> ZERO:</div>
-<div class="line"><span class="lineno">  377</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;ZERO&quot;</span>);</div>
-<div class="line"><span class="lineno">  378</span>                displayBat(0);</div>
-<div class="line"><span class="lineno">  379</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;Resetting to origin&quot;</span>);</div>
-<div class="line"><span class="lineno">  380</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
-<div class="line"><span class="lineno">  381</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  382</span>        }</div>
-<div class="line"><span class="lineno">  383</span>    ssd1306_show(&amp;oled);</div>
-<div class="line"><span class="lineno">  384</span>}</div>
+<p>Handles the order of information, titles, and instructions shown on the OLED display by state in FSM. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00351">351</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>                    {</div>
+<div class="line"><span class="lineno">  352</span>    ssd1306_clear(&amp;oled);</div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">switch</span>(state) {</div>
+<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">case</span> STANDBY:</div>
+<div class="line"><span class="lineno">  355</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;STANDBY&quot;</span>);</div>
+<div class="line"><span class="lineno">  356</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  357</span>                ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ PRESS MSC  : LOGS ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  358</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  359</span>                <a class="code hl_function" href="main_8cpp.html#a77605eb86157d0b0194fc72a25738a22">displayInputSpeed</a>(50);</div>
+<div class="line"><span class="lineno">  360</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  361</span>            </div>
+<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">case</span> CUTTING:</div>
+<div class="line"><span class="lineno">  363</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;CUTTING&quot;</span>);</div>
+<div class="line"><span class="lineno">  364</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  365</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  366</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, rpm, <span class="stringliteral">&quot;SPD (RPM) : &quot;</span>);</div>
+<div class="line"><span class="lineno">  367</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 40, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  368</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 50, force, <span class="stringliteral">&quot;FRC (N)   : &quot;</span>);</div>
+<div class="line"><span class="lineno">  369</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  370</span>            </div>
+<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">case</span> REMOVAL:</div>
+<div class="line"><span class="lineno">  372</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;REMOVAL&quot;</span>);</div>
+<div class="line"><span class="lineno">  373</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  374</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  375</span>                <a class="code hl_function" href="main_8cpp.html#a77605eb86157d0b0194fc72a25738a22">displayInputSpeed</a>(50);</div>
+<div class="line"><span class="lineno">  376</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  377</span>            </div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">case</span> EXITING:</div>
+<div class="line"><span class="lineno">  379</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;EXITING&quot;</span>);</div>
+<div class="line"><span class="lineno">  380</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  381</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 20, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  382</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, rpm, <span class="stringliteral">&quot;SPD (RPM) : &quot;</span>);</div>
+<div class="line"><span class="lineno">  383</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 40, displacement, <span class="stringliteral">&quot;POS (mm)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  384</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 50, force, <span class="stringliteral">&quot;FRC (N)   : &quot;</span>);</div>
+<div class="line"><span class="lineno">  385</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  386</span>            </div>
+<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">case</span> FINISH: <span class="comment">// For debugging purposes.</span></div>
+<div class="line"><span class="lineno">  388</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;COMPLETE&quot;</span>);</div>
+<div class="line"><span class="lineno">  389</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  390</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  391</span>                ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ PRESS MSC  : LOGS ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  392</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  393</span>            <span class="keywordflow">case</span> ZERO:</div>
+<div class="line"><span class="lineno">  394</span>                ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;ZERO&quot;</span>);</div>
+<div class="line"><span class="lineno">  395</span>                <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  396</span>                ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;Resetting to origin&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a>(&amp;oled, 30, current_mA, <span class="stringliteral">&quot;CUR (mA)  : &quot;</span>);</div>
+<div class="line"><span class="lineno">  398</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  399</span>        }</div>
+<div class="line"><span class="lineno">  400</span>    ssd1306_show(&amp;oled);</div>
+<div class="line"><span class="lineno">  401</span>}</div>
+<div class="ttc" id="amain_8cpp_html_a77605eb86157d0b0194fc72a25738a22"><div class="ttname"><a href="main_8cpp.html#a77605eb86157d0b0194fc72a25738a22">displayInputSpeed</a></div><div class="ttdeci">void displayInputSpeed(int y_pos)</div><div class="ttdoc">Helper function used to abstract how potentiometer input information is shown on the OLED screen.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00341">main.cpp:341</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a9ea220abd9e6d180734b3b2bc0750f89"><div class="ttname"><a href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a></div><div class="ttdeci">void displayBat(int y_pos)</div><div class="ttdoc">Helper function used to display calculated battery capacity value on OLED.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00408">main.cpp:408</a></div></div>
 <div class="ttc" id="antm__helpers_8h_html_a42ebef78c974c5dd10ee53b6bea5ac07"><div class="ttname"><a href="ntm__helpers_8h.html#a42ebef78c974c5dd10ee53b6bea5ac07">displayData</a></div><div class="ttdeci">void displayData(ssd1306_t *screen, int y_pos, float data, std::string info)</div><div class="ttdoc">Helper function used to abstract how sensor data is shown on the OLED screen.</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00072">ntm_helpers.cpp:72</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -513,11 +543,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00499">499</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  499</span>                 {</div>
-<div class="line"><span class="lineno">  500</span>    f_unmount(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  501</span>    tud_task();</div>
-<div class="line"><span class="lineno">  502</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00537">537</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  537</span>                 {</div>
+<div class="line"><span class="lineno">  538</span>    f_unmount(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  539</span>    tud_task();</div>
+<div class="line"><span class="lineno">  540</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -536,19 +566,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00401">401</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>                    {</div>
-<div class="line"><span class="lineno">  402</span>    adc_select_input(0);</div>
-<div class="line"><span class="lineno">  403</span>    <span class="keywordtype">long</span> bat = adc_read();</div>
-<div class="line"><span class="lineno">  404</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; potIterations; i++) {</div>
-<div class="line"><span class="lineno">  405</span>        bat += adc_read();</div>
-<div class="line"><span class="lineno">  406</span>    }</div>
-<div class="line"><span class="lineno">  407</span>    bat /= 1.0 * potIterations;</div>
-<div class="line"><span class="lineno">  408</span>    bat = <a class="code hl_define" href="group__BatteryMacros.html#ga24c290b5fa8c0bb248fc15b5bcf873d7">NTM_MAX</a>(bat, <a class="code hl_define" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>);</div>
-<div class="line"><span class="lineno">  409</span>    bat = <a class="code hl_define" href="group__BatteryMacros.html#ga9a187ecf82734a12819e1283bcb69bab">NTM_MIN</a>(bat, <a class="code hl_define" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a>);</div>
-<div class="line"><span class="lineno">  410</span>    bat = (bat - <a class="code hl_define" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>) * <a class="code hl_define" href="group__BatteryMacros.html#ga4ea44361cc7ac80f146feb2806720fda">BAT_ADC_PER</a>;</div>
-<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">return</span> bat;</div>
-<div class="line"><span class="lineno">  412</span>}</div>
+<p>Calculates the current capacity of the battery using predetermined minimum and maximum charge values. </p>
+<p>Relies on ADC averaging and makes calculations based on battery voltage. </p><dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00429">429</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  429</span>                    {</div>
+<div class="line"><span class="lineno">  430</span>    adc_select_input(0);</div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordtype">long</span> bat = adc_read();</div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; potIterations; i++) {</div>
+<div class="line"><span class="lineno">  433</span>        bat += adc_read();</div>
+<div class="line"><span class="lineno">  434</span>    }</div>
+<div class="line"><span class="lineno">  435</span>    bat /= 1.0 * potIterations;</div>
+<div class="line"><span class="lineno">  436</span>    bat = <a class="code hl_define" href="group__BatteryMacros.html#ga24c290b5fa8c0bb248fc15b5bcf873d7">NTM_MAX</a>(bat, <a class="code hl_define" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>);</div>
+<div class="line"><span class="lineno">  437</span>    bat = <a class="code hl_define" href="group__BatteryMacros.html#ga9a187ecf82734a12819e1283bcb69bab">NTM_MIN</a>(bat, <a class="code hl_define" href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a>);</div>
+<div class="line"><span class="lineno">  438</span>    bat = (bat - <a class="code hl_define" href="group__BatteryMacros.html#gad380f4a571d5444566336f067dfb7b01">BAT_MIN_ADC</a>) * <a class="code hl_define" href="group__BatteryMacros.html#ga4ea44361cc7ac80f146feb2806720fda">BAT_ADC_PER</a>;</div>
+<div class="line"><span class="lineno">  439</span>    <span class="keywordflow">return</span> bat;</div>
+<div class="line"><span class="lineno">  440</span>}</div>
 <div class="ttc" id="agroup__BatteryMacros_html_ga24c290b5fa8c0bb248fc15b5bcf873d7"><div class="ttname"><a href="group__BatteryMacros.html#ga24c290b5fa8c0bb248fc15b5bcf873d7">NTM_MAX</a></div><div class="ttdeci">#define NTM_MAX(A, B)</div><div class="ttdoc">Calculates the bigger value between A and B using operator. Essentially: if (A) &gt;= (B) return A....</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00056">config.h:56</a></div></div>
 <div class="ttc" id="agroup__BatteryMacros_html_ga4ea44361cc7ac80f146feb2806720fda"><div class="ttname"><a href="group__BatteryMacros.html#ga4ea44361cc7ac80f146feb2806720fda">BAT_ADC_PER</a></div><div class="ttdeci">#define BAT_ADC_PER</div><div class="ttdoc">Looks strange out of context. Used to calculate the batter capacity i.e. (Current Battery Value - BAT...</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00082">config.h:82</a></div></div>
 <div class="ttc" id="agroup__BatteryMacros_html_ga7703a5d829fb6d1223ad111a9474fa9b"><div class="ttname"><a href="group__BatteryMacros.html#ga7703a5d829fb6d1223ad111a9474fa9b">BAT_MAX_ADC</a></div><div class="ttdeci">#define BAT_MAX_ADC</div><div class="ttdoc">Represents the battery's max capacity from the perspective of the microcontroller....</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00069">config.h:69</a></div></div>
@@ -572,16 +605,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00414">414</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>                     {</div>
-<div class="line"><span class="lineno">  415</span>    adc_select_input(3);</div>
-<div class="line"><span class="lineno">  416</span>    <span class="keywordtype">long</span> val = 0;</div>
-<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; potIterations; i++) {</div>
-<div class="line"><span class="lineno">  418</span>        val += adc_read();</div>
-<div class="line"><span class="lineno">  419</span>    }</div>
-<div class="line"><span class="lineno">  420</span>    </div>
-<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">return</span> long(0.0243 * (val * 1.0 / potIterations) + 1);</div>
-<div class="line"><span class="lineno">  422</span>}</div>
+<p>Calculates the percentage power represented by the inputted ADC value from the potentiometer. </p>
+<dl class="section return"><dt>Returns</dt><dd>long </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00447">447</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  447</span>                     {</div>
+<div class="line"><span class="lineno">  448</span>    adc_select_input(3);</div>
+<div class="line"><span class="lineno">  449</span>    <span class="keywordtype">long</span> val = 0;</div>
+<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; potIterations; i++) {</div>
+<div class="line"><span class="lineno">  451</span>        val += adc_read();</div>
+<div class="line"><span class="lineno">  452</span>    }</div>
+<div class="line"><span class="lineno">  453</span>    </div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">return</span> long(0.0243 * (val * 1.0 / potIterations) + 1);</div>
+<div class="line"><span class="lineno">  455</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -600,18 +636,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00424">424</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  424</span>              {</div>
-<div class="line"><span class="lineno">  425</span>    <span class="keyword">static</span> absolute_time_t prevRPMTime = get_absolute_time();</div>
-<div class="line"><span class="lineno">  426</span>    absolute_time_t currRPMTime = get_absolute_time();</div>
-<div class="line"><span class="lineno">  427</span> </div>
-<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">if</span> (absolute_time_diff_us(prevRPMTime, currRPMTime) &gt;= <a class="code hl_define" href="group__BatteryMacros.html#ga81b58a672e9a97383f06a46f89660b1d">SEC_US</a>) {</div>
-<div class="line"><span class="lineno">  429</span>        rpm = (numPulses/12.0f/34.014f) * 60.0f;</div>
-<div class="line"><span class="lineno">  430</span>        numPulses = 0;</div>
-<div class="line"><span class="lineno">  431</span>        prevRPMTime = currRPMTime;</div>
-<div class="line"><span class="lineno">  432</span>    }</div>
-<div class="line"><span class="lineno">  433</span>}</div>
+<p>Uses a 1 second timer to extrapolate the revolutions per minute. </p>
+<p>Determines the number of revolutions that occur within a second and multiplies it by 60. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00462">462</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  462</span>              {</div>
+<div class="line"><span class="lineno">  463</span>    <span class="keyword">static</span> absolute_time_t prevRPMTime = get_absolute_time();</div>
+<div class="line"><span class="lineno">  464</span>    absolute_time_t currRPMTime = get_absolute_time();</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>    <span class="keywordflow">if</span> (absolute_time_diff_us(prevRPMTime, currRPMTime) &gt;= <a class="code hl_define" href="group__BatteryMacros.html#ga81b58a672e9a97383f06a46f89660b1d">SEC_US</a>) {</div>
+<div class="line"><span class="lineno">  467</span>        rpm = <a class="code hl_function" href="ntm__helpers_8h.html#a8b0e682ac7928c7d2592cb80a81a2874">getRevolutions</a>(numPulses) * 60.0f;</div>
+<div class="line"><span class="lineno">  468</span>        numPulses = 0;</div>
+<div class="line"><span class="lineno">  469</span>        prevRPMTime = currRPMTime;</div>
+<div class="line"><span class="lineno">  470</span>    }</div>
+<div class="line"><span class="lineno">  471</span>}</div>
 <div class="ttc" id="agroup__BatteryMacros_html_ga81b58a672e9a97383f06a46f89660b1d"><div class="ttname"><a href="group__BatteryMacros.html#ga81b58a672e9a97383f06a46f89660b1d">SEC_US</a></div><div class="ttdeci">#define SEC_US</div><div class="ttdoc">1 Second in microseconds.</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00085">config.h:85</a></div></div>
+<div class="ttc" id="antm__helpers_8h_html_a8b0e682ac7928c7d2592cb80a81a2874"><div class="ttname"><a href="ntm__helpers_8h.html#a8b0e682ac7928c7d2592cb80a81a2874">getRevolutions</a></div><div class="ttdeci">float getRevolutions(int count)</div><div class="ttdoc">Takes detected motor signals and converts them to the real-world number of revolutions of the motor s...</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00078">ntm_helpers.cpp:78</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -681,35 +721,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00437">437</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  437</span>                    {</div>
-<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">if</span> (button_press_flag) {</div>
-<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">if</span> (absolute_time_diff_us(pressTime, now) &gt;= debounce_us) {</div>
-<div class="line"><span class="lineno">  440</span>            <span class="keywordflow">if</span> (gpio_get(state_input) == 1) {</div>
-<div class="line"><span class="lineno">  441</span>                validPress = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  442</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  443</span>                button_press_flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  444</span>            }</div>
-<div class="line"><span class="lineno">  445</span>        }</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (validPress) {</div>
-<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">if</span> (absolute_time_diff_us(pressTime, now) &gt;= <a class="code hl_define" href="config_8h.html#ac6f3299722b682ead61165a15c392922">hold_us</a>) {</div>
-<div class="line"><span class="lineno">  449</span>                state = ZERO;</div>
-<div class="line"><span class="lineno">  450</span>                nextState = FINISH;</div>
-<div class="line"><span class="lineno">  451</span>                gpio_put(MOTOR_DIR, 0);</div>
-<div class="line"><span class="lineno">  452</span>                pwm_set_chan_level(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <a class="code hl_variable" href="main_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a>, 255);</div>
-<div class="line"><span class="lineno">  453</span>                displayState();</div>
-<div class="line"><span class="lineno">  454</span>                sleep_ms(<a class="code hl_define" href="config_8h.html#afce5aaf1a0caf368eaf0db8926a30960">SPIKE_TIME</a>);</div>
-<div class="line"><span class="lineno">  455</span> </div>
-<div class="line"><span class="lineno">  456</span>                button_press_flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  457</span>                validPress = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  458</span>            } </div>
-<div class="line"><span class="lineno">  459</span>        }</div>
-<div class="line"><span class="lineno">  460</span>    }</div>
-<div class="line"><span class="lineno">  461</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00475">475</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  475</span>                    {</div>
+<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">if</span> (button_press_flag) {</div>
+<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">if</span> (absolute_time_diff_us(pressTime, now) &gt;= debounce_us) {</div>
+<div class="line"><span class="lineno">  478</span>            <span class="keywordflow">if</span> (gpio_get(state_input) == 1) {</div>
+<div class="line"><span class="lineno">  479</span>                validPress = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  480</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  481</span>                button_press_flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  482</span>            }</div>
+<div class="line"><span class="lineno">  483</span>        }</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span> (validPress) {</div>
+<div class="line"><span class="lineno">  486</span>            <span class="keywordflow">if</span> (absolute_time_diff_us(pressTime, now) &gt;= <a class="code hl_define" href="config_8h.html#ac6f3299722b682ead61165a15c392922">hold_us</a>) {</div>
+<div class="line"><span class="lineno">  487</span>                state = ZERO;</div>
+<div class="line"><span class="lineno">  488</span>                nextState = FINISH;</div>
+<div class="line"><span class="lineno">  489</span>                gpio_put(MOTOR_DIR, 0);</div>
+<div class="line"><span class="lineno">  490</span>                pwm_set_chan_level(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <a class="code hl_variable" href="main_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a>, 255);</div>
+<div class="line"><span class="lineno">  491</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
+<div class="line"><span class="lineno">  492</span>                sleep_ms(<a class="code hl_define" href="config_8h.html#afce5aaf1a0caf368eaf0db8926a30960">SPIKE_TIME</a>);</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>                button_press_flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  495</span>                validPress = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  496</span>            } </div>
+<div class="line"><span class="lineno">  497</span>        }</div>
+<div class="line"><span class="lineno">  498</span>    }</div>
+<div class="line"><span class="lineno">  499</span>}</div>
 <div class="ttc" id="aconfig_8h_html_ac6f3299722b682ead61165a15c392922"><div class="ttname"><a href="config_8h.html#ac6f3299722b682ead61165a15c392922">hold_us</a></div><div class="ttdeci">#define hold_us</div><div class="ttdoc">Hold [STATE] for 3 sec to enter ZERO state.</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00021">config.h:21</a></div></div>
 <div class="ttc" id="aconfig_8h_html_afce5aaf1a0caf368eaf0db8926a30960"><div class="ttname"><a href="config_8h.html#afce5aaf1a0caf368eaf0db8926a30960">SPIKE_TIME</a></div><div class="ttdeci">#define SPIKE_TIME</div><div class="ttdoc">Time in ms used to avoid measuring current spikes during the ZERO state. Without this the ZERO state ...</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00027">config.h:27</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a23777d4d3d69af11916d27e48261cfb1"><div class="ttname"><a href="main_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a></div><div class="ttdeci">uint channel</div><div class="ttdoc">Global channel value for the PWM module. Automatically determined by chosen pin at runtime....</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00024">ntm_helpers.cpp:24</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ac59ebf0340587075ef7d1fc943c78408"><div class="ttname"><a href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a></div><div class="ttdeci">void displayState()</div><div class="ttdoc">Handles the order of information, titles, and instructions shown on the OLED display by state in FSM.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00351">main.cpp:351</a></div></div>
 <div class="ttc" id="amain_8cpp_html_ac7597a58fd0a9415759b81dffee974e6"><div class="ttname"><a href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a></div><div class="ttdeci">uint slice</div><div class="ttdoc">Global slice value for the PWM module. Automatically determined by chosen pin at runtime....</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00018">ntm_helpers.cpp:18</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -729,19 +770,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00476">476</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>                       {</div>
-<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">if</span> (button_msc_flag) {</div>
-<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">if</span> (absolute_time_diff_us(mscPressTime, now) &gt;= debounce_us) {</div>
-<div class="line"><span class="lineno">  479</span>            <span class="keywordflow">if</span> (state == STANDBY || state == FINISH) {</div>
-<div class="line"><span class="lineno">  480</span>                <span class="keywordflow">if</span> (gpio_get(state_input) == 0) {</div>
-<div class="line"><span class="lineno">  481</span>                    watchdog_enable(1, 1);</div>
-<div class="line"><span class="lineno">  482</span>                }</div>
-<div class="line"><span class="lineno">  483</span>            }</div>
-<div class="line"><span class="lineno">  484</span>            button_msc_flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  485</span>        }</div>
-<div class="line"><span class="lineno">  486</span>    }</div>
-<div class="line"><span class="lineno">  487</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00514">514</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  514</span>                       {</div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">if</span> (button_msc_flag) {</div>
+<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">if</span> (absolute_time_diff_us(mscPressTime, now) &gt;= debounce_us) {</div>
+<div class="line"><span class="lineno">  517</span>            <span class="keywordflow">if</span> (state == STANDBY || state == FINISH) {</div>
+<div class="line"><span class="lineno">  518</span>                <span class="keywordflow">if</span> (gpio_get(state_input) == 0) {</div>
+<div class="line"><span class="lineno">  519</span>                    watchdog_enable(1, 1);</div>
+<div class="line"><span class="lineno">  520</span>                }</div>
+<div class="line"><span class="lineno">  521</span>            }</div>
+<div class="line"><span class="lineno">  522</span>            button_msc_flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  523</span>        }</div>
+<div class="line"><span class="lineno">  524</span>    }</div>
+<div class="line"><span class="lineno">  525</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -760,19 +801,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00463">463</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  463</span>                     {</div>
-<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">if</span> (button_release_flag) {</div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">if</span> (validPress) {</div>
-<div class="line"><span class="lineno">  466</span>            state = nextState;</div>
-<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">if</span> (state == CUTTING) {</div>
-<div class="line"><span class="lineno">  468</span>                createDataFile();</div>
-<div class="line"><span class="lineno">  469</span>            }</div>
-<div class="line"><span class="lineno">  470</span>            validPress = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  471</span>        }</div>
-<div class="line"><span class="lineno">  472</span>        button_release_flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  473</span>    }</div>
-<div class="line"><span class="lineno">  474</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00501">501</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  501</span>                     {</div>
+<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">if</span> (button_release_flag) {</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">if</span> (validPress) {</div>
+<div class="line"><span class="lineno">  504</span>            state = nextState;</div>
+<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">if</span> (state == CUTTING) {</div>
+<div class="line"><span class="lineno">  506</span>                <a class="code hl_function" href="main_8cpp.html#a5ab132489f70371e1c876ba54e9d7011">createDataFile</a>();</div>
+<div class="line"><span class="lineno">  507</span>            }</div>
+<div class="line"><span class="lineno">  508</span>            validPress = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  509</span>        }</div>
+<div class="line"><span class="lineno">  510</span>        button_release_flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  512</span>}</div>
+<div class="ttc" id="amain_8cpp_html_a5ab132489f70371e1c876ba54e9d7011"><div class="ttname"><a href="main_8cpp.html#a5ab132489f70371e1c876ba54e9d7011">createDataFile</a></div><div class="ttdeci">void createDataFile()</div><div class="ttdoc">Creates/writes datalog to the microSD via FatFS implementation. Writes the header of the file if succ...</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00322">main.cpp:322</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -814,8 +856,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  153</span>    </div>
 <div class="line"><span class="lineno">  154</span>    <span class="comment">// ==== General Initialization ==== //</span></div>
 <div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="ntm__helpers_8h.html#a8c6d7458362f0a1d72f048e5c28dafc9">board_gpio_init</a>();</div>
-<div class="line"><span class="lineno">  156</span>    bat_per = getBatLevel();</div>
-<div class="line"><span class="lineno">  157</span>    oled_init();</div>
+<div class="line"><span class="lineno">  156</span>    bat_per = <a class="code hl_function" href="main_8cpp.html#a14b5f26e2ea4e4c247dc26ea786e9b11">getBatLevel</a>();</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_function" href="main_8cpp.html#a8c50659733df2acac1580d209db8e97f">oled_init</a>();</div>
 <div class="line"><span class="lineno">  158</span>    state = WAIT;</div>
 <div class="line"><span class="lineno">  159</span>    nextState = STANDBY;</div>
 <div class="line"><span class="lineno">  160</span>    INA219 ina219(MY_I2C, INA219_ADDR);</div>
@@ -833,9 +875,9 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  172</span>        handleRelease();</div>
 <div class="line"><span class="lineno">  173</span>        handleButton();</div>
 <div class="line"><span class="lineno">  174</span>        handleMSCButton();</div>
-<div class="line"><span class="lineno">  175</span>        getRPM();</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_function" href="main_8cpp.html#a5e74d3c55ba6d356cd90823775f2d664">getRPM</a>();</div>
 <div class="line"><span class="lineno">  176</span>        </div>
-<div class="line"><span class="lineno">  177</span>        bat_per = getBatLevel();</div>
+<div class="line"><span class="lineno">  177</span>        bat_per = <a class="code hl_function" href="main_8cpp.html#a14b5f26e2ea4e4c247dc26ea786e9b11">getBatLevel</a>();</div>
 <div class="line"><span class="lineno">  178</span>        current_mA = ina219.read_current() * 1000;</div>
 <div class="line"><span class="lineno">  179</span>        displacement = <a class="code hl_function" href="ntm__helpers_8h.html#a8b0e682ac7928c7d2592cb80a81a2874">getRevolutions</a>(count) * 0.5f;</div>
 <div class="line"><span class="lineno">  180</span>        force = compute_force(FX29_read(MY_I2C, FX29_ADDR));</div>
@@ -862,11 +904,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  201</span>                disableMSC();</div>
 <div class="line"><span class="lineno">  202</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_FW, <a class="code hl_define" href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a>);</div>
 <div class="line"><span class="lineno">  203</span>                </div>
-<div class="line"><span class="lineno">  204</span>                temp_speed = getInputSpeed();</div>
+<div class="line"><span class="lineno">  204</span>                temp_speed = <a class="code hl_function" href="main_8cpp.html#a70ff0abbdc7d6bd7b82553d2037889fd">getInputSpeed</a>();</div>
 <div class="line"><span class="lineno">  205</span>                speed_lvl = uint16_t(temp_speed / 100.0f * 255.0f); </div>
 <div class="line"><span class="lineno">  206</span>                </div>
 <div class="line"><span class="lineno">  207</span>                resetFiltering();</div>
-<div class="line"><span class="lineno">  208</span>                displayState();</div>
+<div class="line"><span class="lineno">  208</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  209</span>                nextState = CUTTING;</div>
 <div class="line"><span class="lineno">  210</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  211</span>            }</div>
@@ -883,18 +925,18 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  222</span>                    <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_FW, speed_lvl);</div>
 <div class="line"><span class="lineno">  223</span>                }</div>
 <div class="line"><span class="lineno">  224</span>                </div>
-<div class="line"><span class="lineno">  225</span>                displayState();</div>
+<div class="line"><span class="lineno">  225</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  226</span>                nextState = REMOVAL;</div>
 <div class="line"><span class="lineno">  227</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  228</span>            }</div>
 <div class="line"><span class="lineno">  229</span>            <span class="keywordflow">case</span> REMOVAL: {</div>
 <div class="line"><span class="lineno">  230</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_BW, 0);</div>
 <div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>                temp_speed = getInputSpeed();</div>
+<div class="line"><span class="lineno">  232</span>                temp_speed = <a class="code hl_function" href="main_8cpp.html#a70ff0abbdc7d6bd7b82553d2037889fd">getInputSpeed</a>();</div>
 <div class="line"><span class="lineno">  233</span>                speed_lvl = int(temp_speed / 100.0f * 255.0f);</div>
 <div class="line"><span class="lineno">  234</span>                resetFiltering();</div>
 <div class="line"><span class="lineno">  235</span>                </div>
-<div class="line"><span class="lineno">  236</span>                displayState();</div>
+<div class="line"><span class="lineno">  236</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  237</span>                nextState = EXITING;</div>
 <div class="line"><span class="lineno">  238</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  239</span>            }</div>
@@ -912,7 +954,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  251</span>                    <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_BW, speed_lvl);</div>
 <div class="line"><span class="lineno">  252</span>                }</div>
 <div class="line"><span class="lineno">  253</span>                </div>
-<div class="line"><span class="lineno">  254</span>                displayState();</div>
+<div class="line"><span class="lineno">  254</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  255</span>                nextState = FINISH;</div>
 <div class="line"><span class="lineno">  256</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  257</span>            }</div>
@@ -922,7 +964,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  261</span> </div>
 <div class="line"><span class="lineno">  262</span>                <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_FW, <a class="code hl_define" href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a>);</div>
 <div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>                displayState();</div>
+<div class="line"><span class="lineno">  264</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  265</span> </div>
 <div class="line"><span class="lineno">  266</span>                nextState = STANDBY;</div>
 <div class="line"><span class="lineno">  267</span>                <span class="keywordflow">break</span>;</div>
@@ -935,7 +977,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  274</span>                    state = FINISH;</div>
 <div class="line"><span class="lineno">  275</span>                }</div>
 <div class="line"><span class="lineno">  276</span>                </div>
-<div class="line"><span class="lineno">  277</span>                displayState();</div>
+<div class="line"><span class="lineno">  277</span>                <a class="code hl_function" href="main_8cpp.html#ac59ebf0340587075ef7d1fc943c78408">displayState</a>();</div>
 <div class="line"><span class="lineno">  278</span> </div>
 <div class="line"><span class="lineno">  279</span>                nextState = FINISH;</div>
 <div class="line"><span class="lineno">  280</span>                <span class="keywordflow">break</span>;</div>
@@ -947,12 +989,15 @@ Variables</h2></td></tr>
 <div class="ttc" id="aconfig_8h_html_a1923668201fdaeaced6d7935492b1a1f"><div class="ttname"><a href="config_8h.html#a1923668201fdaeaced6d7935492b1a1f">CUTOFF_STALL</a></div><div class="ttdeci">#define CUTOFF_STALL</div><div class="ttdoc">Stall current that determines when the ZERO state is complete. If the device detects this current,...</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00028">config.h:28</a></div></div>
 <div class="ttc" id="agroup__MotorMacros_html_ga3249ae087e43a52e0182917edca0dc12"><div class="ttname"><a href="group__MotorMacros.html#ga3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a></div><div class="ttdeci">#define MOTOR_ON</div><div class="ttdoc">Maximum PWM value for motor.</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00041">config.h:41</a></div></div>
 <div class="ttc" id="agroup__MotorMacros_html_gad1b1c6c44e1e025f7a748396b2e6f9f4"><div class="ttname"><a href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a></div><div class="ttdeci">#define MOTOR_OFF</div><div class="ttdoc">Minimum PWM value for motor.</div><div class="ttdef"><b>Definition</b> <a href="config_8h_source.html#l00042">config.h:42</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a14b5f26e2ea4e4c247dc26ea786e9b11"><div class="ttname"><a href="main_8cpp.html#a14b5f26e2ea4e4c247dc26ea786e9b11">getBatLevel</a></div><div class="ttdeci">float getBatLevel()</div><div class="ttdoc">Calculates the current capacity of the battery using predetermined minimum and maximum charge values.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00429">main.cpp:429</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a5988591b58aabf7567019b975da7e7aa"><div class="ttname"><a href="main_8cpp.html#a5988591b58aabf7567019b975da7e7aa">bwRev</a></div><div class="ttdeci">int bwRev</div><div class="ttdoc">Sets the max backwards revolutions of the device from start position. Current ratio of (revolutions :...</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a5e74d3c55ba6d356cd90823775f2d664"><div class="ttname"><a href="main_8cpp.html#a5e74d3c55ba6d356cd90823775f2d664">getRPM</a></div><div class="ttdeci">void getRPM()</div><div class="ttdoc">Uses a 1 second timer to extrapolate the revolutions per minute.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00462">main.cpp:462</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a6af9f0d27369b3f4a063f61c51c198f3"><div class="ttname"><a href="main_8cpp.html#a6af9f0d27369b3f4a063f61c51c198f3">MAF_SZ</a></div><div class="ttdeci">#define MAF_SZ</div><div class="ttdoc">Window size for Moving Average Filter.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00024">main.cpp:24</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a70ff0abbdc7d6bd7b82553d2037889fd"><div class="ttname"><a href="main_8cpp.html#a70ff0abbdc7d6bd7b82553d2037889fd">getInputSpeed</a></div><div class="ttdeci">long getInputSpeed()</div><div class="ttdoc">Calculates the percentage power represented by the inputted ADC value from the potentiometer.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00447">main.cpp:447</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a8c50659733df2acac1580d209db8e97f"><div class="ttname"><a href="main_8cpp.html#a8c50659733df2acac1580d209db8e97f">oled_init</a></div><div class="ttdeci">void oled_init()</div><div class="ttdoc">Initializes the 128x64 OLED display and communication via I2C connections.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00293">main.cpp:293</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a92c826e08ae550b58a56ea3f55c49311"><div class="ttname"><a href="main_8cpp.html#a92c826e08ae550b58a56ea3f55c49311">fwRev</a></div><div class="ttdeci">int fwRev</div><div class="ttdoc">Sets the max forward revolutions of the device from start position. Current ratio of (revolutions : d...</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00022">main.cpp:22</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a9400840ebc875d8e59c484e65a643b77"><div class="ttname"><a href="main_8cpp.html#a9400840ebc875d8e59c484e65a643b77">LP_ALPHA</a></div><div class="ttdeci">#define LP_ALPHA</div><div class="ttdoc">Smoothing factor for LP Filter.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
 <div class="ttc" id="antm__helpers_8h_html_a1a668d0f88bcacc451fca6bf25511b62"><div class="ttname"><a href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a></div><div class="ttdeci">void setMotor(bool direction, uint16_t power)</div><div class="ttdoc">Turns on motor with configureable speed and direction values.</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00067">ntm_helpers.cpp:67</a></div></div>
-<div class="ttc" id="antm__helpers_8h_html_a8b0e682ac7928c7d2592cb80a81a2874"><div class="ttname"><a href="ntm__helpers_8h.html#a8b0e682ac7928c7d2592cb80a81a2874">getRevolutions</a></div><div class="ttdeci">float getRevolutions(int count)</div><div class="ttdoc">Takes detected motor signals and converts them to the real-world number of revolutions of the motor s...</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00078">ntm_helpers.cpp:78</a></div></div>
 <div class="ttc" id="antm__helpers_8h_html_a8c6d7458362f0a1d72f048e5c28dafc9"><div class="ttname"><a href="ntm__helpers_8h.html#a8c6d7458362f0a1d72f048e5c28dafc9">board_gpio_init</a></div><div class="ttdeci">void board_gpio_init()</div><div class="ttdoc">Initiates all GPIO pins as well as communication protocols.</div><div class="ttdef"><b>Definition</b> <a href="ntm__helpers_8cpp_source.html#l00026">ntm_helpers.cpp:26</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -972,31 +1017,33 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00289">289</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  289</span>                 {</div>
-<div class="line"><span class="lineno">  290</span>    <span class="comment">// External_vcc must be false for this to work</span></div>
-<div class="line"><span class="lineno">  291</span>    oled.external_vcc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordtype">bool</span> oled_status = ssd1306_init(</div>
-<div class="line"><span class="lineno">  293</span>        &amp;oled,</div>
-<div class="line"><span class="lineno">  294</span>        128,</div>
-<div class="line"><span class="lineno">  295</span>        64,</div>
-<div class="line"><span class="lineno">  296</span>        OLED_ADDR,</div>
-<div class="line"><span class="lineno">  297</span>        MY_I2C</div>
-<div class="line"><span class="lineno">  298</span>    );</div>
-<div class="line"><span class="lineno">  299</span> </div>
-<div class="line"><span class="lineno">  300</span>    <span class="keywordflow">if</span> (oled_status) {</div>
-<div class="line"><span class="lineno">  301</span>        ssd1306_clear(&amp;oled);</div>
-<div class="line"><span class="lineno">  302</span>        ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;RECORDS&quot;</span>);</div>
-<div class="line"><span class="lineno">  303</span>        ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  304</span>        ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ HOLD  STA  : ZERO ]&quot;</span>);</div>
-<div class="line"><span class="lineno">  305</span>        ssd1306_draw_string(&amp;oled, 0, 45, 1, <span class="stringliteral">&quot;V1.0 - 5/6/25&quot;</span>);</div>
-<div class="line"><span class="lineno">  306</span>        ssd1306_draw_string(&amp;oled, 0, 55, 1, <span class="stringliteral">&quot;Author: Thomas Chang&quot;</span>);</div>
-<div class="line"><span class="lineno">  307</span>        displayBat(0);</div>
-<div class="line"><span class="lineno">  308</span>        ssd1306_show(&amp;oled);</div>
-<div class="line"><span class="lineno">  309</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  310</span>        printf(<span class="stringliteral">&quot;OLED initialization failed.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  311</span>    }</div>
-<div class="line"><span class="lineno">  312</span>}</div>
+<p>Initializes the 128x64 OLED display and communication via I2C connections. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00293">293</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>                 {</div>
+<div class="line"><span class="lineno">  294</span>    <span class="comment">// External_vcc must be false for this to work</span></div>
+<div class="line"><span class="lineno">  295</span>    oled.external_vcc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordtype">bool</span> oled_status = ssd1306_init(</div>
+<div class="line"><span class="lineno">  297</span>        &amp;oled,</div>
+<div class="line"><span class="lineno">  298</span>        128,</div>
+<div class="line"><span class="lineno">  299</span>        64,</div>
+<div class="line"><span class="lineno">  300</span>        OLED_ADDR,</div>
+<div class="line"><span class="lineno">  301</span>        MY_I2C</div>
+<div class="line"><span class="lineno">  302</span>    );</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>    <span class="keywordflow">if</span> (oled_status) {</div>
+<div class="line"><span class="lineno">  305</span>        ssd1306_clear(&amp;oled);</div>
+<div class="line"><span class="lineno">  306</span>        ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;RECORDS&quot;</span>);</div>
+<div class="line"><span class="lineno">  307</span>        ssd1306_draw_string(&amp;oled, 0, 20, 1, <span class="stringliteral">&quot;[ PRESS STA  :  NEW ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        ssd1306_draw_string(&amp;oled, 0, 30, 1, <span class="stringliteral">&quot;[ HOLD  STA  : ZERO ]&quot;</span>);</div>
+<div class="line"><span class="lineno">  309</span>        ssd1306_draw_string(&amp;oled, 0, 45, 1, <span class="stringliteral">&quot;V1.0 - 5/6/25&quot;</span>);</div>
+<div class="line"><span class="lineno">  310</span>        ssd1306_draw_string(&amp;oled, 0, 55, 1, <span class="stringliteral">&quot;Author: Thomas Chang&quot;</span>);</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_function" href="main_8cpp.html#a9ea220abd9e6d180734b3b2bc0750f89">displayBat</a>(0);</div>
+<div class="line"><span class="lineno">  312</span>        ssd1306_show(&amp;oled);</div>
+<div class="line"><span class="lineno">  313</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  314</span>        printf(<span class="stringliteral">&quot;OLED initialization failed.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  315</span>    }</div>
+<div class="line"><span class="lineno">  316</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1015,16 +1062,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00489">489</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  489</span>                      {</div>
-<div class="line"><span class="lineno">  490</span>    <span class="comment">// Initialize all moving average filter values to zero.</span></div>
-<div class="line"><span class="lineno">  491</span>    MAF_counter = 0;</div>
-<div class="line"><span class="lineno">  492</span>    MAF_sum = 0;</div>
-<div class="line"><span class="lineno">  493</span>    memset(MAF, 0, <span class="keyword">sizeof</span>(MAF));</div>
-<div class="line"><span class="lineno">  494</span> </div>
-<div class="line"><span class="lineno">  495</span>    <span class="comment">// Reset previous low pass output.</span></div>
-<div class="line"><span class="lineno">  496</span>    lp_current = 0;</div>
-<div class="line"><span class="lineno">  497</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00527">527</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  527</span>                      {</div>
+<div class="line"><span class="lineno">  528</span>    <span class="comment">// Initialize all moving average filter values to zero.</span></div>
+<div class="line"><span class="lineno">  529</span>    MAF_counter = 0;</div>
+<div class="line"><span class="lineno">  530</span>    MAF_sum = 0;</div>
+<div class="line"><span class="lineno">  531</span>    memset(MAF, 0, <span class="keyword">sizeof</span>(MAF));</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>    <span class="comment">// Reset previous low pass output.</span></div>
+<div class="line"><span class="lineno">  534</span>    lp_current = 0;</div>
+<div class="line"><span class="lineno">  535</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1043,69 +1090,69 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00510">510</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  510</span>                    {</div>
-<div class="line"><span class="lineno">  511</span>    stdio_init_all();</div>
-<div class="line"><span class="lineno">  512</span>    sleep_ms(1000);</div>
-<div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>    gpio_init(26);</div>
-<div class="line"><span class="lineno">  515</span>    gpio_set_dir(26, GPIO_OUT);</div>
-<div class="line"><span class="lineno">  516</span> </div>
-<div class="line"><span class="lineno">  517</span>    <span class="comment">// I2C</span></div>
-<div class="line"><span class="lineno">  518</span>    i2c_init(i2c0, 400000);</div>
-<div class="line"><span class="lineno">  519</span>    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);</div>
-<div class="line"><span class="lineno">  520</span>    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);</div>
-<div class="line"><span class="lineno">  521</span>    gpio_pull_up(I2C_SDA);</div>
-<div class="line"><span class="lineno">  522</span>    gpio_pull_up(I2C_SCL);</div>
-<div class="line"><span class="lineno">  523</span> </div>
-<div class="line"><span class="lineno">  524</span>    <span class="comment">// OLED</span></div>
-<div class="line"><span class="lineno">  525</span>    oled_init();</div>
-<div class="line"><span class="lineno">  526</span> </div>
-<div class="line"><span class="lineno">  527</span>    <span class="comment">// BUTTMOTOR_ONS</span></div>
-<div class="line"><span class="lineno">  528</span>    gpio_init(state_input);</div>
-<div class="line"><span class="lineno">  529</span>    gpio_set_dir(state_input, GPIO_IN);</div>
-<div class="line"><span class="lineno">  530</span>    gpio_pull_down(state_input);</div>
-<div class="line"><span class="lineno">  531</span>    gpio_init(msc_input);</div>
-<div class="line"><span class="lineno">  532</span>    gpio_set_dir(msc_input, GPIO_IN);</div>
-<div class="line"><span class="lineno">  533</span>    gpio_pull_down(msc_input);</div>
-<div class="line"><span class="lineno">  534</span> </div>
-<div class="line"><span class="lineno">  535</span>    <span class="comment">// POTENTIOMETER</span></div>
-<div class="line"><span class="lineno">  536</span>    adc_init();</div>
-<div class="line"><span class="lineno">  537</span>    adc_gpio_init(speed_input);</div>
-<div class="line"><span class="lineno">  538</span> </div>
-<div class="line"><span class="lineno">  539</span>    <span class="comment">// Motor Control</span></div>
-<div class="line"><span class="lineno">  540</span>    uint <a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a> = pwm_gpio_to_slice_num(MOTOR_PWM);</div>
-<div class="line"><span class="lineno">  541</span>    uint <a class="code hl_variable" href="main_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a> = pwm_gpio_to_channel(MOTOR_PWM);</div>
-<div class="line"><span class="lineno">  542</span>    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);</div>
-<div class="line"><span class="lineno">  543</span>    pwm_set_clkdiv(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 48.83f);</div>
-<div class="line"><span class="lineno">  544</span>    pwm_set_wrap(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 255);</div>
-<div class="line"><span class="lineno">  545</span>    pwm_set_chan_level(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, PWM_CHAN_A, 0);</div>
-<div class="line"><span class="lineno">  546</span>    pwm_set_enabled(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  547</span>    gpio_init(MOTOR_DIR);</div>
-<div class="line"><span class="lineno">  548</span>    gpio_set_dir(MOTOR_DIR, GPIO_OUT);</div>
-<div class="line"><span class="lineno">  549</span> </div>
-<div class="line"><span class="lineno">  550</span>    <span class="keywordflow">while</span>(1) {</div>
-<div class="line"><span class="lineno">  551</span>        <span class="comment">// Testing functionality of pushbuttons.</span></div>
-<div class="line"><span class="lineno">  552</span>        <span class="keywordflow">while</span> (gpio_get(msc_input) == 1 || gpio_get(state_input) == 1) {</div>
-<div class="line"><span class="lineno">  553</span>            gpio_put(26, 1);</div>
-<div class="line"><span class="lineno">  554</span>        }</div>
-<div class="line"><span class="lineno">  555</span>        </div>
-<div class="line"><span class="lineno">  556</span>        <span class="comment">// Testing potentiometer.</span></div>
-<div class="line"><span class="lineno">  557</span>        <span class="keywordtype">long</span> test_pot = getInputSpeed() * 10;</div>
-<div class="line"><span class="lineno">  558</span>        gpio_put(26, 1);</div>
-<div class="line"><span class="lineno">  559</span>        sleep_ms(test_pot);</div>
-<div class="line"><span class="lineno">  560</span>        gpio_put(26, 0);</div>
-<div class="line"><span class="lineno">  561</span>        sleep_ms(test_pot);</div>
-<div class="line"><span class="lineno">  562</span> </div>
-<div class="line"><span class="lineno">  563</span>        <span class="comment">// Testing functionality of motor.</span></div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">if</span> (gpio_get(state_input) == 1) {</div>
-<div class="line"><span class="lineno">  565</span>            <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_FW, 255);</div>
-<div class="line"><span class="lineno">  566</span>            sleep_ms(3000);</div>
-<div class="line"><span class="lineno">  567</span>            <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_BW, <a class="code hl_define" href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a>);</div>
-<div class="line"><span class="lineno">  568</span>        }</div>
-<div class="line"><span class="lineno">  569</span>        </div>
-<div class="line"><span class="lineno">  570</span>    }</div>
-<div class="line"><span class="lineno">  571</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00548">548</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  548</span>                    {</div>
+<div class="line"><span class="lineno">  549</span>    stdio_init_all();</div>
+<div class="line"><span class="lineno">  550</span>    sleep_ms(1000);</div>
+<div class="line"><span class="lineno">  551</span> </div>
+<div class="line"><span class="lineno">  552</span>    gpio_init(26);</div>
+<div class="line"><span class="lineno">  553</span>    gpio_set_dir(26, GPIO_OUT);</div>
+<div class="line"><span class="lineno">  554</span> </div>
+<div class="line"><span class="lineno">  555</span>    <span class="comment">// I2C</span></div>
+<div class="line"><span class="lineno">  556</span>    i2c_init(i2c0, 400000);</div>
+<div class="line"><span class="lineno">  557</span>    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">  558</span>    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">  559</span>    gpio_pull_up(I2C_SDA);</div>
+<div class="line"><span class="lineno">  560</span>    gpio_pull_up(I2C_SCL);</div>
+<div class="line"><span class="lineno">  561</span> </div>
+<div class="line"><span class="lineno">  562</span>    <span class="comment">// OLED</span></div>
+<div class="line"><span class="lineno">  563</span>    <a class="code hl_function" href="main_8cpp.html#a8c50659733df2acac1580d209db8e97f">oled_init</a>();</div>
+<div class="line"><span class="lineno">  564</span> </div>
+<div class="line"><span class="lineno">  565</span>    <span class="comment">// BUTTMOTOR_ONS</span></div>
+<div class="line"><span class="lineno">  566</span>    gpio_init(state_input);</div>
+<div class="line"><span class="lineno">  567</span>    gpio_set_dir(state_input, GPIO_IN);</div>
+<div class="line"><span class="lineno">  568</span>    gpio_pull_down(state_input);</div>
+<div class="line"><span class="lineno">  569</span>    gpio_init(msc_input);</div>
+<div class="line"><span class="lineno">  570</span>    gpio_set_dir(msc_input, GPIO_IN);</div>
+<div class="line"><span class="lineno">  571</span>    gpio_pull_down(msc_input);</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>    <span class="comment">// POTENTIOMETER</span></div>
+<div class="line"><span class="lineno">  574</span>    adc_init();</div>
+<div class="line"><span class="lineno">  575</span>    adc_gpio_init(speed_input);</div>
+<div class="line"><span class="lineno">  576</span> </div>
+<div class="line"><span class="lineno">  577</span>    <span class="comment">// Motor Control</span></div>
+<div class="line"><span class="lineno">  578</span>    uint <a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a> = pwm_gpio_to_slice_num(MOTOR_PWM);</div>
+<div class="line"><span class="lineno">  579</span>    uint <a class="code hl_variable" href="main_8cpp.html#a23777d4d3d69af11916d27e48261cfb1">channel</a> = pwm_gpio_to_channel(MOTOR_PWM);</div>
+<div class="line"><span class="lineno">  580</span>    gpio_set_function(MOTOR_PWM, GPIO_FUNC_PWM);</div>
+<div class="line"><span class="lineno">  581</span>    pwm_set_clkdiv(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 48.83f);</div>
+<div class="line"><span class="lineno">  582</span>    pwm_set_wrap(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, 255);</div>
+<div class="line"><span class="lineno">  583</span>    pwm_set_chan_level(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, PWM_CHAN_A, 0);</div>
+<div class="line"><span class="lineno">  584</span>    pwm_set_enabled(<a class="code hl_variable" href="main_8cpp.html#ac7597a58fd0a9415759b81dffee974e6">slice</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  585</span>    gpio_init(MOTOR_DIR);</div>
+<div class="line"><span class="lineno">  586</span>    gpio_set_dir(MOTOR_DIR, GPIO_OUT);</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">  589</span>        <span class="comment">// Testing functionality of pushbuttons.</span></div>
+<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">while</span> (gpio_get(msc_input) == 1 || gpio_get(state_input) == 1) {</div>
+<div class="line"><span class="lineno">  591</span>            gpio_put(26, 1);</div>
+<div class="line"><span class="lineno">  592</span>        }</div>
+<div class="line"><span class="lineno">  593</span>        </div>
+<div class="line"><span class="lineno">  594</span>        <span class="comment">// Testing potentiometer.</span></div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordtype">long</span> test_pot = <a class="code hl_function" href="main_8cpp.html#a70ff0abbdc7d6bd7b82553d2037889fd">getInputSpeed</a>() * 10;</div>
+<div class="line"><span class="lineno">  596</span>        gpio_put(26, 1);</div>
+<div class="line"><span class="lineno">  597</span>        sleep_ms(test_pot);</div>
+<div class="line"><span class="lineno">  598</span>        gpio_put(26, 0);</div>
+<div class="line"><span class="lineno">  599</span>        sleep_ms(test_pot);</div>
+<div class="line"><span class="lineno">  600</span> </div>
+<div class="line"><span class="lineno">  601</span>        <span class="comment">// Testing functionality of motor.</span></div>
+<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">if</span> (gpio_get(state_input) == 1) {</div>
+<div class="line"><span class="lineno">  603</span>            <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_FW, 255);</div>
+<div class="line"><span class="lineno">  604</span>            sleep_ms(3000);</div>
+<div class="line"><span class="lineno">  605</span>            <a class="code hl_function" href="ntm__helpers_8h.html#a1a668d0f88bcacc451fca6bf25511b62">setMotor</a>(MOTOR_BW, <a class="code hl_define" href="group__MotorMacros.html#gad1b1c6c44e1e025f7a748396b2e6f9f4">MOTOR_OFF</a>);</div>
+<div class="line"><span class="lineno">  606</span>        }</div>
+<div class="line"><span class="lineno">  607</span>        </div>
+<div class="line"><span class="lineno">  608</span>    }</div>
+<div class="line"><span class="lineno">  609</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1124,40 +1171,40 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00572">572</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  572</span>               {</div>
-<div class="line"><span class="lineno">  573</span>    board_init();</div>
-<div class="line"><span class="lineno">  574</span>    printf(<span class="stringliteral">&quot;\033[2J\033[H&quot;</span>);</div>
-<div class="line"><span class="lineno">  575</span>    tud_init(BOARD_TUD_RHPORT);</div>
-<div class="line"><span class="lineno">  576</span>    stdio_init_all();</div>
-<div class="line"><span class="lineno">  577</span> </div>
-<div class="line"><span class="lineno">  578</span>    <span class="comment">// I2C</span></div>
-<div class="line"><span class="lineno">  579</span>    i2c_init(i2c0, 400000);</div>
-<div class="line"><span class="lineno">  580</span>    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);</div>
-<div class="line"><span class="lineno">  581</span>    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);</div>
-<div class="line"><span class="lineno">  582</span>    gpio_pull_up(I2C_SDA);</div>
-<div class="line"><span class="lineno">  583</span>    gpio_pull_up(I2C_SCL);</div>
-<div class="line"><span class="lineno">  584</span> </div>
-<div class="line"><span class="lineno">  585</span>    uint32_t sys_freq = clock_get_hz(clk_sys);</div>
-<div class="line"><span class="lineno">  586</span>    std::string temp = to_string(sys_freq);</div>
-<div class="line"><span class="lineno">  587</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* sys_freq_str = temp.c_str();</div>
-<div class="line"><span class="lineno">  588</span>    oled.external_vcc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  589</span>    <span class="keywordtype">bool</span> oled_status = ssd1306_init(&amp;oled, 128, 64, OLED_ADDR, MY_I2C);</div>
-<div class="line"><span class="lineno">  590</span>    </div>
-<div class="line"><span class="lineno">  591</span>    <span class="keywordflow">if</span> (oled_status) {</div>
-<div class="line"><span class="lineno">  592</span>        ssd1306_clear(&amp;oled);</div>
-<div class="line"><span class="lineno">  593</span>        ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;Sys Clock:&quot;</span>);</div>
-<div class="line"><span class="lineno">  594</span>        ssd1306_draw_string(&amp;oled, 0, 20, 1 , sys_freq_str);</div>
-<div class="line"><span class="lineno">  595</span>        ssd1306_show(&amp;oled);</div>
-<div class="line"><span class="lineno">  596</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  597</span>        printf(<span class="stringliteral">&quot;OLED initialization failed.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  598</span>    }</div>
-<div class="line"><span class="lineno">  599</span>    </div>
-<div class="line"><span class="lineno">  600</span> </div>
-<div class="line"><span class="lineno">  601</span>    <span class="keywordflow">while</span>(1) {</div>
-<div class="line"><span class="lineno">  602</span>        tud_task();</div>
-<div class="line"><span class="lineno">  603</span>    }</div>
-<div class="line"><span class="lineno">  604</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00610">610</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  610</span>               {</div>
+<div class="line"><span class="lineno">  611</span>    board_init();</div>
+<div class="line"><span class="lineno">  612</span>    printf(<span class="stringliteral">&quot;\033[2J\033[H&quot;</span>);</div>
+<div class="line"><span class="lineno">  613</span>    tud_init(BOARD_TUD_RHPORT);</div>
+<div class="line"><span class="lineno">  614</span>    stdio_init_all();</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>    <span class="comment">// I2C</span></div>
+<div class="line"><span class="lineno">  617</span>    i2c_init(i2c0, 400000);</div>
+<div class="line"><span class="lineno">  618</span>    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">  619</span>    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);</div>
+<div class="line"><span class="lineno">  620</span>    gpio_pull_up(I2C_SDA);</div>
+<div class="line"><span class="lineno">  621</span>    gpio_pull_up(I2C_SCL);</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>    uint32_t sys_freq = clock_get_hz(clk_sys);</div>
+<div class="line"><span class="lineno">  624</span>    std::string temp = to_string(sys_freq);</div>
+<div class="line"><span class="lineno">  625</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* sys_freq_str = temp.c_str();</div>
+<div class="line"><span class="lineno">  626</span>    oled.external_vcc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  627</span>    <span class="keywordtype">bool</span> oled_status = ssd1306_init(&amp;oled, 128, 64, OLED_ADDR, MY_I2C);</div>
+<div class="line"><span class="lineno">  628</span>    </div>
+<div class="line"><span class="lineno">  629</span>    <span class="keywordflow">if</span> (oled_status) {</div>
+<div class="line"><span class="lineno">  630</span>        ssd1306_clear(&amp;oled);</div>
+<div class="line"><span class="lineno">  631</span>        ssd1306_draw_string(&amp;oled, 0, 2, 2, <span class="stringliteral">&quot;Sys Clock:&quot;</span>);</div>
+<div class="line"><span class="lineno">  632</span>        ssd1306_draw_string(&amp;oled, 0, 20, 1 , sys_freq_str);</div>
+<div class="line"><span class="lineno">  633</span>        ssd1306_show(&amp;oled);</div>
+<div class="line"><span class="lineno">  634</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  635</span>        printf(<span class="stringliteral">&quot;OLED initialization failed.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  636</span>    }</div>
+<div class="line"><span class="lineno">  637</span>    </div>
+<div class="line"><span class="lineno">  638</span> </div>
+<div class="line"><span class="lineno">  639</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">  640</span>        tud_task();</div>
+<div class="line"><span class="lineno">  641</span>    }</div>
+<div class="line"><span class="lineno">  642</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1176,44 +1223,44 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00605">605</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  605</span>              {</div>
-<div class="line"><span class="lineno">  606</span>    stdio_init_all();</div>
-<div class="line"><span class="lineno">  607</span>    tusb_init();</div>
-<div class="line"><span class="lineno">  608</span>    sleep_ms(5000);</div>
-<div class="line"><span class="lineno">  609</span>    printf(<span class="stringliteral">&quot;Testing if seral works.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  610</span> </div>
-<div class="line"><span class="lineno">  611</span>    FATFS fs;</div>
-<div class="line"><span class="lineno">  612</span>    FRESULT fr = f_mount(&amp;fs, <span class="stringliteral">&quot;&quot;</span>, 1);</div>
-<div class="line"><span class="lineno">  613</span>    <span class="keywordflow">if</span> (FR_OK != fr) {</div>
-<div class="line"><span class="lineno">  614</span>        panic(<span class="stringliteral">&quot;f_mount error: %s (%d)\n&quot;</span>, FRESULT_str(fr), fr);</div>
-<div class="line"><span class="lineno">  615</span>    }</div>
-<div class="line"><span class="lineno">  616</span> </div>
-<div class="line"><span class="lineno">  617</span>    <span class="comment">// Open a file and write to it</span></div>
-<div class="line"><span class="lineno">  618</span>    FIL fil;</div>
-<div class="line"><span class="lineno">  619</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> filename = <span class="stringliteral">&quot;filename.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">  620</span>    fr = f_open(&amp;fil, filename, FA_OPEN_APPEND | FA_WRITE);</div>
-<div class="line"><span class="lineno">  621</span>    <span class="keywordflow">if</span> (FR_OK != fr &amp;&amp; FR_EXIST != fr) {</div>
-<div class="line"><span class="lineno">  622</span>        panic(<span class="stringliteral">&quot;f_open(%s) error: %s (%d)\n&quot;</span>, filename, FRESULT_str(fr), fr);</div>
-<div class="line"><span class="lineno">  623</span>    }</div>
-<div class="line"><span class="lineno">  624</span>    <span class="keywordflow">if</span> (f_printf(&amp;fil, <span class="stringliteral">&quot;Hello, world!\n&quot;</span>) &lt; 0) {</div>
-<div class="line"><span class="lineno">  625</span>        printf(<span class="stringliteral">&quot;f_printf failed\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  626</span>    }</div>
-<div class="line"><span class="lineno">  627</span> </div>
-<div class="line"><span class="lineno">  628</span>    <span class="comment">// Close the file</span></div>
-<div class="line"><span class="lineno">  629</span>    fr = f_close(&amp;fil);</div>
-<div class="line"><span class="lineno">  630</span>    <span class="keywordflow">if</span> (FR_OK != fr) {</div>
-<div class="line"><span class="lineno">  631</span>        printf(<span class="stringliteral">&quot;f_close error: %s (%d)\n&quot;</span>, FRESULT_str(fr), fr);</div>
-<div class="line"><span class="lineno">  632</span>    }</div>
-<div class="line"><span class="lineno">  633</span> </div>
-<div class="line"><span class="lineno">  634</span>    <span class="comment">// Unmount the SD card</span></div>
-<div class="line"><span class="lineno">  635</span>    f_unmount(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  636</span> </div>
-<div class="line"><span class="lineno">  637</span>    <span class="keywordflow">while</span>(1) {</div>
-<div class="line"><span class="lineno">  638</span>        printf(<span class="stringliteral">&quot;Testing serial.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  639</span>        sleep_ms(1000);</div>
-<div class="line"><span class="lineno">  640</span>    }</div>
-<div class="line"><span class="lineno">  641</span>}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00643">643</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  643</span>              {</div>
+<div class="line"><span class="lineno">  644</span>    stdio_init_all();</div>
+<div class="line"><span class="lineno">  645</span>    tusb_init();</div>
+<div class="line"><span class="lineno">  646</span>    sleep_ms(5000);</div>
+<div class="line"><span class="lineno">  647</span>    printf(<span class="stringliteral">&quot;Testing if seral works.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  648</span> </div>
+<div class="line"><span class="lineno">  649</span>    FATFS fs;</div>
+<div class="line"><span class="lineno">  650</span>    FRESULT fr = f_mount(&amp;fs, <span class="stringliteral">&quot;&quot;</span>, 1);</div>
+<div class="line"><span class="lineno">  651</span>    <span class="keywordflow">if</span> (FR_OK != fr) {</div>
+<div class="line"><span class="lineno">  652</span>        panic(<span class="stringliteral">&quot;f_mount error: %s (%d)\n&quot;</span>, FRESULT_str(fr), fr);</div>
+<div class="line"><span class="lineno">  653</span>    }</div>
+<div class="line"><span class="lineno">  654</span> </div>
+<div class="line"><span class="lineno">  655</span>    <span class="comment">// Open a file and write to it</span></div>
+<div class="line"><span class="lineno">  656</span>    FIL fil;</div>
+<div class="line"><span class="lineno">  657</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> filename = <span class="stringliteral">&quot;filename.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">  658</span>    fr = f_open(&amp;fil, filename, FA_OPEN_APPEND | FA_WRITE);</div>
+<div class="line"><span class="lineno">  659</span>    <span class="keywordflow">if</span> (FR_OK != fr &amp;&amp; FR_EXIST != fr) {</div>
+<div class="line"><span class="lineno">  660</span>        panic(<span class="stringliteral">&quot;f_open(%s) error: %s (%d)\n&quot;</span>, filename, FRESULT_str(fr), fr);</div>
+<div class="line"><span class="lineno">  661</span>    }</div>
+<div class="line"><span class="lineno">  662</span>    <span class="keywordflow">if</span> (f_printf(&amp;fil, <span class="stringliteral">&quot;Hello, world!\n&quot;</span>) &lt; 0) {</div>
+<div class="line"><span class="lineno">  663</span>        printf(<span class="stringliteral">&quot;f_printf failed\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  664</span>    }</div>
+<div class="line"><span class="lineno">  665</span> </div>
+<div class="line"><span class="lineno">  666</span>    <span class="comment">// Close the file</span></div>
+<div class="line"><span class="lineno">  667</span>    fr = f_close(&amp;fil);</div>
+<div class="line"><span class="lineno">  668</span>    <span class="keywordflow">if</span> (FR_OK != fr) {</div>
+<div class="line"><span class="lineno">  669</span>        printf(<span class="stringliteral">&quot;f_close error: %s (%d)\n&quot;</span>, FRESULT_str(fr), fr);</div>
+<div class="line"><span class="lineno">  670</span>    }</div>
+<div class="line"><span class="lineno">  671</span> </div>
+<div class="line"><span class="lineno">  672</span>    <span class="comment">// Unmount the SD card</span></div>
+<div class="line"><span class="lineno">  673</span>    f_unmount(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  674</span> </div>
+<div class="line"><span class="lineno">  675</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">  676</span>        printf(<span class="stringliteral">&quot;Testing serial.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  677</span>        sleep_ms(1000);</div>
+<div class="line"><span class="lineno">  678</span>    }</div>
+<div class="line"><span class="lineno">  679</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1783,7 +1830,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00435">435</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00473">473</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

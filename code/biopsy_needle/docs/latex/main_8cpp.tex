@@ -36,13 +36,13 @@ enum {\bfseries states} \{ \newline
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\+\_\+init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the 128x64 OLED display and communication via I2C connections. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{display\+Input\+Speed}} (int y\+\_\+pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Helper function used to abstract how potentiometer input information is shown on the OLED screen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{display\+Bat}} (int y\+\_\+pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Helper function used to display calculated battery capacity value on OLED. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{display\+State}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the order of information, titles, and instructions shown on the OLED display by state in FSM. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ac7c42980e08859e81090559d51a512b0}{handle\+Button}} ()
 \item 
 void \mbox{\hyperlink{main_8cpp_ae2e93a7266c27d56845381cb2076d391}{handle\+Release}} ()
@@ -50,15 +50,15 @@ void \mbox{\hyperlink{main_8cpp_ae2e93a7266c27d56845381cb2076d391}{handle\+Relea
 void \mbox{\hyperlink{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}{handle\+MSCButton}} ()
 \item 
 void \mbox{\hyperlink{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}{create\+Data\+File}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates/writes datalog to the micro\+SD via Fat\+FS implementation. Writes the header of the file if successful and names the file by order of creation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}{reset\+Filtering}} ()
 \item 
 float \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{get\+Bat\+Level}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the current capacity of the battery using predetermined minimum and maximum charge values. \end{DoxyCompactList}\item 
 long \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{get\+Input\+Speed}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the percentage power represented by the inputted ADC value from the potentiometer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}{get\+RPM}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Uses a 1 second timer to extrapolate the revolutions per minute. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}{enable\+MSC}} ()
 \item 
 void \mbox{\hyperlink{main_8cpp_ae995a6024db644fcec928354bc4f5f67}{disable\+MSC}} ()
@@ -236,23 +236,27 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00100}{100}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00314}{314}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Creates/writes datalog to the micro\+SD via Fat\+FS implementation. Writes the header of the file if successful and names the file by order of creation. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00322}{322}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00315\ \ \ \ \ }
-\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{int}\ fileNum\ =\ 0;}
-\DoxyCodeLine{00317\ \ \ \ \ FRESULT\ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
-\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{while}\ (file\_created\ ==\ FR\_EXIST)\ \{}
-\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ fileNum++;}
-\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ sprintf(filename,\ \textcolor{stringliteral}{"{}data\%d.csv"{}},\ fileNum);}
-\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
-\DoxyCodeLine{00322\ \ \ \ \ \}}
-\DoxyCodeLine{00323\ }
-\DoxyCodeLine{00324\ \ \ \ \ \textcolor{comment}{//\ Print\ header\ of\ file}}
-\DoxyCodeLine{00325\ \ \ \ \ f\_printf(\&fil,\ \textcolor{stringliteral}{"{}State,\ Time(ms),\ Current(mA),\ CurrentLP(mA),\ CurrentMAF(mA),\ RPM,\ Displacement(mm),\ Force(N)\(\backslash\)n"{}});}
-\DoxyCodeLine{00326\ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ }
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordtype}{int}\ fileNum\ =\ 0;}
+\DoxyCodeLine{00325\ \ \ \ \ FRESULT\ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordflow}{while}\ (file\_created\ ==\ FR\_EXIST)\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ fileNum++;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ sprintf(filename,\ \textcolor{stringliteral}{"{}data\%d.csv"{}},\ fileNum);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ file\_created\ =\ f\_open(\&fil,\ filename,\ FA\_CREATE\_NEW\ |\ FA\_WRITE);}
+\DoxyCodeLine{00330\ \ \ \ \ \}}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{comment}{//\ Print\ header\ of\ file}}
+\DoxyCodeLine{00333\ \ \ \ \ f\_printf(\&fil,\ \textcolor{stringliteral}{"{}State,\ Time(ms),\ Current(mA),\ CurrentLP(mA),\ CurrentMAF(mA),\ RPM,\ Displacement(mm),\ Force(N)\(\backslash\)n"{}});}
+\DoxyCodeLine{00334\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_ae995a6024db644fcec928354bc4f5f67}\label{main_8cpp_ae995a6024db644fcec928354bc4f5f67} 
@@ -263,15 +267,15 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00314}{314}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00504}{504}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00542}{542}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00505\ \ \ \ \ tud\_disconnect();}
-\DoxyCodeLine{00506\ \ \ \ \ f\_mount(\&filesys,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
-\DoxyCodeLine{00507\ \ \ \ \ tud\_deinit(BOARD\_TUD\_RHPORT);}
-\DoxyCodeLine{00508\ \}}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00543\ \ \ \ \ tud\_disconnect();}
+\DoxyCodeLine{00544\ \ \ \ \ f\_mount(\&filesys,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
+\DoxyCodeLine{00545\ \ \ \ \ tud\_deinit(BOARD\_TUD\_RHPORT);}
+\DoxyCodeLine{00546\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}\label{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89} 
@@ -282,24 +286,33 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00504}{504}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00386}{386}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Helper function used to display calculated battery capacity value on OLED. 
+
+When below the 0 threshold, will display LO on the screen. Automatically adjusts depending on if 3 digits are required. 
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+pos} & The y position in pixels (bottom left) of where the text is written. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00408}{408}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00387\ \ \ \ \ std::string\ temp\ =\ to\_string(bat\_per)\ +\ \textcolor{stringliteral}{"{}\%"{}};}
-\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_pos\ =\ 110;}
-\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordflow}{if}\ (bat\_per\ ==\ 0)\ \{}
-\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
-\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 116,\ y\_pos\ +\ 8,\ 1,\ \textcolor{stringliteral}{"{}LO"{}});}
-\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00393\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bat\_per\ <\ 10)\ \{}
-\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ x\_pos\ =\ 116;}
-\DoxyCodeLine{00395\ \ \ \ \ \}}
-\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ bat\ =\ temp.c\_str();}
-\DoxyCodeLine{00397\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
-\DoxyCodeLine{00398\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ x\_pos,\ y\_pos\ +\ 8,\ 1,\ bat);}
-\DoxyCodeLine{00399\ \}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00409\ \ \ \ \ std::string\ temp\ =\ to\_string(bat\_per)\ +\ \textcolor{stringliteral}{"{}\%"{}};}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_pos\ =\ 110;}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{if}\ (bat\_per\ ==\ 0)\ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 116,\ y\_pos\ +\ 8,\ 1,\ \textcolor{stringliteral}{"{}LO"{}});}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00415\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bat\_per\ <\ 10)\ \{}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ x\_pos\ =\ 116;}
+\DoxyCodeLine{00417\ \ \ \ \ \}}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ bat\ =\ temp.c\_str();}
+\DoxyCodeLine{00419\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 110,\ y\_pos,\ 1,\ \textcolor{stringliteral}{"{}BAT"{}});}
+\DoxyCodeLine{00420\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ x\_pos,\ y\_pos\ +\ 8,\ 1,\ bat);}
+\DoxyCodeLine{00421\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a77605eb86157d0b0194fc72a25738a22}\label{main_8cpp_a77605eb86157d0b0194fc72a25738a22} 
@@ -310,15 +323,24 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00386}{386}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00328}{328}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Helper function used to abstract how potentiometer input information is shown on the OLED screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+pos} & The y position in pixels (bottom left) of where the text is written. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00341}{341}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00329\ \ \ \ \ std::string\ temp\ =\ \textcolor{stringliteral}{"{}INPUT\ SPEED:\ [\ "{}}\ +\ to\_string(temp\_speed)\ +\ \textcolor{stringliteral}{"{}\%\ ]"{}};}
-\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ in\_speed\ =\ temp.c\_str();}
-\DoxyCodeLine{00331\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ y\_pos,\ 1,\ in\_speed);}
-\DoxyCodeLine{00332\ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00342\ \ \ \ \ std::string\ temp\ =\ \textcolor{stringliteral}{"{}INPUT\ SPEED:\ [\ "{}}\ +\ to\_string(temp\_speed)\ +\ \textcolor{stringliteral}{"{}\%\ ]"{}};}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ in\_speed\ =\ temp.c\_str();}
+\DoxyCodeLine{00344\ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ y\_pos,\ 1,\ in\_speed);}
+\DoxyCodeLine{00345\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}\label{main_8cpp_ac59ebf0340587075ef7d1fc943c78408} 
@@ -329,61 +351,65 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00328}{328}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00334}{334}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Handles the order of information, titles, and instructions shown on the OLED display by state in FSM. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00351}{351}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00335\ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{switch}(state)\ \{}
-\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STANDBY:}
-\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}STANDBY"{}});}
-\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
-\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayInputSpeed(50);}
-\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CUTTING:}
-\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}CUTTING"{}});}
-\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
-\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
-\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ REMOVAL:}
-\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}REMOVAL"{}});}
-\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayInputSpeed(50);}
-\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EXITING:}
-\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}EXITING"{}});}
-\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
-\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
-\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
-\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FINISH:\ \textcolor{comment}{//\ For\ debugging\ purposes.}}
-\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}COMPLETE"{}});}
-\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
-\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ZERO:}
-\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}ZERO"{}});}
-\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}Resetting\ to\ origin"{}});}
-\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
-\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00383\ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00384\ \}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ ssd1306\_clear(\&oled);}
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordflow}{switch}(state)\ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STANDBY:}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}STANDBY"{}});}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{displayInputSpeed}}(50);}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CUTTING:}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}CUTTING"{}});}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ REMOVAL:}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}REMOVAL"{}});}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a77605eb86157d0b0194fc72a25738a22}{displayInputSpeed}}(50);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EXITING:}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}EXITING"{}});}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 20,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ rpm,\ \textcolor{stringliteral}{"{}SPD\ (RPM)\ :\ "{}});}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 40,\ displacement,\ \textcolor{stringliteral}{"{}POS\ (mm)\ \ :\ "{}});}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 50,\ force,\ \textcolor{stringliteral}{"{}FRC\ (N)\ \ \ :\ "{}});}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FINISH:\ \textcolor{comment}{//\ For\ debugging\ purposes.}}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}COMPLETE"{}});}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ MSC\ \ :\ LOGS\ ]"{}});}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ZERO:}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}ZERO"{}});}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}Resetting\ to\ origin"{}});}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a42ebef78c974c5dd10ee53b6bea5ac07}{displayData}}(\&oled,\ 30,\ current\_mA,\ \textcolor{stringliteral}{"{}CUR\ (mA)\ \ :\ "{}});}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \ \ ssd1306\_show(\&oled);}
+\DoxyCodeLine{00401\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6}\label{main_8cpp_a0b614e0add50e5ae36d208fe910f90c6} 
@@ -394,14 +420,14 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00334}{334}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00499}{499}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00537}{537}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00500\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00501\ \ \ \ \ tud\_task();}
-\DoxyCodeLine{00502\ \}}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00538\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00539\ \ \ \ \ tud\_task();}
+\DoxyCodeLine{00540\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}\label{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11} 
@@ -412,22 +438,29 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00499}{499}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00401}{401}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Calculates the current capacity of the battery using predetermined minimum and maximum charge values. 
+
+Relies on ADC averaging and makes calculations based on battery voltage. \begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00429}{429}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00402\ \ \ \ \ adc\_select\_input(0);}
-\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordtype}{long}\ bat\ =\ adc\_read();}
-\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
-\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ bat\ +=\ adc\_read();}
-\DoxyCodeLine{00406\ \ \ \ \ \}}
-\DoxyCodeLine{00407\ \ \ \ \ bat\ /=\ 1.0\ *\ potIterations;}
-\DoxyCodeLine{00408\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{NTM\_MAX}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}});}
-\DoxyCodeLine{00409\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{NTM\_MIN}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\_MAX\_ADC}});}
-\DoxyCodeLine{00410\ \ \ \ \ bat\ =\ (bat\ -\/\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}})\ *\ \mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{BAT\_ADC\_PER}};}
-\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{return}\ bat;}
-\DoxyCodeLine{00412\ \}}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00430\ \ \ \ \ adc\_select\_input(0);}
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keywordtype}{long}\ bat\ =\ adc\_read();}
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ bat\ +=\ adc\_read();}
+\DoxyCodeLine{00434\ \ \ \ \ \}}
+\DoxyCodeLine{00435\ \ \ \ \ bat\ /=\ 1.0\ *\ potIterations;}
+\DoxyCodeLine{00436\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga24c290b5fa8c0bb248fc15b5bcf873d7}{NTM\_MAX}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}});}
+\DoxyCodeLine{00437\ \ \ \ \ bat\ =\ \mbox{\hyperlink{group__BatteryMacros_ga9a187ecf82734a12819e1283bcb69bab}{NTM\_MIN}}(bat,\ \mbox{\hyperlink{group__BatteryMacros_ga7703a5d829fb6d1223ad111a9474fa9b}{BAT\_MAX\_ADC}});}
+\DoxyCodeLine{00438\ \ \ \ \ bat\ =\ (bat\ -\/\ \mbox{\hyperlink{group__BatteryMacros_gad380f4a571d5444566336f067dfb7b01}{BAT\_MIN\_ADC}})\ *\ \mbox{\hyperlink{group__BatteryMacros_ga4ea44361cc7ac80f146feb2806720fda}{BAT\_ADC\_PER}};}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordflow}{return}\ bat;}
+\DoxyCodeLine{00440\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}\label{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd} 
@@ -438,19 +471,26 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00401}{401}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00414}{414}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Calculates the percentage power represented by the inputted ADC value from the potentiometer. 
+
+\begin{DoxyReturn}{Returns}
+long 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00447}{447}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00415\ \ \ \ \ adc\_select\_input(3);}
-\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keywordtype}{long}\ val\ =\ 0;}
-\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
-\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ val\ +=\ adc\_read();}
-\DoxyCodeLine{00419\ \ \ \ \ \}}
-\DoxyCodeLine{00420\ \ \ \ \ }
-\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keywordflow}{return}\ long(0.0243\ *\ (val\ *\ 1.0\ /\ potIterations)\ +\ 1);}
-\DoxyCodeLine{00422\ \}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00448\ \ \ \ \ adc\_select\_input(3);}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordtype}{long}\ val\ =\ 0;}
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ potIterations;\ i++)\ \{}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ val\ +=\ adc\_read();}
+\DoxyCodeLine{00452\ \ \ \ \ \}}
+\DoxyCodeLine{00453\ \ \ \ \ }
+\DoxyCodeLine{00454\ \ \ \ \ \textcolor{keywordflow}{return}\ long(0.0243\ *\ (val\ *\ 1.0\ /\ potIterations)\ +\ 1);}
+\DoxyCodeLine{00455\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}\label{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664} 
@@ -461,20 +501,24 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00414}{414}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00424}{424}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Uses a 1 second timer to extrapolate the revolutions per minute. 
+
+Determines the number of revolutions that occur within a second and multiplies it by 60. 
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00462}{462}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keyword}{static}\ absolute\_time\_t\ prevRPMTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00426\ \ \ \ \ absolute\_time\_t\ currRPMTime\ =\ get\_absolute\_time();}
-\DoxyCodeLine{00427\ }
-\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(prevRPMTime,\ currRPMTime)\ >=\ \mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{SEC\_US}})\ \{}
-\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ rpm\ =\ (numPulses/12.0f/34.014f)\ *\ 60.0f;}
-\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ numPulses\ =\ 0;}
-\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ prevRPMTime\ =\ currRPMTime;}
-\DoxyCodeLine{00432\ \ \ \ \ \}}
-\DoxyCodeLine{00433\ \}}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \textcolor{keyword}{static}\ absolute\_time\_t\ prevRPMTime\ =\ get\_absolute\_time();}
+\DoxyCodeLine{00464\ \ \ \ \ absolute\_time\_t\ currRPMTime\ =\ get\_absolute\_time();}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(prevRPMTime,\ currRPMTime)\ >=\ \mbox{\hyperlink{group__BatteryMacros_ga81b58a672e9a97383f06a46f89660b1d}{SEC\_US}})\ \{}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ rpm\ =\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(numPulses)\ *\ 60.0f;}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ numPulses\ =\ 0;}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ prevRPMTime\ =\ currRPMTime;}
+\DoxyCodeLine{00470\ \ \ \ \ \}}
+\DoxyCodeLine{00471\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_af70581e416f69b14c5a0bc5e4918b479}\label{main_8cpp_af70581e416f69b14c5a0bc5e4918b479} 
@@ -520,35 +564,35 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00112}{112}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00437}{437}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00475}{475}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_press\_flag)\ \{}
-\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ debounce\_us)\ \{}
-\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00446\ }
-\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
-\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ \mbox{\hyperlink{config_8h_ac6f3299722b682ead61165a15c392922}{hold\_us}})\ \{}
-\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ ZERO;}
-\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
-\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(MOTOR\_DIR,\ 0);}
-\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}},\ 255);}
-\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
-\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(\mbox{\hyperlink{config_8h_afce5aaf1a0caf368eaf0db8926a30960}{SPIKE\_TIME}});}
-\DoxyCodeLine{00455\ }
-\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
-\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00460\ \ \ \ \ \}}
-\DoxyCodeLine{00461\ \}}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_press\_flag)\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ debounce\_us)\ \{}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(pressTime,\ now)\ >=\ \mbox{\hyperlink{config_8h_ac6f3299722b682ead61165a15c392922}{hold\_us}})\ \{}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ ZERO;}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(MOTOR\_DIR,\ 0);}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}},\ 255);}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(\mbox{\hyperlink{config_8h_afce5aaf1a0caf368eaf0db8926a30960}{SPIKE\_TIME}});}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ button\_press\_flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00498\ \ \ \ \ \}}
+\DoxyCodeLine{00499\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524}\label{main_8cpp_a4acf41dad5576bfc9ced017baa2bf524} 
@@ -559,22 +603,22 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00437}{437}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00476}{476}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00514}{514}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_msc\_flag)\ \{}
-\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(mscPressTime,\ now)\ >=\ debounce\_us)\ \{}
-\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ STANDBY\ ||\ state\ ==\ FINISH)\ \{}
-\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 0)\ \{}
-\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ watchdog\_enable(1,\ 1);}
-\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ button\_msc\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00486\ \ \ \ \ \}}
-\DoxyCodeLine{00487\ \}}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_msc\_flag)\ \{}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (absolute\_time\_diff\_us(mscPressTime,\ now)\ >=\ debounce\_us)\ \{}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ STANDBY\ ||\ state\ ==\ FINISH)\ \{}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 0)\ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ watchdog\_enable(1,\ 1);}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ button\_msc\_flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00524\ \ \ \ \ \}}
+\DoxyCodeLine{00525\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_ae2e93a7266c27d56845381cb2076d391}\label{main_8cpp_ae2e93a7266c27d56845381cb2076d391} 
@@ -585,22 +629,22 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00476}{476}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00463}{463}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00501}{501}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00464\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_release\_flag)\ \{}
-\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
-\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ nextState;}
-\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ CUTTING)\ \{}
-\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ createDataFile();}
-\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ button\_release\_flag\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00473\ \ \ \ \ \}}
-\DoxyCodeLine{00474\ \}}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \textcolor{keywordflow}{if}\ (button\_release\_flag)\ \{}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (validPress)\ \{}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ nextState;}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ CUTTING)\ \{}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a5ab132489f70371e1c876ba54e9d7011}{createDataFile}}();}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ validPress\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ button\_release\_flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00511\ \ \ \ \ \}}
+\DoxyCodeLine{00512\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
@@ -637,8 +681,8 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00153\ \ \ \ \ }
 \DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ ====\ General\ Initialization\ ====\ //}}
 \DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a8c6d7458362f0a1d72f048e5c28dafc9}{board\_gpio\_init}}();}
-\DoxyCodeLine{00156\ \ \ \ \ bat\_per\ =\ getBatLevel();}
-\DoxyCodeLine{00157\ \ \ \ \ oled\_init();}
+\DoxyCodeLine{00156\ \ \ \ \ bat\_per\ =\ \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{getBatLevel}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\_init}}();}
 \DoxyCodeLine{00158\ \ \ \ \ state\ =\ WAIT;}
 \DoxyCodeLine{00159\ \ \ \ \ nextState\ =\ STANDBY;}
 \DoxyCodeLine{00160\ \ \ \ \ INA219\ ina219(MY\_I2C,\ INA219\_ADDR);}
@@ -656,9 +700,9 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ handleRelease();}
 \DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ handleButton();}
 \DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ handleMSCButton();}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ getRPM();}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a5e74d3c55ba6d356cd90823775f2d664}{getRPM}}();}
 \DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ bat\_per\ =\ getBatLevel();}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ bat\_per\ =\ \mbox{\hyperlink{main_8cpp_a14b5f26e2ea4e4c247dc26ea786e9b11}{getBatLevel}}();}
 \DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ current\_mA\ =\ ina219.read\_current()\ *\ 1000;}
 \DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ displacement\ =\ \mbox{\hyperlink{ntm__helpers_8h_a8b0e682ac7928c7d2592cb80a81a2874}{getRevolutions}}(count)\ *\ 0.5f;}
 \DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ force\ =\ compute\_force(FX29\_read(MY\_I2C,\ FX29\_ADDR));}
@@ -685,11 +729,11 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ disableMSC();}
 \DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
 \DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ getInputSpeed();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}();}
 \DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ uint16\_t(temp\_speed\ /\ 100.0f\ *\ 255.0f);\ }
 \DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resetFiltering();}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ CUTTING;}
 \DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -706,18 +750,18 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ speed\_lvl);}
 \DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ REMOVAL;}
 \DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ REMOVAL:\ \{}
 \DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ 0);}
 \DoxyCodeLine{00231\ }
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ getInputSpeed();}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_speed\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}();}
 \DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\_lvl\ =\ int(temp\_speed\ /\ 100.0f\ *\ 255.0f);}
 \DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resetFiltering();}
 \DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ EXITING;}
 \DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -735,7 +779,7 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ speed\_lvl);}
 \DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
 \DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -745,7 +789,7 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00261\ }
 \DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
 \DoxyCodeLine{00263\ }
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00265\ }
 \DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ STANDBY;}
 \DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
@@ -758,7 +802,7 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 \DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ FINISH;}
 \DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ displayState();}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac59ebf0340587075ef7d1fc943c78408}{displayState}}();}
 \DoxyCodeLine{00278\ }
 \DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextState\ =\ FINISH;}
 \DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
@@ -777,34 +821,38 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00134}{134}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00289}{289}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Initializes the 128x64 OLED display and communication via I2C connections. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00290\ \ \ \ \ \textcolor{comment}{//\ External\_vcc\ must\ be\ false\ for\ this\ to\ work}}
-\DoxyCodeLine{00291\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \&oled,}
-\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ 128,}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ 64,}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ OLED\_ADDR,}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ MY\_I2C}
-\DoxyCodeLine{00298\ \ \ \ \ );}
-\DoxyCodeLine{00299\ }
-\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}RECORDS"{}});}
-\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ HOLD\ \ STA\ \ :\ ZERO\ ]"{}});}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 45,\ 1,\ \textcolor{stringliteral}{"{}V1.0\ -\/\ 5/6/25"{}});}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 55,\ 1,\ \textcolor{stringliteral}{"{}Author:\ Thomas\ Chang"{}});}
-\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ displayBat(0);}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00309\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
-\DoxyCodeLine{00311\ \ \ \ \ \}}
-\DoxyCodeLine{00312\ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{comment}{//\ External\_vcc\ must\ be\ false\ for\ this\ to\ work}}
+\DoxyCodeLine{00295\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \&oled,}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ 128,}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ 64,}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ OLED\_ADDR,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ MY\_I2C}
+\DoxyCodeLine{00302\ \ \ \ \ );}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}RECORDS"{}});}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1,\ \textcolor{stringliteral}{"{}[\ PRESS\ STA\ \ :\ \ NEW\ ]"{}});}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 30,\ 1,\ \textcolor{stringliteral}{"{}[\ HOLD\ \ STA\ \ :\ ZERO\ ]"{}});}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 45,\ 1,\ \textcolor{stringliteral}{"{}V1.0\ -\/\ 5/6/25"{}});}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 55,\ 1,\ \textcolor{stringliteral}{"{}Author:\ Thomas\ Chang"{}});}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a9ea220abd9e6d180734b3b2bc0750f89}{displayBat}}(0);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
+\DoxyCodeLine{00313\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3}\label{main_8cpp_af7e37f59651692a7089d2b8ed312c7d3} 
@@ -815,19 +863,19 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00289}{289}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00489}{489}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00527}{527}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00490\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ moving\ average\ filter\ values\ to\ zero.}}
-\DoxyCodeLine{00491\ \ \ \ \ MAF\_counter\ =\ 0;}
-\DoxyCodeLine{00492\ \ \ \ \ MAF\_sum\ =\ 0;}
-\DoxyCodeLine{00493\ \ \ \ \ memset(MAF,\ 0,\ \textcolor{keyword}{sizeof}(MAF));}
-\DoxyCodeLine{00494\ }
-\DoxyCodeLine{00495\ \ \ \ \ \textcolor{comment}{//\ Reset\ previous\ low\ pass\ output.}}
-\DoxyCodeLine{00496\ \ \ \ \ lp\_current\ =\ 0;}
-\DoxyCodeLine{00497\ \}}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ moving\ average\ filter\ values\ to\ zero.}}
+\DoxyCodeLine{00529\ \ \ \ \ MAF\_counter\ =\ 0;}
+\DoxyCodeLine{00530\ \ \ \ \ MAF\_sum\ =\ 0;}
+\DoxyCodeLine{00531\ \ \ \ \ memset(MAF,\ 0,\ \textcolor{keyword}{sizeof}(MAF));}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ \ \ \ \ \textcolor{comment}{//\ Reset\ previous\ low\ pass\ output.}}
+\DoxyCodeLine{00534\ \ \ \ \ lp\_current\ =\ 0;}
+\DoxyCodeLine{00535\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a64461563174d034ff94d443f2c172622}\label{main_8cpp_a64461563174d034ff94d443f2c172622} 
@@ -838,72 +886,72 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00489}{489}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00510}{510}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00548}{548}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00511\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00512\ \ \ \ \ sleep\_ms(1000);}
-\DoxyCodeLine{00513\ }
-\DoxyCodeLine{00514\ \ \ \ \ gpio\_init(26);}
-\DoxyCodeLine{00515\ \ \ \ \ gpio\_set\_dir(26,\ GPIO\_OUT);}
-\DoxyCodeLine{00516\ }
-\DoxyCodeLine{00517\ \ \ \ \ \textcolor{comment}{//\ I2C}}
-\DoxyCodeLine{00518\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
-\DoxyCodeLine{00519\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00520\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00521\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
-\DoxyCodeLine{00522\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
-\DoxyCodeLine{00523\ }
-\DoxyCodeLine{00524\ \ \ \ \ \textcolor{comment}{//\ OLED}}
-\DoxyCodeLine{00525\ \ \ \ \ oled\_init();}
-\DoxyCodeLine{00526\ }
-\DoxyCodeLine{00527\ \ \ \ \ \textcolor{comment}{//\ BUTTMOTOR\_ONS}}
-\DoxyCodeLine{00528\ \ \ \ \ gpio\_init(state\_input);}
-\DoxyCodeLine{00529\ \ \ \ \ gpio\_set\_dir(state\_input,\ GPIO\_IN);}
-\DoxyCodeLine{00530\ \ \ \ \ gpio\_pull\_down(state\_input);}
-\DoxyCodeLine{00531\ \ \ \ \ gpio\_init(msc\_input);}
-\DoxyCodeLine{00532\ \ \ \ \ gpio\_set\_dir(msc\_input,\ GPIO\_IN);}
-\DoxyCodeLine{00533\ \ \ \ \ gpio\_pull\_down(msc\_input);}
-\DoxyCodeLine{00534\ }
-\DoxyCodeLine{00535\ \ \ \ \ \textcolor{comment}{//\ POTENTIOMETER}}
-\DoxyCodeLine{00536\ \ \ \ \ adc\_init();}
-\DoxyCodeLine{00537\ \ \ \ \ adc\_gpio\_init(speed\_input);}
-\DoxyCodeLine{00538\ }
-\DoxyCodeLine{00539\ \ \ \ \ \textcolor{comment}{//\ Motor\ Control}}
-\DoxyCodeLine{00540\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}}\ =\ pwm\_gpio\_to\_slice\_num(MOTOR\_PWM);}
-\DoxyCodeLine{00541\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}}\ =\ pwm\_gpio\_to\_channel(MOTOR\_PWM);}
-\DoxyCodeLine{00542\ \ \ \ \ gpio\_set\_function(MOTOR\_PWM,\ GPIO\_FUNC\_PWM);}
-\DoxyCodeLine{00543\ \ \ \ \ pwm\_set\_clkdiv(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 48.83f);}
-\DoxyCodeLine{00544\ \ \ \ \ pwm\_set\_wrap(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 255);}
-\DoxyCodeLine{00545\ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ PWM\_CHAN\_A,\ 0);}
-\DoxyCodeLine{00546\ \ \ \ \ pwm\_set\_enabled(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00547\ \ \ \ \ gpio\_init(MOTOR\_DIR);}
-\DoxyCodeLine{00548\ \ \ \ \ gpio\_set\_dir(MOTOR\_DIR,\ GPIO\_OUT);}
-\DoxyCodeLine{00549\ }
-\DoxyCodeLine{00550\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ pushbuttons.}}
-\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (gpio\_get(msc\_input)\ ==\ 1\ ||\ gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
-\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ potentiometer.}}
-\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ test\_pot\ =\ getInputSpeed()\ *\ 10;}
-\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
-\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
-\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 0);}
-\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
-\DoxyCodeLine{00562\ }
-\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ motor.}}
-\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
-\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ 255);}
-\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(3000);}
-\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
-\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00570\ \ \ \ \ \}}
-\DoxyCodeLine{00571\ \}}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00549\ \ \ \ \ stdio\_init\_all();}
+\DoxyCodeLine{00550\ \ \ \ \ sleep\_ms(1000);}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ \ \ \ \ gpio\_init(26);}
+\DoxyCodeLine{00553\ \ \ \ \ gpio\_set\_dir(26,\ GPIO\_OUT);}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00555\ \ \ \ \ \textcolor{comment}{//\ I2C}}
+\DoxyCodeLine{00556\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
+\DoxyCodeLine{00557\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{00558\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{00559\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
+\DoxyCodeLine{00560\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00562\ \ \ \ \ \textcolor{comment}{//\ OLED}}
+\DoxyCodeLine{00563\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8c50659733df2acac1580d209db8e97f}{oled\_init}}();}
+\DoxyCodeLine{00564\ }
+\DoxyCodeLine{00565\ \ \ \ \ \textcolor{comment}{//\ BUTTMOTOR\_ONS}}
+\DoxyCodeLine{00566\ \ \ \ \ gpio\_init(state\_input);}
+\DoxyCodeLine{00567\ \ \ \ \ gpio\_set\_dir(state\_input,\ GPIO\_IN);}
+\DoxyCodeLine{00568\ \ \ \ \ gpio\_pull\_down(state\_input);}
+\DoxyCodeLine{00569\ \ \ \ \ gpio\_init(msc\_input);}
+\DoxyCodeLine{00570\ \ \ \ \ gpio\_set\_dir(msc\_input,\ GPIO\_IN);}
+\DoxyCodeLine{00571\ \ \ \ \ gpio\_pull\_down(msc\_input);}
+\DoxyCodeLine{00572\ }
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{comment}{//\ POTENTIOMETER}}
+\DoxyCodeLine{00574\ \ \ \ \ adc\_init();}
+\DoxyCodeLine{00575\ \ \ \ \ adc\_gpio\_init(speed\_input);}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \ \ \textcolor{comment}{//\ Motor\ Control}}
+\DoxyCodeLine{00578\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}}\ =\ pwm\_gpio\_to\_slice\_num(MOTOR\_PWM);}
+\DoxyCodeLine{00579\ \ \ \ \ uint\ \mbox{\hyperlink{main_8cpp_a23777d4d3d69af11916d27e48261cfb1}{channel}}\ =\ pwm\_gpio\_to\_channel(MOTOR\_PWM);}
+\DoxyCodeLine{00580\ \ \ \ \ gpio\_set\_function(MOTOR\_PWM,\ GPIO\_FUNC\_PWM);}
+\DoxyCodeLine{00581\ \ \ \ \ pwm\_set\_clkdiv(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 48.83f);}
+\DoxyCodeLine{00582\ \ \ \ \ pwm\_set\_wrap(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ 255);}
+\DoxyCodeLine{00583\ \ \ \ \ pwm\_set\_chan\_level(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ PWM\_CHAN\_A,\ 0);}
+\DoxyCodeLine{00584\ \ \ \ \ pwm\_set\_enabled(\mbox{\hyperlink{main_8cpp_ac7597a58fd0a9415759b81dffee974e6}{slice}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00585\ \ \ \ \ gpio\_init(MOTOR\_DIR);}
+\DoxyCodeLine{00586\ \ \ \ \ gpio\_set\_dir(MOTOR\_DIR,\ GPIO\_OUT);}
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00588\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ pushbuttons.}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (gpio\_get(msc\_input)\ ==\ 1\ ||\ gpio\_get(state\_input)\ ==\ 1)\ \{}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ potentiometer.}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ test\_pot\ =\ \mbox{\hyperlink{main_8cpp_a70ff0abbdc7d6bd7b82553d2037889fd}{getInputSpeed}}()\ *\ 10;}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 1);}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ gpio\_put(26,\ 0);}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ sleep\_ms(test\_pot);}
+\DoxyCodeLine{00600\ }
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Testing\ functionality\ of\ motor.}}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gpio\_get(state\_input)\ ==\ 1)\ \{}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_FW,\ 255);}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ sleep\_ms(3000);}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ntm__helpers_8h_a1a668d0f88bcacc451fca6bf25511b62}{setMotor}}(MOTOR\_BW,\ \mbox{\hyperlink{group__MotorMacros_gad1b1c6c44e1e025f7a748396b2e6f9f4}{MOTOR\_OFF}});}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00608\ \ \ \ \ \}}
+\DoxyCodeLine{00609\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_a4765141d8281f1873714923a260f93fc}\label{main_8cpp_a4765141d8281f1873714923a260f93fc} 
@@ -914,43 +962,43 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00510}{510}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00572}{572}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00610}{610}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00573\ \ \ \ \ board\_init();}
-\DoxyCodeLine{00574\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)033[2J\(\backslash\)033[H"{}});}
-\DoxyCodeLine{00575\ \ \ \ \ tud\_init(BOARD\_TUD\_RHPORT);}
-\DoxyCodeLine{00576\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00577\ }
-\DoxyCodeLine{00578\ \ \ \ \ \textcolor{comment}{//\ I2C}}
-\DoxyCodeLine{00579\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
-\DoxyCodeLine{00580\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00581\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
-\DoxyCodeLine{00582\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
-\DoxyCodeLine{00583\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
-\DoxyCodeLine{00584\ }
-\DoxyCodeLine{00585\ \ \ \ \ uint32\_t\ sys\_freq\ =\ clock\_get\_hz(clk\_sys);}
-\DoxyCodeLine{00586\ \ \ \ \ std::string\ temp\ =\ to\_string(sys\_freq);}
-\DoxyCodeLine{00587\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sys\_freq\_str\ =\ temp.c\_str();}
-\DoxyCodeLine{00588\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00589\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(\&oled,\ 128,\ 64,\ OLED\_ADDR,\ MY\_I2C);}
-\DoxyCodeLine{00590\ \ \ \ \ }
-\DoxyCodeLine{00591\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
-\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
-\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}Sys\ Clock:"{}});}
-\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1\ ,\ sys\_freq\_str);}
-\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
-\DoxyCodeLine{00596\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
-\DoxyCodeLine{00598\ \ \ \ \ \}}
-\DoxyCodeLine{00599\ \ \ \ \ }
-\DoxyCodeLine{00600\ }
-\DoxyCodeLine{00601\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ tud\_task();}
-\DoxyCodeLine{00603\ \ \ \ \ \}}
-\DoxyCodeLine{00604\ \}}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00611\ \ \ \ \ board\_init();}
+\DoxyCodeLine{00612\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)033[2J\(\backslash\)033[H"{}});}
+\DoxyCodeLine{00613\ \ \ \ \ tud\_init(BOARD\_TUD\_RHPORT);}
+\DoxyCodeLine{00614\ \ \ \ \ stdio\_init\_all();}
+\DoxyCodeLine{00615\ }
+\DoxyCodeLine{00616\ \ \ \ \ \textcolor{comment}{//\ I2C}}
+\DoxyCodeLine{00617\ \ \ \ \ i2c\_init(i2c0,\ 400000);}
+\DoxyCodeLine{00618\ \ \ \ \ gpio\_set\_function(I2C\_SDA,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{00619\ \ \ \ \ gpio\_set\_function(I2C\_SCL,\ GPIO\_FUNC\_I2C);}
+\DoxyCodeLine{00620\ \ \ \ \ gpio\_pull\_up(I2C\_SDA);}
+\DoxyCodeLine{00621\ \ \ \ \ gpio\_pull\_up(I2C\_SCL);}
+\DoxyCodeLine{00622\ }
+\DoxyCodeLine{00623\ \ \ \ \ uint32\_t\ sys\_freq\ =\ clock\_get\_hz(clk\_sys);}
+\DoxyCodeLine{00624\ \ \ \ \ std::string\ temp\ =\ to\_string(sys\_freq);}
+\DoxyCodeLine{00625\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sys\_freq\_str\ =\ temp.c\_str();}
+\DoxyCodeLine{00626\ \ \ \ \ oled.external\_vcc\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00627\ \ \ \ \ \textcolor{keywordtype}{bool}\ oled\_status\ =\ ssd1306\_init(\&oled,\ 128,\ 64,\ OLED\_ADDR,\ MY\_I2C);}
+\DoxyCodeLine{00628\ \ \ \ \ }
+\DoxyCodeLine{00629\ \ \ \ \ \textcolor{keywordflow}{if}\ (oled\_status)\ \{}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ ssd1306\_clear(\&oled);}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 2,\ 2,\ \textcolor{stringliteral}{"{}Sys\ Clock:"{}});}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ ssd1306\_draw\_string(\&oled,\ 0,\ 20,\ 1\ ,\ sys\_freq\_str);}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ ssd1306\_show(\&oled);}
+\DoxyCodeLine{00634\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}OLED\ initialization\ failed.\(\backslash\)n"{}});}
+\DoxyCodeLine{00636\ \ \ \ \ \}}
+\DoxyCodeLine{00637\ \ \ \ \ }
+\DoxyCodeLine{00638\ }
+\DoxyCodeLine{00639\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ tud\_task();}
+\DoxyCodeLine{00641\ \ \ \ \ \}}
+\DoxyCodeLine{00642\ \}}
 
 \end{DoxyCode}
 \Hypertarget{main_8cpp_ada5a15c76153823533f203632f7d1d62}\label{main_8cpp_ada5a15c76153823533f203632f7d1d62} 
@@ -961,47 +1009,47 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00572}{572}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00605}{605}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00643}{643}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00606\ \ \ \ \ stdio\_init\_all();}
-\DoxyCodeLine{00607\ \ \ \ \ tusb\_init();}
-\DoxyCodeLine{00608\ \ \ \ \ sleep\_ms(5000);}
-\DoxyCodeLine{00609\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ if\ seral\ works.\(\backslash\)n"{}});}
-\DoxyCodeLine{00610\ }
-\DoxyCodeLine{00611\ \ \ \ \ FATFS\ fs;}
-\DoxyCodeLine{00612\ \ \ \ \ FRESULT\ fr\ =\ f\_mount(\&fs,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
-\DoxyCodeLine{00613\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
-\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_mount\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00615\ \ \ \ \ \}}
-\DoxyCodeLine{00616\ }
-\DoxyCodeLine{00617\ \ \ \ \ \textcolor{comment}{//\ Open\ a\ file\ and\ write\ to\ it}}
-\DoxyCodeLine{00618\ \ \ \ \ FIL\ fil;}
-\DoxyCodeLine{00619\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ filename\ =\ \textcolor{stringliteral}{"{}filename.txt"{}};}
-\DoxyCodeLine{00620\ \ \ \ \ fr\ =\ f\_open(\&fil,\ filename,\ FA\_OPEN\_APPEND\ |\ FA\_WRITE);}
-\DoxyCodeLine{00621\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr\ \&\&\ FR\_EXIST\ !=\ fr)\ \{}
-\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_open(\%s)\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ filename,\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00623\ \ \ \ \ \}}
-\DoxyCodeLine{00624\ \ \ \ \ \textcolor{keywordflow}{if}\ (f\_printf(\&fil,\ \textcolor{stringliteral}{"{}Hello,\ world!\(\backslash\)n"{}})\ <\ 0)\ \{}
-\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_printf\ failed\(\backslash\)n"{}});}
-\DoxyCodeLine{00626\ \ \ \ \ \}}
-\DoxyCodeLine{00627\ }
-\DoxyCodeLine{00628\ \ \ \ \ \textcolor{comment}{//\ Close\ the\ file}}
-\DoxyCodeLine{00629\ \ \ \ \ fr\ =\ f\_close(\&fil);}
-\DoxyCodeLine{00630\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
-\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_close\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
-\DoxyCodeLine{00632\ \ \ \ \ \}}
-\DoxyCodeLine{00633\ }
-\DoxyCodeLine{00634\ \ \ \ \ \textcolor{comment}{//\ Unmount\ the\ SD\ card}}
-\DoxyCodeLine{00635\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{00636\ }
-\DoxyCodeLine{00637\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
-\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ serial.\(\backslash\)n"{}});}
-\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ sleep\_ms(1000);}
-\DoxyCodeLine{00640\ \ \ \ \ \}}
-\DoxyCodeLine{00641\ \}}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00644\ \ \ \ \ stdio\_init\_all();}
+\DoxyCodeLine{00645\ \ \ \ \ tusb\_init();}
+\DoxyCodeLine{00646\ \ \ \ \ sleep\_ms(5000);}
+\DoxyCodeLine{00647\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ if\ seral\ works.\(\backslash\)n"{}});}
+\DoxyCodeLine{00648\ }
+\DoxyCodeLine{00649\ \ \ \ \ FATFS\ fs;}
+\DoxyCodeLine{00650\ \ \ \ \ FRESULT\ fr\ =\ f\_mount(\&fs,\ \textcolor{stringliteral}{"{}"{}},\ 1);}
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_mount\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
+\DoxyCodeLine{00653\ \ \ \ \ \}}
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00655\ \ \ \ \ \textcolor{comment}{//\ Open\ a\ file\ and\ write\ to\ it}}
+\DoxyCodeLine{00656\ \ \ \ \ FIL\ fil;}
+\DoxyCodeLine{00657\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ filename\ =\ \textcolor{stringliteral}{"{}filename.txt"{}};}
+\DoxyCodeLine{00658\ \ \ \ \ fr\ =\ f\_open(\&fil,\ filename,\ FA\_OPEN\_APPEND\ |\ FA\_WRITE);}
+\DoxyCodeLine{00659\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr\ \&\&\ FR\_EXIST\ !=\ fr)\ \{}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}f\_open(\%s)\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ filename,\ FRESULT\_str(fr),\ fr);}
+\DoxyCodeLine{00661\ \ \ \ \ \}}
+\DoxyCodeLine{00662\ \ \ \ \ \textcolor{keywordflow}{if}\ (f\_printf(\&fil,\ \textcolor{stringliteral}{"{}Hello,\ world!\(\backslash\)n"{}})\ <\ 0)\ \{}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_printf\ failed\(\backslash\)n"{}});}
+\DoxyCodeLine{00664\ \ \ \ \ \}}
+\DoxyCodeLine{00665\ }
+\DoxyCodeLine{00666\ \ \ \ \ \textcolor{comment}{//\ Close\ the\ file}}
+\DoxyCodeLine{00667\ \ \ \ \ fr\ =\ f\_close(\&fil);}
+\DoxyCodeLine{00668\ \ \ \ \ \textcolor{keywordflow}{if}\ (FR\_OK\ !=\ fr)\ \{}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}f\_close\ error:\ \%s\ (\%d)\(\backslash\)n"{}},\ FRESULT\_str(fr),\ fr);}
+\DoxyCodeLine{00670\ \ \ \ \ \}}
+\DoxyCodeLine{00671\ }
+\DoxyCodeLine{00672\ \ \ \ \ \textcolor{comment}{//\ Unmount\ the\ SD\ card}}
+\DoxyCodeLine{00673\ \ \ \ \ f\_unmount(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00674\ }
+\DoxyCodeLine{00675\ \ \ \ \ \textcolor{keywordflow}{while}(1)\ \{}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Testing\ serial.\(\backslash\)n"{}});}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ sleep\_ms(1000);}
+\DoxyCodeLine{00678\ \ \ \ \ \}}
+\DoxyCodeLine{00679\ \}}
 
 \end{DoxyCode}
 
@@ -1366,5 +1414,5 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00056}{56}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00435}{435}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00473}{473}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 

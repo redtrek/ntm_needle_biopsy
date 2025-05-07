@@ -286,6 +286,10 @@ int main() {
 
 #pragma region LOCAL DEFINITIONS
 
+/**
+ * @brief Initializes the 128x64 OLED display and communication via I2C connections.
+ * 
+ */
 void oled_init() {
     // External_vcc must be false for this to work
     oled.external_vcc = false;
@@ -311,6 +315,10 @@ void oled_init() {
     }
 }
 
+/**
+ * @brief Creates/writes datalog to the microSD via FatFS implementation.
+ * Writes the header of the file if successful and names the file by order of creation.
+ */
 void createDataFile() {
     
     int fileNum = 0;
@@ -325,12 +333,21 @@ void createDataFile() {
     f_printf(&fil, "State, Time(ms), Current(mA), CurrentLP(mA), CurrentMAF(mA), RPM, Displacement(mm), Force(N)\n");
 }
 
+/**
+ * @brief Helper function used to abstract how potentiometer input information is shown on the OLED screen
+ * 
+ * @param y_pos The y position in pixels (bottom left) of where the text is written.
+ */
 void displayInputSpeed(int y_pos) {
     std::string temp = "INPUT SPEED: [ " + to_string(temp_speed) + "% ]";
     const char* in_speed = temp.c_str();
     ssd1306_draw_string(&oled, 0, y_pos, 1, in_speed);
 }
 
+/**
+ * @brief Handles the order of information, titles, and instructions shown on the OLED display by state in FSM.
+ * 
+ */
 void displayState() {
     ssd1306_clear(&oled);
     switch(state) {
@@ -383,6 +400,11 @@ void displayState() {
     ssd1306_show(&oled);
 }
 
+/**
+ * @brief Helper function used to display calculated battery capacity value on OLED.
+ * @details When below the 0 threshold, will display LO on the screen. Automatically adjusts depending on if 3 digits are required.
+ * @param y_pos The y position in pixels (bottom left) of where the text is written.
+ */
 void displayBat(int y_pos) {
     std::string temp = to_string(bat_per) + "%";
     int x_pos = 110;
@@ -398,6 +420,12 @@ void displayBat(int y_pos) {
     ssd1306_draw_string(&oled, x_pos, y_pos + 8, 1, bat);
 }
 
+/**
+ * @brief Calculates the current capacity of the battery using predetermined minimum and maximum charge values.
+ * 
+ * @details Relies on ADC averaging and makes calculations based on battery voltage.
+ * @return float 
+ */
 float getBatLevel() {
     adc_select_input(0);
     long bat = adc_read();
@@ -411,6 +439,11 @@ float getBatLevel() {
     return bat;
 }
 
+/**
+ * @brief Calculates the percentage power represented by the inputted ADC value from the potentiometer.
+ * 
+ * @return long 
+ */
 long getInputSpeed() {
     adc_select_input(3);
     long val = 0;
@@ -421,12 +454,17 @@ long getInputSpeed() {
     return long(0.0243 * (val * 1.0 / potIterations) + 1);
 }
 
+/**
+ * @brief Uses a 1 second timer to extrapolate the revolutions per minute.
+ * @details Determines the number of revolutions that occur within a second and multiplies it by 60.
+ * 
+ */
 void getRPM() {
     static absolute_time_t prevRPMTime = get_absolute_time();
     absolute_time_t currRPMTime = get_absolute_time();
 
     if (absolute_time_diff_us(prevRPMTime, currRPMTime) >= SEC_US) {
-        rpm = (numPulses/12.0f/34.014f) * 60.0f;
+        rpm = getRevolutions(numPulses) * 60.0f;
         numPulses = 0;
         prevRPMTime = currRPMTime;
     }
